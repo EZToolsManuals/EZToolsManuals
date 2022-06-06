@@ -1,0 +1,1 @@
+* go over every single column/node of CSV/JSON output and explain what each is
