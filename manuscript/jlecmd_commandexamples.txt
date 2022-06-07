@@ -1,4 +1,4 @@
-# Command Examples
+# JLECmd Command Examples
 
 ## Example JLECmd Commands
 
