@@ -1,0 +1,25 @@
+# References
+
+## Associated GitHub Repositories
+
+* <https://github.com/EricZimmerman/Lnk> is the C# library for parsing .LNK files 
+* <https://github.com/EricZimmerman/LECmd> is the Command Line wrapper for the .LNK library
+
+## Blog Posts
+
+### Official Blog Posts
+
+Blog posts from Eric Zimmerman’s blog, Binary Foray:
+
+* <https://binaryforay.blogspot.com/2016/02/introducing-lecmd.html>
+* <https://binaryforay.blogspot.com/2016/02/lecmd-v0600-released.html>
+* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
+* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
+
+### Community Blog Posts
+
+* Links to blog posts go here
+
+## Download LECmd
+
+LECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>

@@ -1,0 +1,9 @@
+# JLECmd Introduction
+
+## Description
+
+JLECmd is a tool created by Eric Zimmerman used to parse JumpList files. JumpList files are native to the Windows operating system and are common indicators of file access. 
+
+TODO flesh this out more
+
+Talk about Automatic vs Custom Destinations

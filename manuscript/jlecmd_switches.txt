@@ -1,0 +1,306 @@
+# JLECmd Switches
+
+In a PowerShell window, running `.\JLECmd.exe` will provide the following options when running JLECmd:
+
+{line-numbers:false}
+```powershell
+Description:
+  JLECmd version 1.5.0.0
+
+  Author: Eric Zimmerman (saericzimmerman@gmail.com)
+  https://github.com/EricZimmerman/JLECmd
+
+  Examples: JLECmd.exe -f "C:\Temp\f01b4d95cf55d32a.customDestinations-ms"
+  --mp
+          JLECmd.exe -f "C:\Temp\f01b4d95cf55d32a.automaticDestinations-ms"
+  --json "D:\jsonOutput" --jsonpretty
+          JLECmd.exe -d "C:\CustomDestinations" --csv "c:\temp" --html "c:\temp"
+  -q
+          JLECmd.exe -d "C:\Users\e\AppData\Roaming\Microsoft\Windows\Recent"
+  --dt "ddd yyyy MM dd HH:mm:ss.fff"
+
+          Short options (single letter) are prefixed with a single dash. Long
+  commands are prefixed with two dashes
+
+
+Usage:
+  JLECmd [options]
+
+Options:
+  -f <f>             File to process. Either this or -d is required
+  -d <d>             Directory to recursively process. Either this or -f is
+                     required
+  --all              Process all files in directory vs. only files matching
+                     *.automaticDestinations-ms or *.customDestinations-ms
+                     [default: False]
+  --csv <csv>        Directory to save CSV formatted results to. This or
+                     --json required unless --de or --body is specified
+  --csvf <csvf>      File name to save CSV formatted results to. When
+                     present, overrides default name
+  --json <json>      Directory to save json representation to. Use --pretty
+                     for a more human readable layout
+  --html <html>      Directory to save xhtml formatted results to. Be sure
+                     to include the full path in double quotes
+  --pretty           When exporting to json, use a more human readable
+                     layout [default: False]
+  -q                 Only show the filename being processed vs all output.
+                     Useful to speed up exporting to json and/or csv
+                     [default: False]
+  --ld               Include more information about lnk files [default:
+                     False]
+  --fd               Include full information about lnk files
+                     (Alternatively, dump lnk files using --dumpTo and
+                     process with LECmd) [default: False]
+  --appIds <appIds>  Path to file containing AppIDs and descriptions
+                     (appid|description format). New appIds are added to
+                     the built-in list, existing appIds will have their
+                     descriptions updated
+  --dumpTo <dumpTo>  Directory to save exported lnk files
+  --dt <dt>          The custom date/time format to use when displaying
+                     timestamps. See https://goo.gl/CNVq0k for options.
+                     Default is: yyyy-MM-dd HH:mm:ss [default: yyyy-MM-dd
+                     HH:mm:ss]
+  --mp               Display higher precision for timestamps [default:
+                     False]
+  --withDir          When true, show contents of Directory not accounted
+                     for in DestList entries [default: False]
+  --debug            Show debug information during processing [default:
+                     False]
+  --trace            Show trace information during processing [default:
+                     False]
+  --version          Show version information
+  -?, -h, --help     Show help and usage information
+
+
+Either -f or -d is required. Exiting
+```
+
+While there are explanations for each switch, let’s walk through each one in further detail.
+
+## Switch Descriptions
+
+### `-f`
+
+This is a common switch within EZ Tools. Use `-f` to point to a single JumpList for JLECmd to parse.
+
+Example: `.\JLECmd.exe -f D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms`
+
+### `-d`
+
+This is a common switch within EZ Tools. Use `-d` to point to a directory for JLECmd to parse. Please note, this switch does work recursively.
+
+Example: `.\JLECmd.exe -d C:\temp`
+
+### `--all`
+
+This switch will instruct JLECmd to attempt to parse every file in the directory specified, regardless of file extension. Output will be generated only for those files identified to be .LNK files.
+
+Example: `.\JLECmd.exe -d C:\temp --all`
+
+### `--csv`
+
+This is a common switch within EZ Tools. This switch will instruct JLECmd to output parsed data into a CSV at the specified location.
+
+Example: `.\JLECmd.exe -d C:\temp\JumpLists --csv C:\temp\JumpLists\output`
+
+### `--csvf`
+
+This is a common switch within EZ Tools. This switch will instruct JLECmd to output parsed data into a CSV at the specified location and name it using the value specified for this switch.
+
+Example: `.\JLECmd.exe -d C:\temp\JumpLists --csv C:\temp\JumpLists\output --csvf JumpListOutput.csv`
+
+### `--json`
+
+This is a common switch within EZ Tools. This switch will instruct JLECmd to output parsed data into JSON at the specified location. Please note, this will output a single JSON file for each JumpList parsed.
+
+Example: `.\JLECmd.exe -d C:\temp\JumpLists --json C:\temp\JumpLists\output`
+
+### `--html`
+
+This is a common switch within EZ Tools. This switch will instruct JLECmd to output parsed data into XML at the specified location.
+
+Example: `.\JLECmd.exe -d C:\temp\JumpLists --html C:\temp\JumpLists\output`
+
+### `--pretty`
+
+This switch will instruct JLECmd to output parsed data into pretty printed JSON at the specified location.
+
+Example: `.\JLECmd.exe -d C:\temp\JumpLists --json C:\temp\JumpLists\output --pretty`
+
+### `-q`
+
+This switch will instruct JLECmd to output only what files were processed rather than the parsed data from each JumpList.
+
+For instance, running `.\JLECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\"` resulted in the following: `Processed 15 out of 20 files in 0.6428 seconds`
+
+Running `.\JLECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\" -q` resulted in the following: `Processed 15 out of 20 files in 0.1246 seconds`
+
+### `--ld`
+
+This switch will instruct JLECmd to include more details about .LNK files. Specifically, JLECmd will include the following information for each JumpList:
+
+{line-numbers:false}
+```powershell
+--- Link information ---
+Flags: VolumeIdAndLocalBasePath
+
+>> Volume information
+  Drive type: Fixed storage media (Hard drive)
+  Serial number: 88008C2F
+  Label: (No label)
+  Local path: C:\Users\e\AppData\Roaming\Microsoft\Windows\Libraries\Videos.library-ms
+```
+
+### `--fd`
+
+This switch will instruct JLECmd to include the full details of the .LNK files. An example of the additional information included can be seen below:
+
+{line-numbers:false}
+```powershell
+  Lnk target created:  2016-01-16 20:22:25
+  Lnk target modified: 2016-01-16 20:23:24
+  Lnk target accessed: 2016-01-16 20:23:24
+
+--- Header ---
+
+  Target created:  2016-01-16 20:22:25
+  Target modified: 2016-01-16 20:23:24
+  Target accessed: 2016-01-16 20:23:24
+
+  File size: 3,483
+  Flags: HasTargetIdList, HasLinkInfo, IsUnicode
+  File attributes: FileAttributeArchive, FileAttributeNotContentIndexed
+  Icon index: 0
+  Show window: SwNormal (Activates and displays the window. The window is restored to its original size and position if the window is minimized or maximized.)
+
+
+--- Link information ---
+Flags: VolumeIdAndLocalBasePath
+
+>> Volume information
+  Drive type: Fixed storage media (Hard drive)
+  Serial number: 88008C2F
+  Label: (No label)
+  Local path: C:\Users\e\AppData\Roaming\Microsoft\Windows\Libraries\Videos.library-ms
+
+--- Target ID information (Format: Type ==> Value) ---
+```
+
+and
+
+{line-numbers:false}
+```powershell
+  -Root folder: GUID ==> User Libraries
+
+  -Variable ==> Videos
+
+--- End Target ID information ---
+
+--- Extra blocks information ---
+
+>> Property store data block (Format: GUID\ID Description ==> Value)
+   9f4c2855-9f79-4b39-a8d0-e1d42de1d5f3\7      App User Model Is DestList Link     ==> True
+
+>> Tracker database block
+   Machine ID:  win7x64
+   MAC Address: 00:15:5d:01:6d:0b
+   MAC Vendor:  (Unknown vendor)
+   Creation:    2016-01-16 21:18:45
+
+   Volume Droid:       42e937f8-244d-406d-86eb-43604356d1ae
+   Volume Droid Birth: 42e937f8-244d-406d-86eb-43604356d1ae
+   File Droid:         ba034b9e-bc96-11e5-b231-00155d016d0b
+   File Droid birth:   ba034b9e-bc96-11e5-b231-00155d016d0b
+
+   (lnk file not present)
+```
+
+### `--appIds`
+
+This switch will instruct JLECmd to use an AppIDs.txt file specified by the user. Default is using the built-in AppIDs.txt file included within JLECmd, which can be found here: <https://github.com/EricZimmerman/JumpList/blob/master/JumpList/Resources/AppIDs.txt>
+
+Example: .\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms" --appIds "C:\temp\AppIDs.txt"
+
+### `--dumpTo`
+
+This switch will instruct JLECmd to dump the .LNK files associated with the JumpList to the specified location.
+
+Example: .\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms" --dumpTo "D:\DFIRArtifactMuseum\testJL"
+
+### `--dt`
+
+This switch will instruct JLECmd to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
+
+### `--mp`
+
+This switch will instruct JLECmd to provide more verbose timestamps. For instance, running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms"` resulted in the following:
+
+{line-numbers:false}
+```powershell
+--- DestList entries ---
+Entry #: 4
+  MRU: 0
+  Path: ::{031E4825-7B94-4DC3-B131-E946B44C8DD5}\Videos.library-ms ==> User Libraries\Videos.library-ms
+  Pinned: False
+  Created on:    2016-01-16 21:18:45
+  Last modified: 2016-01-16 20:23:24
+  Hostname: win7x64
+  Mac Address: 00:15:5d:01:6d:0b
+  Interaction count: 0
+
+--- Lnk information ---
+  Absolute path: User Libraries\Videos
+```
+
+Running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms --mp` resulted in the following:
+
+{line-numbers:false}
+```powershell
+--- DestList entries ---
+Entry #: 4
+  MRU: 0
+  Path: ::{031E4825-7B94-4DC3-B131-E946B44C8DD5}\Videos.library-ms ==> User Libraries\Videos.library-ms
+  Pinned: False
+  Created on:    2016-01-16 21:18:45.6562590
+  Last modified: 2016-01-16 20:23:24.8901093
+  Hostname: win7x64
+  Mac Address: 00:15:5d:01:6d:0b
+  Interaction count: 0
+
+--- Lnk information ---
+  Absolute path: User Libraries\Videos
+```
+
+### `--withDir`
+
+This switch will instruct JLECmd to list directories not account for in the DestList entries. 
+
+For example, running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --withDir` resulted in the following extra data: 
+
+{line-numbers:false}
+```powershell
+Directory entries not represented by DestList entries
+Directory Name: a
+
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt\dist
+
+Directory Name: b
+
+  Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
+```
+
+### `--debug`
+
+This is a common switch within EZ Tools. This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
+
+### `--trace`
+
+This is a common switch within EZ Tools. This switch will provide log messages that are helpful for tracing the execution of code. `--trace` can be added to any command for more verbose messaging.
+
+### `--version`
+
+This is a common switch within EZ Tools. This switch will display the current version of the JLECmd binary.
+
+### `--help`
+
+This is a common switch within EZ Tools. This switch will print the same help information as running `.\JLECmd.exe` by itself.

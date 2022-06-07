@@ -1,0 +1,165 @@
+# JLECmd Output
+
+## Analyzing JLECmd Output - Console
+
+When parsing JumpList files with JLECmd without the `-q` switch, JLECmd will display in the console window parsed data from each .LNK filed processed. 
+
+![](jlecmd_output\ConsoleExample1.jpg)
+
+{pagebreak}
+
+## Analyzing JLECmd Output - CSV
+
+When parsing JumpLists with JLECmd with the ‘--csv‘ switch, JLECmd will output the parsed data into a CSV file. The CSV file can then be ingested into a tool like Timeline Explorer to analyze the parsed data.
+
+![](jlecmd_output\CSVReportExampleTLE.jpg)
+
+{pagebreak}
+
+## Analyzing JLECmd Output - JSON
+
+When parsing JumpLists with JLECmd with the ‘--json‘ switch, JLECmd will output the parsed data into a JSON file. 
+
+`![](jlecmd_output\JSONPrettyReportExample.jpg)`
+
+TODO: figure out if the below JSON excerpt is preferred OR just a single screenshot of the PowerShell console window
+
+{line-numbers:false}
+```json
+{
+	"Directory": [
+		{
+			"ClassId": "00450020006e00747200790000000000",
+			"UserFlags": 0,
+			"ModifiedTime": "\/Date(1646941766733)\/",
+			"FirstDirectorySectorId": 3,
+			"DirectorySize": 576,
+			"PreviousDirectoryId": -1,
+			"NextDirectoryId": -1,
+			"SubDirectoryId": 1,
+			"DirectoryName": "Root Entry",
+			"DirectoryType": "RootStorage",
+			"NodeColor": "Red"
+		},
+		{
+			"ClassId": "00000000000000000000000000000000",
+			"UserFlags": 0,
+			"FirstDirectorySectorId": 0,
+			"DirectorySize": 309,
+			"PreviousDirectoryId": -1,
+			"NextDirectoryId": 2,
+			"SubDirectoryId": -1,
+			"DirectoryName": "1",
+			"DirectoryType": "Stream",
+			"NodeColor": "Black"
+		},
+		{
+			"ClassId": "0069004c007300740000000000000000",
+			"UserFlags": 0,
+			"FirstDirectorySectorId": 5,
+			"DirectorySize": 216,
+			"PreviousDirectoryId": -1,
+			"NextDirectoryId": -1,
+			"SubDirectoryId": -1,
+			"DirectoryName": "DestList",
+			"DirectoryType": "Stream",
+			"NodeColor": "Red"
+		}
+	],
+	"AppId": {
+		"AppId": "573770283dc3d854",
+		"Description": "Windows Defender"
+	},
+	"DestListCount": 1,
+	"PinnedDestListCount": 0,
+	"LastUsedEntryNumber": 1,
+	"DestListVersion": 4,
+	"SourceFile": "D:\\DFIRArtifactMuseum\\Windows\\JumpLists\\Win10\\APTSimulatorVM\\573770283dc3d854.automaticDestinations-ms",
+	"DestListEntries": [
+		{
+			"Hostname": "",
+			"VolumeDroid": "00000000000000000000000000000000",
+			"VolumeBirthDroid": "00000000000000000000000000000000",
+			"FileDroid": "00000000000000000000000000000000",
+			"FileBirthDroid": "00000000000000000000000000000000",
+			"EntryNumber": 1,
+			"MRUPosition": 0,
+			"InteractionCount": 1,
+			"CreatedOn": "\/Date(-12219292800000)\/",
+			"LastModified": "\/Date(1646941766733)\/",
+			"Pinned": false,
+			"Path": "windowsdefender://threat/",
+			"MacAddress": "00:00:00:00:00:00",
+			"Lnk": {
+				"TargetIDs": [
+					{
+						"__type": "Lnk.ShellItems.ShellBag0X1F, Lnk",
+						"PropertyStore": {
+							"Sheets": [
+							]
+						},
+						"FriendlyName": "Root folder: GUID",
+						"Value": "Internet Explorer (Homepage)",
+						"ExtensionBlocks": [
+						]
+					},
+					{
+						"__type": "Lnk.ShellItems.ShellBag0X61, Lnk",
+						"UserName": "",
+						"FriendlyName": "URI",
+						"Value": "windowsdefender://threat/",
+						"ExtensionBlocks": [
+						]
+					}
+				],
+				"ExtraBlocks": [
+					{
+						"__type": "Lnk.ExtraData.PropertyStoreDataBlock, Lnk",
+						"PropertyStore": {
+							"Sheets": [
+								{
+									"Size": 45,
+									"Version": "31-53-50-53",
+									"GUID": "9f4c2855-9f79-4b39-a8d0-e1d42de1d5f3",
+									"PropertyNames": {
+										"7": "True"
+									},
+									"PropertySheetType": "Numeric"
+								}
+							]
+						}
+					}
+				],
+				"SourceFile": "D:\\DFIRArtifactMuseum\\Windows\\JumpLists\\Win10\\APTSimulatorVM\\573770283dc3d854.automaticDestinations-ms_Directory name_1",
+				"RawBytes": "TAAAAAEUAgAAAAAAwAAAAAAAAEaBAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAKoAFAAfaIBTHIegQmkQouoIACswMJ2UAGGAAAAAAHcAaQBuAGQAbwB3AHMAZABlAGYAZQBuAGQAZQByADoALwAvAHQAaAByAGUAYQB0AC8AAAAAAFYAAAAaAO++AgBBAHAAcABYAHIAcgBlAGIAbQBuAGcAZQBiADAAYQA3AGcAZwBkAGQANgBzAGUAYwAxAGMAcQA0ADkANAA2ADgAdgA4AHEAcgAAAD4AAAA5AAAACQAAoC0AAAAxU1BTVShMn3mfOUuo0OHULeHV8xEAAAAHAAAAAAsAAAD//wAAAAAAAAAAAAAAAAAA",
+				"Header": {
+					"Signature": "0002140100000000c000000000000046",
+					"DataFlags": 10485889,
+					"FileAttributes": 0,
+					"TargetCreationDate": "\/Date(-11644473600000)\/",
+					"TargetModificationDate": "\/Date(-11644473600000)\/",
+					"TargetLastAccessedDate": "\/Date(-11644473600000)\/",
+					"FileSize": 0,
+					"IconIndex": 0,
+					"HotKey": "",
+					"ShowWindow": "SwNormal",
+					"Reserved0": 0,
+					"Reserved1": 0,
+					"Reserved2": 0
+				},
+				"LocationFlags": 0
+			}
+		}
+	]
+}
+```
+
+{pagebreak}
+
+## Analyzing JLECmd Output - HTML
+
+When parsing JumpLists with JLECmd with the ‘--html‘ switch, JLECmd will output the parsed data into an HTML file. Please note, the HTML file will be placed into a dedicated subfolder, which is not normally the case when outputting to CSV or JSON.
+
+![](jlecmd_output\HTMLReportExample.jpg)
+
+{pagebreak}

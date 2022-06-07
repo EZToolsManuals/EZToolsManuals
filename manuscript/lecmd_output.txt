@@ -1,0 +1,43 @@
+# LECmd Output
+
+## Analyzing LECmd Output - Console
+
+When parsing .LNK files with LECmd without the `-q` switch, LECmd will display in the console window parsed data from each .LNK filed processed. 
+
+![](lecmd_output\ConsoleExample1.jpg)
+![](lecmd_output\ConsoleExample2.jpg)
+![](lecmd_output\ConsoleExample3.jpg)
+
+{pagebreak}
+
+## Analyzing LECmd Output - CSV
+
+When parsing .LNK files with LECmd with the ‘--csv‘ switch, LECmd will output the parsed data into a CSV file. The CSV file can then be ingested into a tool like Timeline Explorer to analyze the parsed data.
+
+![](lecmd_output\CSVReportExampleTLE.jpg)
+
+{pagebreak}
+
+## Analyzing LECmd Output - JSON
+
+When parsing .LNK files with LECmd with the ‘--json‘ switch, LECmd will output the parsed data into a JSON file. 
+
+![](lecmd_output\JSONPrettyReportExample.jpg)
+
+{pagebreak}
+
+## Analyzing LECmd Output - XML
+
+When parsing .LNK files with LECmd with the ‘--xml‘ switch, LECmd will output the parsed data into an XML file.
+
+![](lecmd_output\XMLReportExample.jpg)
+
+{pagebreak}
+
+## Analyzing LECmd Output - HTML
+
+When parsing .LNK files with LECmd with the ‘--html‘ switch, LECmd will output the parsed data into an HTML file. Please note, the HTML file will be placed into a dedicated subfolder, which is not normally the case when outputting to CSV, XML, or JSON.
+
+![](lecmd_output\HTMLReportExample.jpg)
+
+{pagebreak}

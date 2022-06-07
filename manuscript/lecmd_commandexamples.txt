@@ -1,0 +1,60 @@
+# Command Examples
+
+## Example LECmd Commands
+
+#### Parse a single LNK file and view the results within the console
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f "C:\Temp\foobar.lnk"
+```
+
+#### Parse a single LNK file and output the results to CSV at specified location
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f C:\Temp\foobar.lnk --csv C:\Temp
+```
+
+#### Parse a single LNK file, output to JSON in pretty format
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f "C:\Temp\somelink.lnk" --json "D:\jsonOutput" --pretty
+```
+
+#### Parse a directory, output to CSV at specified location, output to HTML at specified location, output to XML to specified location, while only showing the filename being processed (used to speed up processing)
+
+{line-numbers:false}
+```powershell
+LECmd.exe -d "C:\Temp" --csv "c:\temp" --html c:\temp --xml c:\temp\xml -q
+```
+
+#### Parse a single LNK file while suppressing Target ID list details and Extra blocks information
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f "C:\Temp\some other link.lnk" --nid --neb
+```
+
+#### Parse all files in a directory (regardless of presence of .LNK file extension)
+
+{line-numbers:false}
+```powershell
+LECmd.exe -d "C:\Temp" --all
+```
+
+#### Parse all files in a directory (regardless of presence of .LNK file extension), but only provide output for those .LNK files that point to removable drives
+
+{line-numbers:false}
+```powershell
+LECmd.exe -d "C:\Temp" --all -r
+```
+
+#### Parse a single LNK file and view the results within the console with higher precision timestamps
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test" --mp
+```
+

@@ -1,0 +1,173 @@
+# LECmd Switches
+
+In a PowerShell window, running `.\LECmd.exe` will provide the following options when running LECmd:
+
+{line-numbers:false}
+```powershell
+Description:
+  LECmd version 1.5.0.0
+
+  Author: Eric Zimmerman (saericzimmerman@gmail.com)
+  https://github.com/EricZimmerman/LECmd
+
+  Examples: LECmd.exe -f "C:\Temp\foobar.lnk"
+            LECmd.exe -f "C:\Temp\somelink.lnk" --json "D:\jsonOutput" --jsonpretty
+            LECmd.exe -d "C:\Temp" --csv "c:\temp" --html c:\temp --xml c:\temp\xml -q
+            LECmd.exe -f "C:\Temp\some other link.lnk" --nid --neb
+            LECmd.exe -d "C:\Temp" --all
+
+            Short options (single letter) are prefixed with a single dash. Long commands are prefixed with two dashes
+
+
+Usage:
+  LECmd [options]
+
+Options:
+  -f <f>          File to process. Either this or -d is required
+  -d <d>          Directory to recursively process. Either this or -f is required
+  -r              Only process lnk files pointing to removable drives [default: False]
+  -q              Only show the filename being processed vs all output. Useful to speed up exporting to json and/or csv
+                  [default: False]
+  --all           Process all files in directory vs. only files matching *.lnk [default: False]
+  --csv <csv>     Directory to save CSV formatted results to. Be sure to include the full path in double quotes
+  --csvf <csvf>   File name to save CSV formatted results to. When present, overrides default name
+  --xml <xml>     Directory to save XML formatted results to. Be sure to include the full path in double quotes
+  --html <html>   Directory to save xhtml formatted results to. Be sure to include the full path in double quotes
+  --json <json>   Directory to save json representation to. Use --pretty for a more human readable layout
+  --pretty        When exporting to json, use a more human readable layout [default: False]
+  --nid           Suppress Target ID list details from being displayed [default: False]
+  --neb           Suppress Extra blocks information from being displayed [default: False]
+  --dt <dt>       The custom date/time format to use when displaying time stamps. See https://goo.gl/CNVq0k for options
+                  [default: yyyy-MM-dd HH:mm:ss]
+  --mp            Display higher precision for time stamps [default: False]
+  --debug         Show debug information during processing [default: False]
+  --trace         Show trace information during processing [default: False]
+  --version       Show version information
+  -?, -h, --help  Show help and usage information
+
+
+Either -f or -d is required. Exiting
+```
+
+While there are explanations for each switch, let’s walk through each one in further detail.
+
+## Switch Descriptions
+
+### `-f`
+
+This is a common switch within EZ Tools. Use `-f` to point to a single .LNK file for LECmd to parse.
+
+Example: `.\LECmd.exe -f C:\temp\test.lnk`
+
+### `-d`
+
+This is a common switch within EZ Tools. Use `-d` to point to a directory for LECmd to parse. Please note, this switch does work recursively.
+
+Example: `.\LECmd.exe -d C:\temp`
+
+### `-r`
+
+This switch will instruct LECmd to parse .LNK files that point to a file being opened from a removable drive ONLY.
+
+Example: `.\LECmd.exe -d C:\temp -r`
+
+### `-q`
+
+This switch will instruct LECmd to output only what files were processed rather than the parsed data from each .LNK file.
+
+For instance, running `.\LECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\"` resulted in the following: `Processed 554 out of 554 files in 6.4882 seconds`
+
+Running `.\LECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\" -q` resulted in the following: `Processed 554 out of 554 files in 0.3951 seconds`
+
+### `--all`
+
+This switch will instruct LECmd to attempt to parse every file in the directory specified, regardless of file extension. Output will be generated only for those files identified to be .LNK files.
+
+Example: `.\LECmd.exe -d C:\temp --all`
+
+### `--csv`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into a CSV at the specified location.
+
+Example: `.\LECmd.exe -d C:\temp\LNKFiles --csv C:\temp\LNKFiles\output`
+
+### `--csvf`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into a CSV at the specified location and name it using the value specified for this switch.
+
+Example: `.\LECmd.exe -d C:\temp\LNKFiles --csv C:\temp\LNKFiles\output --csvf LNKFileOutput.csv`
+
+### `--xml`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into XML at the specified location. Please note, this will output an XML file for each .LNK file parsed.
+
+Example: `.\LECmd.exe -d C:\temp\LNKFiles --xml C:\temp\LNKFiles\output`
+
+### `--html`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into XML at the specified location.
+
+Example: `.\LECmd.exe -d C:\temp\LNKFiles --html C:\temp\LNKFiles\output`
+
+### `--json`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into JSON at the specified location. Please note, this will output a single JSON file regardless of the number of .LNK files parsed.
+
+Example: `.\LECmd.exe -d C:\temp\LNKFiles --json C:\temp\LNKFiles\output`
+
+### `--pretty`
+
+This switch will instruct LECmd to output parsed data into pretty printed JSON at the specified location.
+
+Example: `.\LECmd.exe -d C:\temp\LNKFiles --json C:\temp\LNKFiles\output --pretty`
+
+
+### `--nid`
+
+This switch will instruct LECmd to suppress the Target ID list details. This will provide a message similar to this in place of the Target ID list details: `(Target ID information suppressed. Lnk TargetID count: 6)`
+
+### `--neb`
+
+This switch will instruct LECmd to suppress the Extra blocks details. This will provide a message similar to this in place of the Target ID list details: `(Extra blocks information suppressed. Lnk Extra block count: 2)`
+
+### `--dt`
+
+This switch will instruct LECmd to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
+
+### `--mp`
+
+This switch will instruct LECmd to provide more verbose timestamps. For instance, running `.\LECmd.exe -f "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test` resulted in the following:
+
+{line-numbers:false}
+```powershell
+Source file: D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test
+  Source created:  2022-01-31 17:25:58
+  Source modified: 2022-01-31 17:25:58
+  Source accessed: 2022-06-05 01:57:47
+```
+
+Running `.\LECmd.exe -f "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test" --mp` resulted in the following:
+
+{line-numbers:false}
+```powershell
+Source file: D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test
+  Source created:  2022-01-31 17:25:58.4983924
+  Source modified: 2022-01-31 17:25:58.0000000
+  Source accessed: 2022-06-05 01:57:51.8825142
+```
+
+### `--debug`
+
+This is a common switch within EZ Tools. This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
+
+### `--trace`
+
+This is a common switch within EZ Tools. This switch will provide log messages that are helpful for tracing the execution of code. `--trace` can be added to any command for more verbose messaging.
+
+### `--version`
+
+This is a common switch within EZ Tools. This switch will display the current version of the LECmd binary.
+
+### `--help`
+
+This is a common switch within EZ Tools. This switch will print the same help information as running `.\LECmd.exe` by itself.
