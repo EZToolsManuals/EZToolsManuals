@@ -1,0 +1,57 @@
+# LECmd - Key Takeaways
+
+LECmd parses .LNK files, which are indicative of file access. .LNK files are created when a file is opened for the first time. If a .LNK file exists for a given file or folder, then that file or folder has been accessed at least once by a user.
+
+LECmd output, regardless of file format, will provide potentially useful information about user activity on a given Windows system.
+
+## Important Data Points
+
+### Timestamps
+
+LECmd output will provide the following timestamps:
+
+ * SourceCreated - The creation timestamp associated with the .LNK file itself
+ * SourceModified - The modified timestamp associated with the .LNK file itself
+ * SourceAccessed - The accessed timestamp associated with the .LNK file itself
+ * TargetCreated - The creation timestamp associated with the file the .LNK file points to
+ * TargetModified - The modified timestamp associated with the file the .LNK file points to
+ * TargetAccessed - The accessed timestamp associated with the file the .LNK file points to
+
+SourceCreated will be the most useful indicator of when a file was first opened by a user. SourceModified will be the most useful indicator of when the file was last opened by a user.
+
+The Target timestamps can be useful to cross reference with the timestamps in the MFT. Usually, these timestamps are the 0x10 ($Standard_Information) timestamps from the $MFT. In testing, it appears the timestamps stored within the .LNK file are “refreshed” when a file is opened again. The timestamps stored within a .LNK file are therefore a snapshop in time of when the .LNK file was last modified via opening a file. This can be useful in that if a file was timestomped (aka timestamps altered), those altered timestamps won’t reflect in the .LNK file until the timestomped file has been opened AFTER being timestomped.
+
+### Other Attributes
+
+SourceFile will provide the file path to the LNK file being parsed.
+
+FileSize will provide the file size of the target file that the .LNK file is pointing to.
+
+WorkingDirectory will provide the parent directory that the target file resides in.
+
+
+{
+	SourceFile: "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test",
+	SourceCreated: "2022-01-31T17:25:58.4983924+00:00",
+	SourceModified: "2022-01-31T17:25:58.0000000+00:00",
+	SourceAccessed: "2022-06-04T17:27:30.1954118+00:00",
+	TargetCreated: "2015-12-25T03:02:06.2224518+00:00",
+	TargetModified: "2015-12-18T17:21:44.0000000+00:00",
+	TargetAccessed: "2015-12-25T03:02:09.8369990+00:00",
+	FileSize: 34202624,
+	WorkingDirectory: "D:\Dropbox\!Software\xwfim",
+	FileAttributes: FileAttributeArchive,
+	HeaderFlags: "HasTargetIdList, HasLinkInfo, HasWorkingDir, IsUnicode, EnableTargetMetadata",
+	DriveType: Fixed storage media (Hard drive),
+	VolumeSerialNumber: DAFFD9CE,
+	LocalPath: "D:\Dropbox\!Software\xwfim\XWFIM.exe",
+	TargetIDAbsolutePath: "My Computer\D:\\\\",
+	TargetMFTEntryNumber: 0x2C04,
+	TargetMFTSequenceNumber: 0x1,
+	MachineID: sagerez,
+	MachineMACAddress: "a4:34:d9:43:f3:63",
+	MACVendor: INTEL,
+	TrackerCreatedOn: "2016-01-24T18:23:46.4858431+00:00",
+	ExtraBlocksPresent: "TrackerDataBaseBlock, PropertyStoreDataBlock"
+}
+
