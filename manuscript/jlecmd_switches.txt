@@ -75,21 +75,9 @@ Options:
 Either -f or -d is required. Exiting
 ```
 
-While there are explanations for each switch, let’s walk through each one in further detail.
+While there are explanations for each switch, let’s walk through each one of the switches unique to JLECmd in further detail.
 
 ## Switch Descriptions
-
-### `-f`
-
-This is a common switch within EZ Tools. Use `-f` to point to a single JumpList for JLECmd to parse.
-
-Example: `.\JLECmd.exe -f D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms`
-
-### `-d`
-
-This is a common switch within EZ Tools. Use `-d` to point to a directory for JLECmd to parse. Please note, this switch does work recursively.
-
-Example: `.\JLECmd.exe -d C:\temp`
 
 ### `--all`
 
@@ -97,35 +85,6 @@ This switch will instruct JLECmd to attempt to parse every file in the directory
 
 Example: `.\JLECmd.exe -d C:\temp --all`
 
-### `--csv`
-
-This is a common switch within EZ Tools. This switch will instruct JLECmd to output parsed data into a CSV at the specified location.
-
-Example: `.\JLECmd.exe -d C:\temp\JumpLists --csv C:\temp\JumpLists\output`
-
-### `--csvf`
-
-This is a common switch within EZ Tools. This switch will instruct JLECmd to output parsed data into a CSV at the specified location and name it using the value specified for this switch.
-
-Example: `.\JLECmd.exe -d C:\temp\JumpLists --csv C:\temp\JumpLists\output --csvf JumpListOutput.csv`
-
-### `--json`
-
-This is a common switch within EZ Tools. This switch will instruct JLECmd to output parsed data into JSON at the specified location. Please note, this will output a single JSON file for each JumpList parsed.
-
-Example: `.\JLECmd.exe -d C:\temp\JumpLists --json C:\temp\JumpLists\output`
-
-### `--html`
-
-This is a common switch within EZ Tools. This switch will instruct JLECmd to output parsed data into XML at the specified location.
-
-Example: `.\JLECmd.exe -d C:\temp\JumpLists --html C:\temp\JumpLists\output`
-
-### `--pretty`
-
-This switch will instruct JLECmd to output parsed data into pretty printed JSON at the specified location.
-
-Example: `.\JLECmd.exe -d C:\temp\JumpLists --json C:\temp\JumpLists\output --pretty`
 
 ### `-q`
 
@@ -288,19 +247,3 @@ Directory Name: b
 
   Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
 ```
-
-### `--debug`
-
-This is a common switch within EZ Tools. This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
-
-### `--trace`
-
-This is a common switch within EZ Tools. This switch will provide log messages that are helpful for tracing the execution of code. `--trace` can be added to any command for more verbose messaging.
-
-### `--version`
-
-This is a common switch within EZ Tools. This switch will display the current version of the JLECmd binary.
-
-### `--help`
-
-This is a common switch within EZ Tools. This switch will print the same help information as running `.\JLECmd.exe` by itself.
