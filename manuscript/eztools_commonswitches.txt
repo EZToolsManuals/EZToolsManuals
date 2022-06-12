@@ -1,0 +1,93 @@
+# EZ Tools - Common Switches
+
+## Common Switches
+
+While each of the EZ Tools provide unique functionality based on the artifact they were developed specifically to parse, most EZ Tools share common switches that will be covered here so they’re not repeated in each EZ Tools’ respection Switches chapter.
+
+### `-f`
+
+Use `-f` to point to a single file to be parsed.
+
+#### Examples
+
+`.\JLECmd.exe -f D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\573770283dc3d854.automaticDestinations-ms`
+`.\LECmd.exe -f C:\temp\test.lnk`
+`.\MFTECmd.exe -f C:\temp\webinar6152022\tout\C\$MFT`
+
+### `-d`
+
+This is a common switch within EZ Tools. Use `-d` to point to a directory for LECmd to parse. Please note, this switch does work recursively.
+
+#### Examples
+
+`.\LECmd.exe -d C:\temp`
+
+### `--csv`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into a CSV at the specified location.
+
+#### Examples
+
+`.\LECmd.exe -d C:\temp\LNKFiles --csv C:\temp\LNKFiles\output`
+`.\JLECmd.exe -d C:\temp\JumpLists --csv C:\temp\JumpLists\output`
+
+### `--csvf`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into a CSV at the specified location and name it using the value specified for this switch.
+
+#### Examples
+
+`.\LECmd.exe -d C:\temp\LNKFiles --csv C:\temp\LNKFiles\output --csvf LNKFileOutput.csv`
+‘.\JLECmd.exe -d C:\temp\JumpLists --csv C:\temp\JumpLists\output --csvf JumpListOutput.csv`
+
+### `--xml`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into XML at the specified location. Please note, this will output an XML file for each .LNK file parsed.
+
+#### Examples
+
+`.\LECmd.exe -d C:\temp\LNKFiles --xml C:\temp\LNKFiles\output`
+
+### `--html`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into XML at the specified location.
+
+#### Examples
+
+`.\LECmd.exe -d C:\temp\LNKFiles --html C:\temp\LNKFiles\output`
+`.\JLECmd.exe -d C:\temp\JumpLists --html C:\temp\JumpLists\output`
+
+
+### `--json`
+
+This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into JSON at the specified location. Please note, this will output a single JSON file regardless of the number of .LNK files parsed.
+
+#### Examples
+
+`.\LECmd.exe -d C:\temp\LNKFiles --json C:\temp\LNKFiles\output`
+`.\JLECmd.exe -d C:\temp\JumpLists --json C:\temp\JumpLists\output`
+
+### `--pretty`
+
+This switch will instruct LECmd to output parsed data into pretty printed JSON at the specified location.
+
+#### Examples
+
+`.\LECmd.exe -d C:\temp\LNKFiles --json C:\temp\LNKFiles\output --pretty`
+`.\JLECmd.exe -d C:\temp\JumpLists --json C:\temp\JumpLists\output --pretty`
+
+### `--debug`
+
+This is a common switch within EZ Tools. This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
+
+### `--trace`
+
+This is a common switch within EZ Tools. This switch will provide log messages that are helpful for tracing the execution of code. `--trace` can be added to any command for more verbose messaging.
+
+### `--version`
+
+This is a common switch within EZ Tools. This switch will display the current version of the EZ Tool binary.
+
+### `--help`
+
+This is a common switch within EZ Tools. This switch will print the same help information as executing the EZ Tool from the command line without any switches.
