@@ -1,3 +1,4 @@
+EZToolsIntroduction.txt
 lecmd_introduction.txt
 lecmd_switches.txt
 lecmd_usageexamples.txt
