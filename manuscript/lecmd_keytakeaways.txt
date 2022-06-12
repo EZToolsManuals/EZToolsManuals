@@ -23,35 +23,56 @@ The Target timestamps can be useful to cross reference with the timestamps in th
 
 ### Other Attributes
 
+#### SourceFile
+
 SourceFile will provide the file path to the LNK file being parsed.
+
+#### FileSize
 
 FileSize will provide the file size of the target file that the .LNK file is pointing to.
 
+#### WorkingDirectory
+
 WorkingDirectory will provide the parent directory that the target file resides in.
 
+#### DriveType
 
-{
-	SourceFile: "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test",
-	SourceCreated: "2022-01-31T17:25:58.4983924+00:00",
-	SourceModified: "2022-01-31T17:25:58.0000000+00:00",
-	SourceAccessed: "2022-06-04T17:27:30.1954118+00:00",
-	TargetCreated: "2015-12-25T03:02:06.2224518+00:00",
-	TargetModified: "2015-12-18T17:21:44.0000000+00:00",
-	TargetAccessed: "2015-12-25T03:02:09.8369990+00:00",
-	FileSize: 34202624,
-	WorkingDirectory: "D:\Dropbox\!Software\xwfim",
-	FileAttributes: FileAttributeArchive,
-	HeaderFlags: "HasTargetIdList, HasLinkInfo, HasWorkingDir, IsUnicode, EnableTargetMetadata",
-	DriveType: Fixed storage media (Hard drive),
-	VolumeSerialNumber: DAFFD9CE,
-	LocalPath: "D:\Dropbox\!Software\xwfim\XWFIM.exe",
-	TargetIDAbsolutePath: "My Computer\D:\\\\",
-	TargetMFTEntryNumber: 0x2C04,
-	TargetMFTSequenceNumber: 0x1,
-	MachineID: sagerez,
-	MachineMACAddress: "a4:34:d9:43:f3:63",
-	MACVendor: INTEL,
-	TrackerCreatedOn: "2016-01-24T18:23:46.4858431+00:00",
-	ExtraBlocksPresent: "TrackerDataBaseBlock, PropertyStoreDataBlock"
-}
+DriveType will provide insight as to what type of drive the SourceFile resided on at the time of file access.
 
+#### VolumeSerialNumber
+
+VolumeSerialNumber will provide the Volume Serial Number of the drive the target file resided on at the time of file access.
+
+#### LocalPath
+
+LocalPath will provide the full path to the target file that was accessed by the user. 
+
+#### TargetMFTEntryNumber
+
+TargetMFTEntryNumber will provide the MFT Entry number for the Target File in hexadecimal and decimal. 
+
+#### TargetMFTSequenceNumber
+
+TargetMFTSequenceNumber will provide the MFT Sequence number for the Target File in hexadecimal and decimal. 
+
+#### MachineID
+
+MachineID will provide the hostname of the hostnam the target file resided on at the time of file access, if the tracker database block is present within the LNK file.
+
+#### MachineMACAddress
+
+MachineMACAddress will provide the MAC Address for the host, if the tracker database block is present within the LNK file.
+
+#### MACVendor
+
+MACVendor will resolve the MAC address to provide the associated vendor, if known, and if the tracker database block is present within the LNK file..
+
+#### ExtraBlocksPresent
+
+ExtraBlocksPresent will provide insight as to whether or not extra data blcoks are present within the LNK file. The other blocks that are possible to be present within a LNK file are: TrackerDataBaseBlock and PropertyStoreDataBlock.
+
+#### TODO
+FileAttributes
+HeaderFlags
+TargetIDAbsolutePath
+TrackerCreatedOn
