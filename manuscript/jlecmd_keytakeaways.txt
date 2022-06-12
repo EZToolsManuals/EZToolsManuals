@@ -1,0 +1,69 @@
+# JLECmd - Key Takeaways
+
+JLECmd parses JumpLists, which are a collection of LNK files organized by AppID. JumpLists provide indicators of file access. 
+
+JLECmd output, regardless of file format, will provide potentially useful information about user activity on a given Windows system.
+
+## Important Data Points
+
+### Attributes
+
+#### AppID/Description
+
+
+#### DestList Entries
+
+
+#### MRU
+
+
+
+#### Path
+
+
+#### Pinned
+
+
+#### Created on
+
+
+#### Last modified
+
+
+#### Hostname
+
+
+#### Mac Address
+
+
+#### Interaction count
+
+
+#### Absolute path
+
+
+--- AppId information ---
+  AppID: f01b4d95cf55d32a
+  Description: Windows Explorer Windows 8.1
+
+--- DestList information ---
+  Expected DestList entries:  11
+  Actual DestList entries:    11
+  DestList version:           4
+
+--- DestList entries ---
+Entry #: 11
+  MRU: 0
+  Path: C:\Users\TestUser\Desktop\Targets
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 21:40:42
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
+
+#### TODO
+
