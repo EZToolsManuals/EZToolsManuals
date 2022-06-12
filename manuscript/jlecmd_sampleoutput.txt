@@ -1,0 +1,175 @@
+# JLECmd - Sample Output
+
+`.\JLECmd.exe -d "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM"`
+
+{line-numbers:false}
+```powershell
+---------- Processed D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\ccba5a5986c77e43.customDestinations-ms in 0.01157700 seconds ----------
+
+Processing D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms
+
+Source file: D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms
+
+--- AppId information ---
+  AppID: f01b4d95cf55d32a
+  Description: Windows Explorer Windows 8.1
+
+--- DestList information ---
+  Expected DestList entries:  11
+  Actual DestList entries:    11
+  DestList version:           4
+
+--- DestList entries ---
+Entry #: 11
+  MRU: 0
+  Path: C:\Users\TestUser\Desktop\Targets
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 21:40:42
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
+
+
+Entry #: 1
+  MRU: 1
+  Path: knownfolder:{754AC886-DF64-4CBA-86B5-F7FBF4FBCEF5} ==> ThisPCDesktopFolder
+  Pinned: True
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 21:40:42
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 4
+
+--- Lnk information ---
+  Absolute path: My Computer\Desktop
+
+
+Entry #: 10
+  MRU: 2
+  Path: C:\Users\TestUser\Downloads\APTSimulator_pw_apt\dist
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 19:49:34
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt\dist
+
+
+Entry #: 9
+  MRU: 3
+  Path: C:\Users\TestUser\Downloads\APTSimulator_pw_apt\APTSimulator
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 19:49:34
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt\APTSimulator
+
+
+Entry #: 8
+  MRU: 4
+  Path: C:\Users\TestUser\Downloads\APTSimulator_pw_apt
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 19:49:34
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt
+
+
+Entry #: 7
+  MRU: 5
+  Path: C:\Users\TestUser\Downloads\Sysmon
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 19:49:07
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\Sysmon
+
+
+Entry #: 6
+  MRU: 6
+  Path: knownfolder:{18989B1D-99B5-455B-841C-AB7C74E4DDFC} ==> Videos
+  Pinned: False
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:35:24
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Videos
+
+
+Entry #: 5
+  MRU: 7
+  Path: knownfolder:{4BD8D571-6D19-48D3-BE97-422220080E43} ==> Music
+  Pinned: False
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:35:24
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Music
+
+
+Entry #: 3
+  MRU: 8
+  Path: knownfolder:{FDD39AD0-238F-46AF-ADB4-6C85480369C7} ==> Documents
+  Pinned: True
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:35:24
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Documents
+
+
+Entry #: 4
+  MRU: 9
+  Path: knownfolder:{33E28130-4E1E-4676-835A-98395C3BC3BB} ==> Pictures
+  Pinned: True
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:35:24
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Pictures
+
+
+Entry #: 2
+  MRU: 10
+  Path: knownfolder:{374DE290-123F-4565-9164-39C4925E467B} ==> Downloads
+  Pinned: True
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:34:28
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Downloads
+```
