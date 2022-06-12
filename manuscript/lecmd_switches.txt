@@ -49,7 +49,7 @@ Options:
 Either -f or -d is required. Exiting
 ```
 
-While there are explanations for each switch, let’s walk through each one in further detail.
+While there are explanations for each switch, let’s walk through each one of the switches unique to LECmd in further detail.
 
 ## Switch Descriptions
 
@@ -106,19 +106,3 @@ Source file: D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test
   Source modified: 2022-01-31 17:25:58.0000000
   Source accessed: 2022-06-05 01:57:51.8825142
 ```
-
-### `--debug`
-
-This is a common switch within EZ Tools. This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
-
-### `--trace`
-
-This is a common switch within EZ Tools. This switch will provide log messages that are helpful for tracing the execution of code. `--trace` can be added to any command for more verbose messaging.
-
-### `--version`
-
-This is a common switch within EZ Tools. This switch will display the current version of the LECmd binary.
-
-### `--help`
-
-This is a common switch within EZ Tools. This switch will print the same help information as running `.\LECmd.exe` by itself.
