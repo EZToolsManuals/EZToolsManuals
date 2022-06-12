@@ -1,4 +1,5 @@
-EZToolsIntroduction.txt
+eztools_introduction.txt
+eztools_commonswitches.txt
 lecmd_introduction.txt
 lecmd_switches.txt
 lecmd_usageexamples.txt
