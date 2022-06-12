@@ -53,18 +53,6 @@ While there are explanations for each switch, let’s walk through each one in fur
 
 ## Switch Descriptions
 
-### `-f`
-
-This is a common switch within EZ Tools. Use `-f` to point to a single .LNK file for LECmd to parse.
-
-Example: `.\LECmd.exe -f C:\temp\test.lnk`
-
-### `-d`
-
-This is a common switch within EZ Tools. Use `-d` to point to a directory for LECmd to parse. Please note, this switch does work recursively.
-
-Example: `.\LECmd.exe -d C:\temp`
-
 ### `-r`
 
 This switch will instruct LECmd to parse .LNK files that point to a file being opened from a removable drive ONLY.
@@ -84,43 +72,6 @@ Running `.\LECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\" -
 This switch will instruct LECmd to attempt to parse every file in the directory specified, regardless of file extension. Output will be generated only for those files identified to be .LNK files.
 
 Example: `.\LECmd.exe -d C:\temp --all`
-
-### `--csv`
-
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into a CSV at the specified location.
-
-Example: `.\LECmd.exe -d C:\temp\LNKFiles --csv C:\temp\LNKFiles\output`
-
-### `--csvf`
-
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into a CSV at the specified location and name it using the value specified for this switch.
-
-Example: `.\LECmd.exe -d C:\temp\LNKFiles --csv C:\temp\LNKFiles\output --csvf LNKFileOutput.csv`
-
-### `--xml`
-
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into XML at the specified location. Please note, this will output an XML file for each .LNK file parsed.
-
-Example: `.\LECmd.exe -d C:\temp\LNKFiles --xml C:\temp\LNKFiles\output`
-
-### `--html`
-
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into XML at the specified location.
-
-Example: `.\LECmd.exe -d C:\temp\LNKFiles --html C:\temp\LNKFiles\output`
-
-### `--json`
-
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into JSON at the specified location. Please note, this will output a single JSON file regardless of the number of .LNK files parsed.
-
-Example: `.\LECmd.exe -d C:\temp\LNKFiles --json C:\temp\LNKFiles\output`
-
-### `--pretty`
-
-This switch will instruct LECmd to output parsed data into pretty printed JSON at the specified location.
-
-Example: `.\LECmd.exe -d C:\temp\LNKFiles --json C:\temp\LNKFiles\output --pretty`
-
 
 ### `--nid`
 
