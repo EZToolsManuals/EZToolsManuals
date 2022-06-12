@@ -1,10 +1,14 @@
 lecmd_introduction.txt
 lecmd_switches.txt
-lecmd_commandexamples.txt
+lecmd_usageexamples.txt
+lecmd_sampleoutput.txt
 lecmd_output.txt
+lecmd_keytakeaways.txt
 lecmd_references.txt
 jlecmd_introduction.txt
 jlecmd_switches.txt
-jlecmd_commandexamples.txt
+jlecmd_usageexamples.txt
 jlecmd_output.txt
+jlecmd_sampleoutput.txt
+jlecmd_keytakeaways.txt
 jlecmd_references.txt
