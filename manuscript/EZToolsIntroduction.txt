@@ -14,6 +14,6 @@ EZ Tools are tools written by Eric Zimmerman
 
 
 
-# Download EZ Tools
+## Download EZ Tools
 
 [EZ Tools](https://ericzimmerman.github.io/#!index.md)
