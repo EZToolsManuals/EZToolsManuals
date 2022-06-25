@@ -63,15 +63,15 @@ Either -f or -d is required. Exiting
 
 While there are explanations for each switch, let’s walk through each one of the switches unique to LECmd in further detail.
 
-## Switch Descriptions
+### LECmd Switch Descriptions
 
-### `-r`
+#### `-r`
 
 This switch will instruct LECmd to parse .LNK files that point to a file being opened from a removable drive ONLY.
 
 Example: `.\LECmd.exe -d C:\temp -r`
 
-### `-q`
+#### `-q`
 
 This switch will instruct LECmd to output only what files were processed rather than the parsed data from each .LNK file.
 
@@ -79,25 +79,25 @@ For instance, running `.\LECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArti
 
 Running `.\LECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\" -q` resulted in the following: `Processed 554 out of 554 files in 0.3951 seconds`
 
-### `--all`
+#### `--all`
 
 This switch will instruct LECmd to attempt to parse every file in the directory specified, regardless of file extension. Output will be generated only for those files identified to be .LNK files.
 
 Example: `.\LECmd.exe -d C:\temp --all`
 
-### `--nid`
+#### `--nid`
 
 This switch will instruct LECmd to suppress the Target ID list details. This will provide a message similar to this in place of the Target ID list details: `(Target ID information suppressed. Lnk TargetID count: 6)`
 
-### `--neb`
+#### `--neb`
 
 This switch will instruct LECmd to suppress the Extra blocks details. This will provide a message similar to this in place of the Target ID list details: `(Extra blocks information suppressed. Lnk Extra block count: 2)`
 
-### `--dt`
+#### `--dt`
 
 This switch will instruct LECmd to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
 
-### `--mp`
+#### `--mp`
 
 This switch will instruct LECmd to provide more verbose timestamps. For instance, running `.\LECmd.exe -f "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test` resulted in the following:
 
