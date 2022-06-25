@@ -1,0 +1,379 @@
+# LECmd
+
+## LECmd Introduction
+
+### Description
+
+LECmd is a tool created by Eric Zimmerman used to parse .LNK files. .LNK files are native to the Windows operating system and are common indicators of file access. 
+
+TODO flesh this out more
+
+{pagebreak}
+
+## LECmd Switches
+
+In a PowerShell window, running `.\LECmd.exe` will provide the following options when running LECmd:
+
+{line-numbers:false}
+```powershell
+Description:
+  LECmd version 1.5.0.0
+
+  Author: Eric Zimmerman (saericzimmerman@gmail.com)
+  https://github.com/EricZimmerman/LECmd
+
+  Examples: LECmd.exe -f "C:\Temp\foobar.lnk"
+            LECmd.exe -f "C:\Temp\somelink.lnk" --json "D:\jsonOutput" --jsonpretty
+            LECmd.exe -d "C:\Temp" --csv "c:\temp" --html c:\temp --xml c:\temp\xml -q
+            LECmd.exe -f "C:\Temp\some other link.lnk" --nid --neb
+            LECmd.exe -d "C:\Temp" --all
+
+            Short options (single letter) are prefixed with a single dash. Long commands are prefixed with two dashes
+
+
+Usage:
+  LECmd [options]
+
+Options:
+  -f <f>          File to process. Either this or -d is required
+  -d <d>          Directory to recursively process. Either this or -f is required
+  -r              Only process lnk files pointing to removable drives [default: False]
+  -q              Only show the filename being processed vs all output. Useful to speed up exporting to json and/or csv
+                  [default: False]
+  --all           Process all files in directory vs. only files matching *.lnk [default: False]
+  --csv <csv>     Directory to save CSV formatted results to. Be sure to include the full path in double quotes
+  --csvf <csvf>   File name to save CSV formatted results to. When present, overrides default name
+  --xml <xml>     Directory to save XML formatted results to. Be sure to include the full path in double quotes
+  --html <html>   Directory to save xhtml formatted results to. Be sure to include the full path in double quotes
+  --json <json>   Directory to save json representation to. Use --pretty for a more human readable layout
+  --pretty        When exporting to json, use a more human readable layout [default: False]
+  --nid           Suppress Target ID list details from being displayed [default: False]
+  --neb           Suppress Extra blocks information from being displayed [default: False]
+  --dt <dt>       The custom date/time format to use when displaying time stamps. See https://goo.gl/CNVq0k for options
+                  [default: yyyy-MM-dd HH:mm:ss]
+  --mp            Display higher precision for time stamps [default: False]
+  --debug         Show debug information during processing [default: False]
+  --trace         Show trace information during processing [default: False]
+  --version       Show version information
+  -?, -h, --help  Show help and usage information
+
+
+Either -f or -d is required. Exiting
+```
+
+While there are explanations for each switch, let’s walk through each one of the switches unique to LECmd in further detail.
+
+## Switch Descriptions
+
+### `-r`
+
+This switch will instruct LECmd to parse .LNK files that point to a file being opened from a removable drive ONLY.
+
+Example: `.\LECmd.exe -d C:\temp -r`
+
+### `-q`
+
+This switch will instruct LECmd to output only what files were processed rather than the parsed data from each .LNK file.
+
+For instance, running `.\LECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\"` resulted in the following: `Processed 554 out of 554 files in 6.4882 seconds`
+
+Running `.\LECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\" -q` resulted in the following: `Processed 554 out of 554 files in 0.3951 seconds`
+
+### `--all`
+
+This switch will instruct LECmd to attempt to parse every file in the directory specified, regardless of file extension. Output will be generated only for those files identified to be .LNK files.
+
+Example: `.\LECmd.exe -d C:\temp --all`
+
+### `--nid`
+
+This switch will instruct LECmd to suppress the Target ID list details. This will provide a message similar to this in place of the Target ID list details: `(Target ID information suppressed. Lnk TargetID count: 6)`
+
+### `--neb`
+
+This switch will instruct LECmd to suppress the Extra blocks details. This will provide a message similar to this in place of the Target ID list details: `(Extra blocks information suppressed. Lnk Extra block count: 2)`
+
+### `--dt`
+
+This switch will instruct LECmd to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
+
+### `--mp`
+
+This switch will instruct LECmd to provide more verbose timestamps. For instance, running `.\LECmd.exe -f "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test` resulted in the following:
+
+{line-numbers:false}
+```powershell
+Source file: D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test
+  Source created:  2022-01-31 17:25:58
+  Source modified: 2022-01-31 17:25:58
+  Source accessed: 2022-06-05 01:57:47
+```
+
+Running `.\LECmd.exe -f "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test" --mp` resulted in the following:
+
+{line-numbers:false}
+```powershell
+Source file: D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test
+  Source created:  2022-01-31 17:25:58.4983924
+  Source modified: 2022-01-31 17:25:58.0000000
+  Source accessed: 2022-06-05 01:57:51.8825142
+```
+
+{pagebreak}
+
+## LECmd Command Examples
+
+### Example LECmd Commands
+
+#### Parse a single LNK file and view the results within the console
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f "C:\Temp\foobar.lnk"
+```
+
+#### Parse a single LNK file and output the results to CSV at specified location
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f C:\Temp\foobar.lnk --csv C:\Temp
+```
+
+#### Parse a single LNK file, output to JSON in pretty format
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f "C:\Temp\somelink.lnk" --json "D:\jsonOutput" --pretty
+```
+
+#### Parse a directory, output to CSV at specified location, output to HTML at specified location, output to XML to specified location, while only showing the filename being processed (used to speed up processing)
+
+{line-numbers:false}
+```powershell
+LECmd.exe -d "C:\Temp" --csv "c:\temp" --html c:\temp --xml c:\temp\xml -q
+```
+
+#### Parse a single LNK file while suppressing Target ID list details and Extra blocks information
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f "C:\Temp\some other link.lnk" --nid --neb
+```
+
+#### Parse all files in a directory (regardless of presence of .LNK file extension)
+
+{line-numbers:false}
+```powershell
+LECmd.exe -d "C:\Temp" --all
+```
+
+#### Parse all files in a directory (regardless of presence of .LNK file extension), but only provide output for those .LNK files that point to removable drives
+
+{line-numbers:false}
+```powershell
+LECmd.exe -d "C:\Temp" --all -r
+```
+
+#### Parse a single LNK file and view the results within the console with higher precision timestamps
+
+{line-numbers:false}
+```powershell
+LECmd.exe -f "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test" --mp
+```
+
+{pagebreak}
+
+## LECmd Sample Output
+
+`.\LECmd.exe -d "D:\DFIRArtifactMuseum\Windows\LNK\Win10" --mp`
+
+{line-numbers:false}
+```powershell
+Processing D:\DFIRArtifactMuseum\Windows\LNK\Win10\XPS Viewer.lnk
+
+Source file: D:\DFIRArtifactMuseum\Windows\LNK\Win10\XPS Viewer.lnk
+  Source created:  2022-01-31 17:25:58.4973918
+  Source modified: 2022-01-31 17:25:58.0000000
+  Source accessed: 2022-06-12 18:38:15.3854180
+
+--- Header ---
+  Target created:  null
+  Target modified: null
+  Target accessed: null
+
+  File size: 0
+  Flags: HasName, HasIconLocation, IsUnicode, ForceNoLinkInfo, HasExpString, PreferEnvironmentPath
+  File attributes: 0
+  Icon index: -108
+  Show window: SwNormal (Activates and displays the window. The window is restored to its original size and position if the window is minimized or maximized.)
+
+Name: @%systemroot%\system32\XpsRchVw.exe,-103
+Icon Location: %systemroot%\system32\XpsRchVw.exe
+
+--- Extra blocks information ---
+
+>> Property store data block (Format: GUID\ID Description ==> Value)
+   46588ae2-4cbc-4338-bbfc-139326986dce\0      (Description not available)         ==> 0
+   9f4c2855-9f79-4b39-a8d0-e1d42de1d5f3\18     App User Model Installed By         ==> 1
+
+>> Environment variable data block
+   Environment variables: %systemroot%\system32\xpsrchvw.exe
+
+
+---------- Processed D:\DFIRArtifactMuseum\Windows\LNK\Win10\XPS Viewer.lnk in 0.00435160 seconds ----------
+```
+
+{pagebreak}
+
+## LECmd Output
+
+### Analyzing LECmd Output - Console
+
+When parsing .LNK files with LECmd without the `-q` switch, LECmd will display in the console window parsed data from each .LNK filed processed. 
+
+![](lecmd_output\ConsoleExample1.jpg)
+![](lecmd_output\ConsoleExample2.jpg)
+![](lecmd_output\ConsoleExample3.jpg)
+
+{pagebreak}
+
+### Analyzing LECmd Output - CSV
+
+When parsing .LNK files with LECmd with the ‘--csv‘ switch, LECmd will output the parsed data into a CSV file. The CSV file can then be ingested into a tool like Timeline Explorer to analyze the parsed data.
+
+![](lecmd_output\CSVReportExampleTLE.jpg)
+
+{pagebreak}
+
+### Analyzing LECmd Output - JSON
+
+When parsing .LNK files with LECmd with the ‘--json‘ switch, LECmd will output the parsed data into a JSON file. 
+
+![](lecmd_output\JSONPrettyReportExample.jpg)
+
+{pagebreak}
+
+### Analyzing LECmd Output - XML
+
+When parsing .LNK files with LECmd with the ‘--xml‘ switch, LECmd will output the parsed data into an XML file.
+
+![](lecmd_output\XMLReportExample.jpg)
+
+{pagebreak}
+
+### Analyzing LECmd Output - HTML
+
+When parsing .LNK files with LECmd with the ‘--html‘ switch, LECmd will output the parsed data into an HTML file. Please note, the HTML file will be placed into a dedicated subfolder, which is not normally the case when outputting to CSV, XML, or JSON.
+
+![](lecmd_output\HTMLReportExample.jpg)
+
+{pagebreak}
+
+## LECmd Key Takeaways
+
+LECmd parses .LNK files, which are indicative of file access. .LNK files are created when a file is opened for the first time. If a .LNK file exists for a given file or folder, then that file or folder has been accessed at least once by a user.
+
+LECmd output, regardless of file format, will provide potentially useful information about user activity on a given Windows system.
+
+### Important Data Points
+
+#### Timestamps
+
+LECmd output will provide the following timestamps:
+
+ * SourceCreated - The creation timestamp associated with the .LNK file itself
+ * SourceModified - The modified timestamp associated with the .LNK file itself
+ * SourceAccessed - The accessed timestamp associated with the .LNK file itself
+ * TargetCreated - The creation timestamp associated with the file the .LNK file points to
+ * TargetModified - The modified timestamp associated with the file the .LNK file points to
+ * TargetAccessed - The accessed timestamp associated with the file the .LNK file points to
+
+SourceCreated will be the most useful indicator of when a file was first opened by a user. SourceModified will be the most useful indicator of when the file was last opened by a user.
+
+The Target timestamps can be useful to cross reference with the timestamps in the MFT. Usually, these timestamps are the 0x10 ($Standard_Information) timestamps from the $MFT. In testing, it appears the timestamps stored within the .LNK file are “refreshed” when a file is opened again. The timestamps stored within a .LNK file are therefore a snapshop in time of when the .LNK file was last modified via opening a file. This can be useful in that if a file was timestomped (aka timestamps altered), those altered timestamps won’t reflect in the .LNK file until the timestomped file has been opened AFTER being timestomped.
+
+#### Other Attributes
+
+##### SourceFile
+
+SourceFile will provide the file path to the LNK file being parsed.
+
+##### FileSize
+
+FileSize will provide the file size of the target file that the .LNK file is pointing to.
+
+##### WorkingDirectory
+
+WorkingDirectory will provide the parent directory that the target file resides in.
+
+##### DriveType
+
+DriveType will provide insight as to what type of drive the SourceFile resided on at the time of file access.
+
+##### VolumeSerialNumber
+
+VolumeSerialNumber will provide the Volume Serial Number of the drive the target file resided on at the time of file access.
+
+##### LocalPath
+
+LocalPath will provide the full path to the target file that was accessed by the user. 
+
+##### TargetMFTEntryNumber
+
+TargetMFTEntryNumber will provide the MFT Entry number for the Target File in hexadecimal and decimal. 
+
+##### TargetMFTSequenceNumber
+
+TargetMFTSequenceNumber will provide the MFT Sequence number for the Target File in hexadecimal and decimal. 
+
+##### MachineID
+
+MachineID will provide the hostname of the hostnam the target file resided on at the time of file access, if the tracker database block is present within the LNK file.
+
+##### MachineMACAddress
+
+MachineMACAddress will provide the MAC Address for the host, if the tracker database block is present within the LNK file.
+
+##### MACVendor
+
+MACVendor will resolve the MAC address to provide the associated vendor, if known, and if the tracker database block is present within the LNK file..
+
+##### ExtraBlocksPresent
+
+ExtraBlocksPresent will provide insight as to whether or not extra data blcoks are present within the LNK file. The other blocks that are possible to be present within a LNK file are: TrackerDataBaseBlock and PropertyStoreDataBlock.
+
+##### TODO
+FileAttributes
+HeaderFlags
+TargetIDAbsolutePath
+TrackerCreatedOn
+
+{pagebreak}
+
+## LECmd References
+
+### Associated GitHub Repositories
+
+* <https://github.com/EricZimmerman/Lnk> is the C# library for parsing .LNK files 
+* <https://github.com/EricZimmerman/LECmd> is the Command Line wrapper for the .LNK library
+
+### Blog Posts
+
+#### Official Blog Posts
+
+Blog posts from Eric Zimmerman’s blog, Binary Foray:
+
+* <https://binaryforay.blogspot.com/2016/02/introducing-lecmd.html>
+* <https://binaryforay.blogspot.com/2016/02/lecmd-v0600-released.html>
+* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
+* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
+
+#### Community Blog Posts
+
+* Links to blog posts go here
+
+### Download LECmd
+
+LECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+{pagebreak}
