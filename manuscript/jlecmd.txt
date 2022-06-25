@@ -1,11 +1,3 @@
-jlecmd_introduction.txt
-jlecmd_switches.txt
-jlecmd_usageexamples.txt
-jlecmd_output.txt
-jlecmd_sampleoutput.txt
-jlecmd_keytakeaways.txt
-jlecmd_references.txt
-
 # JLECmd
 
 ## JLECmd Introduction
