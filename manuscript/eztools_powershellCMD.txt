@@ -1,14 +1,12 @@
 # EZ Tools - PowerShell vs CMD
 
-Talk about variables in PowerShell and how they need to be properly wrapped
-
-show screenshots of when using quotes vs single backticks
+There are some important scenarios to consider when using PowerShell vs Command Prompt. 
 
 ## Common Scenarios
 
 When using MFTECmd, using the `-f` switch will require you to point to a file that has a dollar sign (`$`) in the filename, such as `$MFT`, `$J`, etc. If you are using PowerShell when running MFTECmd, you will need to use single backticks instead of quotation marks around your file path.
 
-For those not familiar with PowerShell, variables are assigned using dollar signs. For instance, $variable can be assigned any value which can be used throughout a script without having to retype a value repeatedly.
+For those not familiar with PowerShell, variables are assigned using dollar signs. For instance, ‘$variable‘ can be assigned any value which can be used throughout a script without having to retype a value repeatedly.
 
 Here's an example of this:
 
