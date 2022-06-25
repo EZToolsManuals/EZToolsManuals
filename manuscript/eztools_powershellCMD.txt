@@ -3,3 +3,33 @@
 Talk about variables in PowerShell and how they need to be properly wrapped
 
 show screenshots of when using quotes vs single backticks
+
+## Common Scenarios
+
+When using MFTECmd, using the `-f` switch will require you to point to a file that has a dollar sign (`$`) in the filename, such as `$MFT`, `$J`, etc. If you are using PowerShell when running MFTECmd, you will need to use single backticks instead of quotation marks around your file path.
+
+For those not familiar with PowerShell, variables are assigned using dollar signs. For instance, $variable can be assigned any value which can be used throughout a script without having to retype a value repeatedly.
+
+Here's an example of this:
+
+$filePath = C:\User\TestUser\Desktop\Folder\AnotherFolder\LongPath\LongerPath\filename.exe
+
+We are assigning that very long file path to the $filePath variable. Therefore, in a script, we could simple use ‘$filePath‘ every time we want to inject that file path into our script. Additionally, it allows for us to declare the file path once in the script and the corrected file path is reflected wherever that variable is used. 
+
+How this relates to MFTECmd's usage is when pointing to a $MFT file, if you use quotation marks, PowerShell will be expecting a value to have been assigned to $MFT or $J. When running a one-liner command with MFTECmd, we are not declaring variables called $MFT or $J, rather, we're pointing to files that have those specific names. 
+
+Here is an example of a bad command using PowerShell:
+
+.\MFTECmd.exe -f "C:\temp\$someMFT” --csv C:\temp
+
+Here is an example of a correct command using PowerShell:
+
+.\MFTECmd.exe -f 'C:\temp\$someMFT' --csv C:\temp
+
+You will notice a difference in the colors
+
+![](MFTECmdExampleQuotationMarks.jpg)
+
+![](MFTECmdExampleSingleBackticks.jpg)
+
+Only when you run the command with single backticks will you have output generated with MFTECmd.
