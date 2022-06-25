@@ -1,0 +1,90 @@
+# Tool Name
+
+## Tool Introduction
+
+
+{pagebreak}
+
+## Tool Switches
+
+In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+
+{line-numbers:false}
+```powershell
+
+```
+
+### Switch Descriptions
+
+#### SWITCH
+
+{pagebreak}
+
+## Tool Command Examples
+
+### Example TOOL Commands
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+
+```
+
+{pagebreak}
+
+## Tool Output
+
+### Analyzing TOOL Output - Console
+
+{pagebreak}
+
+### Analyzing TOOL Output - CSV
+
+{pagebreak}
+
+### Analyzing TOOL Output - JSON
+
+{pagebreak}
+
+### Analyzing TOOL Output - HTML
+
+{pagebreak}
+
+## Tool Sample Output
+
+{pagebreak}
+
+## Tool Key Takeaways
+
+### Important Data Points
+
+{pagebreak}
+
+## Tool References
+
+### Associated GitHub Repositories
+
+* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
+* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
+* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+
+### Blog Posts
+
+#### Official Blog Posts
+
+Blog posts from Eric Zimmerman’s blog, Binary Foray:
+
+* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
+* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
+* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
+* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
+* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+
+#### Community Blog Posts
+
+* Links to blog posts go here
+
+### Download TOOL
+
+TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
