@@ -21,19 +21,19 @@ EZ Tools are free and open-source digital forensics tools written by Eric Zimmer
 
 ## Content by Eric Zimmerman
 
-[A Guide to Eric Zimmerman's command line tools (EZ Tools)](https://youtu.be/GhCZfCzn2l0)
-[Behind The Incident Eric Zimmerman](https://youtu.be/IuiIGzm7k34)
-[DFIR Summit 2016: Plumbing the Depths - Windows Registry Internals](https://youtu.be/bsWLg1fWelk)
-[Exploring Registry Explorer](https://youtu.be/x5mUUYqnh00)
-[Forensic Lunch 7/3/15 with Eric Zimmerman and more](https://youtu.be/NKzczOFyykc)
-[Forensic Lunch 3/8/19 Eric Zimmerman, Lee Whitfield , Kape, Forensic 4Cast, Nominations](https://youtu.be/Lwu1Deb6-xg)
-[From Tool Building to Scalable Automation - SANS DFIR Summit 2019 Keynote](https://youtu.be/RIDNVRcDuAY)
-[KAPE + EZ Tools and Beyond - OSDFCon 2019 - Eric Zimmerman](https://youtu.be/ZCj7cbWwUOs)
-[Oxygen Forensics Episode 114](https://youtu.be/qbFBmAJIbIU)
-[Plumbing the Depths: ShellBags - SANS DFIR SUMMIT](https://youtu.be/bWxbfARqBPY)
+* [A Guide to Eric Zimmerman's command line tools (EZ Tools)](https://youtu.be/GhCZfCzn2l0)
+* [Behind The Incident Eric Zimmerman](https://youtu.be/IuiIGzm7k34)
+* [DFIR Summit 2016: Plumbing the Depths - Windows Registry Internals](https://youtu.be/bsWLg1fWelk)
+* [Exploring Registry Explorer](https://youtu.be/x5mUUYqnh00)
+* [Forensic Lunch 7/3/15 with Eric Zimmerman and more](https://youtu.be/NKzczOFyykc)
+* [Forensic Lunch 3/8/19 Eric Zimmerman, Lee Whitfield , Kape, Forensic 4Cast, Nominations](https://youtu.be/Lwu1Deb6-xg)
+* [From Tool Building to Scalable Automation - SANS DFIR Summit 2019 Keynote](https://youtu.be/RIDNVRcDuAY)
+* [KAPE + EZ Tools and Beyond - OSDFCon 2019 - Eric Zimmerman](https://youtu.be/ZCj7cbWwUOs)
+* [Oxygen Forensics Episode 114](https://youtu.be/qbFBmAJIbIU)
+* [Plumbing the Depths: ShellBags - SANS DFIR SUMMIT](https://youtu.be/bWxbfARqBPY)
 
 ## Content by the DFIR Community about EZ Tools
 
-[Enabling KAPE at Scale](https://youtu.be/YF-jDoh8BFM)
-[Fast, Scalable Results with EZ Tools and the New Command line poster](https://youtu.be/yEmLuj3oDzs)
-[Triage Collection and Timeline Analysis with KAPE](https://www.youtube.com/watch?v=iYyWZSNBNcw)
+* [Enabling KAPE at Scale](https://youtu.be/YF-jDoh8BFM)
+* [Fast, Scalable Results with EZ Tools and the New Command line poster](https://youtu.be/yEmLuj3oDzs)
+* [Triage Collection and Timeline Analysis with KAPE](https://www.youtube.com/watch?v=iYyWZSNBNcw)
