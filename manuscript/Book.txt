@@ -1,5 +1,7 @@
 eztools_introduction.txt
 eztools_commonswitches.txt
 eztools_powershellCMD.txt
+sectionCLI.txt
 lecmd.txt
 jlecmd.txt
+sectionGUI.txt
