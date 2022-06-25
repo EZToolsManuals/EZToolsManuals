@@ -28,8 +28,8 @@ Here is an example of a correct command using PowerShell:
 
 You will notice a difference in the colors
 
-![](MFTECmdExampleQuotationMarks.jpg)
+![](introduction\MFTECmdExampleQuotationMarks.jpg)
 
-![](MFTECmdExampleSingleBackticks.jpg)
+![](introduction\MFTECmdExampleSingleBackticks.jpg)
 
 Only when you run the command with single backticks will you have output generated with MFTECmd.
