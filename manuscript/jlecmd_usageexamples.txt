@@ -6,21 +6,21 @@
 
 {line-numbers:false}
 ```powershell
-JLECmd.exe -f "JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms"
+JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms"
 ```
 
 #### Parse a single JumpList and output the results to CSV at specified location
 
 {line-numbers:false}
 ```powershell
-JLECmd.exe -f “JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms” --csv C:\Temp
+JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms” --csv C:\Temp
 ```
 
 #### Parse a single JumpList, output to JSON in pretty format
 
 {line-numbers:false}
 ```powershell
-JLECmd.exe -f "JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --json "D:\jsonOutput" --pretty
+JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --json "D:\jsonOutput" --pretty
 ```
 
 #### Parse a directory, output to CSV at specified location, output to HTML at specified location, output to XML to specified location, while only showing the filename being processed (used to speed up processing)
@@ -41,6 +41,6 @@ JLECmd.exe -d "C:\Temp" --all
 
 {line-numbers:false}
 ```powershell
-JLECmd.exe -f "JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --mp
+JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --mp
 ```
 
