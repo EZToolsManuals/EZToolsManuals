@@ -1,0 +1,767 @@
+jlecmd_introduction.txt
+jlecmd_switches.txt
+jlecmd_usageexamples.txt
+jlecmd_output.txt
+jlecmd_sampleoutput.txt
+jlecmd_keytakeaways.txt
+jlecmd_references.txt
+
+# JLECmd
+
+## JLECmd Introduction
+
+### Description
+
+JLECmd is a tool created by Eric Zimmerman used to parse JumpList files. JumpList files are native to the Windows operating system and are common indicators of file access. 
+
+TODO flesh this out more
+
+Talk about Automatic vs Custom Destinations
+
+{pagebreak}
+
+## JLECmd Switches
+
+In a PowerShell window, running `.\JLECmd.exe` will provide the following options when running JLECmd:
+
+{line-numbers:false}
+```powershell
+Description:
+  JLECmd version 1.5.0.0
+
+  Author: Eric Zimmerman (saericzimmerman@gmail.com)
+  https://github.com/EricZimmerman/JLECmd
+
+  Examples: JLECmd.exe -f "C:\Temp\f01b4d95cf55d32a.customDestinations-ms"
+  --mp
+          JLECmd.exe -f "C:\Temp\f01b4d95cf55d32a.automaticDestinations-ms"
+  --json "D:\jsonOutput" --jsonpretty
+          JLECmd.exe -d "C:\CustomDestinations" --csv "c:\temp" --html "c:\temp"
+  -q
+          JLECmd.exe -d "C:\Users\e\AppData\Roaming\Microsoft\Windows\Recent"
+  --dt "ddd yyyy MM dd HH:mm:ss.fff"
+
+          Short options (single letter) are prefixed with a single dash. Long
+  commands are prefixed with two dashes
+
+
+Usage:
+  JLECmd [options]
+
+Options:
+  -f <f>             File to process. Either this or -d is required
+  -d <d>             Directory to recursively process. Either this or -f is
+                     required
+  --all              Process all files in directory vs. only files matching
+                     *.automaticDestinations-ms or *.customDestinations-ms
+                     [default: False]
+  --csv <csv>        Directory to save CSV formatted results to. This or
+                     --json required unless --de or --body is specified
+  --csvf <csvf>      File name to save CSV formatted results to. When
+                     present, overrides default name
+  --json <json>      Directory to save json representation to. Use --pretty
+                     for a more human readable layout
+  --html <html>      Directory to save xhtml formatted results to. Be sure
+                     to include the full path in double quotes
+  --pretty           When exporting to json, use a more human readable
+                     layout [default: False]
+  -q                 Only show the filename being processed vs all output.
+                     Useful to speed up exporting to json and/or csv
+                     [default: False]
+  --ld               Include more information about lnk files [default:
+                     False]
+  --fd               Include full information about lnk files
+                     (Alternatively, dump lnk files using --dumpTo and
+                     process with LECmd) [default: False]
+  --appIds <appIds>  Path to file containing AppIDs and descriptions
+                     (appid|description format). New appIds are added to
+                     the built-in list, existing appIds will have their
+                     descriptions updated
+  --dumpTo <dumpTo>  Directory to save exported lnk files
+  --dt <dt>          The custom date/time format to use when displaying
+                     timestamps. See https://goo.gl/CNVq0k for options.
+                     Default is: yyyy-MM-dd HH:mm:ss [default: yyyy-MM-dd
+                     HH:mm:ss]
+  --mp               Display higher precision for timestamps [default:
+                     False]
+  --withDir          When true, show contents of Directory not accounted
+                     for in DestList entries [default: False]
+  --debug            Show debug information during processing [default:
+                     False]
+  --trace            Show trace information during processing [default:
+                     False]
+  --version          Show version information
+  -?, -h, --help     Show help and usage information
+
+
+Either -f or -d is required. Exiting
+```
+
+While there are explanations for each switch, let’s walk through each one of the switches unique to JLECmd in further detail.
+
+### Switch Descriptions
+
+#### `--all`
+
+This switch will instruct JLECmd to attempt to parse every file in the directory specified, regardless of file extension. Output will be generated only for those files identified to be .LNK files.
+
+Example: `.\JLECmd.exe -d C:\temp --all`
+
+
+#### `-q`
+
+This switch will instruct JLECmd to output only what files were processed rather than the parsed data from each JumpList.
+
+For instance, running `.\JLECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\"` resulted in the following: `Processed 15 out of 20 files in 0.6428 seconds`
+
+Running `.\JLECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\" -q` resulted in the following: `Processed 15 out of 20 files in 0.1246 seconds`
+
+#### `--ld`
+
+This switch will instruct JLECmd to include more details about .LNK files. Specifically, JLECmd will include the following information for each JumpList:
+
+{line-numbers:false}
+```powershell
+--- Link information ---
+Flags: VolumeIdAndLocalBasePath
+
+>> Volume information
+  Drive type: Fixed storage media (Hard drive)
+  Serial number: 88008C2F
+  Label: (No label)
+  Local path: C:\Users\e\AppData\Roaming\Microsoft\Windows\Libraries\Videos.library-ms
+```
+
+#### `--fd`
+
+This switch will instruct JLECmd to include the full details of the .LNK files. An example of the additional information included can be seen below:
+
+{line-numbers:false}
+```powershell
+  Lnk target created:  2016-01-16 20:22:25
+  Lnk target modified: 2016-01-16 20:23:24
+  Lnk target accessed: 2016-01-16 20:23:24
+
+--- Header ---
+
+  Target created:  2016-01-16 20:22:25
+  Target modified: 2016-01-16 20:23:24
+  Target accessed: 2016-01-16 20:23:24
+
+  File size: 3,483
+  Flags: HasTargetIdList, HasLinkInfo, IsUnicode
+  File attributes: FileAttributeArchive, FileAttributeNotContentIndexed
+  Icon index: 0
+  Show window: SwNormal (Activates and displays the window. The window is restored to its original size and position if the window is minimized or maximized.)
+
+
+--- Link information ---
+Flags: VolumeIdAndLocalBasePath
+
+>> Volume information
+  Drive type: Fixed storage media (Hard drive)
+  Serial number: 88008C2F
+  Label: (No label)
+  Local path: C:\Users\e\AppData\Roaming\Microsoft\Windows\Libraries\Videos.library-ms
+
+--- Target ID information (Format: Type ==> Value) ---
+```
+
+and
+
+{line-numbers:false}
+```powershell
+  -Root folder: GUID ==> User Libraries
+
+  -Variable ==> Videos
+
+--- End Target ID information ---
+
+--- Extra blocks information ---
+
+>> Property store data block (Format: GUID\ID Description ==> Value)
+   9f4c2855-9f79-4b39-a8d0-e1d42de1d5f3\7      App User Model Is DestList Link     ==> True
+
+>> Tracker database block
+   Machine ID:  win7x64
+   MAC Address: 00:15:5d:01:6d:0b
+   MAC Vendor:  (Unknown vendor)
+   Creation:    2016-01-16 21:18:45
+
+   Volume Droid:       42e937f8-244d-406d-86eb-43604356d1ae
+   Volume Droid Birth: 42e937f8-244d-406d-86eb-43604356d1ae
+   File Droid:         ba034b9e-bc96-11e5-b231-00155d016d0b
+   File Droid birth:   ba034b9e-bc96-11e5-b231-00155d016d0b
+
+   (lnk file not present)
+```
+
+#### `--appIds`
+
+This switch will instruct JLECmd to use an AppIDs.txt file specified by the user. Default is using the built-in AppIDs.txt file included within JLECmd, which can be found here: <https://github.com/EricZimmerman/JumpList/blob/master/JumpList/Resources/AppIDs.txt>
+
+Example: .\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms" --appIds "C:\temp\AppIDs.txt"
+
+#### `--dumpTo`
+
+This switch will instruct JLECmd to dump the .LNK files associated with the JumpList to the specified location.
+
+Example: .\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms" --dumpTo "D:\DFIRArtifactMuseum\testJL"
+
+#### `--dt`
+
+This switch will instruct JLECmd to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
+
+#### `--mp`
+
+This switch will instruct JLECmd to provide more verbose timestamps. For instance, running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms"` resulted in the following:
+
+{line-numbers:false}
+```powershell
+--- DestList entries ---
+Entry #: 4
+  MRU: 0
+  Path: ::{031E4825-7B94-4DC3-B131-E946B44C8DD5}\Videos.library-ms ==> User Libraries\Videos.library-ms
+  Pinned: False
+  Created on:    2016-01-16 21:18:45
+  Last modified: 2016-01-16 20:23:24
+  Hostname: win7x64
+  Mac Address: 00:15:5d:01:6d:0b
+  Interaction count: 0
+
+--- Lnk information ---
+  Absolute path: User Libraries\Videos
+```
+
+Running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms --mp` resulted in the following:
+
+{line-numbers:false}
+```powershell
+--- DestList entries ---
+Entry #: 4
+  MRU: 0
+  Path: ::{031E4825-7B94-4DC3-B131-E946B44C8DD5}\Videos.library-ms ==> User Libraries\Videos.library-ms
+  Pinned: False
+  Created on:    2016-01-16 21:18:45.6562590
+  Last modified: 2016-01-16 20:23:24.8901093
+  Hostname: win7x64
+  Mac Address: 00:15:5d:01:6d:0b
+  Interaction count: 0
+
+--- Lnk information ---
+  Absolute path: User Libraries\Videos
+```
+
+#### `--withDir`
+
+This switch will instruct JLECmd to list directories not account for in the DestList entries. 
+
+For example, running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --withDir` resulted in the following extra data: 
+
+{line-numbers:false}
+```powershell
+Directory entries not represented by DestList entries
+Directory Name: a
+
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt\dist
+
+Directory Name: b
+
+  Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
+```
+
+{pagebreak}
+
+
+## JLECmd Command Examples
+
+### Example JLECmd Commands
+
+#### Parse a single JumpList and view the results within the console
+
+{line-numbers:false}
+```powershell
+JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms"
+```
+
+#### Parse a single JumpList and output the results to CSV at specified location
+
+{line-numbers:false}
+```powershell
+JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms” --csv C:\Temp
+```
+
+#### Parse a single JumpList, output to JSON in pretty format
+
+{line-numbers:false}
+```powershell
+JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --json "D:\jsonOutput" --pretty
+```
+
+#### Parse a directory, output to CSV at specified location, output to HTML at specified location, output to XML to specified location, while only showing the filename being processed (used to speed up processing)
+
+{line-numbers:false}
+```powershell
+JLECmd.exe -d "C:\Temp" --csv "c:\temp" --html c:\temp --xml c:\temp\xml -q
+```
+
+#### Parse all files in a directory (regardless of presence of .JumpList extension)
+
+{line-numbers:false}
+```powershell
+JLECmd.exe -d "C:\Temp" --all
+```
+
+#### Parse a single JumpList and view the results within the console with higher precision timestamps
+
+{line-numbers:false}
+```powershell
+JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --mp
+```
+
+{pagebreak}
+
+## JLECmd Output
+
+### Analyzing JLECmd Output - Console
+
+When parsing JumpList files with JLECmd without the `-q` switch, JLECmd will display in the console window parsed data from each .LNK filed processed. 
+
+![](jlecmd_output\ConsoleExample1.jpg)
+
+{pagebreak}
+
+### Analyzing JLECmd Output - CSV
+
+When parsing JumpLists with JLECmd with the ‘--csv‘ switch, JLECmd will output the parsed data into a CSV file. The CSV file can then be ingested into a tool like Timeline Explorer to analyze the parsed data.
+
+![](jlecmd_output\CSVReportExampleTLE.jpg)
+
+{pagebreak}
+
+### Analyzing JLECmd Output - JSON
+
+When parsing JumpLists with JLECmd with the ‘--json‘ switch, JLECmd will output the parsed data into a JSON file. 
+
+`![](jlecmd_output\JSONPrettyReportExample.jpg)`
+
+TODO: figure out if the below JSON excerpt is preferred OR just a single screenshot of the PowerShell console window
+
+{line-numbers:false}
+```json
+{
+	"Directory": [
+		{
+			"ClassId": "00450020006e00747200790000000000",
+			"UserFlags": 0,
+			"ModifiedTime": "\/Date(1646941766733)\/",
+			"FirstDirectorySectorId": 3,
+			"DirectorySize": 576,
+			"PreviousDirectoryId": -1,
+			"NextDirectoryId": -1,
+			"SubDirectoryId": 1,
+			"DirectoryName": "Root Entry",
+			"DirectoryType": "RootStorage",
+			"NodeColor": "Red"
+		},
+		{
+			"ClassId": "00000000000000000000000000000000",
+			"UserFlags": 0,
+			"FirstDirectorySectorId": 0,
+			"DirectorySize": 309,
+			"PreviousDirectoryId": -1,
+			"NextDirectoryId": 2,
+			"SubDirectoryId": -1,
+			"DirectoryName": "1",
+			"DirectoryType": "Stream",
+			"NodeColor": "Black"
+		},
+		{
+			"ClassId": "0069004c007300740000000000000000",
+			"UserFlags": 0,
+			"FirstDirectorySectorId": 5,
+			"DirectorySize": 216,
+			"PreviousDirectoryId": -1,
+			"NextDirectoryId": -1,
+			"SubDirectoryId": -1,
+			"DirectoryName": "DestList",
+			"DirectoryType": "Stream",
+			"NodeColor": "Red"
+		}
+	],
+	"AppId": {
+		"AppId": "573770283dc3d854",
+		"Description": "Windows Defender"
+	},
+	"DestListCount": 1,
+	"PinnedDestListCount": 0,
+	"LastUsedEntryNumber": 1,
+	"DestListVersion": 4,
+	"SourceFile": "D:\\DFIRArtifactMuseum\\Windows\\JumpLists\\Win10\\APTSimulatorVM\\573770283dc3d854.automaticDestinations-ms",
+	"DestListEntries": [
+		{
+			"Hostname": "",
+			"VolumeDroid": "00000000000000000000000000000000",
+			"VolumeBirthDroid": "00000000000000000000000000000000",
+			"FileDroid": "00000000000000000000000000000000",
+			"FileBirthDroid": "00000000000000000000000000000000",
+			"EntryNumber": 1,
+			"MRUPosition": 0,
+			"InteractionCount": 1,
+			"CreatedOn": "\/Date(-12219292800000)\/",
+			"LastModified": "\/Date(1646941766733)\/",
+			"Pinned": false,
+			"Path": "windowsdefender://threat/",
+			"MacAddress": "00:00:00:00:00:00",
+			"Lnk": {
+				"TargetIDs": [
+					{
+						"__type": "Lnk.ShellItems.ShellBag0X1F, Lnk",
+						"PropertyStore": {
+							"Sheets": [
+							]
+						},
+						"FriendlyName": "Root folder: GUID",
+						"Value": "Internet Explorer (Homepage)",
+						"ExtensionBlocks": [
+						]
+					},
+					{
+						"__type": "Lnk.ShellItems.ShellBag0X61, Lnk",
+						"UserName": "",
+						"FriendlyName": "URI",
+						"Value": "windowsdefender://threat/",
+						"ExtensionBlocks": [
+						]
+					}
+				],
+				"ExtraBlocks": [
+					{
+						"__type": "Lnk.ExtraData.PropertyStoreDataBlock, Lnk",
+						"PropertyStore": {
+							"Sheets": [
+								{
+									"Size": 45,
+									"Version": "31-53-50-53",
+									"GUID": "9f4c2855-9f79-4b39-a8d0-e1d42de1d5f3",
+									"PropertyNames": {
+										"7": "True"
+									},
+									"PropertySheetType": "Numeric"
+								}
+							]
+						}
+					}
+				],
+				"SourceFile": "D:\\DFIRArtifactMuseum\\Windows\\JumpLists\\Win10\\APTSimulatorVM\\573770283dc3d854.automaticDestinations-ms_Directory name_1",
+				"RawBytes": "TAAAAAEUAgAAAAAAwAAAAAAAAEaBAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAKoAFAAfaIBTHIegQmkQouoIACswMJ2UAGGAAAAAAHcAaQBuAGQAbwB3AHMAZABlAGYAZQBuAGQAZQByADoALwAvAHQAaAByAGUAYQB0AC8AAAAAAFYAAAAaAO++AgBBAHAAcABYAHIAcgBlAGIAbQBuAGcAZQBiADAAYQA3AGcAZwBkAGQANgBzAGUAYwAxAGMAcQA0ADkANAA2ADgAdgA4AHEAcgAAAD4AAAA5AAAACQAAoC0AAAAxU1BTVShMn3mfOUuo0OHULeHV8xEAAAAHAAAAAAsAAAD//wAAAAAAAAAAAAAAAAAA",
+				"Header": {
+					"Signature": "0002140100000000c000000000000046",
+					"DataFlags": 10485889,
+					"FileAttributes": 0,
+					"TargetCreationDate": "\/Date(-11644473600000)\/",
+					"TargetModificationDate": "\/Date(-11644473600000)\/",
+					"TargetLastAccessedDate": "\/Date(-11644473600000)\/",
+					"FileSize": 0,
+					"IconIndex": 0,
+					"HotKey": "",
+					"ShowWindow": "SwNormal",
+					"Reserved0": 0,
+					"Reserved1": 0,
+					"Reserved2": 0
+				},
+				"LocationFlags": 0
+			}
+		}
+	]
+}
+```
+
+{pagebreak}
+
+### Analyzing JLECmd Output - HTML
+
+When parsing JumpLists with JLECmd with the ‘--html‘ switch, JLECmd will output the parsed data into an HTML file. Please note, the HTML file will be placed into a dedicated subfolder, which is not normally the case when outputting to CSV or JSON.
+
+![](jlecmd_output\HTMLReportExample.jpg)
+
+{pagebreak}
+
+## JLECmd Sample Output
+
+`.\JLECmd.exe -d "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM"`
+
+{line-numbers:false}
+```powershell
+---------- Processed D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\ccba5a5986c77e43.customDestinations-ms in 0.01157700 seconds ----------
+
+Processing D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms
+
+Source file: D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms
+
+--- AppId information ---
+  AppID: f01b4d95cf55d32a
+  Description: Windows Explorer Windows 8.1
+
+--- DestList information ---
+  Expected DestList entries:  11
+  Actual DestList entries:    11
+  DestList version:           4
+
+--- DestList entries ---
+Entry #: 11
+  MRU: 0
+  Path: C:\Users\TestUser\Desktop\Targets
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 21:40:42
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
+
+
+Entry #: 1
+  MRU: 1
+  Path: knownfolder:{754AC886-DF64-4CBA-86B5-F7FBF4FBCEF5} ==> ThisPCDesktopFolder
+  Pinned: True
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 21:40:42
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 4
+
+--- Lnk information ---
+  Absolute path: My Computer\Desktop
+
+
+Entry #: 10
+  MRU: 2
+  Path: C:\Users\TestUser\Downloads\APTSimulator_pw_apt\dist
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 19:49:34
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt\dist
+
+
+Entry #: 9
+  MRU: 3
+  Path: C:\Users\TestUser\Downloads\APTSimulator_pw_apt\APTSimulator
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 19:49:34
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt\APTSimulator
+
+
+Entry #: 8
+  MRU: 4
+  Path: C:\Users\TestUser\Downloads\APTSimulator_pw_apt
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 19:49:34
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt
+
+
+Entry #: 7
+  MRU: 5
+  Path: C:\Users\TestUser\Downloads\Sysmon
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 19:49:07
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Downloads\Sysmon
+
+
+Entry #: 6
+  MRU: 6
+  Path: knownfolder:{18989B1D-99B5-455B-841C-AB7C74E4DDFC} ==> Videos
+  Pinned: False
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:35:24
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Videos
+
+
+Entry #: 5
+  MRU: 7
+  Path: knownfolder:{4BD8D571-6D19-48D3-BE97-422220080E43} ==> Music
+  Pinned: False
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:35:24
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Music
+
+
+Entry #: 3
+  MRU: 8
+  Path: knownfolder:{FDD39AD0-238F-46AF-ADB4-6C85480369C7} ==> Documents
+  Pinned: True
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:35:24
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Documents
+
+
+Entry #: 4
+  MRU: 9
+  Path: knownfolder:{33E28130-4E1E-4676-835A-98395C3BC3BB} ==> Pictures
+  Pinned: True
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:35:24
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Pictures
+
+
+Entry #: 2
+  MRU: 10
+  Path: knownfolder:{374DE290-123F-4565-9164-39C4925E467B} ==> Downloads
+  Pinned: True
+  Created on:    2022-03-10 19:33:36
+  Last modified: 2022-03-10 16:34:28
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 3
+
+--- Lnk information ---
+  Absolute path: My Computer\Downloads
+```
+
+{pagebreak}
+
+## JLECmd - Key Takeaways
+
+JLECmd parses JumpLists, which are a collection of LNK files organized by AppID. JumpLists provide indicators of file access. 
+
+JLECmd output, regardless of file format, will provide potentially useful information about user activity on a given Windows system.
+
+### Important Data Points
+
+
+#### AppID/Description
+
+
+#### DestList Entries
+
+
+#### MRU
+
+
+
+#### Path
+
+
+#### Pinned
+
+
+#### Created on
+
+
+#### Last modified
+
+
+#### Hostname
+
+
+#### Mac Address
+
+
+#### Interaction count
+
+
+#### Absolute path
+
+
+--- AppId information ---
+  AppID: f01b4d95cf55d32a
+  Description: Windows Explorer Windows 8.1
+
+--- DestList information ---
+  Expected DestList entries:  11
+  Actual DestList entries:    11
+  DestList version:           4
+
+--- DestList entries ---
+Entry #: 11
+  MRU: 0
+  Path: C:\Users\TestUser\Desktop\Targets
+  Pinned: False
+  Created on:    2022-03-10 16:35:09
+  Last modified: 2022-03-10 21:40:42
+  Hostname: desktop-tmku40h
+  Mac Address: ec:63:d7:72:83:36
+  Interaction count: 1
+
+--- Lnk information ---
+  Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
+
+#### TODO
+
+{pagebreak}
+
+## JLECmd References
+
+### Associated GitHub Repositories
+
+* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
+* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
+* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+
+### Blog Posts
+
+#### Official Blog Posts
+
+Blog posts from Eric Zimmerman’s blog, Binary Foray:
+
+* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
+* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
+* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
+* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
+* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+
+#### Community Blog Posts
+
+* Links to blog posts go here
+
+### Download JLECmd
+
+JLECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+{pagebreak}
+
