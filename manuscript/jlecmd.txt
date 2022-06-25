@@ -665,7 +665,7 @@ Entry #: 2
 
 {pagebreak}
 
-## JLECmd - Key Takeaways
+## JLECmd Key Takeaways
 
 JLECmd parses JumpLists, which are a collection of LNK files organized by AppID. JumpLists provide indicators of file access. 
 
