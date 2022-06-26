@@ -111,7 +111,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 * <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
 * <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
 
-#### Community Blog Posts
+#### Community Resources
 
 * Links to blog posts go here
 

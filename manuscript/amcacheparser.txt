@@ -163,7 +163,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 * <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
 * <https://binaryforay.blogspot.com/2017/10/amcache-still-rules-everything-around.html>
 
-#### Community Blog Posts
+#### Community Resources
 
 * Links to blog posts go here
 
