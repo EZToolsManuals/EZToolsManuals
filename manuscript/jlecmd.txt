@@ -319,7 +319,7 @@ JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b
 
 When parsing JumpList files with JLECmd without the `-q` switch, JLECmd will display in the console window parsed data from each .LNK filed processed. 
 
-![](jlecmd_output\ConsoleExample1.jpg)
+![](jlecmd\ConsoleExample1.jpg)
 
 {pagebreak}
 
@@ -327,7 +327,7 @@ When parsing JumpList files with JLECmd without the `-q` switch, JLECmd will dis
 
 When parsing JumpLists with JLECmd with the ‘--csv‘ switch, JLECmd will output the parsed data into a CSV file. The CSV file can then be ingested into a tool like Timeline Explorer to analyze the parsed data.
 
-![](jlecmd_output\CSVReportExampleTLE.jpg)
+![](jlecmd\CSVReportExampleTLE.jpg)
 
 {pagebreak}
 
@@ -335,7 +335,7 @@ When parsing JumpLists with JLECmd with the ‘--csv‘ switch, JLECmd will output t
 
 When parsing JumpLists with JLECmd with the ‘--json‘ switch, JLECmd will output the parsed data into a JSON file. 
 
-`![](jlecmd_output\JSONPrettyReportExample.jpg)`
+`![](jlecmd\JSONPrettyReportExample.jpg)`
 
 TODO: figure out if the below JSON excerpt is preferred OR just a single screenshot of the PowerShell console window
 
@@ -475,7 +475,7 @@ TODO: figure out if the below JSON excerpt is preferred OR just a single screens
 
 When parsing JumpLists with JLECmd with the ‘--html‘ switch, JLECmd will output the parsed data into an HTML file. Please note, the HTML file will be placed into a dedicated subfolder, which is not normally the case when outputting to CSV or JSON.
 
-![](jlecmd_output\HTMLReportExample.jpg)
+![](jlecmd\HTMLReportExample.jpg)
 
 {pagebreak}
 
