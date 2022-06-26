@@ -35,7 +35,17 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `--sbl`
+
+This switch will instruct IISGeoLocate to not display bad lines to the console. These lines will still be written to the file being written to the location specified with the `--csv` switch.
+
+`.\iisgeolocate.exe -d C:\inetpub\logs\LogFiles --csv C:\temp --sbl`
+
+#### `--nul`
+
+This switch will instruct IISGeoLocate to not update the CSV file at the location specified with the `--csv` switch.
+
+`.\iisgeolocate.exe -d C:\inetpub\logs\LogFiles --csv C:\temp --nul`
 
 {pagebreak}
 
