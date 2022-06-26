@@ -2,6 +2,7 @@
 
 ## AmcacheParser Introduction
 
+AmcacheParser is used to parse Amcache.hve files, commonly found at `C:\Windows\appcompat\Programs\Amcache.hve`. 
 
 {pagebreak}
 
@@ -63,23 +64,18 @@ Options:
 
 ```
 
+AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" --csv C:\temp
+AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -i on --csv C:\temp --csvf foo.csv
+AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.txt" --csv C:\temp
+
 {pagebreak}
 
 ## AmcacheParser Output
 
-### Analyzing AmcacheParser Output - Console
-
-{pagebreak}
 
 ### Analyzing AmcacheParser Output - CSV
 
-{pagebreak}
-
-### Analyzing AmcacheParser Output - JSON
-
-{pagebreak}
-
-### Analyzing AmcacheParser Output - HTML
+`--csv` is required, so there's no console output with AmcacheParser
 
 {pagebreak}
 
@@ -97,9 +93,7 @@ Options:
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/AmcacheParser> is the AmcacheParser repo 
 
 ### Blog Posts
 
@@ -107,11 +101,10 @@ Options:
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
+* <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
+* <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
+* <https://binaryforay.blogspot.com/2017/10/amcache-still-rules-everything-around.html>
 
 #### Community Blog Posts
 
