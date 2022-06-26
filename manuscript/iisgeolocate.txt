@@ -2,6 +2,7 @@
 
 ## IISGeoLocate Introduction
 
+IISGeoLocate can be used to geolocate IP addresses found in IIS Logs. 
 
 {pagebreak}
 
