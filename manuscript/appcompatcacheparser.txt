@@ -3,28 +3,14 @@
 ## AppCompatCacheParser Introduction
 
 
+### Understanding the Artifact: AppCompatCache
+
+
 {pagebreak}
 
 ## AppCompatCacheParser Switches
 
-In a PowerShell window, running `.\AppCompatCacheParser.exe` will provide the following options when running JLECmd:
-
-{line-numbers:false}
-```powershell
-
-```
-
-### Switch Descriptions
-
-#### SWITCH
-
-{pagebreak}
-
-## AppCompatCacheParser Command Examples
-
-### Example AppCompatCacheParser Commands
-
-#### Example description here
+In a PowerShell window, running `.\AppCompatCacheParser.exe` will provide the following options when running AppCompatCacheParser:
 
 {line-numbers:false}
 ```powershell
@@ -62,6 +48,23 @@ Options:
   --trace                 Show trace information during processing [default: False]
   --version               Show version information
   -?, -h, --help          Show help and usage information
+```
+
+### Switch Descriptions
+
+#### SWITCH
+
+{pagebreak}
+
+## AppCompatCacheParser Command Examples
+
+### Example AppCompatCacheParser Commands
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+
 ```
 
 {pagebreak}
