@@ -1,4 +1,4 @@
-# EvtxECmd Name
+# EvtxECmd
 
 ## EvtxECmd Introduction
 

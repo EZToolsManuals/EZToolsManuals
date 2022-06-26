@@ -1,4 +1,4 @@
-# IISGeoLocate Name
+# IISGeoLocate
 
 ## IISGeoLocate Introduction
 

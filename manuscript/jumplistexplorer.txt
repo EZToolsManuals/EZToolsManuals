@@ -1,4 +1,4 @@
-# JumpList Explorer Name
+# JumpList Explorer
 
 ## JumpList Explorer Introduction
 

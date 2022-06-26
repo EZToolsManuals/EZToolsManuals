@@ -1,4 +1,4 @@
-# SumECmd Name
+# SumECmd
 
 ## SumECmd Introduction
 

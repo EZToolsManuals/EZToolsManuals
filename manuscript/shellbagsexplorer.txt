@@ -1,4 +1,4 @@
-# Shellbags Explorer Name
+# Shellbags Explorer
 
 ## Shellbags Explorer Introduction
 

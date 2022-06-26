@@ -1,4 +1,4 @@
-# PECmd Name
+# PECmd
 
 ## PECmd Introduction
 

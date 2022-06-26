@@ -1,4 +1,4 @@
-# AmcacheParser Name
+# AmcacheParser
 
 ## AmcacheParser Introduction
 

@@ -1,4 +1,4 @@
-# Registry Explorer Name
+# Registry Explorer
 
 ## Registry Explorer Introduction
 

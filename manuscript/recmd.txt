@@ -1,4 +1,4 @@
-# RECmd Name
+# RECmd
 
 ## RECmd Introduction
 

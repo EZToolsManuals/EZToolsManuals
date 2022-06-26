@@ -1,4 +1,4 @@
-# SQLECmd Name
+# SQLECmd
 
 ## SQLECmd Introduction
 

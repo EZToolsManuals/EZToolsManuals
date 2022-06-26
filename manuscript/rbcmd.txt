@@ -1,4 +1,4 @@
-# RBCmd Name
+# RBCmd
 
 ## RBCmd Introduction
 

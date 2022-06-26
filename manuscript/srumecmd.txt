@@ -1,4 +1,4 @@
-# SrumECmd Name
+# SrumECmd
 
 ## SrumECmd Introduction
 

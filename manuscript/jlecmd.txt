@@ -253,11 +253,11 @@ For example, running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\W
 {line-numbers:false}
 ```powershell
 Directory entries not represented by DestList entries
-Directory Name: a
+Directory: a
 
   Absolute path: My Computer\C:\Users\TestUser\Downloads\APTSimulator_pw_apt\dist
 
-Directory Name: b
+Directory: b
 
   Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
 ```

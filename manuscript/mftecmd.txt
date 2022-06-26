@@ -1,4 +1,4 @@
-# MFTECmd Name
+# MFTECmd
 
 ## MFTECmd Introduction
 

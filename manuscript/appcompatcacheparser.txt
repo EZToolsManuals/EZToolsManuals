@@ -1,4 +1,4 @@
-# AppCompatCacheParser Name
+# AppCompatCacheParser
 
 ## AppCompatCacheParser Introduction
 

@@ -1,4 +1,4 @@
-# SBECmd Name
+# SBECmd
 
 ## SBECmd Introduction
 

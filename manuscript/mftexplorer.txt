@@ -1,4 +1,4 @@
-# MFT Explorer Name
+# MFT Explorer
 
 ## MFT Explorer Introduction
 
