@@ -1,13 +1,13 @@
-# Tool Name
+# SDB Explorer Name
 
-## Tool Introduction
+## SDB Explorer Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## SDB Explorer Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\SDB Explorer.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## SDB Explorer Command Examples
 
-### Example TOOL Commands
+### Example SDB Explorer Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## SDB Explorer Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing SDB Explorer Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing SDB Explorer Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing SDB Explorer Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing SDB Explorer Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## SDB Explorer Sample Output
+
+{pagebreak}
+
+## SDB Explorer Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## SDB Explorer References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download SDB Explorer
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+SDB Explorer can be downloaded from <https://ericzimmerman.github.io/#!index.md>

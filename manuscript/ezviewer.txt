@@ -1,13 +1,13 @@
-# Tool Name
+# EZViewer Name
 
-## Tool Introduction
+## EZViewer Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## EZViewer Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\EZViewer.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## EZViewer Command Examples
 
-### Example TOOL Commands
+### Example EZViewer Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## EZViewer Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing EZViewer Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing EZViewer Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing EZViewer Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing EZViewer Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## EZViewer Sample Output
+
+{pagebreak}
+
+## EZViewer Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## EZViewer References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download EZViewer
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+EZViewer can be downloaded from <https://ericzimmerman.github.io/#!index.md>

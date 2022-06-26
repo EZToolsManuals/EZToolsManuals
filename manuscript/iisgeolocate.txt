@@ -1,13 +1,13 @@
-# Tool Name
+# IISGeoLocate Name
 
-## Tool Introduction
+## IISGeoLocate Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## IISGeoLocate Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\IISGeoLocate.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## IISGeoLocate Command Examples
 
-### Example TOOL Commands
+### Example IISGeoLocate Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## IISGeoLocate Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing IISGeoLocate Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing IISGeoLocate Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing IISGeoLocate Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing IISGeoLocate Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## IISGeoLocate Sample Output
+
+{pagebreak}
+
+## IISGeoLocate Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## IISGeoLocate References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download IISGeoLocate
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+IISGeoLocate can be downloaded from <https://ericzimmerman.github.io/#!index.md>

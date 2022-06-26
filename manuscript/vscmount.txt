@@ -1,13 +1,13 @@
-# Tool Name
+# VSCMount
 
-## Tool Introduction
+## VSCMount Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## VSCMount Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\VSCMount.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## VSCMount Command Examples
 
-### Example TOOL Commands
+### Example VSCMount Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## VSCMount Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing VSCMount Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing VSCMount Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing VSCMount Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing VSCMount Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## VSCMount Sample Output
+
+{pagebreak}
+
+## VSCMount Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## VSCMount References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download VSCMount
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+VSCMount can be downloaded from <https://ericzimmerman.github.io/#!index.md>

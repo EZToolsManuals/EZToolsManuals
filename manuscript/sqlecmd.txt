@@ -1,13 +1,13 @@
-# Tool Name
+# SQLECmd Name
 
-## Tool Introduction
+## SQLECmd Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## SQLECmd Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\SQLECmd.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## SQLECmd Command Examples
 
-### Example TOOL Commands
+### Example SQLECmd Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## SQLECmd Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing SQLECmd Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing SQLECmd Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing SQLECmd Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing SQLECmd Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## SQLECmd Sample Output
+
+{pagebreak}
+
+## SQLECmd Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## SQLECmd References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download SQLECmd
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+SQLECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>

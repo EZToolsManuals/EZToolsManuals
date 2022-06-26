@@ -1,13 +1,13 @@
-# Tool Name
+# RBCmd Name
 
-## Tool Introduction
+## RBCmd Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## RBCmd Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\RBCmd.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## RBCmd Command Examples
 
-### Example TOOL Commands
+### Example RBCmd Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## RBCmd Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing RBCmd Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing RBCmd Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing RBCmd Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing RBCmd Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## RBCmd Sample Output
+
+{pagebreak}
+
+## RBCmd Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## RBCmd References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download RBCmd
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+RBCmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>

@@ -1,13 +1,13 @@
-# Tool Name
+# WxTCmd
 
-## Tool Introduction
+## WxTCmd Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## WxTCmd Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\WxTCmd.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## WxTCmd Command Examples
 
-### Example TOOL Commands
+### Example WxTCmd Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## WxTCmd Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing WxTCmd Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing WxTCmd Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing WxTCmd Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing WxTCmd Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## WxTCmd Sample Output
+
+{pagebreak}
+
+## WxTCmd Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## WxTCmd References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download WxTCmd
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+WxTCmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>

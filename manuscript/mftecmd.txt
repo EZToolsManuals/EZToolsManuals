@@ -1,13 +1,13 @@
-# Tool Name
+# MFTECmd Name
 
-## Tool Introduction
+## MFTECmd Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## MFTECmd Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\MFTECmd.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## MFTECmd Command Examples
 
-### Example TOOL Commands
+### Example MFTECmd Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## MFTECmd Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing MFTECmd Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing MFTECmd Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing MFTECmd Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing MFTECmd Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## MFTECmd Sample Output
+
+{pagebreak}
+
+## MFTECmd Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## MFTECmd References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download MFTECmd
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+MFTECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>

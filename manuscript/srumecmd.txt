@@ -1,13 +1,13 @@
-# Tool Name
+# SrumECmd Name
 
-## Tool Introduction
+## SrumECmd Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## SrumECmd Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\SrumECmd.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## SrumECmd Command Examples
 
-### Example TOOL Commands
+### Example SrumECmd Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## SrumECmd Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing SrumECmd Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing SrumECmd Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing SrumECmd Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing SrumECmd Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## SrumECmd Sample Output
+
+{pagebreak}
+
+## SrumECmd Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## SrumECmd References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download SrumECmd
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+SrumECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>

@@ -1,13 +1,13 @@
-# Tool Name
+# bstrings Name
 
-## Tool Introduction
+## bstrings Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## bstrings Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\bstrings.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## bstrings Command Examples
 
-### Example TOOL Commands
+### Example bstrings Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## bstrings Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing bstrings Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing bstrings Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing bstrings Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing bstrings Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## bstrings Sample Output
+
+{pagebreak}
+
+## bstrings Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## bstrings References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download bstrings
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+bstrings can be downloaded from <https://ericzimmerman.github.io/#!index.md>

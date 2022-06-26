@@ -1,13 +1,13 @@
-# Tool Name
+# RECmd Name
 
-## Tool Introduction
+## RECmd Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## RECmd Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\RECmd.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## RECmd Command Examples
 
-### Example TOOL Commands
+### Example RECmd Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## RECmd Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing RECmd Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing RECmd Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing RECmd Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing RECmd Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## RECmd Sample Output
+
+{pagebreak}
+
+## RECmd Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## RECmd References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download RECmd
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+RECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>

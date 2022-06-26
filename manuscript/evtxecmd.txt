@@ -1,13 +1,13 @@
-# Tool Name
+# EvtxECmd Name
 
-## Tool Introduction
+## EvtxECmd Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## EvtxECmd Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\EvtxECmd.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## EvtxECmd Command Examples
 
-### Example TOOL Commands
+### Example EvtxECmd Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## EvtxECmd Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing EvtxECmd Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing EvtxECmd Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing EvtxECmd Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing EvtxECmd Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## EvtxECmd Sample Output
+
+{pagebreak}
+
+## EvtxECmd Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## EvtxECmd References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download EvtxECmd
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+EvtxECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>

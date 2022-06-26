@@ -1,13 +1,13 @@
-# Tool Name
+# Registry Explorer Name
 
-## Tool Introduction
+## Registry Explorer Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## Registry Explorer Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\Registry Explorer.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## Registry Explorer Command Examples
 
-### Example TOOL Commands
+### Example Registry Explorer Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## Registry Explorer Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing Registry Explorer Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing Registry Explorer Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing Registry Explorer Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing Registry Explorer Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## Registry Explorer Sample Output
+
+{pagebreak}
+
+## Registry Explorer Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## Registry Explorer References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download Registry Explorer
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+Registry Explorer can be downloaded from <https://ericzimmerman.github.io/#!index.md>

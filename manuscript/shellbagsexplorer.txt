@@ -1,13 +1,13 @@
-# Tool Name
+# Shellbags Explorer Name
 
-## Tool Introduction
+## Shellbags Explorer Introduction
 
 
 {pagebreak}
 
-## Tool Switches
+## Shellbags Explorer Switches
 
-In a PowerShell window, running `.\TOOL.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\Shellbags Explorer.exe` will provide the following options when running JLECmd:
 
 {line-numbers:false}
 ```powershell
@@ -20,9 +20,9 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Command Examples
+## Shellbags Explorer Command Examples
 
-### Example TOOL Commands
+### Example Shellbags Explorer Commands
 
 #### Example description here
 
@@ -33,35 +33,35 @@ In a PowerShell window, running `.\TOOL.exe` will provide the following options 
 
 {pagebreak}
 
-## Tool Output
+## Shellbags Explorer Output
 
-### Analyzing TOOL Output - Console
-
-{pagebreak}
-
-### Analyzing TOOL Output - CSV
+### Analyzing Shellbags Explorer Output - Console
 
 {pagebreak}
 
-### Analyzing TOOL Output - JSON
+### Analyzing Shellbags Explorer Output - CSV
 
 {pagebreak}
 
-### Analyzing TOOL Output - HTML
+### Analyzing Shellbags Explorer Output - JSON
 
 {pagebreak}
 
-## Tool Sample Output
+### Analyzing Shellbags Explorer Output - HTML
 
 {pagebreak}
 
-## Tool Key Takeaways
+## Shellbags Explorer Sample Output
+
+{pagebreak}
+
+## Shellbags Explorer Key Takeaways
 
 ### Important Data Points
 
 {pagebreak}
 
-## Tool References
+## Shellbags Explorer References
 
 ### Associated GitHub Repositories
 
@@ -85,6 +85,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * Links to blog posts go here
 
-### Download TOOL
+### Download Shellbags Explorer
 
-TOOL can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+Shellbags Explorer can be downloaded from <https://ericzimmerman.github.io/#!index.md>
