@@ -65,19 +65,7 @@ This switch will instruct IISGeoLocate to not update the CSV file at the locatio
 
 ## IISGeoLocate Output
 
-### Analyzing IISGeoLocate Output - Console
-
-{pagebreak}
-
 ### Analyzing IISGeoLocate Output - CSV
-
-{pagebreak}
-
-### Analyzing IISGeoLocate Output - JSON
-
-{pagebreak}
-
-### Analyzing IISGeoLocate Output - HTML
 
 {pagebreak}
 
