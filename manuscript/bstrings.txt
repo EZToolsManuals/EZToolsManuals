@@ -2,6 +2,7 @@
 
 ## bstrings Introduction
 
+bstrings is a tool created by Eric Zimmerman used to search for strings.
 
 {pagebreak}
 
