@@ -60,22 +60,6 @@ Options:
 
 ## VSCMount Output
 
-### Analyzing VSCMount Output - Console
-
-{pagebreak}
-
-### Analyzing VSCMount Output - CSV
-
-{pagebreak}
-
-### Analyzing VSCMount Output - JSON
-
-{pagebreak}
-
-### Analyzing VSCMount Output - HTML
-
-{pagebreak}
-
 ## VSCMount Sample Output
 
 {pagebreak}

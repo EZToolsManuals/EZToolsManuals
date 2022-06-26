@@ -113,10 +113,6 @@ Options:
 
 {pagebreak}
 
-### Analyzing RECmd Output - HTML
-
-{pagebreak}
-
 ## RECmd Sample Output
 
 {pagebreak}

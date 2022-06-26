@@ -66,19 +66,7 @@ Options:
 
 ## WxTCmd Output
 
-### Analyzing WxTCmd Output - Console
-
-{pagebreak}
-
 ### Analyzing WxTCmd Output - CSV
-
-{pagebreak}
-
-### Analyzing WxTCmd Output - JSON
-
-{pagebreak}
-
-### Analyzing WxTCmd Output - HTML
 
 {pagebreak}
 

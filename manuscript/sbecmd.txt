@@ -70,19 +70,7 @@ Options:
 
 ## SBECmd Output
 
-### Analyzing SBECmd Output - Console
-
-{pagebreak}
-
 ### Analyzing SBECmd Output - CSV
-
-{pagebreak}
-
-### Analyzing SBECmd Output - JSON
-
-{pagebreak}
-
-### Analyzing SBECmd Output - HTML
 
 {pagebreak}
 

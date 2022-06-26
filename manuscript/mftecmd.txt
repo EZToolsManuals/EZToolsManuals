@@ -112,6 +112,10 @@ Options:
 
 {pagebreak}
 
+### Analyzing MFTECmd Output - Body
+
+{pagebreak}
+
 ### Analyzing MFTECmd Output - HTML
 
 {pagebreak}

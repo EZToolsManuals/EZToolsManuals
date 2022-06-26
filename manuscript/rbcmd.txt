@@ -77,14 +77,6 @@ Either -f or -d is required. Exiting
 
 {pagebreak}
 
-### Analyzing RBCmd Output - JSON
-
-{pagebreak}
-
-### Analyzing RBCmd Output - HTML
-
-{pagebreak}
-
 ## RBCmd Sample Output
 
 {pagebreak}

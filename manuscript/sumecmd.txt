@@ -64,19 +64,7 @@ Options:
 
 ## SumECmd Output
 
-### Analyzing SumECmd Output - Console
-
-{pagebreak}
-
 ### Analyzing SumECmd Output - CSV
-
-{pagebreak}
-
-### Analyzing SumECmd Output - JSON
-
-{pagebreak}
-
-### Analyzing SumECmd Output - HTML
 
 {pagebreak}
 

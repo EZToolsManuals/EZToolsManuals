@@ -72,19 +72,11 @@ Options:
 
 ## SQLECmd Output
 
-### Analyzing SQLECmd Output - Console
-
-{pagebreak}
-
 ### Analyzing SQLECmd Output - CSV
 
 {pagebreak}
 
 ### Analyzing SQLECmd Output - JSON
-
-{pagebreak}
-
-### Analyzing SQLECmd Output - HTML
 
 {pagebreak}
 

@@ -71,22 +71,6 @@ Options:
 
 ## RLA Output
 
-### Analyzing RLA Output - Console
-
-{pagebreak}
-
-### Analyzing RLA Output - CSV
-
-{pagebreak}
-
-### Analyzing RLA Output - JSON
-
-{pagebreak}
-
-### Analyzing RLA Output - HTML
-
-{pagebreak}
-
 ## RLA Sample Output
 
 {pagebreak}

@@ -67,19 +67,7 @@ Options:
 
 ## SrumECmd Output
 
-### Analyzing SrumECmd Output - Console
-
-{pagebreak}
-
 ### Analyzing SrumECmd Output - CSV
-
-{pagebreak}
-
-### Analyzing SrumECmd Output - JSON
-
-{pagebreak}
-
-### Analyzing SrumECmd Output - HTML
 
 {pagebreak}
 
