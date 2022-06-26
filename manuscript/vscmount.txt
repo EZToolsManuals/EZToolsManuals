@@ -11,7 +11,32 @@ In a PowerShell window, running `.\VSCMount.exe` will provide the following opti
 
 {line-numbers:false}
 ```powershell
+Description:
+  VSCMount version 1.5.0.0
 
+  Author: Eric Zimmerman (saericzimmerman@gmail.com)
+  https://github.com/EricZimmerman/VSCMount
+
+  Examples: VSCMount.exe --dl C --mp C:\VssRoot --ud --debug
+
+            Short options (single letter) are prefixed with a single dash. Long commands are
+  prefixed with two dashes
+
+Usage:
+  VSCMount [options]
+
+Options:
+  --dl <dl>       Source drive to look for Volume Shadow Copies (C, D:, or F:\ for example)
+  --mp <mp>       The base directory where you want VSCs mapped to
+  --ud            Use VSC creation timestamps (yyyyMMddTHHmmss.fffffff) in symbolic link
+                  names [default: True]
+  --debug         Show debug information during processing [default: False]
+  --version       Show version information
+  -?, -h, --help  Show help and usage information
+
+
+
+--dl is required. Exiting
 ```
 
 ### Switch Descriptions

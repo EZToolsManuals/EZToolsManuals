@@ -11,6 +11,72 @@ In a PowerShell window, running `.\RECmd.exe` will provide the following options
 
 {line-numbers:false}
 ```powershell
+RECmd version 2.0.0.0
+
+Author: Eric Zimmerman (saericzimmerman@gmail.com)
+https://github.com/EricZimmerman/RECmd
+
+Note: Enclose all strings containing spaces (and all RegEx) with double quotes
+
+Command line:
+
+Description:
+  RECmd version 2.0.0.0
+
+  Author: Eric Zimmerman (saericzimmerman@gmail.com)
+  https://github.com/EricZimmerman/RECmd
+
+  Note: Enclose all strings containing spaces (and all RegEx) with double quotes
+
+  Example: RECmd.exe --f "C:\Temp\UsrClass 1.dat" --sk URL --recover false --nl
+             RECmd.exe --f "D:\temp\UsrClass 1.dat" --StartDate "11/13/2014 15:35:01"
+             RECmd.exe --f "D:\temp\UsrClass 1.dat" --RegEx --sv "(App|Display)Name"
+
+Usage:
+  RECmd [options]
+
+Options:
+  -d <d>               Directory to look for hives (recursively). -f or -d is required
+  -f <f>               Hive to search. -f or -d is required
+  -q                   Quiet mode. When true, hide processing details [default: False]
+  --kn <kn>            Display details for key name. Includes subkeys and values
+  --vn <vn>            Value name. Only this value will be dumped
+  --bn <bn>            Use settings from supplied file to find keys/values. See included sample
+                       file for examples
+  --csv <csv>          Directory to save CSV formatted results to. Required when -bn is used
+  --csvf <csvf>        File name to save CSV formatted results to. When present, overrides default
+                       name
+  --saveTo <saveTo>    Saves --vn value data in binary form to file. Expects path to a FILE
+  --json <json>        Export --kn to directory specified by --json. Ignored when --vn is specified
+  --jsonf <jsonf>      When true, compress names for profile based hives.
+  --details            Show more details when displaying results [default: False]
+  --base64 <base64>    Find Base64 encoded values with size >= Base64 (specified in bytes)
+  --minSize <minSize>  Find values with data size >= MinSize (specified in bytes)
+  --sa <sa>            Search for <string> in keys, values, data, and slack
+  --sk <sk>            Search for <string> in value record's key names
+  --sv <sv>            Search for <string> in value record's value names
+  --sd <sd>            Search for <string> in value record's value data
+  --ss <ss>            Search for <string> in value record's value slack
+  --literal            If true, --sd and --ss search value will not be interpreted as ASCII or
+                       Unicode byte strings [default: False]
+  --nd                 If true, do not show data when using --sd or --ss [default: False]
+  --regex              If present, treat <string> in --sk, --sv, --sd, and --ss as a regular
+                       expression [default: False]
+  --dt <dt>            The custom date/time format to use when displaying time stamps [default:
+                       yyyy-MM-dd HH:mm:ss.fffffff]
+  --nl                 When true, ignore transaction log files for dirty hives [default: False]
+  --recover            If true, recover deleted keys/values [default: False]
+  --vss                Process all Volume Shadow Copies that exist on drive specified by -f or -d
+                       [default: False]
+  --dedupe             Deduplicate -f or -d & VSCs based on SHA-1. First file found wins [default:
+                       False]
+  --sync               If true, the latest batch files from
+                       https://github.com/EricZimmerman/RECmd/tree/master/BatchExamples are
+                       downloaded and local files updated [default: False]
+  --debug              Show debug information during processing [default: False]
+  --trace              Show trace information during processing [default: False]
+  --version            Show version information
+  -?, -h, --help       Show help and usage information
 
 ```
 

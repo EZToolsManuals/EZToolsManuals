@@ -11,6 +11,25 @@ In a PowerShell window, running `.\IISGeoLocate.exe` will provide the following 
 
 {line-numbers:false}
 ```powershell
+Description:
+  iisgeolocate version 2.2.0.0
+
+  Author: Eric Zimmerman (saericzimmerman@gmail.com)
+  https://github.com/EricZimmerman/iisGeolocate
+
+Usage:
+  iisGeolocate [options]
+
+Options:
+  -d <d> (REQUIRED)       The directory that contains IIS logs. This will be recursively searched
+                          for *.log files
+  --csv <csv> (REQUIRED)  The directory to write results to
+  --sbl                   When true, do NOT show bad lines to console (they are still logged to a
+                          file) [default: False]
+  --nul                   When true, do NOT create updated CSV files in --csv directory [default:
+                          False]
+  --version               Show version information
+  -?, -h, --help          Show help and usage information
 
 ```
 
