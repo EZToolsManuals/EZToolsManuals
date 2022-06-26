@@ -49,7 +49,51 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `-i`
+
+This switch will instruct AmcacheParser to include output for ProgramEntries. 
+
+Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache -i`
+
+#### `-w`
+
+This switch will instruct AmcacheParser to read a specified file containing SHA-1 hashes to exclude from the results. This means that hashes specified in this file will NOT be included in the CSV output.
+
+Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache -w D:\Amcache\Hashes.txt`
+
+#### `-b`
+
+This switch will instruct AmcacheParser to read a specified file containing SHA-1 hashes to include from the results. This means that hashes specified in this file will be the ONLY results included in the CSV output.
+
+Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache -b D:\Amcache\Hashes.txt`
+
+#### `--dt`
+
+This switch will instruct AmcacheParser to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
+
+#### `--mp`
+
+This switch will instruct AmcacheParser to provide more verbose timestamps. For instance, running `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache` resulted in the following:
+
+{line-numbers:false}
+```powershell
+File Key Last Write Timestamp
+2022-03-20 21:24:56.000000
+```
+
+Running `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache --mp` resulted in the following:
+
+{line-numbers:false}
+```powershell
+File Key Last Write Timestamp
+2022-03-20 21:24:56.028214
+```
+
+#### `--nl`
+
+This switch will instruct AmcacheParser to ignore transaction logs (*.LOG files)
+
+Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache --nl`
 
 {pagebreak}
 
@@ -57,21 +101,30 @@ Options:
 
 ### Example AmcacheParser Commands
 
-#### Example description here
+#### Parse an Amcache.hve File and Output to CSV
 
 {line-numbers:false}
 ```powershell
-
+AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" --csv C:\temp
 ```
 
-AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" --csv C:\temp
+#### Parse an Amcache.hve file and Output to CSV (specified filename) with ProgramEntries 
+
+{line-numbers:false}
+```powershell
 AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -i on --csv C:\temp --csvf foo.csv
+```
+
+#### Parse an Amcache.hve file and Output to CSV While Only Including Results That Match Specified Hashes
+
+{line-numbers:false}
+```powershell
 AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.txt" --csv C:\temp
+```
 
 {pagebreak}
 
 ## AmcacheParser Output
-
 
 ### Analyzing AmcacheParser Output - CSV
 
