@@ -4,6 +4,10 @@
 
 AmcacheParser is used to parse Amcache.hve files, commonly found at `C:\Windows\appcompat\Programs\Amcache.hve`. 
 
+### Understanding the Artifact: Amcache
+
+
+
 {pagebreak}
 
 ## AmcacheParser Switches
