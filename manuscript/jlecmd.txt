@@ -738,7 +738,7 @@ Entry #: 11
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman’s blog, [Binary Foray](https://binaryforay.blogspot.com/):
 
 * <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
 * <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
