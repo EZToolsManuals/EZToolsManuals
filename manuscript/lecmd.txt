@@ -361,7 +361,7 @@ TrackerCreatedOn
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman’s blog, [Binary Foray](https://binaryforay.blogspot.com/):
 
 * <https://binaryforay.blogspot.com/2016/02/introducing-lecmd.html>
 * <https://binaryforay.blogspot.com/2016/02/lecmd-v0600-released.html>
