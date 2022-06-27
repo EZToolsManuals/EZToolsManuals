@@ -2,6 +2,15 @@
 
 ## WxTCmd Introduction
 
+WxTCmd is a tool created by Eric Zimmerman used to parse the Windows Timeline. Windows Timeline was added to Windows 10 with the 1804 (April 2018) feature update. 
+
+The Windows Timeline can be found at the following location: `C:\Users\%User%\AppData\Local\ConnectedDevicesPlatform\L.CFUser\ActivitiesCache.db`
+
+### Understanding the Artifact: Windows Timeline
+
+MORE TO COME HERE
+
+TODO How far back does it hold on to data?
 
 {pagebreak}
 
@@ -47,7 +56,7 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+Thankfully, WxTCmd doesn't have any unique switches that aren't already covered in the common switches chapter. 
 
 {pagebreak}
 
@@ -55,11 +64,11 @@ Options:
 
 ### Example WxTCmd Commands
 
-#### Example description here
+#### Parse the Windows Timeline and Output to CSV to a Specified Location
 
 {line-numbers:false}
 ```powershell
-
+WxTCmd.exe -f "C:\Users\eric\AppData\Local\ConnectedDevicesPlatform\L.eric\ActivitiesCache.db" --csv c:\temp
 ```
 
 {pagebreak}
@@ -67,6 +76,22 @@ Options:
 ## WxTCmd Output
 
 ### Analyzing WxTCmd Output - CSV
+
+#### *_Activity_PackageIDs.csv
+
+CSV Column Headers:
+
+Id,Platform,Name,AdditionalInformation,Expires
+
+
+
+#### *_Activity.csv
+
+CSV Column Headers:
+
+Id,ActivityTypeOrg,ActivityType,Executable,DisplayText,ContentInfo,Payload,ClipboardPayload,StartTime,EndTime,Duration,LastModifiedTime,LastModifiedOnClient,OriginalLastModifiedOnClient,ExpirationTime,CreatedInCloud,IsLocalOnly,ETag,PackageIdHash,PlatformDeviceId,DevicePlatform,TimeZone
+
+
 
 {pagebreak}
 
@@ -78,31 +103,38 @@ Options:
 
 ### Important Data Points
 
+#### Timestamps
+
+WxTCmd will output the following timestamps of interest:
+
+ * StartTime - TODO 
+ * EndTime - TODO
+
+
 {pagebreak}
 
 ## WxTCmd References
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/WxTCmd> is the GitHub repo for WxTCmd
 
 ### Blog Posts
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman’s blog, [Binary Foray](https://binaryforay.blogspot.com/):
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* <https://binaryforay.blogspot.com/2018/05/introducing-wxtcmd.html>
+* <https://binaryforay.blogspot.com/2018/05/introducing-wxtcmd.html>
 
 #### Community Resources
 
-* Links to blog posts go here
+* <https://niiconsulting.com/checkmate/2021/10/windows-timeline-putting-the-what-when-together/>
+* <https://www.datadigitally.com/2019/04/windows-10-timeline-feature.html>
+* <https://blog.group-ib.com/windows10_timeline_for_forensics>
+* <https://andreafortuna.org/2019/10/03/some-forensic-thoughts-about-windows-10-timeline/>
+* <https://tajdini.net/blog/forensics-and-security/windows-artifacts-for-forensics-investigation/>
 
 ### Download WxTCmd
 
