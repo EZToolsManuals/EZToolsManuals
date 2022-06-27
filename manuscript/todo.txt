@@ -3,3 +3,6 @@
 jlecmd
 
 JLECmd Key Takeaways section needs love
+
+merge SampleOutput and Output?
+add links to DFIRArtifactMuseum sample data for each specific tool's artifact
