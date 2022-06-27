@@ -57,7 +57,6 @@ This is a common switch within EZ Tools. This switch will instruct LECmd to outp
 `.\LECmd.exe -d C:\temp\LNKFiles --html C:\temp\LNKFiles\output`
 `.\JLECmd.exe -d C:\temp\JumpLists --html C:\temp\JumpLists\output`
 
-
 ### `--json`
 
 This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into JSON at the specified location. Please note, this will output a single JSON file regardless of the number of .LNK files parsed.
