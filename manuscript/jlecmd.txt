@@ -99,7 +99,6 @@ This switch will instruct JLECmd to attempt to parse every file in the directory
 
 Example: `.\JLECmd.exe -d C:\temp --all`
 
-
 #### `-q`
 
 This switch will instruct JLECmd to output only what files were processed rather than the parsed data from each JumpList.
