@@ -2,6 +2,13 @@
 
 ## RecentFileCacheParser Introduction
 
+WxTCmd is a tool created by Eric Zimmerman used to parse the RecentFileCache. 
+
+### Understanding the Artifact: RecentFileCache
+
+MORE TO COME HERE
+
+TODO
 
 {pagebreak}
 
@@ -46,7 +53,7 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+Thankfully, RecentFileCacheParser doesn't have any unique switches that aren't already covered in the common switches chapter. 
 
 {pagebreak}
 
@@ -54,11 +61,18 @@ Options:
 
 ### Example RecentFileCacheParser Commands
 
-#### Example description here
+#### Parse the RecentFileCache and Output to CSV to a Specified Location
 
 {line-numbers:false}
 ```powershell
+RecentFileCacheParser.exe -f "C:\Temp\RecentFileCache.bcf" --csv "c:\temp"
+```
 
+#### Parse the RecentFileCache and Output to JSON to a Specified Location
+
+{line-numbers:false}
+```powershell
+RecentFileCacheParser.exe -f "C:\Temp\RecentFileCache.bcf" --json "D:\jsonOutput"
 ```
 
 {pagebreak}
@@ -91,9 +105,7 @@ Options:
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/RecentFileCacheParser> is the GitHub repository for RecentFileCacheParser 
 
 ### Blog Posts
 
@@ -101,15 +113,11 @@ Options:
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* N/A
 
 #### Community Resources
 
-* Links to blog posts go here
+* [RecentFileCache Samples - DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/RecentFileCache/Win7/EricZimmerman)
 
 ### Download RecentFileCacheParser
 
