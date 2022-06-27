@@ -325,7 +325,7 @@ When parsing JumpList files with JLECmd without the `-q` switch, JLECmd will dis
 
 ### Analyzing JLECmd Output - CSV
 
-When parsing JumpLists with JLECmd with the ‘--csv‘ switch, JLECmd will output the parsed data into a CSV file. The CSV file can then be ingested into a tool like Timeline Explorer to analyze the parsed data.
+When parsing JumpLists with JLECmd with the `--csv` switch, JLECmd will output the parsed data into a CSV file. The CSV file can then be ingested into a tool like Timeline Explorer to analyze the parsed data.
 
 ![](jlecmd\CSVReportExampleTLE.jpg)
 
@@ -333,7 +333,7 @@ When parsing JumpLists with JLECmd with the ‘--csv‘ switch, JLECmd will output t
 
 ### Analyzing JLECmd Output - JSON
 
-When parsing JumpLists with JLECmd with the ‘--json‘ switch, JLECmd will output the parsed data into a JSON file. 
+When parsing JumpLists with JLECmd with the `--json` switch, JLECmd will output the parsed data into a JSON file. 
 
 `![](jlecmd\JSONPrettyReportExample.jpg)`
 
@@ -473,7 +473,7 @@ TODO: figure out if the below JSON excerpt is preferred OR just a single screens
 
 ### Analyzing JLECmd Output - HTML
 
-When parsing JumpLists with JLECmd with the ‘--html‘ switch, JLECmd will output the parsed data into an HTML file. Please note, the HTML file will be placed into a dedicated subfolder, which is not normally the case when outputting to CSV or JSON.
+When parsing JumpLists with JLECmd with the `--html` switch, JLECmd will output the parsed data into an HTML file. Please note, the HTML file will be placed into a dedicated subfolder, which is not normally the case when outputting to CSV or JSON.
 
 ![](jlecmd\HTMLReportExample.jpg)
 
