@@ -5,4 +5,5 @@ jlecmd
 JLECmd Key Takeaways section needs love
 
 merge SampleOutput and Output?
-add links to DFIRArtifactMuseum sample data for each specific tool's artifact
+add links to DFIRArtifactMuseum sample data for each specific tool’s artifact
+add sample output for every single type of output to GitHub repo and link to it in the book?
