@@ -2,7 +2,7 @@
 
 ## Common Switches
 
-While each of the EZ Tools provide unique functionality based on the artifact they were developed specifically to parse, most EZ Tools share common switches that will be covered here so they’re not repeated in each EZ Tools’ respection Switches chapter.
+While each of the EZ Tools provide unique functionality based on the artifact they were developed specifically to parse, most EZ Tools share common switches that will be covered here so they’re not repeated in each EZ Tools’ respective Switches section.
 
 ### `-f`
 
