@@ -2,6 +2,7 @@
 
 ## MFTECmd Introduction
 
+MFTECmd is a tool created by Eric Zimmerman used to parse various NTFS metadata artifacts, including but not limited to the $MFT, $J, $Boot, $SDS, and $I30 files. 
 
 {pagebreak}
 
@@ -81,7 +82,7 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `--bdl`
 
 {pagebreak}
 
@@ -144,15 +145,16 @@ Options:
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* <https://binaryforay.blogspot.com/2018/06/introducing-mftecmd.html>
+* <https://binaryforay.blogspot.com/2018/06/mftecmd-v0260-released.html>
+* <https://binaryforay.blogspot.com/2018/12/mftecmd-0360-released.html>
+* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
 
 #### Community Resources
 
-* Links to blog posts go here
+* <https://aboutdfir.com/toolsandartifacts/windows/mft-explorer-mftecmd/>
+* <https://www.youtube.com/watch?v=1mwiShxREm8>
+* <https://www.youtube.com/watch?v=_qElVZJqlGY>
 
 ### Download MFTECmd
 
