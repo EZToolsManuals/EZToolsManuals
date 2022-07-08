@@ -79,17 +79,11 @@ WxTCmd.exe -f "C:\Users\eric\AppData\Local\ConnectedDevicesPlatform\L.eric\Activ
 
 #### *_Activity_PackageIDs.csv
 
-CSV Column Headers:
-
-Id,Platform,Name,AdditionalInformation,Expires
-
 
 
 #### *_Activity.csv
 
-CSV Column Headers:
 
-Id,ActivityTypeOrg,ActivityType,Executable,DisplayText,ContentInfo,Payload,ClipboardPayload,StartTime,EndTime,Duration,LastModifiedTime,LastModifiedOnClient,OriginalLastModifiedOnClient,ExpirationTime,CreatedInCloud,IsLocalOnly,ETag,PackageIdHash,PlatformDeviceId,DevicePlatform,TimeZone
 
 
 
@@ -107,7 +101,7 @@ Id,ActivityTypeOrg,ActivityType,Executable,DisplayText,ContentInfo,Payload,Clipb
 
 WxTCmd will output the following timestamps of interest:
 
- * StartTime - TODO 
+ * StartTime - TODO
  * EndTime - TODO
 
 
