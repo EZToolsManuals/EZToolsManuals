@@ -3,7 +3,7 @@
 ![image1](shellbagsexplorer\image1.png)
 
 Revision history
-11/21/2014 Rev. 1 – Initial release
+11/21/2014 Rev. 1 â€“ Initial release
 7/25/2022 Rev, 2 - Leanpub release
 
 ## Requirements
@@ -13,11 +13,11 @@ ShellBags Explorer requires Microsoft .net framework version 4.5.1 full runtime 
 
 ShellBags are of great forensic value from Intrusion investigations to Malware Causality examinations to timeline generation in that they are a perfect example of Locard's exchange principle - "a perpetrator will bring something into a crime scene and leave with something from it."
 
-By design, Microsoft® Windows may track a cyber intruder's actions on a host system after compromise if the actor uses RDP or other Remote Connection controls and/or Windows Explorer to drop binaries onto the system, to access network resources, browse compressed archives, etc.  Additionally, all directory traversal done with Windows Explorer is tracked and maintained in the registry. This data includes multiple timestamps and other pieces of information that provide context and can be used to show knowledge and intent when it comes to accessing directories or other resources on a computer.
+By design, MicrosoftÂ® Windows may track a cyber intruder's actions on a host system after compromise if the actor uses RDP or other Remote Connection controls and/or Windows Explorer to drop binaries onto the system, to access network resources, browse compressed archives, etc.  Additionally, all directory traversal done with Windows Explorer is tracked and maintained in the registry. This data includes multiple timestamps and other pieces of information that provide context and can be used to show knowledge and intent when it comes to accessing directories or other resources on a computer.
 
 From the anti-forensics standpoint, an absence of ShellBag entries may suggest system cleaning or overt action by an end-user and potential sophistication of the actor.  Lastly, bad actors are becoming smarter every day - not every forensic examination will contain evidence in plain sight/allocated space.  ShellBags, along with other artifacts, may point to evidence that existed at one point in time or may assist the examiner in looking at the broader picture when only a piece is known.
 
-ShellBags are a set of Windows Registry keys located in NTUser.dat and USRClass.dat registry hives (primarily usrclass.dat) that maintain view, icon, position, size (and other attributes) of folders when using Windows Explorer.  They are likely to persist information even when the original directories, files, and physical devices have been removed from the system and due to this, can serve as a "history" of sorts into data that was previously on a system but may have since been removed.  When combined with volume shadow copies (specifically, older copies of registry hives), significant insight into a user’s activity can be gleaned.
+ShellBags are a set of Windows Registry keys located in NTUser.dat and USRClass.dat registry hives (primarily usrclass.dat) that maintain view, icon, position, size (and other attributes) of folders when using Windows Explorer.  They are likely to persist information even when the original directories, files, and physical devices have been removed from the system and due to this, can serve as a "history" of sorts into data that was previously on a system but may have since been removed.  When combined with volume shadow copies (specifically, older copies of registry hives), significant insight into a userâ€™s activity can be gleaned.
 
 ## ShellBags location in the registry
 
@@ -50,7 +50,7 @@ Each ShellBag contains binary data that defines what the ShellBag represents. Do
 
 In the example above, the "0" value has been opened. The contents of the ShellBag are shown in hexadecimal. The example above contains a GUID which corresponds to the "My Computer" folder. There are hundreds of GUIDs that map to directories, control panel items and categories, etc. SBE contains hundreds of GUID mappings to human readable formats.
 
-Some ShellBags will contain strings (both ANSI and Unicode) representing things such as directory names or UNC paths. In the image below, a directory named "Timelord" was accessed. The ‘short name’ is highlighted in green and the ‘long name’ is highlighted in blue.
+Some ShellBags will contain strings (both ANSI and Unicode) representing things such as directory names or UNC paths. In the image below, a directory named "Timelord" was accessed. The â€˜short nameâ€™ is highlighted in green and the â€˜long nameâ€™ is highlighted in blue.
 
 ![image4](shellbagsexplorer\image4.png)
 
@@ -92,7 +92,7 @@ We know we are at the "bottom" because there are no more child keys and the MRUL
 
 ### LastWrite times and their value in ShellBags analysis
 
-Whenever a value is changed in a registry key, the key’s LastWrite timestamp is updated. Regedit does not display these timestamps, but other forensic programs such as X-Ways Forensics or TZWorks yaru can. When using yaru to look at the same key as shown above, we can see the key was last written on 11/17/2014 at 18:14:40.553 UTC.
+Whenever a value is changed in a registry key, the keyâ€™s LastWrite timestamp is updated. Regedit does not display these timestamps, but other forensic programs such as X-Ways Forensics or TZWorks yaru can. When using yaru to look at the same key as shown above, we can see the key was last written on 11/17/2014 at 18:14:40.553 UTC.
 
 ![image9](shellbagsexplorer\image9.png)
 
@@ -104,7 +104,7 @@ To determine the first time a ShellBag was explored, we can look for the "bottom
 
 ![image10](shellbagsexplorer\image10.png)
 
-Note: This only works for the bottommost key and its corresponding value in the key’s parent. If a child directory is browsed underneath the highlighted key above, it is not possible to determine the first explored date for the intermediate folder anymore (but we would now know when the newly browsed folder was viewed, assuming it was the bottommost directory navigated to).
+Note: This only works for the bottommost key and its corresponding value in the keyâ€™s parent. If a child directory is browsed underneath the highlighted key above, it is not possible to determine the first explored date for the intermediate folder anymore (but we would now know when the newly browsed folder was viewed, assuming it was the bottommost directory navigated to).
 
 To determine the last time a ShellBag was explored, we use the LastWrite timestamp in conjunction with the MRUListEx value. Recall the first entry in MRUListEx is the most recently viewed ShellBag in a given key. By looking at the LastWrite timestamp for a key, we know when the first entry in the MRUListEx was last explored.
 
@@ -116,14 +116,14 @@ More information on these concepts is available at http://www.4n6k.com/2013/12/s
 
 ## Why another ShellBags program?
 
-Tools like RegRipper and sbags from TZWorks have processed ShellBags for quite some time now, but ShellBags Explorer (SBE) is different in that it presents a visual representation of what a user’s directory structure looked like. Additionally SBE exposes various timestamps such as First Explored and Last Explored for a given folder, the file system where a directory existed, and so on. SBE also contains a command line version which can produce output (while still including the additional relevant timestamps and file system info, etc.) similar to sbags and RegRipper.
+Tools like RegRipper and sbags from TZWorks have processed ShellBags for quite some time now, but ShellBags Explorer (SBE) is different in that it presents a visual representation of what a userâ€™s directory structure looked like. Additionally SBE exposes various timestamps such as First Explored and Last Explored for a given folder, the file system where a directory existed, and so on. SBE also contains a command line version which can produce output (while still including the additional relevant timestamps and file system info, etc.) similar to sbags and RegRipper.
 
 ### Capabilities overview
 
 SBE is meant to be an all-inclusive tool for ShellBag artifacts.  It negates the need for laborious manual steps, decoding of data, and determining contextual relationships between directories, etc.
 
  * Included support for all known Extension blocks and auto-detection of unknown blocks, unknown ShellBag types, etc.
- * Data interpreter to Hex view.  As hex values are selected, the values update from the cursor’s position.
+ * Data interpreter to Hex view.  As hex values are selected, the values update from the cursorâ€™s position.
  * Support for NTUser.dat and USRClass.dat
  * Consistent display of data for bags
  * Ability to view all bags recursively to easily sort, filter, etc.
@@ -133,7 +133,7 @@ SBE is meant to be an all-inclusive tool for ShellBag artifacts.  It negates the
 
 ### How does it work?
 
- * The basis for SBE is Joachim Metz’s document, Windows Shell Item format specification, which is available here http://goo.gl/rJXmLY. The specification outlines all known shell bag types and layouts and is continually updated by Metz as new information is discovered.
+ * The basis for SBE is Joachim Metzâ€™s document, Windows Shell Item format specification, which is available here http://goo.gl/rJXmLY. The specification outlines all known shell bag types and layouts and is continually updated by Metz as new information is discovered.
  * Certain shell bags contain other properties with complex layouts. These specifications are linked in the document above.
 
 SBE has been designed with features and capabilities such as unknown GUID detection, extension block mismatches, etc. and has been used to contribute significant, previously unknown information to the format specification for shell items. By automatically reporting anomalies in the decoding process, these anomalies can be reported to the program developer in order to improve the capabilities of SBE and thusly the forensic process in which SBE is used.
@@ -148,7 +148,6 @@ If you are reading this, it is assumed you already have ShellBags Explorer insta
 
  * SBECmd.exe: The command line version of ShellBags Explorer
  * ShellBagsExplorer.exe: The GUI version of ShellBags Explorer
- * ShellBagsExplorerManual.pdf: The file you are reading now
 
 Either version of ShellBags Explorer (SBE) can be used to process and examine registry hives. One program does not rely on the other for SBE to function.
 
@@ -212,7 +211,7 @@ More information is available when browsing an offline hive than browsing the li
 
 Once SBE has loaded a hive, the File menu also allows for exporting of the data in one of several formats.
 
- * TSV: All available columns will be exported
+ * CSV: All available columns will be exported
  * Excel: The visible columns in the Grid view are exported.
  * json: All data is exported in json format.
 
@@ -317,7 +316,7 @@ SBE supports the following columns as of v0.5.0.0:
  * Miscellaneous: Used to report additional items of interest about shell bags as needed. This is primarily used to report the type of file system an item was located on
  * Modified on: The modified date as stored in the ShellBag
  * MRU: The Most Recently Used position of the bag
- * Slot: The shell bag’s numerical identifier in its parent key
+ * Slot: The shell bagâ€™s numerical identifier in its parent key
  * Type: The human readable description of what kind of data the shell bag represents (file, folder, etc.)
  * Type ID: The hexadecimal identifier for the shell bag. This is found in offset 0x02 in the hex that makes up a shell bag.
  * Value: The name of the file, folder, property view, etc. for the shell bag. This is the primary identifier for a shell bag.
@@ -351,7 +350,7 @@ Clicking on this cell and typing will immediately filter that column to only ite
 
 ![image27](shellbagsexplorer\image27.png)
 
-There are also dropdowns which contain all unique entries in the column plus options to add custom filters to the list. To the right of each cell is a button that can be used to clear that column’s filter.
+There are also dropdowns which contain all unique entries in the column plus options to add custom filters to the list. To the right of each cell is a button that can be used to clear that columnâ€™s filter.
 
 To the far right of the filter row is a button that can be used to clear all filters.
 
@@ -381,7 +380,7 @@ To "undo" grouping, drag the columns back into the main grid area at any locatio
 
 ### Selecting bags in grid view
 
-Left clicking a bag will select that bag and display that bag’s details in the details view (described below). After selecting a bag via left clicking it, you can jump to that bag by right clicking it.
+Left clicking a bag will select that bag and display that bagâ€™s details in the details view (described below). After selecting a bag via left clicking it, you can jump to that bag by right clicking it.
 
 In the image below, we are recursively viewing the bags at and below D:.
 
@@ -496,11 +495,11 @@ After exporting one or more hives to a directory, execute SBECmd.exe as follows:
 
 SBECmd.exe -d <directory>
 
-A new directory underneath <directory> will be created called ‘Out’ which will contain the TSV reports generated by SBECmd.exe. An example run is shown below.
+A new directory underneath <directory> will be created called â€˜Outâ€™ which will contain the TSV reports generated by SBECmd.exe. An example run is shown below.
 
 ![image44](shellbagsexplorer\image44.png)
 
-If SBECmd.exe encounters any errors processing hives, they will be reported to the console and to ‘!SBECmd_Messages.txt’ in <directory>\Out
+If SBECmd.exe encounters any errors processing hives, they will be reported to the console and to â€˜!SBECmd_Messages.txtâ€™ in <directory>\Out
 
 ### Processing multiple, related hives
 
@@ -512,13 +511,13 @@ After exporting one or more hives to a directory, execute SBECmd.exe as follows:
 
 SBECmd.exe -d <directory> --dedupe
 
-A new directory underneath <directory> will be created called ‘Out’ which will contain the TSV report named ’Deduplicated.tsv’. An example run is shown below.
+A new directory underneath <directory> will be created called â€˜Outâ€™ which will contain the TSV report named â€™Deduplicated.tsvâ€™. An example run is shown below.
 
 ![image45](shellbagsexplorer\image45.png)
 
 ### Time zone support
 
-Like its GUI counterpart, SBECmd can adjust all dates and times to a user selected time zone. The default time zone is UTC, but a different time zone can be selected via the –timezone switch. Enclose the timezone in quotes. An example is shown below.
+Like its GUI counterpart, SBECmd can adjust all dates and times to a user selected time zone. The default time zone is UTC, but a different time zone can be selected via the â€“timezone switch. Enclose the timezone in quotes. An example is shown below.
 
 ![image46](shellbagsexplorer\image46.png)
 
@@ -563,13 +562,13 @@ CHANGE: Look for common signatures in several bags and act accordingly
 FIX: Detect several fringe cases and set value to "!!! Unable to determine value !!!". These need more research for full support
 FIX: Remove early return in 0x4d bag which resulted in the ShellBag not displaying properly
 Version 0.5.0.3
-NEW: Add new ShellBag type, ShellBagParseError, that is used as a placeholder when ShellBag contents aren’t parsed properly.
+NEW: Add new ShellBag type, ShellBagParseError, that is used as a placeholder when ShellBag contents arenâ€™t parsed properly.
 Version 0.5.0.2
 NEW: Added support for 0x61 bags (FTP). Connection date and username (when saved) are reported
 NEW: Added support for Variable: FTP URI ShellBags. These show directories browsed on an FTP server and in many cases contains the timestamp on the FTP folder
 
 CHANGE: More support for contents in BEEF000e extension blocks
-CHANGE: Improve message when BagMRU key isn’t found in a hive.
+CHANGE: Improve message when BagMRU key isnâ€™t found in a hive.
 CHANGE: Updated drive letter icon to a hard drive vs green folder
 CHANGE: Expand and collapse nodes now affects the selected node vs all nodes.
 
@@ -617,7 +616,7 @@ NEW: Even MORE GUIDS!!!!!1
 CHANGE: Improvements to message form details pane
 CHANGE: Hide InternalID and HexView from grid field chooser
 
-FIX: Deal with improperly terminated Unicode strings so a ? isn’t displayed as the last character
+FIX: Deal with improperly terminated Unicode strings so a ? isnâ€™t displayed as the last character
 FIX: Handle embedded property stores in 0x71 (Control panel bags) vs reporting unknown GUID
 FIX: Lots of fringe case cleanup
 Version 0.3.7.0
@@ -641,14 +640,14 @@ NEW: Alternate row colors in Messages window
 NEW: Added exporting of messages to Excel via button on Messages window
 NEW: Added 'Clear messages' button to Messages window
 
-CHANGE: Made column headers look nicer by adding spaces (it’s the little things sometimes)
+CHANGE: Made column headers look nicer by adding spaces (itâ€™s the little things sometimes)
 CHANGE: Tweak Messages window to allow for message type, message, and details view to unclutter the display
 CHANGE: Recoded Root folder shell item ShellBag type (0x1f) to find and add multiple extension blocks
 CHANGE: Expand hex view to fill more space and move data interpreter to far right
 CHANGE: Show wait cursor while doing things vs arrow
 CHANGE: Add detection of bags related to zip file contents early vs inside each known bag type. This prevents a lot of future "unknown" types going forward
 
-Appendix A – Contributors
+Appendix A â€“ Contributors
 The following people have contributed in one way or another during the development and refinement of SBE
  * SA/FE Devon P. Ackerman devon.ackerman@ic.fbi.gov, sadevonackerman@gmail.com
  * David Cowen @HECFBlog
@@ -656,7 +655,7 @@ The following people have contributed in one way or another during the developme
  * Dan Pullega @4n6k
  * Mark Woan @woanware
 
-Appendix B – Additional resources
+Appendix B â€“ Additional resources
  * http://msdn.microsoft.com/en-us/library/aa965725%28v=vs.85%29.aspx
  * https://code.google.com/p/libfwsi/wiki/ShellFolderIdentifiers
  * https://docs.google.com/file/d/0B-VYGsDJPtZlVDNJQ3pWX0M1b1k/edit
