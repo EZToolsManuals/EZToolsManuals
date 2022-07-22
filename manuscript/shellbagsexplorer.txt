@@ -3,8 +3,8 @@
 ![image1](shellbagsexplorer\image1.png)
 
 Revision history
-11/21/2014 Rev. 1 – Initial release
-7/25/2022 Rev, 2 - Leanpub release
+2014-11-21 Rev. 1 – Initial release
+2022-07-25 Rev, 2 - Leanpub release
 
 ## Requirements
 ShellBags Explorer requires Microsoft .net framework version 4.5.1 full runtime or greater to be installed.  It is available at http://www.microsoft.com/en-us/download/details.aspx?id=40779.
