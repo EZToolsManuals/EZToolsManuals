@@ -2,12 +2,13 @@
 
 ## EvtxECmd Introduction
 
+EvtxECmd is a tool created by Eric Zimmerman used to parse event logs from Windows. Versions of Windows from Vista and beyond have utilized the .evtx format, which incorporates XML payloads within the .evtx files. EvtxECmd only parses .evtx files, so if you're dealing with .evt files, EvtxECmd will not parse those particular files.
 
 {pagebreak}
 
 ## EvtxECmd Switches
 
-In a PowerShell window, running `.\EvtxECmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\EvtxECmd.exe` will provide the following options when running EvtxECmd:
 
 {line-numbers:false}
 ```powershell
@@ -21,8 +22,7 @@ Description:
             EvtxECmd.exe -f "C:\Temp\Application.evtx" --csv "c:\temp\out"
             EvtxECmd.exe -f "C:\Temp\Application.evtx" --json "c:\temp\jsonout"
 
-            Short options (single letter) are prefixed with a single dash. Long commands are prefixed
-  with two dashes
+            Short options (single letter) are prefixed with a single dash. Long commands are prefixed with two dashes
 
 Usage:
   EvtxECmd [options]
@@ -33,32 +33,23 @@ Options:
   --csv <csv>      Directory to save CSV formatted results to
   --csvf <csvf>    File name to save CSV formatted results to. When present, overrides default name
   --json <json>    Directory to save JSON formatted results to
-  --jsonf <jsonf>  File name to save JSON formatted results to. When present, overrides default
-                   name
+  --jsonf <jsonf>  File name to save JSON formatted results to. When present, overrides default name
   --xml <xml>      Directory to save XML formatted results to
   --xmlf <xmlf>    File name to save XML formatted results to. When present, overrides default name
-  --dt <dt>        The custom date/time format to use when displaying time stamps [default:
-                   yyyy-MM-dd HH:mm:ss.fffffff]
-  --inc <inc>      List of Event IDs to process. All others are ignored. Overrides --exc Format is
-                   4624,4625,5410
+  --dt <dt>        The custom date/time format to use when displaying time stamps [default: yyyy-MM-dd HH:mm:ss.fffffff]
+  --inc <inc>      List of Event IDs to process. All others are ignored. Overrides --exc Format is 4624,4625,5410
   --exc <exc>      List of Event IDs to IGNORE. All others are included. Format is 4624,4625,5410
-  --sd <sd>        Start date for including events (UTC). Anything OLDER than this is dropped.
-                   Format should match --dt
-  --ed <ed>        End date for including events (UTC). Anything NEWER than this is dropped.
-                   Format should match --dt
+  --sd <sd>        Start date for including events (UTC). Anything OLDER than this is dropped. Format should match --dt
+  --ed <ed>        End date for including events (UTC). Anything NEWER than this is dropped. Format should match --dt
   --fj             When true, export all available data when using --json [default: False]
   --tdt <tdt>      The number of seconds to use for time discrepancy detection [default: 1]
   --met            When true, show metrics about processed event log [default: True]
-  --maps <maps>    The path where event maps are located. Defaults to 'Maps' folder where program
-                   was executed [default: C:\Users\CFUser\OneDrive - Kroll\Desktop\EZ
-                   Tools\net6\EvtxeCmd\Maps]
-  --vss            Process all Volume Shadow Copies that exist on drive specified by -f or -d
-                   [default: False]
-  --dedupe         Deduplicate -f or -d & VSCs based on SHA-1. First file found wins [default:
-                   True]
-  --sync           If true, the latest maps from
-                   https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps are downloaded and
-                   local maps updated [default: False]
+  --maps <maps>    The path where event maps are located. Defaults to 'Maps' folder where program was executed
+                   [default: C:\Users\CFUser\OneDrive - Kroll\Desktop\EZ Tools\net6\EvtxeCmd\Maps]
+  --vss            Process all Volume Shadow Copies that exist on drive specified by -f or -d [default: False]
+  --dedupe         Deduplicate -f or -d & VSCs based on SHA-1. First file found wins [default: True]
+  --sync           If true, the latest maps from https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps are
+                   downloaded and local maps updated [default: False]
   --debug          Show debug information during processing [default: False]
   --trace          Show trace information during processing [default: False]
   --version        Show version information
@@ -70,7 +61,55 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### inc
+
+This switch will provide EvtxECmd with which event ID(s) to process.
+
+Example: `.\EvtxECmd.exe -d C:\Windows\System32\winevt\Logs --inc 4624,4625`
+
+The above command WILL process 4624 and 4625 events, but will NOT process anything else.
+
+### exc
+
+This switch will provide EvtxECmd with which event ID(s) to ignore during process.
+
+Example: `.\EvtxECmd.exe -d C:\Windows\System32\winevt\Logs --exc 4624,4625`
+
+The above command will NOT process 4624 and 4625 events, but will process everything other event.
+
+#### sd
+
+This switch will provide a starting date for which EvtxECmd will process all events that have occurred AFTER that date.
+
+Example: `.\EvtxECmd.exe -f "C:\Windows\System32\winevt\Logs\Microsoft-Windows-SmbClient%4Security.evtx" --csv D:\ --sd "2022-07-29 00:00:00.0000000"`
+
+Not using quotes around the timestamp may cause issues.
+
+#### ed
+
+This switch will provide a starting date for which EvtxECmd will process all events that have occurred BEFORE that date.
+
+Example: `.\EvtxECmd.exe -f "C:\Windows\System32\winevt\Logs\Microsoft-Windows-SmbClient%4Security.evtx" --csv D:\ --ed "2022-07-27 00:00:00.0000000"`
+
+Not using quotes around the timestamp may cause issues.
+
+#### fj
+
+This switch will include full details when using the common `--json` switch.
+
+Example: `.\EvtxECmd.exe -d "C:\Users\CFUser\Downloads\EventLogs\logs" --json "C:\Users\CFUser\Downloads\EventLogs\logs\json" --fj`
+
+#### tdt
+
+
+#### met
+
+
+
+#### maps
+
+
+
 
 {pagebreak}
 
@@ -119,7 +158,7 @@ Options:
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
+* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
 * <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
 * <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
 
