@@ -75,6 +75,10 @@ This switch will instruct LECmd to output parsed data into pretty printed JSON a
 `.\LECmd.exe -d C:\temp\LNKFiles --json C:\temp\LNKFiles\output --pretty`
 `.\JLECmd.exe -d C:\temp\JumpLists --json C:\temp\JumpLists\output --pretty`
 
+### `--dt`
+
+
+
 ### `--debug`
 
 This is a common switch within EZ Tools. This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
