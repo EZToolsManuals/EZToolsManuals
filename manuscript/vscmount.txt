@@ -41,7 +41,23 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `--dl`
+
+This switch
+
+Example: ``
+
+#### `--mp`
+
+This switch
+
+Example: ``
+
+#### `--ud`
+
+This switch
+
+Example: ``
 
 {pagebreak}
 
@@ -49,11 +65,11 @@ Options:
 
 ### Example VSCMount Commands
 
-#### Example description here
+#### Mount VSCs from the C:\ drive and map them to a specified directory while using VSC creation timestamps in symbolic link names
 
 {line-numbers:false}
 ```powershell
-
+.\VSCMount.exe --dl C --mp C:\VssRoot --ud --debug
 ```
 
 {pagebreak}
@@ -74,9 +90,7 @@ Options:
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/VSCMount> is the GitHub repository for VSCMount
 
 ### Blog Posts
 
@@ -84,15 +98,7 @@ Options:
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
-
-#### Community Resources
-
-* Links to blog posts go here
+* <https://binaryforay.blogspot.com/2018/09/introducing-vscmount.html>
 
 ### Download VSCMount
 
