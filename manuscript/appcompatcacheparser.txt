@@ -2,7 +2,7 @@
 
 ## AppCompatCacheParser Introduction
 
-AppCompatCacheParser is a tool created by Eric Zimmerman used to parse the AppCompatCache, commonly referred to as the ShimCache, which can be found in the INSERT HIVE HERE.
+AppCompatCacheParser is a tool created by Eric Zimmerman used to parse the AppCompatCache, commonly referred to as the ShimCache, which can be found in the SYSTEM hive.
 
 ### Understanding the Artifact: AppCompatCache
 
