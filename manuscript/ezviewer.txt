@@ -2,56 +2,7 @@
 
 ## EZViewer Introduction
 
-
-{pagebreak}
-
-## EZViewer Switches
-
-In a PowerShell window, running `.\EZViewer.exe` will provide the following options when running JLECmd:
-
-{line-numbers:false}
-```powershell
-
-```
-
-### Switch Descriptions
-
-#### SWITCH
-
-{pagebreak}
-
-## EZViewer Command Examples
-
-### Example EZViewer Commands
-
-#### Example description here
-
-{line-numbers:false}
-```powershell
-
-```
-
-{pagebreak}
-
-## EZViewer Output
-
-### Analyzing EZViewer Output - Console
-
-{pagebreak}
-
-### Analyzing EZViewer Output - CSV
-
-{pagebreak}
-
-### Analyzing EZViewer Output - JSON
-
-{pagebreak}
-
-### Analyzing EZViewer Output - HTML
-
-{pagebreak}
-
-## EZViewer Sample Output
+EZViewer is a standalone, zero dependency viewer for .doc, .docx, .xls, .xlsx, .txt, .log, .rtf, .otd, .htm, .html, .mht, .csv, and .pdf. Any non-supported files are shown in a hex editor (with data interpreter!).
 
 {pagebreak}
 
@@ -59,31 +10,9 @@ In a PowerShell window, running `.\EZViewer.exe` will provide the following opti
 
 ### Important Data Points
 
+EZViewer is a great tool to have on your flash drive when you’re on site at a search warrant or at a client’s site. There is no need to deal with Microsoft Office. Just use EZViewer in all of its fully portable glory so you can view those files without any of the first-party dependencies! 
+
 {pagebreak}
-
-## EZViewer References
-
-### Associated GitHub Repositories
-
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
-
-### Blog Posts
-
-#### Official Blog Posts
-
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
-
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
-
-#### Community Resources
-
-* Links to blog posts go here
 
 ### Download EZViewer
 
