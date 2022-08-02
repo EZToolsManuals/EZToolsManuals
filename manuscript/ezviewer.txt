@@ -2,7 +2,7 @@
 
 ## EZViewer Introduction
 
-EZViewer is a standalone, zero dependency viewer for .doc, .docx, .xls, .xlsx, .txt, .log, .rtf, .otd, .htm, .html, .mht, .csv, and .pdf. Any non-supported files are shown in a hex editor (with data interpreter!).
+EZViewer is a standalone, zero dependency viewer for .doc, .docx, .xls, .xlsx, .txt, .log, .rtf, .otd, .htm, .html, .mht, .csv, and .pdf. Any non-supported files are shown in a hex editor (with data interpreter!). Please note, this tool is read only and therefore cannot edit any files!
 
 {pagebreak}
 
