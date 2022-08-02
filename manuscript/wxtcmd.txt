@@ -2,15 +2,13 @@
 
 ## WxTCmd Introduction
 
-WxTCmd is a tool created by Eric Zimmerman used to parse the Windows Timeline. Windows Timeline was added to Windows 10 with the 1804 (April 2018) feature update. 
+WxTCmd is a tool created by Eric Zimmerman used to parse the [Windows Timeline](https://support.microsoft.com/en-us/windows/get-help-with-timeline-febc28db-034c-d2b0-3bbe-79aa0c501039). Windows Timeline was added to Windows 10 with the 1804 (April 2018) feature update.
 
-The Windows Timeline can be found at the following location: `C:\Users\%User%\AppData\Local\ConnectedDevicesPlatform\L.CFUser\ActivitiesCache.db`
+The Windows Timeline can be found at the following location: `C:\Users\%User%\AppData\Local\ConnectedDevicesPlatform\L.CFUser\ActivitiesCache.db`.
 
 ### Understanding the Artifact: Windows Timeline
 
-MORE TO COME HERE
-
-TODO How far back does it hold on to data?
+The Windows Timeline is an SQLite database that records artifacts relating to program execution and file access for up to 30 days prior to the time of parsing the artifact.
 
 {pagebreak}
 
@@ -56,7 +54,7 @@ Options:
 
 ### Switch Descriptions
 
-Thankfully, WxTCmd doesn't have any unique switches that aren't already covered in the common switches chapter. 
+Thankfully, WxTCmd doesn't have any unique switches that aren't already covered in the common switches chapter.
 
 {pagebreak}
 
@@ -79,13 +77,11 @@ WxTCmd.exe -f "C:\Users\eric\AppData\Local\ConnectedDevicesPlatform\L.eric\Activ
 
 #### *_Activity_PackageIDs.csv
 
-
+This CSV will contain GUIDs of applications that were executed on disk. Generally speaking, this CSV is not going to be as useful as the CSV highlighted below.
 
 #### *_Activity.csv
 
-
-
-
+This CSV will contain the Start Time and End Time of an application's execution by a given user. This database is user specific, so this activity can be associated with a specific user account. Additionally, there is a JSON payload for each entry within the Windows Timeline SQLite database that may provide further context for an entry within the database.
 
 {pagebreak}
 
@@ -101,9 +97,8 @@ WxTCmd.exe -f "C:\Users\eric\AppData\Local\ConnectedDevicesPlatform\L.eric\Activ
 
 WxTCmd will output the following timestamps of interest:
 
- * StartTime - TODO
- * EndTime - TODO
-
+ * StartTime - The timestamp of when the user opened an application
+ * EndTime - The timestamp of when the user closed an application
 
 {pagebreak}
 
@@ -119,7 +114,6 @@ WxTCmd will output the following timestamps of interest:
 
 Blog posts from Eric Zimmerman’s blog, [Binary Foray](https://binaryforay.blogspot.com/):
 
-* <https://binaryforay.blogspot.com/2018/05/introducing-wxtcmd.html>
 * <https://binaryforay.blogspot.com/2018/05/introducing-wxtcmd.html>
 
 #### Community Resources
