@@ -2,6 +2,7 @@
 
 ## RLA Introduction
 
+RLA is a tool that can be used to repair dirty Windows Registry hives. This is particularly useful when using tools that don’t handle dirty Registry hives themselves.
 
 {pagebreak}
 
@@ -52,7 +53,23 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `--out`
+
+This switch will output updated hives (aka dirty -> clean) to the specified directory. This will only occur if there are dirty hives with transaction logs applied.
+
+Example: `.\rla.exe -d "D:\TODO" --out "D:\TODO\clean"`
+
+#### `--ca`
+
+This switch will tell RLA.exe to always copy hives to the specified directory, even if they aren't dirty.
+
+Example: `.\rla.exe -d "D:\Hives" --out "D:\Hives\clean" --ca`
+
+#### `--cn`
+
+This switch will compress the names for profile-based hives.
+
+Example: `.\rla.exe -d "D:\Hives\NTUser" --out "D:\Hives\clean" --cn`
 
 {pagebreak}
 
@@ -60,50 +77,24 @@ Options:
 
 ### Example RLA Commands
 
-#### Example description here
+#### Replay transaction logs from a specific Registry hive and output the clean Registry hive to a specified location
 
 {line-numbers:false}
 ```powershell
+rla.exe -f "C:\Temp\UsrClass 1.dat" --out C:\temp
 
+```
+
+#### Replay transaction logs from a directory or Registry hives and output the clean Registry hives to a specified location
+
+{line-numbers:false}
+```powershell
+rla.exe -d "D:\temp\" --out c:\temp
 ```
 
 {pagebreak}
 
-## RLA Output
-
-## RLA Sample Output
-
-{pagebreak}
-
-## RLA Key Takeaways
-
-### Important Data Points
-
-{pagebreak}
-
 ## RLA References
-
-### Associated GitHub Repositories
-
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
-
-### Blog Posts
-
-#### Official Blog Posts
-
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
-
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
-
-#### Community Resources
-
-* Links to blog posts go here
 
 ### Download RLA
 
