@@ -53,7 +53,23 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `-c`
+
+This switch
+
+Example: ``
+
+#### `-t`
+
+This switch
+
+Example: ``
+
+#### `-nl`
+
+This switch
+
+Example: ``
 
 {pagebreak}
 
