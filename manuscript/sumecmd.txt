@@ -48,9 +48,9 @@ Options:
 
 #### wd
 
-This switch will generate
+This switch will generate CSVs with day level details. This means an extra CSV will be generated named `TIMESTAMP_SumECmd_DETAIL_ClientsDetailed_Output.csv`. When running SumECmd with `--wd false`, this CSV will not generate.
 
-Example: ``
+Example: `.\SumECmd.exe -d "D:\Test\SUM" --csv "D:\temp" --wd`
 
 {pagebreak}
 
@@ -58,11 +58,11 @@ Example: ``
 
 ### Example SumECmd Commands
 
-#### Example description here
+#### Parse the SUM database and output CSVs to a specified location
 
 {line-numbers:false}
 ```powershell
-
+SumECmd.exe -d "C:\Temp\sum" --csv "C:\Temp\"
 ```
 
 {pagebreak}
@@ -70,6 +70,8 @@ Example: ``
 ## SumECmd Output
 
 ### Analyzing SumECmd Output - CSV
+
+TODO
 
 {pagebreak}
 
