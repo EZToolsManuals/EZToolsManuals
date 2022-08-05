@@ -30,6 +30,7 @@ This is a common switch within EZ Tools. This switch will instruct LECmd to outp
 
 `.\LECmd.exe -d C:\temp\LNKFiles --csv C:\temp\LNKFiles\output`
 `.\JLECmd.exe -d C:\temp\JumpLists --csv C:\temp\JumpLists\output`
+`.\MFTECmd.exe -f C:\some\random\$MFT --csv C:\temp\output`
 
 ### `--csvf`
 
