@@ -2,6 +2,7 @@
 
 ## RECmd Introduction
 
+RECmd is a tool created by Eric Zimmerman used to parse Registry hives. Registry hives are located at `C:\Windows\System32\config` and contain multiple hives of interest. 
 
 {pagebreak}
 
@@ -82,7 +83,125 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `-q`
+
+This switch hides the processing details when running a command. This means potentially faster output since your computer doesn't have to worry about generating output to the console window during processing.
+
+Example: `recmd.exe -d C:\Windows\system32\config --bn BatchExamples\Kroll_Batch.reb --nl false --csv C:\temp -q`
+
+#### `--kn`
+
+This switch 
+
+Example: 
+
+#### `--vn`
+
+This switch 
+
+Example: 
+
+#### `--bn`
+
+This switch 
+
+Example: 
+
+#### `--saveTo`
+
+This switch 
+
+Example: 
+
+#### `--details`
+
+This switch 
+
+Example: 
+
+#### `--base64`
+
+This switch 
+
+Example: 
+
+#### `--minSize`
+
+This switch 
+
+Example: 
+
+#### --sa`
+
+This switch 
+
+Example: 
+
+#### `--sk`
+
+This switch 
+
+Example: 
+
+#### `--sv`
+
+This switch 
+
+Example: 
+
+#### `--sd`
+
+This switch 
+
+Example: 
+
+#### `--ss`
+
+This switch 
+
+Example: 
+
+#### `--literal`
+
+This switch 
+
+Example: 
+
+#### `--nd`
+
+This switch 
+
+Example: 
+
+#### `--regex`
+
+This switch 
+
+Example: 
+
+#### `--nl`
+
+This switch 
+
+Example: 
+
+#### `--recover`
+
+This switch 
+
+Example: 
+
+#### `--vss`
+
+This switch 
+
+Example:
+
+#### `--dedupe`
+
+This switch 
+
+Example:
 
 {pagebreak}
 
