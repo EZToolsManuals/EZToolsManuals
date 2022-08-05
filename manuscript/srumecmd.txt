@@ -2,6 +2,7 @@
 
 ## SrumECmd Introduction
 
+SrumECmd is a tool created by Eric Zimmerman used to parse the SRUM database. The SRUM database is located at `C:\Windows\System32\sru\SRUDB.dat` and serves as the backend for Windows Task Manager. 
 
 {pagebreak}
 
