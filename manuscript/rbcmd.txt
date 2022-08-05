@@ -2,6 +2,7 @@
 
 ## RBCmd Introduction
 
+RBCmd is a tool created by Eric Zimmerman used to parse the SUM database. The SUM database is located at `C:\Windows\System32\LogFiles\SUM` where multiple `*.mdb` files can be located.
 
 {pagebreak}
 
@@ -50,7 +51,7 @@ Either -f or -d is required. Exiting
 
 ### Switch Descriptions
 
-#### SWITCH
+Thankfully, RBCmd doesn't have any unique switches that aren't already covered in the common switches chapter.
 
 {pagebreak}
 
@@ -62,7 +63,21 @@ Either -f or -d is required. Exiting
 
 {line-numbers:false}
 ```powershell
+RBCmd.exe -f "C:\Temp\INFO2"
+```
 
+#### Example description here
+
+{line-numbers:false}
+```powershell
+RBCmd.exe -f "C:\Temp\$I3VPA17" --csv "D:\csvOutput"
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+RBCmd.exe -d "C:\Temp" --csv "c:\temp"
 ```
 
 {pagebreak}
