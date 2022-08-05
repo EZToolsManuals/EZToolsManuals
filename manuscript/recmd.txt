@@ -87,7 +87,7 @@ Options:
 
 This switch hides the processing details when running a command. This means potentially faster output since your computer doesn't have to worry about generating output to the console window during processing.
 
-Example: `recmd.exe -d C:\Windows\system32\config --bn BatchExamples\Kroll_Batch.reb --nl false --csv C:\temp -q`
+Example: `RECmd.exe -d C:\Windows\system32\config --bn BatchExamples\Kroll_Batch.reb --nl false --csv C:\temp -q`
 
 #### `--kn`
 
@@ -213,7 +213,21 @@ Example:
 
 {line-numbers:false}
 ```powershell
+RECmd.exe --f "C:\Temp\UsrClass 1.dat" --sk URL --recover false --nl
+```
 
+#### Example description here
+
+{line-numbers:false}
+```powershell
+RECmd.exe --f "D:\temp\UsrClass 1.dat" --StartDate "11/13/2014 15:35:01"
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+RECmd.exe --f "D:\temp\UsrClass 1.dat" --RegEx --sv "(App|Display)Name"
 ```
 
 {pagebreak}
