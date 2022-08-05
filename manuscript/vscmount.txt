@@ -43,21 +43,47 @@ Options:
 
 #### `--dl`
 
-This switch
+This switch will allow for the examiner to specify which drive letter to search for Volume Shadow Copies to be mounted. In the below example, a folder will be created at the root of the C:\ drive labeled `vssroot_C` and the following folders will be created, as an example:
 
-Example: ``
+* vss067-20220802T071544.8950680
+* vss069-20220802T111643.1360760
+* vss073-20220802T151751.7332050
+* vss075-20220802T191857.4091500
+* vss077-20220802T231954.8229610
+* vss079-20220803T145849.8753330
+* vss081-20220803T154303.5886250
+* vss082-20220803T185949.1160530
+* vss084-20220804T122438.3318770
+* vss085-20220804T125916.5830320
+* vss087-20220804T170016.7516520
+* vss089-20220805T002628.8687860
+
+Example: `.\VSCMount.exe --dl C --mp C:\vssroot`
 
 #### `--mp`
 
-This switch
+This switch will allow for the examiner to specify the directory in which the Volume Shadow Copies found with the `--dl` switch will be mounted to for easy access.
 
-Example: ``
+Example: `.\VSCMount.exe --dl C --mp C:\vssroot`
 
 #### `--ud`
 
-This switch
+This switch will use the creation timestamps (yyyyMMddTHHmmss.fffffff) in symbolic link names. Given that the default is true, if you run the below command, you will find the following output compared to the exmaple listed above for the `--dl` switch:
 
-Example: ``
+* vss067
+* vss069
+* vss073
+* vss075
+* vss077
+* vss079
+* vss081
+* vss082
+* vss084
+* vss085
+* vss087
+* vss089
+
+Example: `.\VSCMount.exe --dl C --mp C:\vssroot --ud false`
 
 {pagebreak}
 
@@ -65,24 +91,12 @@ Example: ``
 
 ### Example VSCMount Commands
 
-#### Mount VSCs from the C:\ drive and map them to a specified directory while using VSC creation timestamps in symbolic link names
+#### Mount VSCs from the C:\ drive and map them to a specified directory while using VSC creation timestamps in symbolic link names with debug messages enabled
 
 {line-numbers:false}
 ```powershell
 .\VSCMount.exe --dl C --mp C:\VssRoot --ud --debug
 ```
-
-{pagebreak}
-
-## VSCMount Output
-
-## VSCMount Sample Output
-
-{pagebreak}
-
-## VSCMount Key Takeaways
-
-### Important Data Points
 
 {pagebreak}
 
