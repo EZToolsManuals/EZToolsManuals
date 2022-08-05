@@ -80,6 +80,12 @@ This switch will instruct LECmd to output parsed data into pretty printed JSON a
 
 TODO
 
+#### `-q`
+
+This switch hides the processing details when running a command. This means potentially faster generated output since your computer doesn't have to worry about generating output to the console window during processing.
+
+Example: `RECmd.exe -d C:\Windows\system32\config --bn BatchExamples\Kroll_Batch.reb --nl false --csv C:\temp -q`
+
 ### `--debug`
 
 This is a common switch within EZ Tools. This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
