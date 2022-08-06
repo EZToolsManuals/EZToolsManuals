@@ -86,7 +86,7 @@ When processing transaction logs, you will see a message similar to this:
 
 ```
 Two transaction logs found. Determining primary log...
-Primary log: D:\TODO\SYSTEM.LOG2, secondary log: D:\temp\SYSTEM.LOG1
+Primary log: D:\temp\SYSTEM.LOG2, secondary log: D:\temp\SYSTEM.LOG1
 Replaying log file: D:\temp\SYSTEM.LOG2
 Replaying log file: D:\temp\SYSTEM.LOG1
 At least one transaction log was applied. Sequence numbers have been updated to 0x91DD. New Checksum: 0xAD729723
