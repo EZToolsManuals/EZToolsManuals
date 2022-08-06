@@ -2,6 +2,7 @@
 
 ## SBECmd Introduction
 
+SBECmd is a tool created by Eric Zimmerman used to parse the NTUSER.dat and UsrClass.dat Registry hives. These hives contains shell items that are recorded by Windows which indicate which folders a user has traversed.
 
 {pagebreak}
 
@@ -51,7 +52,44 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `-l`
+
+This switch will inform SBECmd to process the live user Registry hives.
+
+Example: `.\SBECmd.exe -l --csv D:\temp\sbecmd`
+
+The above command will output a filename similar to this: `YYYYMMDD_HHMMSS_hostname_LIVE_REGISTRY.csv`
+
+#### `-nl`
+
+This switch will inform the tool whether to replay transaction logs or not.
+
+Below is an exmaple of replaying transaction logs:
+
+Example: `.\SBECmd.exe -d "D:\temp\hives" --nl false --csv "D:\temp"`
+
+When processing transaction logs, you will see a message similar to this:
+
+```
+Two transaction logs found. Determining primary log...
+Primary log: D:\temp\hives\SYSTEM.LOG2, secondary log: D:\temp\hives\SYSTEM.LOG1
+Replaying log file: D:\temp\hives\SYSTEM.LOG2
+Replaying log file: D:\temp\hives\SYSTEM.LOG1
+At least one transaction log was applied. Sequence numbers have been updated to 0x91DD. New Checksum: 0xAD729723
+Found 1,024 cache entries for Windows10Creators in ControlSet001
+```
+
+Below is an example of ignoring transaction logs:
+
+Example: `.\SBECmd.exe -d "D:\temp\hives" --nl true --csv "D:\temp"`
+
+When ignoring transaction logs, you will see a message similar to this:
+
+```
+Registry hive is dirty and transaction logs were found in the same directory, but --nl was provided. Data may be missing! Continuing anyways...
+Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
+Found 1,024 cache entries for Windows10Creators in ControlSet001
+```
 
 {pagebreak}
 
@@ -59,11 +97,24 @@ Options:
 
 ### Example SBECmd Commands
 
-#### Example description here
+#### Parse offline user Registry hives and output to CSV to a specified location
 
 {line-numbers:false}
 ```powershell
+SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout
+```
 
+#### Parse offline user Registry hives and output to CSV to a specified location with timestamps adjusted to a specified timezone
+
+{line-numbers:false}
+```powershell
+SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout --tz "US Eastern Standard Time"
+```
+#### Parse offline user Registry hives and output to CSV to a specified location with deduplicated output
+
+{line-numbers:false}
+```powershell
+SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout --dedupe
 ```
 
 {pagebreak}
@@ -82,6 +133,10 @@ Options:
 
 ### Important Data Points
 
+#### FirstIntereacted and LastInteracted
+
+THe FirstInteracted timestamp for a shell item will provide you with the timestamp of the first time a given user had traversed a directory within Windows. The LastInteracted timestamp for a shell item will provide you with the last time a given user had traversed a directory within Windows. There are no timestamps for in between those two bookends within this artifact.
+
 {pagebreak}
 
 ## SBECmd References
@@ -98,15 +153,13 @@ Options:
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
-
-#### Community Resources
-
-* Links to blog posts go here
+* <https://binaryforay.blogspot.com/2015/02/shellbags-explorer-v0520-released.html>
+* <https://binaryforay.blogspot.com/2015/02/shellbags-explorer-0540-released.html>
+* <https://binaryforay.blogspot.com/2015/08/a-few-updates.html>
+* <https://binaryforay.blogspot.com/2017/01/shellbags-explorer-v0800-released.html>
+* <https://binaryforay.blogspot.com/2017/09/shellbags-explorer-0950-released.html>
+* <https://binaryforay.blogspot.com/2018/05/a-fluery-of-updates.html>
+* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
 
 ### Download SBECmd
 
