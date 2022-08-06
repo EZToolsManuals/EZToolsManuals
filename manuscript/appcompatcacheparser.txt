@@ -6,6 +6,7 @@ AppCompatCacheParser is a tool created by Eric Zimmerman used to parse the AppCo
 
 ### Understanding the Artifact: AppCompatCache
 
+TODO
 
 {pagebreak}
 
@@ -55,21 +56,54 @@ Options:
 
 #### `-c`
 
-This switch
+This switch informs the tool to parse a specific ControlSet. The default is to parse all ControlSets specified within the Registry.
 
-Example: ``
+Example: `.\AppCompatCacheParser.exe -f "C:\temp\System" --csv C:\temp\appcompatcachetest --c 1`
+
+The above command will display the following message in the console window:
+
+```
+Found 1,024 cache entries for Windows10Creators in ControlSet001
+
+Results saved to 'C:\temp\appcompatcachetest\20220805212738_Windows10Creators_System_ControlSet001_AppCompatCache.csv'
+```
 
 #### `-t`
 
-This switch
+This switch IS NOT CURRENTLY WORKING
 
 Example: ``
 
 #### `-nl`
 
-This switch
+This switch will inform the tool whether to replay transaction logs or not.
 
-Example: ``
+Below is an exmaple of replaying transaction logs:
+
+Example: `.\AppCompatCacheParser.exe -f "D:\temp\SYSTEM" --nl false --csv "D:\temp"`
+
+When processing transaction logs, you will see a message similar to this:
+
+```
+Two transaction logs found. Determining primary log...
+Primary log: D:\TODO\SYSTEM.LOG2, secondary log: D:\temp\SYSTEM.LOG1
+Replaying log file: D:\temp\SYSTEM.LOG2
+Replaying log file: D:\temp\SYSTEM.LOG1
+At least one transaction log was applied. Sequence numbers have been updated to 0x91DD. New Checksum: 0xAD729723
+Found 1,024 cache entries for Windows10Creators in ControlSet001
+```
+
+Below is an example of ignoring transaction logs:
+
+Example: `.\AppCompatCacheParser.exe -f "D:\temp\SYSTEM" --nl true --csv "D:\temp"`
+
+When ignoring transaction logs, you will see a message similar to this:
+
+```
+Registry hive is dirty and transaction logs were found in the same directory, but --nl was provided. Data may be missing! Continuing anyways...
+Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
+Found 1,024 cache entries for Windows10Creators in ControlSet001
+```
 
 {pagebreak}
 
@@ -77,30 +111,26 @@ Example: ``
 
 ### Example AppCompatCacheParser Commands
 
-#### Example description here
+#### Parse the AppCompatCache from the SYSTEM Registry hive and output to a specified location while only parsing ControlSet2
 
 {line-numbers:false}
 ```powershell
+AppCompatCacheParser.exe --csv c:\temp -c 2
 
+```
+
+#### Parse the AppCompatCache from the SYSTEM Registry hive and output to a specified location while outputting a CSV named results.csv
+
+{line-numbers:false}
+```powershell
+AppCompatCacheParser.exe --csv c:\temp --csvf results.csv
 ```
 
 {pagebreak}
 
 ## AppCompatCacheParser Output
 
-### Analyzing AppCompatCacheParser Output - Console
-
-{pagebreak}
-
 ### Analyzing AppCompatCacheParser Output - CSV
-
-{pagebreak}
-
-### Analyzing AppCompatCacheParser Output - JSON
-
-{pagebreak}
-
-### Analyzing AppCompatCacheParser Output - HTML
 
 {pagebreak}
 
@@ -128,16 +158,19 @@ Example: ``
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* <https://binaryforay.blogspot.com/2015/05/introducing-appcompatcacheparser.html>
+* <https://binaryforay.blogspot.com/2015/05/appcompatcacheparser-v0051-released.html>
+* <https://binaryforay.blogspot.com/2015/05/appcompatcacheparser-v0052-released.html>
+* <https://binaryforay.blogspot.com/2016/05/appcompatcacheparser-v0900-released-and.html>
+* <https://binaryforay.blogspot.com/2017/03/windows-10-creators-update-vs-shimcache.html>
+* <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
+* <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
+* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
 
 #### Community Resources
 
-* <https://youtu.be/7byz1dR_CLg>
 * <https://youtu.be/ZKlyu-HOvxY>
+* <https://youtu.be/7byz1dR_CLg>
 
 ### Download AppCompatCacheParser
 
