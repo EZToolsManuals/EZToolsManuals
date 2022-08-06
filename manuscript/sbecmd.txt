@@ -8,7 +8,7 @@ SBECmd is a tool created by Eric Zimmerman used to parse the NTUSER.dat and UsrC
 
 ## SBECmd Switches
 
-In a PowerShell window, running `.\SBECmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\SBECmd.exe` will provide the following options when running SBECmd:
 
 {line-numbers:false}
 ```powershell
