@@ -664,40 +664,9 @@ JLECmd output, regardless of file format, will provide potentially useful inform
 
 ### Important Data Points
 
+#### Last Modified
 
-#### AppID/Description
-
-
-#### DestList Entries
-
-
-#### MRU
-
-
-
-#### Path
-
-
-#### Pinned
-
-
-#### Created on
-
-
-#### Last modified
-
-
-#### Hostname
-
-
-#### Mac Address
-
-
-#### Interaction count
-
-
-#### Absolute path
-
+This timestamp will provide you with the a reliable indication of when a file was opened with a specific application.
 
 --- AppId information ---
   AppID: f01b4d95cf55d32a
