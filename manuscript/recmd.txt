@@ -39,7 +39,6 @@ Usage:
 Options:
   -d <d>               Directory to look for hives (recursively). -f or -d is required
   -f <f>               Hive to search. -f or -d is required
-  -q                   Quiet mode. When true, hide processing details [default: False]
   --kn <kn>            Display details for key name. Includes subkeys and values
   --vn <vn>            Value name. Only this value will be dumped
   --bn <bn>            Use settings from supplied file to find keys/values. See included sample
@@ -82,12 +81,6 @@ Options:
 ```
 
 ### Switch Descriptions
-
-#### `-q`
-
-This switch hides the processing details when running a command. This means potentially faster output since your computer doesn't have to worry about generating output to the console window during processing.
-
-Example: `RECmd.exe -d C:\Windows\system32\config --bn BatchExamples\Kroll_Batch.reb --nl false --csv C:\temp -q`
 
 #### `--kn`
 
