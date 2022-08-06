@@ -66,7 +66,30 @@ Either -f or -d is required. Exiting
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `-k`
+
+This switch 
+
+Example: ``
+
+#### `-o`
+
+This switch 
+
+Example: ``
+
+#### `--mp`
+
+This switch will instruct PECmd to provide more verbose timestamps. TODO fill this out like LECmd's example
+
+Example: ``
+
+#### `--vss`
+
+This switch 
+
+Example: ``
+
 
 {pagebreak}
 
