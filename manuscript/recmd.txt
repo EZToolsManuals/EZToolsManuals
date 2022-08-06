@@ -8,7 +8,7 @@ RECmd is a tool created by Eric Zimmerman used to parse Registry hives. Registry
 
 ## RECmd Switches
 
-In a PowerShell window, running `.\RECmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\RECmd.exe` will provide the following options when running RECmd:
 
 {line-numbers:false}
 ```powershell
