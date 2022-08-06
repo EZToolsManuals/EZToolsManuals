@@ -2,12 +2,13 @@
 
 ## PECmd Introduction
 
+PECmd is a tool created by Eric Zimmerman used to parse Windows Prefetch files (.pf), which can be located at ‘C:\Windows\Prefetch‘.
 
 {pagebreak}
 
 ## PECmd Switches
 
-In a PowerShell window, running `.\PECmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\PECmd.exe` will provide the following options when running PECmd:
 
 {line-numbers:false}
 ```powershell
@@ -73,11 +74,39 @@ Either -f or -d is required. Exiting
 
 ### Example PECmd Commands
 
-#### Example description here
+#### Parse a Prefetch file and output to the console window
 
 {line-numbers:false}
 ```powershell
+PECmd.exe -f "C:\Temp\CALC.EXE-3FBEF7FD.pf"
+```
 
+#### Parse a Prefetch file and output to formatted JSON to a specified location
+
+{line-numbers:false}
+```powershell
+PECmd.exe -f "C:\Temp\CALC.EXE-3FBEF7FD.pf" --json "D:\jsonOutput" --jsonpretty
+```
+
+#### Parse a directory of Prefetch files and output to console window with specified keywords highlighted in the output
+
+{line-numbers:false}
+```powershell
+PECmd.exe -d "C:\Temp" -k "system32, fonts"
+```
+
+#### Parse a directory of Prefetch and output to CSV to a specified location with the filename ‘foo.csv‘ and output to JSON to a specified location
+
+{line-numbers:false}
+```powershell
+PECmd.exe -d "C:\Temp" --csv "c:\temp" --csvf foo.csv --json c:\temp\json
+```
+
+#### Parse a directory of Prefetch files
+
+{line-numbers:false}
+```powershell
+PECmd.exe -d "C:\Windows\Prefetch"
 ```
 
 {pagebreak}
@@ -124,15 +153,17 @@ Either -f or -d is required. Exiting
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
+* <https://binaryforay.blogspot.com/2016/01/windows-prefetch-parser-in-c.html>
+* <https://binaryforay.blogspot.com/2016/01/introducing-pecmd.html>
+* <https://binaryforay.blogspot.com/2016/01/pecmd-v0600-released.html>
 * <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
 
 #### Community Resources
 
-* Links to blog posts go here
+* <https://or10nlabs.tech/prefetch-forensics/>
+* <https://www.security-hive.com/post/execution-evidence-prefetch-files>
+* <https://www.hackingarticles.in/forensic-investigation-prefetch-file/>
+* <https://angry-bender.github.io/blog/WIP_Windows_Artefacts/>
 
 ### Download PECmd
 
