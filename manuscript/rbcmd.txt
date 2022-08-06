@@ -8,7 +8,7 @@ RBCmd is a tool created by Eric Zimmerman used to parse the SUM database. The SU
 
 ## RBCmd Switches
 
-In a PowerShell window, running `.\RBCmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\RBCmd.exe` will provide the following options when running RBCmd:
 
 {line-numbers:false}
 ```powershell
@@ -59,21 +59,21 @@ Thankfully, RBCmd doesn't have any unique switches that aren't already covered i
 
 ### Example RBCmd Commands
 
-#### Example description here
+#### Parse a legacy INFO2 Recycle Bin artifact and output to the console window
 
 {line-numbers:false}
 ```powershell
 RBCmd.exe -f "C:\Temp\INFO2"
 ```
 
-#### Example description here
+#### Parse a $I file and output to CSV to a specified location
 
 {line-numbers:false}
 ```powershell
 RBCmd.exe -f "C:\Temp\$I3VPA17" --csv "D:\csvOutput"
 ```
 
-#### Example description here
+#### Parse a directory of files and output to CSV to a specified location
 
 {line-numbers:false}
 ```powershell
@@ -106,9 +106,7 @@ RBCmd.exe -d "C:\Temp" --csv "c:\temp"
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/RBCmd> is the GitHub repository for RBCmd
 
 ### Blog Posts
 
@@ -117,10 +115,6 @@ RBCmd.exe -d "C:\Temp" --csv "c:\temp"
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 * <https://thinkdfir.com/2018/11/23/quick-post-notes-on-the-win10-recycle-bin/>
-
-#### Community Resources
-
-* Links to blog posts go here
 
 ### Download RBCmd
 
