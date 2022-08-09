@@ -118,7 +118,7 @@ Example: `.\EvtxECmd.exe -d "C:\Users\CFUser\Downloads\EventLogs\logs" --json "C
 
 #### `--tdt`
 
-This switch
+This switch 
 
 Example: ``
 
@@ -152,11 +152,25 @@ Example: `.\EvtxECmd.exe --sync`
 
 ### Example EvtxECmd Commands
 
-#### Example description here
+#### Parse a single .evtx file and output to CSV to a specified location with a specified output filename
 
 {line-numbers:false}
 ```powershell
+EvtxECmd.exe -f "C:\Temp\Application.evtx" --csv "c:\temp\out" --csvf MyOutputFile.csv
+```
 
+#### Parse a single .evtx file and output to CSV to a specified location
+
+{line-numbers:false}
+```powershell
+EvtxECmd.exe -f "C:\Temp\Application.evtx" --csv "c:\temp\out"
+```
+
+#### Parse a single .evtx file and output to JSON to a specified location
+
+{line-numbers:false}
+```powershell
+EvtxECmd.exe -f "C:\Temp\Application.evtx" --json "c:\temp\jsonout"
 ```
 
 {pagebreak}
