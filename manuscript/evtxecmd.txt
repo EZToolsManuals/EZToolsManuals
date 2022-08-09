@@ -118,17 +118,38 @@ Example: `.\EvtxECmd.exe -d "C:\Users\CFUser\Downloads\EventLogs\logs" --json "C
 
 #### `--tdt`
 
-This switch 
+This switch informs the tool with the number of seconds to look for when searching for time discrepancy detection.
 
-Example: ``
+Example: `EvtxECmd.exe -f "C:\Temp\Application.evtx" --csv "c:\temp\out" --tdt 5`
 
 #### met
 
-This switch
+This switch informs the tool as to whether or not to provide statistics, with the default being true.
 
-Example: ``
+Example: `EvtxECmd.exe -f "C:\Temp\Application.evtx" --csv "c:\temp\out" --met false`
 
-#### maps
+With `--met false`, the following statistics will NOT be displayed after each .evtx file that is parsed by EvtxECmd:
+
+```
+Metrics (including dropped events)
+Event ID        Count
+300             1
+400             666
+403             404
+600             4,939
+800             197
+```
+
+By default, the above statistics will be displayed after each .evtx file is parsed by EvtxECmd.
+
+#### `--maps‘
+
+This switch will inform the tool to look for EvtxECmd Maps at a specified location other than `.\EvtxECmd\Maps`.
+
+Example: `.\EvtxECmd.exe -d "D:\evtx" --csv "D:\evtx" --maps "D:\Maps"`
+
+#### dedupe
+
 
 This switch
 
