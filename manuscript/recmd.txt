@@ -4,6 +4,19 @@
 
 RECmd is a tool created by Eric Zimmerman used to parse Registry hives. Registry hives are located at `C:\Windows\System32\config` and contain multiple hives of interest. 
 
+### RECmd Batch Files
+
+<https://github.com/EricZimmerman/RECmd/tree/master/BatchExamples>
+
+#### Creating RECmd Batch Files
+
+If you are looking for guidance on how to create RECmd Batch Files, look no further than the following resources:
+
+* [RECmd Batch Files Guide](https://github.com/EricZimmerman/RECmd/blob/master/BatchExamples/!RECmdBatch.guide)
+* [RECmd Batch Files Template](https://github.com/EricZimmerman/RECmd/blob/master/BatchExamples/!RECmdBatch.template)
+
+Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=318) for a timestamped link to the section of the presentation that relates to RECmd Batch Files. 
+
 {pagebreak}
 
 ## RECmd Switches
@@ -190,6 +203,12 @@ This switch
 
 Example:
 
+#### `--sync‘
+
+This switch will inform the tool to download all RECmd Batch Files from [GitHub](https://github.com/EricZimmerman/RECmd/tree/master/BatchExamples) and update the local Batch Files stored in `.\RECmd\BatchExamples`.
+
+Example: `.\RECmd.exe --sync`
+
 #### `--dedupe`
 
 This switch 
@@ -253,9 +272,7 @@ RECmd.exe --f "D:\temp\UsrClass 1.dat" --RegEx --sv "(App|Display)Name"
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/RECmd> is the GitHub repository for RECmd
 
 ### Blog Posts
 
@@ -263,15 +280,20 @@ RECmd.exe --f "D:\temp\UsrClass 1.dat" --RegEx --sv "(App|Display)Name"
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* <https://binaryforay.blogspot.com/2015/05/introducing-recmd.html>
+* <https://binaryforay.blogspot.com/2015/05/recmd-0600-released.html>
+* <https://binaryforay.blogspot.com/2015/06/recmd-0610-released.html>
+* <https://binaryforay.blogspot.com/2015/07/reintroducing-registry-explorer-and.html>
+* <https://binaryforay.blogspot.com/2015/07/registry-explorerrecmd-0710-released.html>
+* <https://binaryforay.blogspot.com/2016/01/registry-values-starting-with-null.html>
+* <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
+* <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
+* <https://binaryforay.blogspot.com/2019/01/registry-explorer-and-recmd-1200.html>
+* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
 
 #### Community Resources
 
-* Links to blog posts go here
+* <https://aboutdfir.com/toolsandartifacts/windows/registry-explorer-recmd/>
 
 ### Download RECmd
 
