@@ -133,7 +133,7 @@ SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout --dedupe
 
 ### Important Data Points
 
-#### FirstIntereacted and LastInteracted
+#### FirstInteracted and LastInteracted
 
 THe FirstInteracted timestamp for a shell item will provide you with the timestamp of the first time a given user had traversed a directory within Windows. The LastInteracted timestamp for a shell item will provide you with the last time a given user had traversed a directory within Windows. There are no timestamps for in between those two bookends within this artifact.
 
