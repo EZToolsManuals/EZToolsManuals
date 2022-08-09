@@ -90,11 +90,39 @@ Options:
 
 ### Example MFTECmd Commands
 
-#### Example description here
+#### Parse a $MFT and output to CSV to a specified location and name the output file MyOutputFile.csv
 
 {line-numbers:false}
 ```powershell
+MFTECmd.exe -f "C:\Temp\SomeMFT" --csv "c:\temp\out" --csvf MyOutputFile.csv
+```
 
+#### Parse a $MFT and output to CSV to a specified location
+
+{line-numbers:false}
+```powershell
+MFTECmd.exe -f "C:\Temp\SomeMFT" --csv "c:\temp\out"
+```
+
+#### Parse a $MFT and output to JSON to a specified location
+
+{line-numbers:false}
+```powershell
+MFTECmd.exe -f "C:\Temp\SomeMFT" --json "c:\temp\jsonout"
+```
+
+#### Parse a $MFT and output to bodyfile for the C:\ drive
+
+{line-numbers:false}
+```powershell
+MFTECmd.exe -f "C:\Temp\SomeMFT" --body "c:\temp\bout" --bdl c
+```
+
+#### Parse a $MFT and dump the full details for entry number 5, sequence number 5 to the console
+
+{line-numbers:false}
+```powershell
+MFTECmd.exe -f "C:\Temp\SomeMFT" --de 5-5
 ```
 
 {pagebreak}
