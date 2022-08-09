@@ -67,6 +67,12 @@ Options:
 
 ### Switch Descriptions
 
+#### `--dedupe`
+
+This switch will inform the tool to deduplicate across all parsed data. By default, SQLECmd will deduplicate results parsed from raw artifacts.
+
+Example: ``
+
 #### `--hunt‘
 
 This switch
@@ -75,9 +81,9 @@ Example: ``
 
 #### `--maps‘
 
-This switch
+This switch will inform the tool to look for SQLECmd Maps at a specified location other than `.\SQLECmd\Maps`.
 
-Example: ``
+Example: `.\SQLECmd.exe -d "D:\sql" --csv "D:\sql" --maps "D:\Maps"`
 
 #### `--sync‘
 
