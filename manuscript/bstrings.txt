@@ -93,7 +93,70 @@ Either -f or -d is required. Exiting
 
 {line-numbers:false}
 ```powershell
+bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls URL
+```
 
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -f "C:\Temp\someFile.txt" --lr guid
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -f "C:\Temp\aBigFile.bin" --fs c:\temp\searchStrings.txt --fr c:\temp\searchRegex.txt -s
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -d "C:\Temp" --mask "*.dll"
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -d "C:\Temp" --ar "[\x20-\x37]"
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -d "C:\Temp" --cp 10007
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -d "C:\Temp" --ls test
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -f "C:\Temp\someOtherFile.txt" --lr cc --sa
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -f "C:\Temp\someOtherFile.txt" --lr cc --sa -m 15 -x 22
+```
+
+#### Example description here
+
+{line-numbers:false}
+```powershell
+bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls mui --sl
 ```
 
 {pagebreak}
