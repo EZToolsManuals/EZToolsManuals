@@ -141,12 +141,6 @@ THe FirstInteracted timestamp for a shell item will provide you with the timesta
 
 ## SBECmd References
 
-### Associated GitHub Repositories
-
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
-
 ### Blog Posts
 
 #### Official Blog Posts
