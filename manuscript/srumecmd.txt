@@ -49,7 +49,15 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `-r`
+
+This switch informs the tool to parse a SOFTWARE Registry hive at a specified location. This is beneficial because applications referenced in the SRUM database can be resolved using data stored within the SOFTWARE Registry hive for better results. 
+
+Example: `.\SrumECmd.exe -d "C:\temp\SRUMdb" -r "C:\temp\SOFTWAREhive" --csv "C:\temp\SRUMoutput`
+
+Please note, that using the `-d` switch against a directory where a SRUM database and a SOFTWARE Registry hive resides within the subdirectories, SrumECmd will find both without needing to utilize the `-r` switch to specifically point to the SOFTWARE Registry hive.
+
+Example: `.\SrumECmd.exe -d "C:\temp\KapeTriage\tout\C" --csv "C:\temp\SRUMoutput"`
 
 {pagebreak}
 
@@ -57,12 +65,27 @@ Options:
 
 ### Example SrumECmd Commands
 
-#### Example description here
+#### Parse a SRUM database at a specified location and a SOFTWARE Registry hive at a specified location and output to CSV to a specified location
 
 {line-numbers:false}
 ```powershell
-
+SrumECmd.exe -f "C:\Temp\SRUDB.dat" -r "C:\Temp\SOFTWARE" --csv "C:\Temp\"
 ```
+
+#### Parse a SRUM database and output to CSV to a specified location
+
+{line-numbers:false}
+```powershell
+SrumECmd.exe -f "C:\Temp\SRUDB.dat" --csv "c:\temp"
+```
+
+#### Process a specified location looking for a SRUM database and/or SOFTWARE Registry hive to parse and output to CSV to a specified location
+
+{line-numbers:false}
+```powershell
+SrumECmd.exe -d "C:\Temp" --csv "c:\temp"
+```
+
 
 {pagebreak}
 
@@ -86,25 +109,13 @@ Options:
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/Srum> is the GitHub repository for SrumECmd
 
 ### Blog Posts
 
-#### Official Blog Posts
-
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
-
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
-
 #### Community Resources
 
-* Links to blog posts go here
+* <https://aboutdfir.com/app-timeline-provider-srum-database/>
 
 ### Download SrumECmd
 
