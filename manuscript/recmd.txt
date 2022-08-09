@@ -211,9 +211,9 @@ Example: `.\RECmd.exe --sync`
 
 #### `--dedupe`
 
-This switch 
+This switch will inform the tool to deduplicate across all parsed data. By default, RECmd will deduplicate results parsed from raw artifacts.
 
-Example:
+Example: ``
 
 {pagebreak}
 
