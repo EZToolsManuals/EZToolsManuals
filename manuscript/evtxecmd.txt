@@ -10,6 +10,23 @@ EvtxECmd is a tool created by Eric Zimmerman used to parse event logs from Windo
 
 In a PowerShell window, running `.\EvtxECmd.exe` will provide the following options when running EvtxECmd:
 
+### EvtxECmd Maps
+
+<https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps>
+
+#### Creating EvtxECmd Maps
+
+If you are looking for guidance on how to create EvtxECmd Maps, look no further than the following resources:
+
+* [EvtxECmd Maps Guide](https://github.com/EricZimmerman/evtx/blob/master/evtx/Maps/!Channel-Name_Provider-Name_EventID.guide)
+* [EvtxECmd Maps Template](https://github.com/EricZimmerman/evtx/blob/master/evtx/Maps/!Channel-Name_Provider-Name_EventID.template)
+
+Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=860) for a timestamped link to the section of the presentation that relates to EvtxECmd Maps.
+
+## EvtxECmd Switches
+
+In a PowerShell window, running `.\EvtxECmd.exe` will provide the following options when running EvtxECmd:
+
 {line-numbers:false}
 ```powershell
 Description:
@@ -109,7 +126,14 @@ Example: `.\EvtxECmd.exe -d "C:\Users\CFUser\Downloads\EventLogs\logs" --json "C
 #### maps
 
 
-
+#### dedupe
+
+
+#### `--sync‘
+
+This switch will inform the tool to download all EvtxECmd Maps from [GitHub](https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps) and update the local Maps stored in `.\EvtxECmd\Maps`.
+
+Example: `.\EvtxECmd.exe --sync`
 
 {pagebreak}
 
@@ -168,11 +192,7 @@ Example: `.\EvtxECmd.exe -d "C:\Users\CFUser\Downloads\EventLogs\logs" --json "C
 
 Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* <https://binaryforay.blogspot.com/2019/04/introducing-evtxecmd.html>
 
 #### Community Resources
 
