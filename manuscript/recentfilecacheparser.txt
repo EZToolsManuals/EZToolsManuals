@@ -2,11 +2,9 @@
 
 ## RecentFileCacheParser Introduction
 
-WxTCmd is a tool created by Eric Zimmerman used to parse the RecentFileCache. 
+WxTCmd is a tool created by Eric Zimmerman used to parse the RecentFileCache. The RecentFileCache can be located at `C:\Windows\AppCompat\Programs\RecentFileCache.bcf`.
 
 ### Understanding the Artifact: RecentFileCache
-
-MORE TO COME HERE
 
 TODO
 
@@ -14,7 +12,7 @@ TODO
 
 ## RecentFileCacheParser Switches
 
-In a PowerShell window, running `.\RecentFileCacheParser.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\RecentFileCacheParser.exe` will provide the following options when running RecentFileCacheParser:
 
 {line-numbers:false}
 ```powershell
@@ -53,7 +51,7 @@ Options:
 
 ### Switch Descriptions
 
-Thankfully, RecentFileCacheParser doesn't have any unique switches that aren't already covered in the common switches chapter. 
+Thankfully, RecentFileCacheParser doesn't have any unique switches that aren't already covered in the common switches chapter.
 
 {pagebreak}
 
@@ -61,14 +59,14 @@ Thankfully, RecentFileCacheParser doesn't have any unique switches that aren't a
 
 ### Example RecentFileCacheParser Commands
 
-#### Parse the RecentFileCache and Output to CSV to a Specified Location
+#### Parse the RecentFileCache and output to CSV to a specified location
 
 {line-numbers:false}
 ```powershell
 RecentFileCacheParser.exe -f "C:\Temp\RecentFileCache.bcf" --csv "c:\temp"
 ```
 
-#### Parse the RecentFileCache and Output to JSON to a Specified Location
+#### Parse the RecentFileCache and output to JSON to a specified location
 
 {line-numbers:false}
 ```powershell
@@ -105,15 +103,9 @@ RecentFileCacheParser.exe -f "C:\Temp\RecentFileCache.bcf" --json "D:\jsonOutput
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/RecentFileCacheParser> is the GitHub repository for RecentFileCacheParser 
+* <https://github.com/EricZimmerman/RecentFileCacheParser> is the GitHub repository for RecentFileCacheParser
 
 ### Blog Posts
-
-#### Official Blog Posts
-
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
-
-* N/A
 
 #### Community Resources
 
