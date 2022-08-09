@@ -2,6 +2,20 @@
 
 ## SQLECmd Introduction
 
+SQLECmd is a tool created by Eric Zimmerman used to parse SQLite databases. SQLite databases will only be parsed if a Map exists for that specific SQLite database.
+
+### SQLECmd Maps
+
+<https://github.com/EricZimmerman/SQLECmd/tree/master/SQLMap/Maps>
+
+#### Creating SQLECmd Maps
+
+If you are looking for guidance on how to create SQLECmd Maps, look no further than the following resources:
+
+* [SQLECmd Maps Guide](https://github.com/EricZimmerman/SQLECmd/blob/master/SQLMap/Maps/!OS_Application_OptionalDescription.guide)
+* [SQLECmd Maps Template](https://github.com/EricZimmerman/SQLECmd/blob/master/SQLMap/Maps/!OS_Application_OptionalDescription.template)
+
+Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=682) for a timestamped link to the section of the presentation that relates to SQLECmd Maps.
 
 {pagebreak}
 
@@ -53,7 +67,23 @@ Options:
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `--hunt‘
+
+This switch
+
+Example: ``
+
+#### `--maps‘
+
+This switch
+
+Example: ``
+
+#### `--sync‘
+
+This switch will inform the tool to download all SQLECmd Maps from [GitHub](https://github.com/EricZimmerman/SQLECmd/tree/master/SQLMap/Maps) and update the local Maps stored in `.\SQLECmd\Maps`.
+
+Example: `.\SQLECmd.exe --sync`
 
 {pagebreak}
 
@@ -94,7 +124,7 @@ Options:
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
+* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
 * <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
 * <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
 
