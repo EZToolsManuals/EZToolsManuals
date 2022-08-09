@@ -163,9 +163,8 @@ MFTECmd.exe -f "C:\Temp\SomeMFT" --de 5-5
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/MFT> is the C# library for parsing $MFT files
+* <https://github.com/EricZimmerman/MFTECmd> is the Command Line wrapper for the MFT library
 
 ### Blog Posts
 
