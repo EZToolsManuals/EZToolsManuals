@@ -78,7 +78,7 @@ Options:
 
 ### Switch Descriptions
 
-#### inc
+#### `--inc`
 
 This switch will provide EvtxECmd with which event ID(s) to process.
 
@@ -86,7 +86,7 @@ Example: `.\EvtxECmd.exe -d C:\Windows\System32\winevt\Logs --inc 4624,4625`
 
 The above command WILL process 4624 and 4625 events, but will NOT process anything else.
 
-### exc
+### `--exc`
 
 This switch will provide EvtxECmd with which event ID(s) to ignore during process.
 
@@ -94,7 +94,7 @@ Example: `.\EvtxECmd.exe -d C:\Windows\System32\winevt\Logs --exc 4624,4625`
 
 The above command will NOT process 4624 and 4625 events, but will process everything other event.
 
-#### sd
+#### `--sd`
 
 This switch will provide a starting date for which EvtxECmd will process all events that have occurred AFTER that date.
 
@@ -102,7 +102,7 @@ Example: `.\EvtxECmd.exe -f "C:\Windows\System32\winevt\Logs\Microsoft-Windows-S
 
 Not using quotes around the timestamp may cause issues.
 
-#### ed
+#### `--ed`
 
 This switch will provide a starting date for which EvtxECmd will process all events that have occurred BEFORE that date.
 
@@ -110,24 +110,35 @@ Example: `.\EvtxECmd.exe -f "C:\Windows\System32\winevt\Logs\Microsoft-Windows-S
 
 Not using quotes around the timestamp may cause issues.
 
-#### fj
+#### `--fj`
 
 This switch will include full details when using the common `--json` switch.
 
 Example: `.\EvtxECmd.exe -d "C:\Users\CFUser\Downloads\EventLogs\logs" --json "C:\Users\CFUser\Downloads\EventLogs\logs\json" --fj`
 
-#### tdt
+#### `--tdt`
 
+This switch
+
+Example: ``
 
 #### met
 
+This switch
 
+Example: ``
 
 #### maps
 
+This switch
+
+Example: ``
 
 #### dedupe
 
+This switch
+
+Example: ``
 
 #### `--sync‘
 
