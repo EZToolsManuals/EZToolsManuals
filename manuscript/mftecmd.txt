@@ -2,7 +2,7 @@
 
 ## MFTECmd Introduction
 
-MFTECmd is a tool created by Eric Zimmerman used to parse various NTFS metadata artifacts, including but not limited to the $MFT, $J, $Boot, $SDS, and $I30 files. 
+MFTECmd is a tool created by Eric Zimmerman used to parse various NTFS metadata artifacts, including but not limited to the $MFT, $J, $Boot, $SDS, and $I30 files.
 
 {pagebreak}
 
