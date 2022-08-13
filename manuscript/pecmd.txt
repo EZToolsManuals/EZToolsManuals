@@ -68,13 +68,13 @@ Either -f or -d is required. Exiting
 
 #### `-k`
 
-This switch 
+This switch
 
 Example: ``
 
 #### `-o`
 
-This switch 
+This switch
 
 Example: ``
 
@@ -86,7 +86,7 @@ Example: ``
 
 #### `--vss`
 
-This switch 
+This switch
 
 Example: ``
 
@@ -166,7 +166,7 @@ PECmd.exe -d "C:\Windows\Prefetch"
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
+* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
 * <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
 * <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
 
