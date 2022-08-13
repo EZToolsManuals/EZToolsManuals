@@ -193,7 +193,7 @@ bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls mui --sl
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/bstrings> is the GitHub repository for bstrings 
+* <https://github.com/EricZimmerman/bstrings> is the GitHub repository for bstrings
 
 ### Blog Posts
 
