@@ -21,6 +21,8 @@ If you are looking for guidance on how to create EvtxECmd Maps, look no further 
 * [EvtxECmd Maps Guide](https://github.com/EricZimmerman/evtx/blob/master/evtx/Maps/!Channel-Name_Provider-Name_EventID.guide)
 * [EvtxECmd Maps Template](https://github.com/EricZimmerman/evtx/blob/master/evtx/Maps/!Channel-Name_Provider-Name_EventID.template)
 
+#### Value
+
 Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=860) for a timestamped link to the section of the presentation that relates to EvtxECmd Maps.
 
 ## EvtxECmd Switches
@@ -228,9 +230,7 @@ EvtxECmd.exe -f "C:\Temp\Application.evtx" --json "c:\temp\jsonout"
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/evtx> is the GitHub repository for EvtxECmd
 
 ### Blog Posts
 
@@ -242,7 +242,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 
 #### Community Resources
 
-* Links to blog posts go here
+* <https://www.youtube.com/watch?v=BIkyWexMF0I>
 
 ### Download EvtxECmd
 
