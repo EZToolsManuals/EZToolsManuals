@@ -8,7 +8,7 @@ MFTECmd is a tool created by Eric Zimmerman used to parse various NTFS metadata 
 
 ## MFTECmd Switches
 
-In a PowerShell window, running `.\MFTECmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\MFTECmd.exe` will provide the following options when running MFTECmd:
 
 {line-numbers:false}
 ```powershell
@@ -83,6 +83,14 @@ Options:
 ### Switch Descriptions
 
 #### `--bdl`
+
+Example: ``
+
+#### `--vss
+
+This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse NTFS metadata files present within.
+
+Example: ``
 
 {pagebreak}
 
