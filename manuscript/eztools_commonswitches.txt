@@ -80,6 +80,19 @@ This switch will instruct LECmd to output parsed data into pretty printed JSON a
 
 TODO
 
+### `--dedupe`
+
+TODO
+
+### `--vss`
+
+This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse Prefetch files present within.
+
+#### Examples
+
+recmd
+pecmd
+
 #### `-q`
 
 This switch hides the processing details when running a command. This means potentially faster generated output since your computer doesn't have to worry about generating output to the console window during processing.
