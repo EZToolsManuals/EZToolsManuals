@@ -86,7 +86,7 @@ Example: ``
 
 #### `--vss`
 
-This switch
+This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse Prefetch files present within.
 
 Example: ``
 
