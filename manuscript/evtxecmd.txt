@@ -124,7 +124,7 @@ This switch informs the tool with the number of seconds to look for when searchi
 
 Example: `EvtxECmd.exe -f "C:\Temp\Application.evtx" --csv "c:\temp\out" --tdt 5`
 
-#### met
+#### `--met`
 
 This switch informs the tool as to whether or not to provide statistics, with the default being true.
 
@@ -150,12 +150,17 @@ This switch will inform the tool to look for EvtxECmd Maps at a specified locati
 
 Example: `.\EvtxECmd.exe -d "D:\evtx" --csv "D:\evtx" --maps "D:\Maps"`
 
-#### dedupe
+#### `--vss`
 
+This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse Prefetch files present within.
+
+Example: ``
+
+#### `--dedupe`
 
 This switch
 
-Example: ``
+Example: `NEED FALSE EXAMPLE HERE AND OTHER TOOLS`
 
 #### dedupe
 
@@ -199,10 +204,6 @@ EvtxECmd.exe -f "C:\Temp\Application.evtx" --json "c:\temp\jsonout"
 {pagebreak}
 
 ## EvtxECmd Output
-
-### Analyzing EvtxECmd Output - Console
-
-{pagebreak}
 
 ### Analyzing EvtxECmd Output - CSV
 
