@@ -691,8 +691,6 @@ Entry #: 11
 --- Lnk information ---
   Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
 
-#### TODO
-
 {pagebreak}
 
 ## JLECmd References
