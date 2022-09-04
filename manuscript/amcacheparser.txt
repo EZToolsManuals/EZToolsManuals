@@ -134,6 +134,19 @@ AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.tx
 
 `--csv` is required, so there's no console output with AmcacheParser
 
+AmcacheParser will produce the following CSVs:
+
+%timestamp%_Amcache_AssociatedFileEntries.csv
+%timestamp%_Amcache_DeviceContainers.csv
+%timestamp%_Amcache_DevicePnps.csv
+%timestamp%_Amcache_DriveBinaries.csv
+%timestamp%_Amcache_DriverPackages.csv
+%timestamp%_Amcache_ProgramEntries.csv
+%timestamp%_Amcache_ShortCuts.csv
+%timestamp%_Amcache_UnassociatedFileEntries.csv
+
+`%timestamp%` will look something similar to this: `20220904032628`
+
 {pagebreak}
 
 ## AmcacheParser Sample Data
