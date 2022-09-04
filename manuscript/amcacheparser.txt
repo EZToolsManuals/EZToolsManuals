@@ -136,7 +136,9 @@ AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.tx
 
 {pagebreak}
 
-## AmcacheParser Sample Output
+## AmcacheParser Sample Data
+
+Sample Amcache.hve artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Amcache).
 
 {pagebreak}
 
