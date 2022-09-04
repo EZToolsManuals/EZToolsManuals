@@ -144,6 +144,9 @@ AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.tx
 
 ### Important Data Points
 
+SHA1 values
+Execution timestamp of interest
+
 {pagebreak}
 
 ## AmcacheParser References
