@@ -97,12 +97,28 @@ Example: `.\SQLECmd.exe --sync`
 
 ### Example SQLECmd Commands
 
-#### Example description here
+#### Parse `someFile.db` and output to CSV to a specified location
 
 {line-numbers:false}
 ```powershell
-
+SQLECmd.exe -f "C:\Temp\someFile.db" --csv "c:\temp\out"
 ```
+
+#### Parse SQLite databases located within `C:\Temp` and output to CSV to a specified location
+
+{line-numbers:false}
+```powershell
+SQLECmd.exe -d "C:\Temp\" --csv "c:\temp\out"
+```
+
+#### Hunt for SQLite Databases recursively in a specified directory and output CSVs of any mapped databases to a specified location
+
+{line-numbers:false}
+```powershell
+SQLECmd.exe -d "C:\Temp\" --hunt --csv "c:\temp\out"
+```
+
+The `--hunt` command will inform you as to which files are SQLite databases! This is very helpful when searching for new SQLite databases to research.
 
 {pagebreak}
 
@@ -145,10 +161,6 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 * <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
 * <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
 * <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
-
-#### Community Resources
-
-* Links to blog posts go here
 
 ### Download SQLECmd
 
