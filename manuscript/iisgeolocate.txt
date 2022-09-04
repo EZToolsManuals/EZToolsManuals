@@ -74,8 +74,6 @@ IISGeoLocate will convert IIS logs into CSV format for ingestion into Timeline E
 
 * <https://github.com/EricZimmerman/iisGeolocate> is the GitHub repository for IISGeoLocate
 
-### Blog Posts
-
 ### Download IISGeoLocate
 
 IISGeoLocate can be downloaded from <https://ericzimmerman.github.io/#!index.md>
