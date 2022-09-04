@@ -138,6 +138,8 @@ AppCompatCacheParser.exe --csv c:\temp --csvf results.csv
 
 ### Important Data Points
 
+Last modified is timestamp of binary, not execution. 
+
 {pagebreak}
 
 ## AppCompatCacheParser References
