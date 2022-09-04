@@ -4,15 +4,9 @@
 
 EZViewer is a standalone, zero dependency viewer for .doc, .docx, .xls, .xlsx, .txt, .log, .rtf, .otd, .htm, .html, .mht, .csv, and .pdf. Any non-supported files are shown in a hex editor (with data interpreter!). Please note, this tool is read only and therefore cannot edit any files!
 
-{pagebreak}
-
-## EZViewer Key Takeaways
-
-### Important Data Points
-
 EZViewer is a great tool to have on your flash drive when you’re on site at a search warrant or at a client’s site. There is no need to deal with Microsoft Office. Just use EZViewer in all of its fully portable glory so you can view those files without any of the first-party dependencies! 
 
-{pagebreak}
+## References
 
 ### Download EZViewer
 
