@@ -92,15 +92,36 @@ SrumECmd.exe -d "C:\Temp" --csv "c:\temp"
 
 ### Analyzing SrumECmd Output - CSV
 
+SrumECmd will produce the following CSVs:
+
+* `%timestamp%_SrumECmd_AppResourceUseInfo_Output.csv`
+* `%timestamp%_SrumECmd_EnergyUsage_Output.csv`
+* `%timestamp%_SrumECmd_NetworkConnections_Output.csv`
+* `%timestamp%_SrumECmd_NetworkUsages_Output.csv`
+* `%timestamp%_SrumECmd_PushNotifications_Output.csv`
+* `%timestamp%_SrumECmd_Unknown312_Output.csv`
+* `%timestamp%_SrumECmd_UnknownD8F_Output.csv`
+
+`%timestamp%` will look something similar to this: `20220904032628`
+
 {pagebreak}
 
-## SrumECmd Sample Output
+## SrumECmd Sample Data
+
+Sample SRUM database artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/SRUM).
 
 {pagebreak}
 
 ## SrumECmd Key Takeaways
 
 ### Important Data Points
+
+The AppResourceUseInfo and NetworkUsages tables will likely contain the most actionable forensic data for most examiners.
+
+#### AppResourceUseInfo
+
+
+#### NetworkUsages
 
 {pagebreak}
 
