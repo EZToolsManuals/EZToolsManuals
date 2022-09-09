@@ -2,7 +2,7 @@
 
 ## PECmd Introduction
 
-PECmd is a tool created by Eric Zimmerman used to parse Windows Prefetch files (.pf), which can be located at ‘C:\Windows\Prefetch‘.
+PECmd is a tool created by Eric Zimmerman used to parse Windows Prefetch files (.pf), which can be located at `C:\Windows\Prefetch`.
 
 {pagebreak}
 
@@ -70,26 +70,52 @@ Either -f or -d is required. Exiting
 
 This switch
 
-Example: ``
+Example: `.\PECmd.exe -f "C:\temp\prefetch\TIMELINEEXPLORER.EXE-959F92B3.pf" -k timeline`
+
+Within the results, one can see the `(Keyword True)` appended to the end of a line where the specified keyword appears:
+
+{line-numbers:false}
+```powershell
+19: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL
+20: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL\DESKTOP
+21: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL\DESKTOP\EZ TOOLS
+22: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL\DESKTOP\EZ TOOLS\NET6
+23: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL\DESKTOP\EZ TOOLS\NET6\TIMELINEEXPLORER (Keyword True)
+```
 
 #### `-o`
 
-This switch
+This switch informs the tool to output the decompressed bytes of the Prefetch file to a specified location. Please note, this works in Windows 10 and newer as those operating systems compress Prefetch files.
 
-Example: ``
+Example: `.\PECmd.exe -f "C:\temp\prefetch\TIMELINEEXPLORER.EXE-959F92B3.pf" -o D:\Prefetch`
+
+Please note, in the above example a binary file called `Prefetch` will be output to the root of the D:\ drive. Do not expect PECmd to output the bytes as a binary file into the D:\Prefetch folder.
 
 #### `--mp`
 
-This switch will instruct PECmd to provide more verbose timestamps. TODO fill this out like LECmd's example
+This switch will instruct PECmd to provide more verbose timestamps. For instance, running `.\PECmd.exe -f "C:\temp\prefetch\TIMELINEEXPLORER.EXE-959F92B3.pf" --mp` resulted in the following:
 
-Example: ``
+{line-numbers:false}
+```powershell
+Created on: 2022-05-28 03:22:25.3924904
+Modified on: 2022-07-08 12:42:40.1435546
+Last accessed on: 2022-09-09 03:03:13.7696931
+```
+
+Running `.\PECmd.exe -f "C:\temp\prefetch\TIMELINEEXPLORER.EXE-959F92B3.pf"` resulted in the following:
+
+{line-numbers:false}
+```powershell
+Created on: 2022-05-28 03:22:25
+Modified on: 2022-07-08 12:42:40
+Last accessed on: 2022-09-09 03:03:23
+```
 
 #### `--vss`
 
 This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse Prefetch files present within.
 
-Example: ``
-
+Example: `.\PECmd.exe -d "C:\temp\prefetch" --vss`
 
 {pagebreak}
 
@@ -118,7 +144,7 @@ PECmd.exe -f "C:\Temp\CALC.EXE-3FBEF7FD.pf" --json "D:\jsonOutput" --jsonpretty
 PECmd.exe -d "C:\Temp" -k "system32, fonts"
 ```
 
-#### Parse a directory of Prefetch and output to CSV to a specified location with the filename ‘foo.csv‘ and output to JSON to a specified location
+#### Parse a directory of Prefetch and output to CSV to a specified location with the filename `foo.csv` and output to JSON to a specified location
 
 {line-numbers:false}
 ```powershell
@@ -142,17 +168,49 @@ PECmd.exe -d "C:\Windows\Prefetch"
 
 ### Analyzing PECmd Output - CSV
 
+PECmd will output multiple CSVs with the following filenames:
+
+`%timestamp%_PECmd_Output.csv`
+`%timestamp%_PECmd_Output_Timeline.csv`
+
+The timeline output will provide all of the entries from the PECmd output in a single timeline sorted on the run time stored within Prefetch.
+
 {pagebreak}
 
 ### Analyzing PECmd Output - JSON
 
-{pagebreak}
+Here's an example of PECmd's JSON output:
+
+```json
+{
+	"SourceFilename": "C:\\temp\\prefetch\\TIMELINEEXPLORER.EXE-959F92B3.pf",
+	"SourceCreated": "2022-05-28 03:22:25",
+	"SourceModified": "2022-07-08 12:42:40",
+	"SourceAccessed": "2022-09-09 03:22:30",
+	"ExecutableName": "TIMELINEEXPLORER.EXE",
+	"Hash": "959F92B3",
+	"Size": "447074",
+	"Version": "Windows 10 or Windows 11",
+	"RunCount": "24",
+	"LastRun": "2022-07-08 12:42:38",
+	"PreviousRun0": "2022-06-29 17:56:46",
+	"PreviousRun1": "2022-06-28 13:06:32",
+	"PreviousRun2": "2022-06-26 02:57:37",
+	"PreviousRun3": "2022-06-22 18:12:52",
+	"PreviousRun4": "2022-06-13 20:37:15",
+	"PreviousRun5": "2022-06-11 20:57:04",
+	"PreviousRun6": "2022-06-10 17:50:59",
+	"Volume0Name": "\\VOLUME{01d7b51f5d5ed7cd-b45d68a4}",
+	"Volume0Serial": "B45D68A4",
+	"Volume0Created": "2021-09-29 10:47:14",
+	"Directories": TooManyToListHere
+	"FilesLoaded": TooManyToListHere
+	"ParsingError": false
+```
 
 ### Analyzing PECmd Output - HTML
 
-{pagebreak}
-
-## PECmd Sample Output
+PECmd's JSON output will be very similar to the JSON output, except in an HTML file.
 
 {pagebreak}
 
@@ -160,8 +218,7 @@ PECmd.exe -d "C:\Windows\Prefetch"
 
 ### Important Data Points
 
-
-
+Prefetch files can store multiple run times for a single executable. This can help track historical execution of a file of interest.
 
 {pagebreak}
 
@@ -194,3 +251,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 ### Download PECmd
 
 PECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### PECmd Sample Data
+
+Sample Prefetch artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Prefetch).
