@@ -86,13 +86,20 @@ RBCmd.exe -d "C:\Temp" --csv "c:\temp"
 
 ### Analyzing RBCmd Output - Console
 
-{pagebreak}
+When running RBCmd with no specified output, you will see an entry similar to the one below for each Recycle Bin artifact parsed:
+
+```
+Source file: C:\temp\$Recycle.Bin\S-1-5-21-868105201-2749328792-1957117261-1001\$IZUDHPA.md
+
+Version: 2 (Windows 10/11)
+File size: 304 (304B)
+File name: C:\Users\CFUser\Documents\GitHub\DFIRArtifactMuseum\iOS\Address Book\iOS 14.1 - Hickman\README.md
+Deleted on: 2022-05-13 16:29:11
+```
 
 ### Analyzing RBCmd Output - CSV
 
-{pagebreak}
-
-## RBCmd Sample Output
+When running RBCmd with CSV output, a CSV will be output with similar data that's output to the console.
 
 {pagebreak}
 
@@ -100,7 +107,7 @@ RBCmd.exe -d "C:\Temp" --csv "c:\temp"
 
 ### Important Data Points
 
-TODO last deleted
+The `Deleted On` timestamp will be useful in determining when a file was deleted by a specific user. The Recycle Bin metadata files can be tracked to a user by their SID. That way, one can attribute which user deleted the file a given metadata file is pointing to.
 
 {pagebreak}
 
@@ -121,3 +128,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 ### Download RBCmd
 
 RBCmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### Recycle Bin Sample Data
+
+Sample Recycle Bin artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/%24Recycle.Bin).
