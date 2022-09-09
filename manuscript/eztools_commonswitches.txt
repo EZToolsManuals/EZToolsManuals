@@ -82,7 +82,7 @@ TODO
 
 ### `--dedupe`
 
-This switch informs the tool to deduplicate results parsed from by the tool. That way, your output won't be needlessly bloated by only providing unique data.
+This switch informs the tool to deduplicate results parsed from by the tool. That way, your output won't include multipe identical rows for the leanest output possible.
 
 ### `--vss`
 
