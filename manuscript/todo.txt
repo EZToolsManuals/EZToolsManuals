@@ -1,8 +1,5 @@
 * go over every single column/node of CSV/JSON output and explain what each is
 
-jlecmd
-
-JLECmd Key Takeaways section needs love
 
 merge SampleOutput and Output?
 add links to DFIRArtifactMuseum sample data for each specific tool’s artifact
@@ -11,6 +8,5 @@ add sample output for every single type of output to GitHub repo and link to it 
 ### Understanding the Artifact: RecentFileCache
 
 TODO
-
 
 Add DFIRArtifactrMuseum links to all community resources sections of each tool
