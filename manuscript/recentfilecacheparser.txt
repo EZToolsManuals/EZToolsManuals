@@ -75,17 +75,52 @@ RecentFileCacheParser.exe -f "C:\Temp\RecentFileCache.bcf" --json "D:\jsonOutput
 
 ### Analyzing RecentFileCacheParser Output - Console
 
+{line-numbers:false}
+```powershell
+Source file: D:\DFIRArtifactMuseum\Windows\RecentFileCache\Win7\EricZimmerman\RecentFileCache.bcf
+  Source created:  2022-07-03 02:06:55
+  Source modified: 2022-07-03 02:06:55
+  Source accessed: 2022-09-09 17:11:42
+
+File names
+c:\windows\system32\werfault.exe
+c:\program files\jetico\bcwipe\bcwipesvc.exe
+c:\program files\jetico\bcwipe\bcwipetm.exe
+c:\windows\system32\icacls.exe
+c:\windows\system32\systempropertiesprotection.exe
+c:\windows\bcuninstall.exe
+```
+
 {pagebreak}
 
 ### Analyzing RecentFileCacheParser Output - CSV
+
+When executing RecentFileCacherParser with CSV output enabled, it will output a filename similar to the example below:
+
+`%timestamp%_RecentFileCacheParser_Output.csv`
 
 {pagebreak}
 
 ### Analyzing RecentFileCacheParser Output - JSON
 
-{pagebreak}
+When executing RecentFileCacherParser with JSON output enabled, it will produce output similar to the example below:
 
-## RecentFileCacheParser Sample Output
+```json
+{
+	"SourceFile": "D:\\DFIRArtifactMuseum\\Windows\\RecentFileCache\\Win7\\EricZimmerman\\RecentFileCache.bcf",
+	"SourceCreated": "\/Date(1656814015362)\/",
+	"SourceModified": "\/Date(1656814015362)\/",
+	"SourceAccessed": "\/Date(1662743665086)\/",
+	"FileNames": [
+		"c:\\windows\\system32\\werfault.exe",
+		"c:\\program files\\jetico\\bcwipe\\bcwipesvc.exe",
+		"c:\\program files\\jetico\\bcwipe\\bcwipetm.exe",
+		"c:\\windows\\system32\\icacls.exe",
+		"c:\\windows\\system32\\systempropertiesprotection.exe",
+		"c:\\windows\\bcuninstall.exe"
+	]
+}
+```
 
 {pagebreak}
 
@@ -94,12 +129,6 @@ RecentFileCacheParser.exe -f "C:\Temp\RecentFileCache.bcf" --json "D:\jsonOutput
 ### Associated GitHub Repositories
 
 * <https://github.com/EricZimmerman/RecentFileCacheParser> is the GitHub repository for RecentFileCacheParser
-
-### Blog Posts
-
-#### Community Resources
-
-* [RecentFileCache Samples - DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/RecentFileCache/Win7/EricZimmerman)
 
 ### Download RecentFileCacheParser
 
