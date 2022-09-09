@@ -21,8 +21,6 @@ If you are looking for guidance on how to create EvtxECmd Maps, look no further 
 * [EvtxECmd Maps Guide](https://github.com/EricZimmerman/evtx/blob/master/evtx/Maps/!Channel-Name_Provider-Name_EventID.guide)
 * [EvtxECmd Maps Template](https://github.com/EricZimmerman/evtx/blob/master/evtx/Maps/!Channel-Name_Provider-Name_EventID.template)
 
-#### Value
-
 Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=860) for a timestamped link to the section of the presentation that relates to EvtxECmd Maps.
 
 ## EvtxECmd Switches
@@ -154,19 +152,7 @@ Example: `.\EvtxECmd.exe -d "D:\evtx" --csv "D:\evtx" --maps "D:\Maps"`
 
 This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse Prefetch files present within.
 
-Example: ``
-
-#### `--dedupe`
-
-This switch
-
-Example: `NEED FALSE EXAMPLE HERE AND OTHER TOOLS`
-
-#### dedupe
-
-This switch
-
-Example: ``
+Example: `.\EvtxECmd.exe -d "D:\evtx" --csv "D:\evtx" --vss`
 
 #### `--sync‘
 
@@ -205,25 +191,72 @@ EvtxECmd.exe -f "C:\Temp\Application.evtx" --json "c:\temp\jsonout"
 
 ## EvtxECmd Output
 
-### Analyzing EvtxECmd Output - CSV
-
-{pagebreak}
-
 ### Analyzing EvtxECmd Output - JSON
 
+When executing EvtxECmd with JSON output enabled, you will see similar output to the example below:
+
+```json
+{
+	"ChunkNumber": 0,
+	"Computer": "HostnameGoesHere",
+	"Payload": "{\"EventData\":{\"Data\":[{\"@Name\":\"param1\",\"#text\":\"86400\"},{\"@Name\":\"param2\",\"#text\":\"SuppressDuplicateDuration\"},{\"@Name\":\"param3\",\"#text\":\"Software\\\\Microsoft\\\\EventSystem\\\\EventLog\"}]}}",
+	"Channel": "Application",
+	"Provider": "Microsoft-Windows-EventSystem",
+	"EventId": 4625,
+	"EventRecordId": "1",
+	"ProcessId": 0,
+	"ThreadId": 0,
+	"Level": "Info",
+	"Keywords": "0x80000000000000",
+	"SourceFile": "C:\\temp\\evtx\\Application.evtx",
+	"ExtraDataOffset": 0,
+	"HiddenRecord": false,
+	"TimeCreated": "2022-05-19T15:34:34.9710202+00:00",
+	"RecordNumber": 1
+},
+```
+
 {pagebreak}
 
-### Analyzing EvtxECmd Output - HTML
+### Analyzing EvtxECmd Output - XML
 
-{pagebreak}
+When executing EvtxECmd with XML output enabled, you will see similar output to the example below:
 
-## EvtxECmd Sample Output
+```xml
+<Event>
+	<System>
+		<Provider Name="Microsoft-Windows-EventSystem" Guid="{899daace-4868-4295-afcd-9eb8fb497561}" EventSourceName="EventSystem" />
+		<EventID Qualifiers="16384">4625</EventID>
+		<Version>0</Version>
+		<Level>4</Level>
+		<Task>0</Task>
+		<Opcode>0</Opcode>
+		<Keywords>0x80000000000000</Keywords>
+		<TimeCreated SystemTime="2022-05-19 15:34:34.9710202" />
+		<EventRecordID>1</EventRecordID>
+		<Correlation />
+		<Execution ProcessID="0" ThreadID="0" />
+		<Channel>Application</Channel>
+		<Computer>CFL-HostnameGoesHere</Computer>
+		<Security />
+	</System>
+	<EventData>
+		<Data Name="param1">86400</Data>
+		<Data Name="param2">SuppressDuplicateDuration</Data>
+		<Data Name="param3">Software\Microsoft\EventSystem\EventLog</Data>
+	</EventData>
+</Event>
+```
+
+This is the preferred way to do research for creating new EvtxECmd Maps. EvtxECmd Maps use XPath queries which would require XML output to develop a working XPath query.
 
 {pagebreak}
 
 ## EvtxECmd Key Takeaways
 
 ### Important Data Points
+
+The Payload column will always have all the of XML data stored within a given event log. The columns where data from the XML Payload are mapped to should be considered the highlights of that particular event, but given that there are only 6 PayloadData columns, some events naturally will have more than 6 relevant data points.
 
 {pagebreak}
 
@@ -248,3 +281,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 ### Download EvtxECmd
 
 EvtxECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### Event Log Sample Data
+
+Sample Event Log artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Amcache).
