@@ -726,4 +726,3 @@ JLECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
 Sample JumpList files can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/JumpLists).
 
 {pagebreak}
-
