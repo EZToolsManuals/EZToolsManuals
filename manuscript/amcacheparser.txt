@@ -4,10 +4,6 @@
 
 AmcacheParser is a tool created by Eric Zimmerman used to parse Amcache.hve files, commonly found at `C:\Windows\appcompat\Programs\Amcache.hve`. 
 
-### Understanding the Artifact: Amcache
-
-TODO
-
 {pagebreak}
 
 ## AmcacheParser Switches
@@ -149,18 +145,13 @@ AmcacheParser will produce the following CSVs:
 
 {pagebreak}
 
-## AmcacheParser Sample Data
-
-Sample Amcache.hve artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Amcache).
-
-{pagebreak}
-
 ## AmcacheParser Key Takeaways
 
 ### Important Data Points
 
-SHA1 values
-Execution timestamp of interest
+The Amcache.hve will provide SHA1 hash values for binaries. This can be helpful in Incident Response engagements where you can leverage the SHA1 hash value for something like VirusTotal to learn more about a potentially malicious binary. Please note that often malicious binaries introduced by threat actors will be found in the UnassociatedEntries CSV. These will be programs that don't have program entries within the Amcache. This is an easy way to find malware because malware doesn't come with an installer! Additionally, the File Key ID Last Write Timestamp can be a reliable indicator of evidence of execution. 
+
+If you want to analyze the Amcache.hve artifact in a GUI tool, you can simply ingest it into Registry Explorer similar to other common Registry hives.
 
 {pagebreak}
 
@@ -181,10 +172,10 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 * <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
 * <https://binaryforay.blogspot.com/2017/10/amcache-still-rules-everything-around.html>
 
-#### Community Resources
-
-* Links to blog posts go here
-
 ### Download AmcacheParser
 
 AmcacheParser can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### Amcache Sample Data
+
+Sample Amcache.hve artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Amcache).
