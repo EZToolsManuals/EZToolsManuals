@@ -58,16 +58,6 @@ IISGeoLocate will convert IIS logs into CSV format for ingestion into Timeline E
 
 {pagebreak}
 
-## IISGeoLocate Sample Output
-
-{pagebreak}
-
-## IISGeoLocate Key Takeaways
-
-### Important Data Points
-
-{pagebreak}
-
 ## IISGeoLocate References
 
 ### Associated GitHub Repositories
