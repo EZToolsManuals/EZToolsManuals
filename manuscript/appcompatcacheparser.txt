@@ -33,12 +33,12 @@ Options:
                           specified, the live Registry will be used
   --csv <csv> (REQUIRED)  Directory to save CSV formatted results to. Be sure to include the
                           full path in double quotes
-  --csvf <csvf>           File name to save CSV formatted results to. When present, overrides 
+  --csvf <csvf>           File name to save CSV formatted results to. When present, overrides
                           default name
   --c <c>                 The ControlSet to parse. Default is to extract all control sets
                           [default: -1]
   -t                      Sorts last modified timestamps in descending order [default: False]
-  --dt <dt>               The custom date/time format to use when displaying time stamps. See 
+  --dt <dt>               The custom date/time format to use when displaying time stamps. See
                           https://goo.gl/CNVq0k for options [default: yyyy-MM-dd HH:mm:ss]
   --nl                    When true, ignore transaction log files for dirty hives [default:
                           False]
@@ -66,9 +66,9 @@ Results saved to 'C:\temp\appcompatcachetest\20220805212738_Windows10Creators_Sy
 
 #### `-t`
 
-This switch IS NOT CURRENTLY WORKING
+This switch will inform the tool to sort the last modified timestamps in descending order.
 
-Example: ``
+Example: `.\AppCompatCacheParser.exe -f "D:\temp\SYSTEM" --nl false --csv "D:\temp" -t`
 
 #### `-nl`
 
@@ -128,9 +128,23 @@ AppCompatCacheParser.exe --csv c:\temp --csvf results.csv
 
 ### Analyzing AppCompatCacheParser Output - CSV
 
-{pagebreak}
+AppCompatCacheParser will output a filename similar to these:
 
-## AppCompatCacheParser Sample Output
+`%timestamp%_XXXXXX_SYSTEM_AppCompatCache.csv`
+
+According to [AppCompatCacheParser's code](https://github.com/EricZimmerman/AppCompatCacheParser/blob/95d4e1e084fdf8289175fdb47a15747753ec8e77/AppCompatCache/AppCompatCache.cs#L56), the following versions can replace the XXXXXX:
+
+```
+WindowsXP,
+WindowsVistaWin2k3Win2k8,
+Windows7x86,
+Windows7x64_Windows2008R2,
+Windows80_Windows2012,
+Windows81_Windows2012R2,
+Windows10,
+Windows10Creators,
+Unknown
+```
 
 {pagebreak}
 
@@ -138,7 +152,7 @@ AppCompatCacheParser.exe --csv c:\temp --csvf results.csv
 
 ### Important Data Points
 
-Last modified is timestamp of binary, not execution. 
+The Last Modified timestamp will not be the last time of execution, rather, it'll be the last modified timestamp of the file itself. In some instances, this timestamp could be similar to a file's execution as seen elsewhere in UserAssist, Prefetch, etc. In that scenario, consider the file may have been copied from elsewhere and then executed immediately upon the file copy operation's completion. With the file being copied, the last modified timestamp will reflect the time of the file copy operation's completion, which being immediately followed by executing the file could make the last modified timestamp found in the AppCompatCache seem like a reliable timestamp, in some cases. Ideally, rely on other artifacts for more reliable evidence of execution timestamps.
 
 {pagebreak}
 
@@ -146,7 +160,7 @@ Last modified is timestamp of binary, not execution.
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
+* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
 * <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
 * <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
 
@@ -173,3 +187,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 ### Download AppCompatCacheParser
 
 AppCompatCacheParser can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### AppCompatCache Sample Data
+
+Sample data for the AppCompatCache can be found in the DFIRArtifactMuseum [here](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/AppCompatCache).
