@@ -376,4 +376,8 @@ Blog posts from Eric Zimmerman’s blog, [Binary Foray](https://binaryforay.blogsp
 
 LECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
 
+### LNK Sample Data
+
+Sample LNK files can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/LNK).
+
 {pagebreak}
