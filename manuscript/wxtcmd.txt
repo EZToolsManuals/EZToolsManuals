@@ -75,11 +75,11 @@ WxTCmd.exe -f "C:\Users\eric\AppData\Local\ConnectedDevicesPlatform\L.eric\Activ
 
 ### Analyzing WxTCmd Output - CSV
 
-#### *_Activity_PackageIDs.csv
+#### ‘%timestamp%_Activity_PackageIDs.csv‘
 
 This CSV will contain GUIDs of applications that were executed on disk. Generally speaking, this CSV is not going to be as useful as the CSV highlighted below.
 
-#### *_Activity.csv
+#### ‘%timestamp%__Activity.csv
 
 This CSV will contain the Start Time and End Time of an application's execution by a given user. This database is user specific, so this activity can be associated with a specific user account. Additionally, there is a JSON payload for each entry within the Windows Timeline SQLite database that may provide further context for an entry within the database.
 
@@ -127,3 +127,7 @@ Blog posts from Eric Zimmerman’s blog, [Binary Foray](https://binaryforay.blogsp
 ### Download WxTCmd
 
 WxTCmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### Windows Timeline Sample Data
+
+Sample Windows Timeline artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/WindowsTimeline).
