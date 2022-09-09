@@ -89,12 +89,6 @@ RecentFileCacheParser.exe -f "C:\Temp\RecentFileCache.bcf" --json "D:\jsonOutput
 
 {pagebreak}
 
-## RecentFileCacheParser Key Takeaways
-
-### Important Data Points
-
-{pagebreak}
-
 ## RecentFileCacheParser References
 
 ### Associated GitHub Repositories
@@ -110,3 +104,7 @@ RecentFileCacheParser.exe -f "C:\Temp\RecentFileCache.bcf" --json "D:\jsonOutput
 ### Download RecentFileCacheParser
 
 RecentFileCacheParser can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### RecentFileCache Sample Data
+
+Sample RecentFileCache artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/RecentFileCache).
