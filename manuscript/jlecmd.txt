@@ -6,10 +6,6 @@
 
 JLECmd is a tool created by Eric Zimmerman used to parse JumpList files. JumpList files are native to the Windows operating system and are common indicators of file access. 
 
-TODO flesh this out more
-
-Talk about Automatic vs Custom Destinations
-
 {pagebreak}
 
 ## JLECmd Switches
@@ -335,8 +331,6 @@ When parsing JumpLists with JLECmd with the `--csv` switch, JLECmd will output t
 When parsing JumpLists with JLECmd with the `--json` switch, JLECmd will output the parsed data into a JSON file. 
 
 `![](jlecmd\JSONPrettyReportExample.jpg)`
-
-TODO: figure out if the below JSON excerpt is preferred OR just a single screenshot of the PowerShell console window
 
 {line-numbers:false}
 ```json
