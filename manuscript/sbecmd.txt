@@ -123,9 +123,14 @@ SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout --dedupe
 
 ### Analyzing SBECmd Output - CSV
 
-{pagebreak}
+When executing SBECmd with CSV output enabled, it will output filenames similar to the examples below:
 
-## SBECmd Sample Output
+```
+Username_NTUSER.csv
+Username_usrClass.csv
+```
+
+If the system you're analzying has had 100 users who have traversed directories at some point in time, you should see 200 CSVs for your output!
 
 {pagebreak}
 
@@ -158,3 +163,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 ### Download SBECmd
 
 SBECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### Shellbags Sample Data
+
+Sample Shellbags (NTUser.dat and UsrClass.dat) artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Registry).
