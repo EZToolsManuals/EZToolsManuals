@@ -6,7 +6,7 @@ While each of the EZ Tools provide unique functionality based on the artifact th
 
 ### `-f`
 
-Use `-f` to point to a single file to be parsed.
+Use `-f` to point the tool to a single file to be parsed.
 
 #### Examples
 
@@ -16,7 +16,7 @@ Use `-f` to point to a single file to be parsed.
 
 ### `-d`
 
-This is a common switch within EZ Tools. Use `-d` to point to a directory for LECmd to parse. Please note, this switch does work recursively.
+Use `-d` to point to a directory for LECmd to parse. Please note, this switch does work recursively.
 
 #### Examples
 
@@ -24,7 +24,7 @@ This is a common switch within EZ Tools. Use `-d` to point to a directory for LE
 
 ### `--csv`
 
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into a CSV at the specified location.
+This switch will instruct LECmd to output parsed data into a CSV at the specified location.
 
 #### Examples
 
@@ -34,7 +34,7 @@ This is a common switch within EZ Tools. This switch will instruct LECmd to outp
 
 ### `--csvf`
 
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into a CSV at the specified location and name it using the value specified for this switch.
+This switch will instruct LECmd to output parsed data into a CSV at the specified location and name it using the value specified for this switch.
 
 #### Examples
 
@@ -43,7 +43,7 @@ This is a common switch within EZ Tools. This switch will instruct LECmd to outp
 
 ### `--xml`
 
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into XML at the specified location. Please note, this will output an XML file for each .LNK file parsed.
+This switch will instruct LECmd to output parsed data into XML at the specified location. Please note, this will output an XML file for each .LNK file parsed.
 
 #### Examples
 
@@ -51,7 +51,7 @@ This is a common switch within EZ Tools. This switch will instruct LECmd to outp
 
 ### `--html`
 
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into XML at the specified location.
+This switch will instruct LECmd to output parsed data into XML at the specified location.
 
 #### Examples
 
@@ -60,7 +60,7 @@ This is a common switch within EZ Tools. This switch will instruct LECmd to outp
 
 ### `--json`
 
-This is a common switch within EZ Tools. This switch will instruct LECmd to output parsed data into JSON at the specified location. Please note, this will output a single JSON file regardless of the number of .LNK files parsed.
+This switch will instruct LECmd to output parsed data into JSON at the specified location. Please note, this will output a single JSON file regardless of the number of .LNK files parsed.
 
 #### Examples
 
@@ -82,7 +82,7 @@ TODO
 
 ### `--dedupe`
 
-TODO
+This switch informs the tool to deduplicate results parsed from by the tool. That way, your output won't be needlessly bloated by only providing unique data.
 
 ### `--vss`
 
@@ -101,16 +101,16 @@ Example: `RECmd.exe -d C:\Windows\system32\config --bn BatchExamples\Kroll_Batch
 
 ### `--debug`
 
-This is a common switch within EZ Tools. This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
+This switch will provide log messages that are helpful for debugging code. `--debug` can be added to any command for more verbose messaging.
 
 ### `--trace`
 
-This is a common switch within EZ Tools. This switch will provide log messages that are helpful for tracing the execution of code. `--trace` can be added to any command for more verbose messaging.
+This switch will provide log messages that are helpful for tracing the execution of code. `--trace` can be added to any command for more verbose messaging.
 
 ### `--version`
 
-This is a common switch within EZ Tools. This switch will display the current version of the EZ Tool binary.
+This switch will display the current version of the EZ Tool binary.
 
 ### `--help`
 
-This is a common switch within EZ Tools. This switch will print the same help information as executing the EZ Tool from the command line without any switches.
+This switch will print the same help information as executing the EZ Tool from the command line without any switches.
