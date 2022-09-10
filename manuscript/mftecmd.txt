@@ -82,15 +82,113 @@ Options:
 
 ### Switch Descriptions
 
+#### `-m`
+
+This switch informs the tool to parse an $MFT along with its associated $J. The main benefit for this is the resolution of the Parent Path column in the $J output, which will save examiners from having to manually cross reference the Parent Entry ID in the $MFT to the one associated with a change recorded in the $J. This is absolutely worth the extra effort.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\J\Win10\APTSimulatorVM\$J' -m 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --csv "C:\temp"`
+
+#### `--body`
+
+This switch informs the tool to output to a [bodyfile](https://forensicswiki.xyz/wiki/index.php?title=Bodyfile). Please note, the `--bdl` switch is required when using `--bdl`.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --body C:\temp --bdl C`
+
+#### `--bodyf`
+
+This switch informs the tool to name the bodyfile output a specified filename.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --body C:\temp --bdl C --bodyf test`
+
+The above command will output a file named `test`.
+
 #### `--bdl`
 
+This switch informs the tool to use a specified drive letter when providing output to bodyfile format.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --body C:\temp --bdl C`
+
+#### `--blf`
+
+This switch informs the tool to use LF instead of CRLF for line endings in . More information about LF vs. CRLF can be found [here](https://www.aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git/).
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --csv "C:\temp" --blf`
+
+#### `--dd`
+
+This switch informs the tool to save an exported FILE record to a specified directory. Please note, the `--do` switch is required when using `--dd`.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --dd C:\temp --do 679`
+
+#### `--do`
+
+This switch informs the tool of which decimal or hex offset to dump to a specified location.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --dd C:\temp --do 679`
+
+#### `--de`
+
+This switch informs the tool to dump the full details of a specific entry number.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --de 679`
+
+#### `--dr`
+
+This switch informs the tool to dump all files resident within the $MFT to a specified directory. Please note, the specified directory will be whatever is specified for the `--csv` switch.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --csv c:\temp --dr`
+
+#### `--fls`
+
+This switch informs the tool to display the contents of a folder based on the data stored within the $MFT.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --de 500 --fls`
+
+The above command will display results similar to below:
+
+```
+Contents for .\Program Files\WindowsApps\Microsoft.WebMediaExtensions_1.0.42192.0_x64__8wekyb3d8bbwe\microsoft.system.package.metadata
+
+Key                     Type            Name
+115558-4                File            resources.ae44601c.pri
+115558-4                File            S-1-5-21-2212929841-2730996645-2649195864-1000-MergedResources-1.pri
+```
+
+Removing the `--fls` switch would display the timestamps and other NTFS metadata stored about that directory within the $MFT.
+
+#### `--ds`
+
+This switch informs the tool to TODO
+
 Example: ``
 
-#### `--vss
+#### `--sn`
 
-This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse NTFS metadata files present within.
+This switch informs the tool to include DOS file names as well as a few other columns of output.
 
-Example: ``
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --csv C:\temp --sn`
+
+The above command output a 191MB CSV compared to 122MB without the `--sn` switch. Also, the above command adds the following columns within Timeline Explorer that are available in the Column Chooser (right-click on a column header and double click on them to add them in).
+
+![mftecmdSNswitchcolumnsTLE](mftecmd\mftecmdSNswitchcolumnsTLE.png)
+
+#### `--fl`
+
+This switch informs the tool to output a simple file listing of the contents of the $MFT parsed which will include the following columns: FullPath, Extension, IsDirectory, FileSize, Created0x10, and LastModified0x10.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --csv C:\temp --fl`
+
+#### `--at`
+
+This switch informs the tool to display the timestamps even when the 0x10 and 0x30 timestamps are identical. Normally, the 0x30 timestamps would be empty if they're identical to the 0x10 timestamps for the purpose of making anomalies easier to spot.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --csv C:\temp --at`
+
+#### `--rs`
+
+This switch informs the tool to attempt to recover slack space from FILE records.
+
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --csv C:\temp --rs`
 
 {pagebreak}
 
@@ -139,17 +237,70 @@ MFTECmd.exe -f "C:\Temp\SomeMFT" --de 5-5
 
 ### Analyzing MFTECmd Output - Console
 
+sample output
+
 {pagebreak}
 
 ### Analyzing MFTECmd Output - CSV
+
+talk about copied, SI>FN, etc
 
 {pagebreak}
 
 ### Analyzing MFTECmd Output - JSON
 
+Executing MFTECmd with JSON output enabled will provide results similar to the example below:
+
+```json
+{
+	"EntryNumber": 0,
+	"SequenceNumber": 1,
+	"ParentEntryNumber": 5,
+	"ParentSequenceNumber": 5,
+	"InUse": true,
+	"ParentPath": ".",
+	"FileName": "$MFT",
+	"Extension": "",
+	"IsDirectory": false,
+	"HasAds": false,
+	"IsAds": false,
+	"FileSize": 274202624,
+	"Created0x10": "2022-03-10T19:30:21.3503859+00:00",
+	"LastModified0x10": "2022-03-10T19:30:21.3503859+00:00",
+	"LastRecordChange0x10": "2022-03-10T19:30:21.3503859+00:00",
+	"LastAccess0x10": "2022-03-10T19:30:21.3503859+00:00",
+	"UpdateSequenceNumber": 0,
+	"LogfileSequenceNumber": 960937622,
+	"SecurityId": 256,
+	"SiFlags": 6,
+	"ReferenceCount": 1,
+	"NameType": 3,
+	"Timestomped": false,
+	"uSecZeros": false,
+	"Copied": false,
+	"FnAttributeId": 3,
+	"OtherAttributeId": 6
+},
+```
+
 {pagebreak}
 
 ### Analyzing MFTECmd Output - Body
+
+Executing MFTECmd with bodyfile output enabled will provide results similar to the example below:
+
+```
+0|c:/$MFT|0-128-6|r/rrwxrwxrwx|0|0|274202624|1646940621|1646940621|1646940621|1646940621
+0|c:/$MFT ($FILE_NAME)|0-48-3|r/rrwxrwxrwx|0|0|274202624|1646940621|1646940621|1646940621|1646940621
+0|c:/$MFTMirr|1-128-1|r/rrwxrwxrwx|0|0|4096|1646940621|1646940621|1646940621|1646940621
+0|c:/$MFTMirr ($FILE_NAME)|1-48-2|r/rrwxrwxrwx|0|0|4096|1646940621|1646940621|1646940621|1646940621
+0|c:/$LogFile|2-128-1|r/rrwxrwxrwx|0|0|67108864|1646940621|1646940621|1646940621|1646940621
+0|c:/$LogFile ($FILE_NAME)|2-48-2|r/rrwxrwxrwx|0|0|67108864|1646940621|1646940621|1646940621|1646940621
+0|c:/$Volume|3-128-3|r/rrwxrwxrwx|0|0|0|1646940621|1646940621|1646940621|1646940621
+0|c:/$Volume ($FILE_NAME)|3-48-1|r/rrwxrwxrwx|0|0|0|1646940621|1646940621|1646940621|1646940621
+0|c:/$AttrDef|4-128-1|r/rrwxrwxrwx|0|0|2560|1646940621|1646940621|1646940621|1646940621
+0|c:/$AttrDef ($FILE_NAME)|4-48-2|r/rrwxrwxrwx|0|0|2560|1646940621|1646940621|1646940621|1646940621
+```
 
 {pagebreak}
 
@@ -190,7 +341,12 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 * <https://aboutdfir.com/toolsandartifacts/windows/mft-explorer-mftecmd/>
 * <https://www.youtube.com/watch?v=1mwiShxREm8>
 * <https://www.youtube.com/watch?v=_qElVZJqlGY>
+* <https://github.com/AndrewRathbun/DFIRPowerShellScripts/blob/main/MFTECmd%24J%24MFTParser.ps1>
 
 ### Download MFTECmd
 
 MFTECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### NTFS Sample Data
+
+Sample NTFS artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/NTFSArtifacts).
