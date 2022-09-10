@@ -273,6 +273,9 @@ MFTECmd.exe -f "C:\Temp\SomeMFT" --de 5-5
 
 ### Analyzing MFTECmd Output - CSV
 
+MFTECmd output provides a few important data points that are not native to NTFS metadata files but are still very helpful to examiners. 
+
+
 talk about copied, SI>FN, etc
 
 {pagebreak}
@@ -338,25 +341,23 @@ Executing MFTECmd with bodyfile output enabled will provide results similar to t
 
 ### #SDS
 
-
+$SDS contains a list of all the security descriptors on a given volume. Learn more about the $SDS [here](https://www.ntfs.com/ntfs-permissions-file-structure.htm).
 
 ### $Boot
 
-
-
+$Boot is the NTFS metadata file for the NTFS Partition Boot Sector. Learn more about the $Boot [here](https://www.ntfs.com/ntfs-partition-boot-sector.htm).
 
 ### $MFT
 
-
-
+$MFT contains metadata about every file and folder on an NTFS volume within FILE records. Learn more about the $MFT [here](https://www.ntfs.com/ntfs-mft.htm).
 
 ### $J
 
-
+$J tracks changes that were made to files and folders on an NTFS volume. Learn more about the $J [here](https://en.wikipedia.org/wiki/USN_Journal).
 
 ### $I30
 
-
+$I30 files can provide insight into deleted and overwritten files. Learn more about $I30 files [here](https://www.sans.org/blog/ntfs-i30-index-attributes-evidence-of-deleted-and-overwritten-files/#:~:text=Interestingly%2C%20NTFS%20directory%20index%20entries%20utilize%20a%20%24FILE_NAME,trove%20of%20information%20about%20the%20file%3A%20Full%20filename).
 
 {pagebreak}
 
