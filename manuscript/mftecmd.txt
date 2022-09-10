@@ -158,9 +158,45 @@ Removing the `--fls` switch would display the timestamps and other NTFS metadata
 
 #### `--ds`
 
-This switch informs the tool to TODO
+This switch informs the tool to provide information about the specified security descriptor. 
 
-Example: ``
+Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\Secure_$SDS\Win10\APTSimulatorVM\$Secure_$SDS' --ds 256`
+
+The above command would yield the following output:
+
+```
+Command line: -f D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\Secure_$SDS\Win10\APTSimulatorVM\$Secure_$SDS --ds 256
+
+File type: Sds
+
+
+Processed D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\Secure_$SDS\Win10\APTSimulatorVM\$Secure_$SDS in 0.0042 seconds
+
+SDS entries found in D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\Secure_$SDS\Win10\APTSimulatorVM\$Secure_$SDS: 4,626
+
+Details for security record # 256 (0x100), Found in D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\Secure_$SDS\Win10\APTSimulatorVM\$Secure_$SDS
+Hash value: CBC6FE32, Offset: 0x0
+Control flags: SeDaclPresent | SeSelfRelative
+
+Owner SID: S-1-5-18: An account that is used by the operating system.
+Group SID: S-1-5-32-544: A built-in group. After the initial installation of the operating system, the only member of the group is the Administrator account. When a computer joins a domain, the Domain Administrators group is added to the Administrators group. When a server becomes a domain controller, the Enterprise Administrators group also is added to the Administrators group.
+
+Discretionary Access Control List
+ACE record count: 2
+ACL type: Discretionary
+
+------------ Ace record #0 ------------
+Type: AccessAllowed
+Flags: None
+Mask: FileReadDirList | ReadEa | ReadAttrs | ReadControl | Synchronize
+SID: S-1-5-18: An account that is used by the operating system.
+
+------------ Ace record #1 ------------
+Type: AccessAllowed
+Flags: None
+Mask: FileReadDirList | ReadEa | ReadAttrs | ReadControl | Synchronize
+SID: S-1-5-32-544: A built-in group. After the initial installation of the operating system, the only member of the group is the Administrator account. When a computer joins a domain, the Domain Administrators group is added to the Administrators group. When a server becomes a domain controller, the Enterprise Administrators group also is added to the Administrators group.
+```
 
 #### `--sn`
 
@@ -235,12 +271,6 @@ MFTECmd.exe -f "C:\Temp\SomeMFT" --de 5-5
 
 ## MFTECmd Output
 
-### Analyzing MFTECmd Output - Console
-
-sample output
-
-{pagebreak}
-
 ### Analyzing MFTECmd Output - CSV
 
 talk about copied, SI>FN, etc
@@ -304,17 +334,29 @@ Executing MFTECmd with bodyfile output enabled will provide results similar to t
 
 {pagebreak}
 
-### Analyzing MFTECmd Output - HTML
+## File Types Parsed by MFTECmd
 
-{pagebreak}
+### #SDS
 
-## MFTECmd Sample Output
 
-{pagebreak}
 
-## MFTECmd Key Takeaways
+### $Boot
 
-### Important Data Points
+
+
+
+### $MFT
+
+
+
+
+### $J
+
+
+
+### $I30
+
+
 
 {pagebreak}
 
