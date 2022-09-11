@@ -284,4 +284,4 @@ EvtxECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
 
 ### Event Log Sample Data
 
-Sample Event Log artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Amcache).
+Sample Event Log artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/EventLogs).
