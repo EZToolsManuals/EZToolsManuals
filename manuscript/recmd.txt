@@ -90,20 +90,19 @@ Options:
   --trace              Show trace information during processing [default: False]
   --version            Show version information
   -?, -h, --help       Show help and usage information
-
 ```
 
 ### Switch Descriptions
 
 #### `--kn`
 
-This switch 
+This switch informs the tool to dump the full details of a provided key within the Registry.
 
-Example: 
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry\Win10\APTSimulatorVM" --kn ROOT\ControlSet001\Control\BackupRestore\FilesNotToBackup`
 
 #### `--vn`
 
-This switch 
+This switch informs the tool to dump the full details of the value name specified. Please note, one of the following switches is required when using `--vn`: `--sk`, `--sv`, `--sd`, `--ss`, `--kn`, `--Base64`, `--MinSize`, and `--bn`.
 
 Example: 
 
@@ -298,3 +297,7 @@ Blog posts from Eric Zimmerman’s blog, Binary Foray:
 ### Download RECmd
 
 RECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### Registry Sample Data
+
+Sample Registry artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Registry).
