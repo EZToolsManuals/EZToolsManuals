@@ -81,7 +81,137 @@ Either -f or -d is required. Exiting
 
 ### Switch Descriptions
 
-#### SWITCH
+#### `-o`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `-a`
+
+This switch informs the tool to
+
+Example: ``
+
+#### ``-u
+
+This switch informs the tool to
+
+Example: ``
+
+#### `-m`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `-b`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `-q`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `-s`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `-x`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `-p`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--ls`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--lr`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--fs`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--fr`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--ar`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--ur`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--cp`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--mask`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--ms`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--ro`
+
+This switch informs the tool to
+
+Example: ``
+
+#### `--off`
+
+This switch informs the tool to
+
+Example: `--sa`
+
+#### `--`
+
+This switch informs the tool to
+
+Example: ``
+
+#### ``--sl
+
+This switch informs the tool to
+
+Example: ``
 
 {pagebreak}
 
