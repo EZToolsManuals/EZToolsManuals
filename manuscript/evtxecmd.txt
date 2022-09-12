@@ -86,7 +86,7 @@ Example: `.\EvtxECmd.exe -d C:\Windows\System32\winevt\Logs --inc 4624,4625`
 
 The above command WILL process 4624 and 4625 events, but will NOT process anything else.
 
-### `--exc`
+#### `--exc`
 
 This switch will provide EvtxECmd with which event ID(s) to ignore during process.
 
