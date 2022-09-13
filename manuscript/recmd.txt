@@ -124,87 +124,138 @@ Please note, output is a binary file that can be opened in a text editor to view
 
 #### `--details`
 
-This switch
+This switch informs the tool to display more details when displaying results.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sd VMware`
 
 #### `--base64`
 
-This switch
+This switch informs the tool to search for Base64 values that are larger than the amount of bytes specified.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry\Win11\RathbunVM" --base64 10`
+
+The above command provides results similar to the following:
+
+```
+Found 2 search hits with size greater or equal to 10 bytes in D:\DFIRArtifactMuseum\Windows\Registry\Win11\RathbunVM\DEFAULT (NTUSER)\NTUSER.DAT
+Key: AppEvents\EventLabels\Notification.Default, Value: (default), Size: 26
+Key: Control Panel\PowerCfg\PowerPolicies\2, Value: Name, Size: 26
+```
 
 #### `--minSize`
 
-This switch
+This switch informs the tool to search for values with a minimum size in bytes.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry\Win11\RathbunVM" --minSize 500`
+
+The above command provides results similar to the following:
+
+```
+Found 18 search hits with size greater or equal to 500 bytes in D:\DFIRArtifactMuseum\Windows\Registry\Win11\RathbunVM\SAM
+Key: SAM\Domains\Account\Users\000001F4, Value: V, Size: 688
+Key: SAM\Domains\Account\Users\000001F5, Value: V, Size: 664
+Key: SAM\Domains\Account\Users\000001F7, Value: V, Size: 680
+Key: SAM\Domains\Account\Users\000001F8, Value: V, Size: 836
+Key: SAM\Domains\Account\Users\000001F8, Value: SupplementalCredentials, Size: 1,168
+Key: SAM\Domains\Account\Users\000003E9, Value: V, Size: 580
+Key: SAM\Domains\Builtin\Aliases\00000221, Value: C, Size: 560
+Key: SAM\Domains\Builtin\Aliases\00000222, Value: C, Size: 600
+Key: SAM\Domains\Builtin\Aliases\00000223, Value: C, Size: 520
+Key: SAM\Domains\Builtin\Aliases\00000227, Value: C, Size: 504
+Key: SAM\Domains\Builtin\Aliases\0000022C, Value: C, Size: 564
+Key: SAM\Domains\Builtin\Aliases\0000022F, Value: C, Size: 664
+Key: SAM\Domains\Builtin\Aliases\00000232, Value: C, Size: 504
+Key: SAM\Domains\Builtin\Aliases\00000242, Value: C, Size: 504
+Key: SAM\Domains\Builtin\Aliases\00000243, Value: C, Size: 584
+Key: SAM\Domains\Builtin\Aliases\00000244, Value: C, Size: 744
+Key: SAM\Domains\Account\Users\000003E8, Value: V, Size: 632 (Deleted: True)
+Key: SAM\Domains\Account\Users\000003E8, Value: SupplementalCredentials, Size: 1,552 (Deleted: True)
+```
 
 #### --sa`
 
-This switch
+This switch informs the tool to search for a specified string within keys, values, data, and slack.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sa VMware`
 
 #### `--sk`
 
-This switch
+This switch informs the tool to search for a specified string within a value record's key names.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sk VMware`
+
+The above command provides results similar to the following:
+
+```
+Found 2 search hits in D:\DFIRArtifactMuseum\Windows\Registry\Win11\RathbunVM\NTUSER.DAT
+        Key: Software\VMware, Inc.
+        Key: Software\VMware, Inc.\VMware Tools
+```
 
 #### `--sv`
 
-This switch
+This switch informs the tool to search for a specified string within a record's value names.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sv VMware`
 
 #### `--sd`
 
-This switch
+This switch informs the tool to search for a specified string within a value record's value data.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sd VMware`
+
+The above command provides results similar to the following:
+
+```
+Found 5 search hits in D:\DFIRArtifactMuseum\Windows\Registry\Win11\RathbunVM\SYSTEM
+        Key: ControlSet001\Control\DeviceContainers\{00000000-0000-0000-FFFF-FFFFFFFFFFFF}\BaseContainers\{00000000-0000-0000-FFFF-FFFFFFFFFFFF}, Value: SCSI\CdRom&Ven_NECVMWar&Prod_VMware_SATA_CD01\5&260e6d66&0&010000
+        Key: ControlSet001\Control\DeviceContainers\{8a1a5449-86cd-11ec-ae32-806e6f6e6963}\BaseContainers\{8a1a5449-86cd-11ec-ae32-806e6f6e6963}, Value: SCSI\Disk&Ven_NVMe&Prod_VMware_Virtual_N\5&25a13950&0&000000
+        Key: ControlSet001\Services\bam\State\UserSettings\S-1-5-21-4063860464-1508573791-632671957-1001, Value: \Device\HarddiskVolume3\Program Files\VMware\VMware Tools\vmtoolsd.exe
+        Key: DriverDatabase\DriverPackages\vmci.inf_amd64_5e38a278d114b813\Strings, Value: loc.vmwaremanufacturer
+        Key: DriverDatabase\DriverPackages\vmci.inf_amd64_5e38a278d114b813\Strings, Value: loc.vmwarebusdevicedesc
+```
 
 #### `--ss`
 
-This switch
+This switch informs the tool to search for a specified string within a value record's slack.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --ss VMware`
+
+The above command will provide no results.
 
 #### `--literal`
 
-This switch
+This switch informs the tool to not interpret the specified string as ASCII or Unicode byte strings.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sd VMware --literal`
 
 #### `--nd`
 
-This switch
+This switch informs the tool to not show data when using `--sd` or `--ss`.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sd VMware --nd`
 
 #### `--regex`
 
-This switch
+This switch informs the tool to treat the specified string as a regular expression for the following switches: `--sk`, `--sv`, `--sd`, and `--ss`.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sd  "\b(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\b" --regex`
+
+The above regular expression is the IPv4 regular expression taken from [here](https://github.com/AndrewRathbun/DFIRRegex).
 
 #### `--nl`
 
-This switch
+This switch informs the tool to ignore replaying transaction logs.
 
-Example: ``
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sd VMware --nl`
+
+Please note, using this switch will provide the following message: `Registry hive is dirty and transaction logs were found in the same directory, but --nl was provided. Data may be missing! Continuing anyways...`
 
 #### `--recover`
 
-This switch
+This switch informs the tool to attempt to recover deleted keys/values.
 
-Example: ``
-
-#### `--vss`
-
-This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse Registry hives present within.
-
-Example: ```.\RECmd.exe TODO TODO TODO --vss`
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sd VMware --recover`
 
 #### `--sync‘
 
@@ -212,19 +263,13 @@ This switch will inform the tool to download all RECmd Batch Files from [GitHub]
 
 Example: ```.\RECmd.exe --sync`
 
-#### `--dedupe`
-
-This switch will inform the tool to deduplicate across all parsed data. By default, RECmd will deduplicate results parsed from raw artifacts.
-
-Example: ````
-
 {pagebreak}
 
 ## RECmd Command Examples
 
 ### Example RECmd Commands
 
-#### Example description here
+#### Parse a specified file
 
 {line-numbers:false}
 ```powershell
