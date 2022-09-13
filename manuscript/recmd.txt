@@ -2,7 +2,7 @@
 
 ## RECmd Introduction
 
-RECmd is a tool created by Eric Zimmerman used to parse Registry hives. Registry hives are located at `C:\Windows\System32\config` and contain multiple hives of interest. 
+RECmd is a tool created by Eric Zimmerman used to parse Registry hives. Registry hives are located at `C:\Windows\System32\config` and contain multiple hives of interest.
 
 ### RECmd Batch Files
 
@@ -15,7 +15,7 @@ If you are looking for guidance on how to create RECmd Batch Files, look no furt
 * [RECmd Batch Files Guide](https://github.com/EricZimmerman/RECmd/blob/master/BatchExamples/!RECmdBatch.guide)
 * [RECmd Batch Files Template](https://github.com/EricZimmerman/RECmd/blob/master/BatchExamples/!RECmdBatch.template)
 
-Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=318) for a timestamped link to the section of the presentation that relates to RECmd Batch Files. 
+Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=318) for a timestamped link to the section of the presentation that relates to RECmd Batch Files.
 
 {pagebreak}
 
@@ -42,7 +42,7 @@ Description:
 
   Note: Enclose all strings containing spaces (and all RegEx) with double quotes
 
-  Example: RECmd.exe --f "C:\Temp\UsrClass 1.dat" --sk URL --recover false --nl
+  Example: ``RECmd.exe --f "C:\Temp\UsrClass 1.dat" --sk URL --recover false --nl
              RECmd.exe --f "D:\temp\UsrClass 1.dat" --StartDate "11/13/2014 15:35:01"
              RECmd.exe --f "D:\temp\UsrClass 1.dat" --RegEx --sv "(App|Display)Name"
 
@@ -104,115 +104,119 @@ Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry\Win10\APTSimula
 
 This switch informs the tool to dump the full details of the value name specified. Please note, one of the following switches is required when using `--vn`: `--sk`, `--sv`, `--sd`, `--ss`, `--kn`, `--Base64`, `--MinSize`, and `--bn`.
 
-Example: 
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry\Win10\APTSimulatorVM" --kn "ROOT\Microsoft\Windows\CurrentVersion\Authentication\LogonUI" --vn LastLoggedOnSAMUser`
 
 #### `--bn`
 
-This switch 
+This switch informs the tool to use a specified batch file when parsing registry hives.
 
-Example: 
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry\Win10\APTSimulatorVM" --bn BatchExamples\Kroll_Batch.reb --csv C:\temp`
+
+Please note, the Kroll Batch file is the most updated and actively maintained RECmd Batch file.
 
 #### `--saveTo`
 
-This switch 
+This switch informs the tool to save the binary data from a specified value name to a specified location.
 
-Example: 
+Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry\Win10\APTSimulatorVM" --kn "ROOT\Microsoft\Windows\CurrentVersion\Authentication\LogonUI" --vn LastLoggedOnSAMUser --saveTo c:\temp\output`
+
+Please note, output is a binary file that can be opened in a text editor to view the contents.
 
 #### `--details`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--base64`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--minSize`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### --sa`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--sk`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--sv`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--sd`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--ss`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--literal`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--nd`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--regex`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--nl`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--recover`
 
-This switch 
+This switch
 
-Example: 
+Example: ``
 
 #### `--vss`
 
 This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse Registry hives present within.
 
-Example: `.\RECmd.exe TODO TODO TODO --vss`
+Example: ```.\RECmd.exe TODO TODO TODO --vss`
 
 #### `--sync‘
 
 This switch will inform the tool to download all RECmd Batch Files from [GitHub](https://github.com/EricZimmerman/RECmd/tree/master/BatchExamples) and update the local Batch Files stored in `.\RECmd\BatchExamples`.
 
-Example: `.\RECmd.exe --sync`
+Example: ```.\RECmd.exe --sync`
 
 #### `--dedupe`
 
 This switch will inform the tool to deduplicate across all parsed data. By default, RECmd will deduplicate results parsed from raw artifacts.
 
-Example: ``
+Example: ````
 
 {pagebreak}
 
@@ -300,4 +304,4 @@ RECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
 
 ### Registry Sample Data
 
-Sample Registry artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Registry).
+Sample Registry artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/Registry). More can also be found [here](https://github.com/AndrewRathbun/VanillaWindowsRegistryHives) for nearly every version of Windows.
