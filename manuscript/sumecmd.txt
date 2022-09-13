@@ -8,7 +8,7 @@ SumECmd is a tool created by Eric Zimmerman used to parse the SUM database. The 
 
 ## SumECmd Switches
 
-In a PowerShell window, running `.\SumECmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\SumECmd.exe` will provide the following options when running SumECmd:
 
 {line-numbers:false}
 ```powershell
@@ -75,13 +75,11 @@ TODO
 
 {pagebreak}
 
-## SumECmd Sample Output
-
-{pagebreak}
-
 ## SumECmd Key Takeaways
 
 ### Important Data Points
+
+
 
 {pagebreak}
 
@@ -101,3 +99,7 @@ TODO
 ### Download SumECmd
 
 SumECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### SUM Sample Data
+
+Sample SUM artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/SUM).
