@@ -140,3 +140,7 @@ The AppResourceUseInfo and NetworkUsages tables will likely contain the most act
 ### Download SrumECmd
 
 SrumECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### SRUM Sample Data
+
+Sample SRUM artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/SRUM).
