@@ -36,7 +36,7 @@ Usage:
 Options:
   -f <f>          File to search. Either this or -d is required
   -d <d>          Directory to recursively process. Either this or -f is required
-  -o <o>          File to save results to
+ -o <o>          File to save results to
   -a              If set, look for ASCII strings. Use -a false to disable [default: True]
   -u              If set, look for Unicode strings. Use -u false to disable [default: True]
   -m <m>          Minimum string length [default: 3]
@@ -83,135 +83,217 @@ Either -f or -d is required. Exiting
 
 #### `-o`
 
-This switch informs the tool to
+This switch informs the tool to save the results of a search to a specified location.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt"`
 
 #### `-a`
 
-This switch informs the tool to
+This switch informs the tool to look for [ASCII](https://en.wikipedia.org/wiki/ASCII) strings. Default is true, so if you want to disable it, use `-a false`.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt" -a false`
 
 #### ``-u
 
-This switch informs the tool to
+This switch informs the tool to look for [Unicode](https://en.wikipedia.org/wiki/Unicode) strings. Default is true, so if you want to disable it, use `-u false`.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt" -u false`
 
 #### `-m`
 
-This switch informs the tool to
+This switch informs the tool to look for strings that are a minimum length of the specified value.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt" -m 12`
 
 #### `-b`
 
-This switch informs the tool to
+This switch informs the tool to search a specified chunk size. The default is 512 but the valid range is 1 to 1024.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows\Pagefile\" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt" -b 10`
+
+Running the above command will result in console messages similar to the below:
+
+```
+Searching 3 chunks (10 MB each) across 22.034 MB in 'D:\DFIRArtifactMuseum\Windows\Pagefile\Win10\APTSiimulatorVM\pagefile.7z'
+
+Chunk 1 of 3 finished. Total strings so far: 311,770 Elapsed time: 0.252 seconds. Average strings/sec: 1,239,057
+Chunk 2 of 3 finished. Total strings so far: 580,462 Elapsed time: 0.649 seconds. Average strings/sec: 894,890
+Chunk 3 of 3 finished. Total strings so far: 624,488 Elapsed time: 0.713 seconds. Average strings/sec: 875,745
+Primary search complete. Looking for strings across chunk boundaries...
+Search complete.
+```
+
+Change the value to 1 would result in the following messages:
+
+```
+Searching 23 chunks (1 MB each) across 22.034 MB in 'D:\DFIRArtifactMuseum\Windows\Pagefile\Win10\APTSiimulatorVM\pagefile.7z'
+
+Chunk 1 of 23 finished. Total strings so far: 33,330 Elapsed time: 0.029 seconds. Average strings/sec: 1,153,463
+Chunk 2 of 23 finished. Total strings so far: 66,074 Elapsed time: 0.052 seconds. Average strings/sec: 1,266,474
+Chunk 3 of 23 finished. Total strings so far: 98,578 Elapsed time: 0.082 seconds. Average strings/sec: 1,195,192
+Chunk 4 of 23 finished. Total strings so far: 130,789 Elapsed time: 0.111 seconds. Average strings/sec: 1,178,745
+Chunk 5 of 23 finished. Total strings so far: 162,189 Elapsed time: 0.137 seconds. Average strings/sec: 1,186,162
+Chunk 6 of 23 finished. Total strings so far: 192,861 Elapsed time: 0.207 seconds. Average strings/sec: 933,171
+Chunk 7 of 23 finished. Total strings so far: 223,261 Elapsed time: 0.229 seconds. Average strings/sec: 975,082
+Chunk 8 of 23 finished. Total strings so far: 253,191 Elapsed time: 0.260 seconds. Average strings/sec: 974,158
+Chunk 9 of 23 finished. Total strings so far: 282,837 Elapsed time: 0.281 seconds. Average strings/sec: 1,004,852
+Chunk 10 of 23 finished. Total strings so far: 311,770 Elapsed time: 0.312 seconds. Average strings/sec: 998,170
+Chunk 11 of 23 finished. Total strings so far: 340,242 Elapsed time: 0.426 seconds. Average strings/sec: 798,514
+Chunk 12 of 23 finished. Total strings so far: 368,446 Elapsed time: 0.446 seconds. Average strings/sec: 825,609
+Chunk 13 of 23 finished. Total strings so far: 396,369 Elapsed time: 0.471 seconds. Average strings/sec: 840,736
+Chunk 14 of 23 finished. Total strings so far: 423,846 Elapsed time: 0.510 seconds. Average strings/sec: 831,394
+Chunk 15 of 23 finished. Total strings so far: 450,770 Elapsed time: 0.536 seconds. Average strings/sec: 840,528
+Chunk 16 of 23 finished. Total strings so far: 477,418 Elapsed time: 0.560 seconds. Average strings/sec: 851,896
+Chunk 17 of 23 finished. Total strings so far: 503,561 Elapsed time: 0.623 seconds. Average strings/sec: 808,210
+Chunk 18 of 23 finished. Total strings so far: 529,823 Elapsed time: 0.664 seconds. Average strings/sec: 798,020
+Chunk 19 of 23 finished. Total strings so far: 555,164 Elapsed time: 0.691 seconds. Average strings/sec: 803,042
+Chunk 20 of 23 finished. Total strings so far: 580,462 Elapsed time: 0.714 seconds. Average strings/sec: 812,530
+Chunk 21 of 23 finished. Total strings so far: 605,518 Elapsed time: 0.776 seconds. Average strings/sec: 780,189
+Chunk 22 of 23 finished. Total strings so far: 624,488 Elapsed time: 0.821 seconds. Average strings/sec: 760,773
+Chunk 23 of 23 finished. Total strings so far: 624,488 Elapsed time: 0.824 seconds. Average strings/sec: 757,961
+Primary search complete. Looking for strings across chunk boundaries...
+Search complete.
+```
 
 #### `-q`
 
-This switch informs the tool to
+This switch informs the tool to run in quiet mode, where the header and footer won't display as results are being displayed in the console window.
 
-Example: ``
-
-#### `-s`
-
-This switch informs the tool to
-
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt" -a false -q`
 
 #### `-x`
 
-This switch informs the tool to
+This switch informs the tool to search for strings with a maximum length of a specified value.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt" -x 15`
 
 #### `-p`
 
-This switch informs the tool to
+This switch informs the tool to display the list of regular expressions built in to the tool.
 
-Example: ``
+Example: `.\bstrings.exe -p`
+
+This command will display the following information:
+
+```
+Name            Description
+aeon            Finds Aeon wallet addresses
+b64             Finds valid formatted base 64 strings
+bitcoin         Finds BitCoin wallet addresses
+bitlocker       Finds Bitlocker recovery keys
+bytecoin        Finds ByteCoin wallet addresses
+cc              Finds credit card numbers
+dashcoin        Finds DashCoin wallet addresses (D*)
+dashcoin2       Finds DashCoin wallet addresses (7|X)*
+email           Finds embedded email addresses
+fantomcoin      Finds Fantomcoin wallet addresses
+guid            Finds GUIDs
+ipv4            Finds IP version 4 addresses
+ipv6            Finds IP version 6 addresses
+mac             Finds MAC addresses
+monero          Finds Monero wallet addresses
+reg_path        Finds paths related to Registry hives
+sid             Finds Microsoft Security Identifiers (SID)
+ssn             Finds US Social Security Numbers
+sumokoin        Finds SumoKoin wallet addresses
+unc             Finds UNC paths
+url3986         Finds URLs according to RFC 3986
+urlUser         Finds usernames in URLs
+usPhone         Finds US phone numbers
+var_set         Finds environment variables being set (OS=Windows_NT)
+win_path        Finds Windows style paths (C:\folder1\folder2\file.txt)
+xml             Finds XML/HTML tags
+zip             Finds zip codes
+
+To use a built in pattern, supply the Name to the --lr switch
+```
 
 #### `--ls`
 
-This switch informs the tool to
+This switch informs the tool to search for a specified string.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell`
 
 #### `--lr`
 
-This switch informs the tool to
+This switch informs the tool to search for a specified built-in regular expression.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4`
 
 #### `--fs`
 
-This switch informs the tool to
+This switch informs the tool to use a specified list of search terms within a specified file.
 
-Example: ``
-
-#### `--fr`
-
-This switch informs the tool to
-
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --fs C:\temp\searchterms.txt`
 
 #### `--ar`
 
-This switch informs the tool to
+This switch informs the tool to search using a specified range to search for in "code page" strings.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 --fr C:\temp\results.txt --ar [\x20-\x37] -q`
 
 #### `--ur`
 
-This switch informs the tool to
+This switch informs the tool to search using a specified range to search for in Unicode strings.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 --fr C:\temp\results.txt --ur [\u0020-\u007E] -q`
 
 #### `--cp`
 
-This switch informs the tool to
+This switch informs the tool to use a specified code page. The default is 1252. Check out [this link](https://docs.microsoft.com/en-us/windows/win32/intl/code-page-identifiers?redirectedfrom=MSDN) for information on other code pages available.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 --fr C:\temp\results.txt --ur [\u0020-\u007E] -q --cp 1256`
 
 #### `--mask`
 
-This switch informs the tool to
+This switch informs the tool to search a specified file mask. For instance, to search through all .exe files, one would specify `--mask *.exe`.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 --fr C:\temp\results.txt --mask *.txt`
+
+The above command would search through all .txt files using the IPv4 regular expression as a search term.
 
 #### `--ms`
 
-This switch informs the tool to
+This switch informs the tool of the maximum size file (in bytes) to process when using the `-d` switch.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 --fr C:\temp\results.txt --mask *.txt --ms 10`
+
+The above command will provide messages similar to the following:
+
+```
+'D:\DFIRArtifactMuseum\Windows\AppCompatCache\ReadMe.txt' is bigger than max file size of 10 bytes! Skipping...
+Searching via RegEx pattern: \b(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\b
+```
 
 #### `--ro`
 
-This switch informs the tool to
+This switch informs the tool to list the string matched as the search is running.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 -o C:\temp\results.txt --ro -q`
+
+Try the above command with and without the `--ro` and see the difference. `--ro` will list each IPv4 address hit and running the command without `--ro` will list the files where hits are being located.
 
 #### `--off`
 
-This switch informs the tool to
+This switch informs the tool to show the offset of the hit and code page for each hit.
 
-Example: `--sa`
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 -o C:\temp\results.txt --off -q`
 
-#### `--`
+The above command's first hit will be similar to the following:
 
-This switch informs the tool to
+`C:\Program Files (x86)\Common Files\Microsoft Shared\VsHub\1.0.0.0\Microsoft.VsHub.Server.HttpHostx64.exe       0x5D82 (U)`
 
-Example: ``
+#### `--sa`
+
+This switch informs the tool to sort the results alphabetically.
+
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 -o C:\temp\results.txt --sa -q`
 
 #### ``--sl
 
-This switch informs the tool to
+This switch informs the tool to sort the results by length.
 
-Example: ``
+Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 -o C:\temp\results.txt --sl -q`
 
 {pagebreak}
 
@@ -316,6 +398,8 @@ bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls mui --sl
 ## bstrings Key Takeaways
 
 ### Important Data Points
+
+Please note that if you run multiple searches with the `-o` switch, which outputs to a file with a specified filename, subsequent searches after the initial search will append the results to that output file with each search if the output filename is the same for each search.
 
 {pagebreak}
 
