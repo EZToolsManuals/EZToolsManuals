@@ -2,7 +2,7 @@
 
 ## bstrings Introduction
 
-bstrings is a tool created by Eric Zimmerman used to search files for strings.
+bstrings is a tool created by Eric Zimmerman used to search files for strings. This can be accomplished by using user-specified search strings or regular expressions or built-in regular expressions.
 
 {pagebreak}
 
@@ -86,6 +86,8 @@ Either -f or -d is required. Exiting
 This switch informs the tool to save the results of a search to a specified location.
 
 Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt"`
+
+Please note that if you run multiple searches with the `-o` switch, which outputs to a file with a specified filename, subsequent searches after the initial search will append the results to that output file with each search if the output filename is the same for each search.
 
 #### `-a`
 
@@ -301,105 +303,75 @@ Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 -o C:\temp
 
 ### Example bstrings Commands
 
-#### Example description here
+#### Search a specified file for the string `URL`
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls URL
 ```
 
-#### Example description here
+#### Search a specified file for the GUID regular expression
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -f "C:\Temp\someFile.txt" --lr guid
 ```
 
-#### Example description here
+#### Search a specified file using a file with specified search strings and a file with specified regular expressions
 
 {line-numbers:false}
 ```powershell
-bstrings.exe -f "C:\Temp\aBigFile.bin" --fs c:\temp\searchStrings.txt --fr c:\temp\searchRegex.txt -s
+bstrings.exe -f "C:\Temp\aBigFile.bin" --fs c:\temp\searchStrings.txt --fr c:\temp\searchRegex.txt
 ```
 
-#### Example description here
+#### Search a specified directory for all files with the `.dll` file extension
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -d "C:\Temp" --mask "*.dll"
 ```
 
-#### Example description here
+#### Search a specified directory for a range of specified characters within a code page
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -d "C:\Temp" --ar "[\x20-\x37]"
 ```
 
-#### Example description here
+#### Search a specified directory using the Cyrillic (Mac) code page
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -d "C:\Temp" --cp 10007
 ```
 
-#### Example description here
+#### Search a specified directory for the string `test`
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -d "C:\Temp" --ls test
 ```
 
-#### Example description here
+#### Search a specified file for credit cards using regular expressions and sort the results alphabetically
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -f "C:\Temp\someOtherFile.txt" --lr cc --sa
 ```
 
-#### Example description here
+#### Search a specified file using the credit card regular expression, sorting the results alphabetically, with a minimum string length of 15, and a maximum string length of 22
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -f "C:\Temp\someOtherFile.txt" --lr cc --sa -m 15 -x 22
 ```
 
-#### Example description here
+#### Search a specified file for the string `mui` and sort the results by length
 
 {line-numbers:false}
 ```powershell
 bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls mui --sl
 ```
-
-{pagebreak}
-
-## bstrings Output
-
-### Analyzing bstrings Output - Console
-
-{pagebreak}
-
-### Analyzing bstrings Output - CSV
-
-{pagebreak}
-
-### Analyzing bstrings Output - JSON
-
-{pagebreak}
-
-### Analyzing bstrings Output - HTML
-
-{pagebreak}
-
-## bstrings Sample Output
-
-{pagebreak}
-
-## bstrings Key Takeaways
-
-### Important Data Points
-
-Please note that if you run multiple searches with the `-o` switch, which outputs to a file with a specified filename, subsequent searches after the initial search will append the results to that output file with each search if the output filename is the same for each search.
 
 {pagebreak}
 
