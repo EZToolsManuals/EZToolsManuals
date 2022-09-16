@@ -2,22 +2,13 @@
 
 ## What are EZ Tools?
 
-EZ Tools are free and open-source digital forensics tools written by Eric Zimmerman.
+EZ Tools are free and open-source digital forensics tools written by [Eric Zimmerman](https://www.sans.org/profiles/eric-zimmerman/).
 
-
-
-
-
-
-
-
-
-
+<!-- TODO: need to expand this -->
 
 ## Download EZ Tools
 
 [EZ Tools](https://ericzimmerman.github.io/#!index.md)
-
 
 ## Content by Eric Zimmerman
 
