@@ -4,6 +4,9 @@
 
 PECmd is a tool created by Eric Zimmerman used to parse Windows Prefetch files (.pf), which can be located at `C:\Windows\Prefetch`.
 
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
+
 {pagebreak}
 
 ## PECmd Switches
@@ -68,19 +71,19 @@ Either -f or -d is required. Exiting
 
 #### `-k`
 
-This switch
+This switch informs the tool to highlight a list of keywords (comma separated)
 
-Example: `.\PECmd.exe -f "C:\temp\prefetch\TIMELINEEXPLORER.EXE-959F92B3.pf" -k timeline`
+Example: `.\PECmd.exe -f "C:\temp\prefetch\TIMELINEEXPLORER.EXE-959F92B3.pf" -k timeline,explorer`
 
 Within the results, one can see the `(Keyword True)` appended to the end of a line where the specified keyword appears:
 
 {line-numbers:false}
 ```powershell
-19: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL
-20: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL\DESKTOP
-21: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL\DESKTOP\EZ TOOLS
-22: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL\DESKTOP\EZ TOOLS\NET6
-23: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE - KROLL\DESKTOP\EZ TOOLS\NET6\TIMELINEEXPLORER (Keyword True)
+19: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE
+20: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE\DESKTOP
+21: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE\DESKTOP\EZ TOOLS
+22: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE\DESKTOP\EZ TOOLS\NET6
+23: \VOLUME{01d7b51f5d5ed7cd-b45d68a4}\USERS\CFUSER\ONEDRIVE\DESKTOP\EZ TOOLS\NET6\TIMELINEEXPLORER (Keyword True)
 ```
 
 #### `-o`
@@ -116,6 +119,8 @@ Last accessed on: 2022-09-09 03:03:23
 This switch informs the tool to mount Volume Shadow Copies from the drive letter specified using the `-f` or `-d` switch and parse Prefetch files present within.
 
 Example: `.\PECmd.exe -d "C:\temp\prefetch" --vss`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 
