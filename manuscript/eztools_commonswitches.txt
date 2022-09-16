@@ -76,9 +76,9 @@ This switch will instruct LECmd to output parsed data into pretty printed JSON a
 `.\LECmd.exe -d C:\temp\LNKFiles --json C:\temp\LNKFiles\output --pretty`
 `.\JLECmd.exe -d C:\temp\JumpLists --json C:\temp\JumpLists\output --pretty`
 
-### `--dt`
+#### `--dt`
 
-TODO
+This switch will instruct AmcacheParser to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
 
 ### `--dedupe`
 
