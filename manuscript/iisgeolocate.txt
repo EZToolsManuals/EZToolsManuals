@@ -2,7 +2,10 @@
 
 ## IISGeoLocate Introduction
 
-IISGeoLocate can be used to geolocate IP addresses found in IIS Logs. IIS Logs can be located at `C:\inetpub\logs\LogFiles` on Windows Server machines. 
+IISGeoLocate can be used to geolocate IP addresses found in IIS Logs. IIS Logs can be located at `C:\inetpub\logs\LogFiles` on Windows Server machines.
+
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
 {pagebreak}
 
@@ -48,13 +51,15 @@ This switch will instruct IISGeoLocate to not update the CSV file at the locatio
 
 `.\iisgeolocate.exe -d C:\inetpub\logs\LogFiles --csv C:\temp --nul true`
 
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
+
 {pagebreak}
 
 ## IISGeoLocate Output
 
 ### Analyzing IISGeoLocate Output - CSV
 
-IISGeoLocate will convert IIS logs into CSV format for ingestion into Timeline Explorer as well as adding IP geolocation data to each log entry. 
+IISGeoLocate will convert IIS logs into CSV format for ingestion into Timeline Explorer as well as adding IP geolocation data to each log entry.
 
 {pagebreak}
 
