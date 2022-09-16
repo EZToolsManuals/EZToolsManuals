@@ -2,7 +2,9 @@
 
 ## SrumECmd Introduction
 
-SrumECmd is a tool created by Eric Zimmerman used to parse the SRUM database. The SRUM database is located at `C:\Windows\System32\sru\SRUDB.dat` and serves as the backend for Windows Task Manager. 
+SrumECmd is a tool created by Eric Zimmerman used to parse the SRUM database. The SRUM database is located at `C:\Windows\System32\sru\SRUDB.dat` and serves as the backend for Windows Task Manager.
+
+<!-- TODO: need to expand this -->
 
 {pagebreak}
 
@@ -51,13 +53,15 @@ Options:
 
 #### `-r`
 
-This switch informs the tool to parse a SOFTWARE Registry hive at a specified location. This is beneficial because applications referenced in the SRUM database can be resolved using data stored within the SOFTWARE Registry hive for better results. 
+This switch informs the tool to parse a SOFTWARE Registry hive at a specified location. This is beneficial because applications referenced in the SRUM database can be resolved using data stored within the SOFTWARE Registry hive for better results.
 
 Example: `.\SrumECmd.exe -d "C:\temp\SRUMdb" -r "C:\temp\SOFTWAREhive" --csv "C:\temp\SRUMoutput`
 
 Please note, that using the `-d` switch against a directory where a SRUM database and a SOFTWARE Registry hive resides within the subdirectories, SrumECmd will find both without needing to utilize the `-r` switch to specifically point to the SOFTWARE Registry hive.
 
 Example: `.\SrumECmd.exe -d "C:\temp\KapeTriage\tout\C" --csv "C:\temp\SRUMoutput"`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 
@@ -104,24 +108,19 @@ SrumECmd will produce the following CSVs:
 
 `%timestamp%` will look something similar to this: `20220904032628`
 
+#### `%timestamp%_SrumECmd_AppResourceUseInfo_Output.csv`
+
+This output can be useful for seeing which applications were running at a given time.
+
+#### `%timestamp%_SrumECmd_NetworkUsages_Output.csv`
+
+This output can be useful for seeing which applications were sending and receiving data. This is helpful in Incident Response engagements where data exfiltration is an important part of the mission for examiners.
+
 {pagebreak}
 
 ## SrumECmd Sample Data
 
 Sample SRUM database artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/SRUM).
-
-{pagebreak}
-
-## SrumECmd Key Takeaways
-
-### Important Data Points
-
-The AppResourceUseInfo and NetworkUsages tables will likely contain the most actionable forensic data for most examiners.
-
-#### AppResourceUseInfo
-
-
-#### NetworkUsages
 
 {pagebreak}
 
