@@ -4,6 +4,8 @@
 
 bstrings is a tool created by Eric Zimmerman used to search files for strings. This can be accomplished by using user-specified search strings or regular expressions or built-in regular expressions.
 
+<!-- TODO: need to expand this -->
+
 {pagebreak}
 
 ## bstrings Switches
@@ -296,6 +298,8 @@ Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 -o C:\temp
 This switch informs the tool to sort the results by length.
 
 Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 -o C:\temp\results.txt --sl -q`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 

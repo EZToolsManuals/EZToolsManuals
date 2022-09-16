@@ -4,6 +4,8 @@
 
 RECmd is a tool created by Eric Zimmerman used to parse Registry hives. Registry hives are located at `C:\Windows\System32\config` and contain multiple hives of interest.
 
+<!-- TODO: need to expand this -->
+
 ### RECmd Batch Files
 
 <https://github.com/EricZimmerman/RECmd/tree/master/BatchExamples>
@@ -262,6 +264,8 @@ Example: `.\RECmd.exe -d "D:\DFIRArtifactMuseum\Windows\Registry" --sd VMware --
 This switch will inform the tool to download all RECmd Batch Files from [GitHub](https://github.com/EricZimmerman/RECmd/tree/master/BatchExamples) and update the local Batch Files stored in `.\RECmd\BatchExamples`.
 
 Example: ```.\RECmd.exe --sync`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 

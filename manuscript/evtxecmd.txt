@@ -4,6 +4,9 @@
 
 EvtxECmd is a tool created by Eric Zimmerman used to parse event logs from Windows. Versions of Windows from Vista and beyond have utilized the .evtx format, which incorporates XML payloads within the .evtx files. EvtxECmd only parses .evtx files, so if you're dealing with .evt files, EvtxECmd will not parse those particular files.
 
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
+
 {pagebreak}
 
 ## EvtxECmd Switches
@@ -159,6 +162,8 @@ Example: `.\EvtxECmd.exe -d "D:\evtx" --csv "D:\evtx" --vss`
 This switch will inform the tool to download all EvtxECmd Maps from [GitHub](https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps) and update the local Maps stored in `.\EvtxECmd\Maps`.
 
 Example: `.\EvtxECmd.exe --sync`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 

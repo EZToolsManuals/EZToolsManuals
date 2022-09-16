@@ -6,7 +6,8 @@
 
 LECmd is a tool created by Eric Zimmerman used to parse .LNK files. .LNK files are native to the Windows operating system and are common indicators of file access.
 
-TODO flesh this out more
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
 {pagebreak}
 
@@ -118,6 +119,8 @@ Source file: D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test
   Source modified: 2022-01-31 17:25:58.0000000
   Source accessed: 2022-06-05 01:57:51.8825142
 ```
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 

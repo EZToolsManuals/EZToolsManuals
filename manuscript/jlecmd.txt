@@ -6,6 +6,9 @@
 
 JLECmd is a tool created by Eric Zimmerman used to parse JumpList files. JumpList files are native to the Windows operating system and are common indicators of file access.
 
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
+
 {pagebreak}
 
 ## JLECmd Switches
@@ -257,8 +260,9 @@ Directory: b
   Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
 ```
 
-{pagebreak}
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
+{pagebreak}
 
 ## JLECmd Command Examples
 

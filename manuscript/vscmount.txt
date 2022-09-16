@@ -86,6 +86,8 @@ This switch will use the creation timestamps (yyyyMMddTHHmmss.fffffff) in symbol
 
 Example: `.\VSCMount.exe --dl C --mp C:\vssroot --ud false`
 
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
+
 {pagebreak}
 
 ## VSCMount Command Examples

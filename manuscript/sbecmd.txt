@@ -4,6 +4,9 @@
 
 SBECmd is a tool created by Eric Zimmerman used to parse the NTUSER.dat and UsrClass.dat Registry hives. These hives contains shell items that are recorded by Windows which indicate which folders a user has traversed.
 
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
+
 {pagebreak}
 
 ## SBECmd Switches
@@ -90,6 +93,8 @@ Registry hive is dirty and transaction logs were found in the same directory, bu
 Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
 Found 1,024 cache entries for Windows10Creators in ControlSet001
 ```
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 

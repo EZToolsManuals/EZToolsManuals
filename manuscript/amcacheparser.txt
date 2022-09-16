@@ -2,7 +2,10 @@
 
 ## AmcacheParser Introduction
 
-AmcacheParser is a tool created by Eric Zimmerman used to parse Amcache.hve files, commonly found at `C:\Windows\appcompat\Programs\Amcache.hve`. 
+AmcacheParser is a tool created by Eric Zimmerman used to parse Amcache.hve files, commonly found at `C:\Windows\appcompat\Programs\Amcache.hve`.
+
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
 {pagebreak}
 
@@ -36,7 +39,7 @@ Options:
                           whitelisting
   --csv <csv> (REQUIRED)  Directory to save CSV formatted results to. Be sure to include the full path in double quotes
   --csvf <csvf>           File name to save CSV formatted results to. When present, overrides default name
-  --dt <dt>               The custom date/time format to use when displaying time stamps. See https://goo.gl/CNVq0k for 
+  --dt <dt>               The custom date/time format to use when displaying time stamps. See https://goo.gl/CNVq0k for
                           options [default: yyyy-MM-dd HH:mm:ss]
   --mp                    Display higher precision for time stamps [default: False]
   --nl                    When true, ignore transaction log files for dirty hives. Default is FALSE
@@ -51,7 +54,7 @@ Options:
 
 #### `-i`
 
-This switch will instruct AmcacheParser to include output for ProgramEntries. 
+This switch will instruct AmcacheParser to include output for ProgramEntries.
 
 Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache -i`
 
@@ -95,6 +98,8 @@ This switch will instruct AmcacheParser to ignore transaction logs (*.LOG files)
 
 Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache --nl`
 
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
+
 {pagebreak}
 
 ## AmcacheParser Command Examples
@@ -108,7 +113,7 @@ Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache --nl`
 AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" --csv C:\temp
 ```
 
-#### Parse an Amcache.hve file and Output to CSV (specified filename) with ProgramEntries 
+#### Parse an Amcache.hve file and Output to CSV (specified filename) with ProgramEntries
 
 {line-numbers:false}
 ```powershell
@@ -132,14 +137,14 @@ AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.tx
 
 AmcacheParser will produce the following CSVs:
 
-%timestamp%_Amcache_AssociatedFileEntries.csv
-%timestamp%_Amcache_DeviceContainers.csv
-%timestamp%_Amcache_DevicePnps.csv
-%timestamp%_Amcache_DriveBinaries.csv
-%timestamp%_Amcache_DriverPackages.csv
-%timestamp%_Amcache_ProgramEntries.csv
-%timestamp%_Amcache_ShortCuts.csv
-%timestamp%_Amcache_UnassociatedFileEntries.csv
+`%timestamp%_Amcache_AssociatedFileEntries.csv`
+`%timestamp%_Amcache_DeviceContainers.csv`
+`%timestamp%_Amcache_DevicePnps.csv`
+`%timestamp%_Amcache_DriveBinaries.csv`
+`%timestamp%_Amcache_DriverPackages.csv`
+`%timestamp%_Amcache_ProgramEntries.csv`
+`%timestamp%_Amcache_ShortCuts.csv`
+`%timestamp%_Amcache_UnassociatedFileEntries.csv`
 
 `%timestamp%` will look something similar to this: `20220904032628`
 
@@ -149,7 +154,7 @@ AmcacheParser will produce the following CSVs:
 
 ### Important Data Points
 
-The Amcache.hve will provide SHA1 hash values for binaries. This can be helpful in Incident Response engagements where you can leverage the SHA1 hash value for something like VirusTotal to learn more about a potentially malicious binary. Please note that often malicious binaries introduced by threat actors will be found in the UnassociatedEntries CSV. These will be programs that don't have program entries within the Amcache. This is an easy way to find malware because malware doesn't come with an installer! Additionally, the File Key ID Last Write Timestamp can be a reliable indicator of evidence of execution. 
+The Amcache.hve will provide SHA1 hash values for binaries. This can be helpful in Incident Response engagements where you can leverage the SHA1 hash value for something like VirusTotal to learn more about a potentially malicious binary. Please note that often malicious binaries introduced by threat actors will be found in the UnassociatedEntries CSV. These will be programs that don't have program entries within the Amcache. This is an easy way to find malware because malware doesn't come with an installer! Additionally, the File Key ID Last Write Timestamp can be a reliable indicator of evidence of execution.
 
 If you want to analyze the Amcache.hve artifact in a GUI tool, you can simply ingest it into Registry Explorer similar to other common Registry hives.
 
@@ -159,7 +164,7 @@ If you want to analyze the Amcache.hve artifact in a GUI tool, you can simply in
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/AmcacheParser> is the AmcacheParser repo 
+* <https://github.com/EricZimmerman/AmcacheParser> is the AmcacheParser repo
 
 ### Blog Posts
 

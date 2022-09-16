@@ -4,6 +4,8 @@
 
 MFTECmd is a tool created by Eric Zimmerman used to parse various NTFS metadata artifacts, including but not limited to the $MFT, $J, $Boot, $SDS, and $I30 files.
 
+<!-- TODO: need to expand this -->
+
 {pagebreak}
 
 ## MFTECmd Switches
@@ -225,6 +227,8 @@ Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win1
 This switch informs the tool to attempt to recover slack space from FILE records.
 
 Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win10\APTSimulatorVM\$MFT' --csv C:\temp --rs`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 

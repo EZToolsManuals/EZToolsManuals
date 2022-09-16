@@ -4,6 +4,9 @@
 
 RecentFileCacheParser is a tool created by Eric Zimmerman used to parse the RecentFileCache. The RecentFileCache can be located at `C:\Windows\AppCompat\Programs\RecentFileCache.bcf`.
 
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
+
 {pagebreak}
 
 ## RecentFileCacheParser Switches

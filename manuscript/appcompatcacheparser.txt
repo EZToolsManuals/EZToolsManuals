@@ -4,6 +4,9 @@
 
 AppCompatCacheParser is a tool created by Eric Zimmerman used to parse the AppCompatCache, commonly referred to as the ShimCache, which can be found in the SYSTEM hive.
 
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
+
 {pagebreak}
 
 ## AppCompatCacheParser Switches
@@ -121,6 +124,8 @@ AppCompatCacheParser.exe --csv c:\temp -c 2
 ```powershell
 AppCompatCacheParser.exe --csv c:\temp --csvf results.csv
 ```
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 

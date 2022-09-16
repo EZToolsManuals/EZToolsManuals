@@ -6,6 +6,8 @@ WxTCmd is a tool created by Eric Zimmerman used to parse the [Windows Timeline](
 
 The Windows Timeline can be found at the following location: `C:\Users\%User%\AppData\Local\ConnectedDevicesPlatform\L.CFUser\ActivitiesCache.db`.
 
+<!-- TODO: need to expand this -->
+
 ### Understanding the Artifact: Windows Timeline
 
 The Windows Timeline is an SQLite database that records artifacts relating to program execution and file access for up to 30 days prior to the time of parsing the artifact.
