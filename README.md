@@ -1,4 +1,4 @@
-# This is the default new book content for writing a Leanpub book in plain text!
+# EZ Tools Manual
 
 This repository contains some default content that can be added to a new Leanpub book so you can make your first book preview.
 
