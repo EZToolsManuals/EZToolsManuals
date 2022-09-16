@@ -389,7 +389,7 @@ bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls mui --sl
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2015/07/introducing-bstrings-better-strings.html>
 * <https://binaryforay.blogspot.com/2015/07/bstrings-0900-released.html>

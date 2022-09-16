@@ -173,7 +173,7 @@ The Last Modified timestamp will not be the last time of execution, rather, it'l
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2015/05/introducing-appcompatcacheparser.html>
 * <https://binaryforay.blogspot.com/2015/05/appcompatcacheparser-v0051-released.html>

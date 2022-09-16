@@ -155,7 +155,7 @@ THe FirstInteracted timestamp for a shell item will provide you with the timesta
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2015/02/shellbags-explorer-v0520-released.html>
 * <https://binaryforay.blogspot.com/2015/02/shellbags-explorer-0540-released.html>

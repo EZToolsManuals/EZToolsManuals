@@ -68,7 +68,7 @@ To the far right of the top status bar is a button that, when clicked, will coll
 
 Double clicking the key path will copy the key path to the clipboard. Holding Shift and double clicking will copy only the key name to the clipboard.
 
-Double clicking the value will copy the value’s name to the clipboard. Holding Shift and double clicking will copy the value’s data to the clipboard.
+Double clicking the value will copy the value's name to the clipboard. Holding Shift and double clicking will copy the value's data to the clipboard.
 
 ##### Bottom status bar
 
@@ -93,7 +93,7 @@ The File menu contains options for loading hives (you can also simply drag and d
 * Load offline hive: Allows for loading one or more hives. To select more than one file, select a file, then hold Shift and select the last file to load. You can also hold Ctrl and click files to select them individually.
 * Unload all hives: Unloads all hives at once vs. removing one at a time
 * Project: Allows for loading/saving of projects. Projects will be discussed below.
-* Export ‘Registry hives’: Exports what is shown in the Registry hives tab to a variety of formats. As an example, if the Registry hives tree looked like this:
+* Export ‘Registry hives': Exports what is shown in the Registry hives tab to a variety of formats. As an example, if the Registry hives tree looked like this:
 
 ![image7](registryexplorer\image7.png)
 
@@ -137,7 +137,7 @@ The other aspect this option controls is whether to show subkeys of keys that ma
 
 ![image12](registryexplorer\image12.png)
 
-While we haven’t discussed how to hide keys yet (it has its own section below), if we right click on a key, an option to hide the selected key (based on the key path, not just the key name) is shown.
+While we haven't discussed how to hide keys yet (it has its own section below), if we right click on a key, an option to hide the selected key (based on the key path, not just the key name) is shown.
 
 For example, if we hide the MuiCache key, it will disappear, as seen below.
 
@@ -159,7 +159,7 @@ The Preferences dialog allows you to change the default timestamp format and oth
 
 ##### Bookmarks
 
-The Bookmarks menu contains both common (included with Registry Explorer) and user created bookmarks to “of interest” Registry keys. Bookmarks can be created for any Registry key (we will see how to create our own bookmarks soon). Bookmarks that are included with Registry Explorer will show up under the ‘Common’ menu and any user created bookmarks will appear under the ‘User created’ menu.
+The Bookmarks menu contains both common (included with Registry Explorer) and user created bookmarks to “of interest” Registry keys. Bookmarks can be created for any Registry key (we will see how to create our own bookmarks soon). Bookmarks that are included with Registry Explorer will show up under the ‘Common' menu and any user created bookmarks will appear under the ‘User created' menu.
 
 Bookmarks live in a subdirectory of the main Registry Explorer program directory in a directory named Bookmarks. The Bookmarks directory contains two subdirectories, Common and User. To move a user created bookmark from the User created to Common submenu, simply move the bookmark file from the User directory to the Common directory.
 
@@ -194,7 +194,7 @@ Because the Bookmarks menu dynamically adjusts itself based solely on what exist
 
 As you interact with loaded hives, the Bookmarks menu will show you at a glance how many bookmarks are available, but as we will soon see, Registry Explorer has an even easier way to interact with bookmarks (the Available bookmarks tab).
 
-The bookmark names are sorted alphabetically as well so it’s easy to find the bookmark you are interested in.
+The bookmark names are sorted alphabetically as well so it's easy to find the bookmark you are interested in.
 
 ##### View
 
@@ -206,7 +206,7 @@ Hives tend to process and load faster when the Messages window is hidden, so kee
 
 ![image20](registryexplorer\image20.png)
 
-The total number of messages is also shown on the main window’s bottom status bar to the far right. Double clicking the message count will show the Messages form.
+The total number of messages is also shown on the main window's bottom status bar to the far right. Double clicking the message count will show the Messages form.
 
 ![image21](registryexplorer\image21.png)
 
@@ -258,13 +258,13 @@ When filters are in place (by entering text in the areas below the column name),
 
 The leftmost X can be used to clear the active filter, the checkbox can be used to disable the filter without clearing it, and the down arrow on the right side contains a history of the different filters that have been recently used.
 
-The ‘Edit filter’ button on the far right allows you to edit the current filter as needed. This is the same option that is available in the context menu from above.
+The ‘Edit filter' button on the far right allows you to edit the current filter as needed. This is the same option that is available in the context menu from above.
 
 ![image27](registryexplorer\image27.png)
 
 Using these options, very detailed filters can be created.
 
-Clicking the icon in the left side of the filter area allows for changing the filter criteria as well. The default is ‘Contains’
+Clicking the icon in the left side of the filter area allows for changing the filter criteria as well. The default is ‘Contains'
 
 ![image28](registryexplorer\image28.png)
 
@@ -280,11 +280,11 @@ There are options to format things on a variety of conditions, as seen below.
 
 ![image30](registryexplorer\image30.png)
 
-If we select the ‘Text that contains…’ option and enter ‘Bags’ along with how we want any matching rows to be formatted, the tree will reflect these changes. For example, if we entered the following conditions:
+If we select the ‘Text that contains…' option and enter ‘Bags' along with how we want any matching rows to be formatted, the tree will reflect these changes. For example, if we entered the following conditions:
 
 ![image31](registryexplorer\image31.png)
 
-The Registry hives tree would then look like the screen shot below. The instances of ‘Bags’ in the highlighted rows have been circled for emphasis.
+The Registry hives tree would then look like the screen shot below. The instances of ‘Bags' in the highlighted rows have been circled for emphasis.
 
 ![image32](registryexplorer\image32.png)
 
@@ -306,17 +306,17 @@ The last write timestamp for the hive is the timestamp value from the header of 
 
 Below the hive name is the root key for the hive. The root key name can vary for every hive that is loaded. All other keys in the active (that is, not deleted) portion of the Registry will be displayed under the root key.
 
-If the option to recover deleted records is enabled, up to two different virtual keys may be created: one for Associated deleted records and one for unassociated deleted records. These virtual keys will not be shown if there aren’t any deleted records of that type available. As discussed above, these keys can also be hidden using the relevant option under the Options menu.
+If the option to recover deleted records is enabled, up to two different virtual keys may be created: one for Associated deleted records and one for unassociated deleted records. These virtual keys will not be shown if there aren't any deleted records of that type available. As discussed above, these keys can also be hidden using the relevant option under the Options menu.
 The number after Registry hives in parenthesis is the total number of hives loaded. In the example below, there are 18 hives loaded.
 
 ![image34](registryexplorer\image34.png)
 
 ##### Dirty hives
 
-In some cases, Registry Explorer will inform you that a hive is dirty when it is loaded. This means the hive’s header primary and secondary sequence numbers do not match. More importantly, there is uncommitted data in one or more transaction logs that need to be applied to the original hive to ensure the most recent data is presented.
+In some cases, Registry Explorer will inform you that a hive is dirty when it is loaded. This means the hive's header primary and secondary sequence numbers do not match. More importantly, there is uncommitted data in one or more transaction logs that need to be applied to the original hive to ensure the most recent data is presented.
 
 The transaction logs are found in the same directory as the hive itself and end with .LOG1 and .LOG2. Both are needed to accurately replay the transactions contained therein. Registry Explorer will determine which logs to apply and the order to apply them.
-Once the logs have been replayed, Registry Explorer will offer to save out the updated hive to a new location. The new hive’s header sequence numbers will also be updated to match. This hive (along with the dirty hive, optionally) can then be loaded into Registry Explorer for review.
+Once the logs have been replayed, Registry Explorer will offer to save out the updated hive to a new location. The new hive's header sequence numbers will also be updated to match. This hive (along with the dirty hive, optionally) can then be loaded into Registry Explorer for review.
 
 ##### Projects
 
@@ -326,7 +326,7 @@ Projects allow you to load one or more hives into Registry Explorer and save the
 
 Selecting keys in Registry Explorer works much the same as it does in regedit or selecting directories in Windows Explorer. Clicking the small arrow to the left of the key name or double clicking a key will expand that key, displaying any subkeys that are present. If the arrow is not visible, the key does not have any subkeys.
 
-Keys can be double clicked and expanded, drilling down into the key hierarchy, until the key you are interested in is located. Alternatively, you can simply start typing a key’s name and the keys will be dynamically expanded as matching keys are found in the tree.
+Keys can be double clicked and expanded, drilling down into the key hierarchy, until the key you are interested in is located. Alternatively, you can simply start typing a key's name and the keys will be dynamically expanded as matching keys are found in the tree.
 
 For example, assume Registry Explorer looks like this:
 
@@ -348,7 +348,7 @@ While it may seem that filtering is the quickest way to find a certain key, it i
 
 ##### Key context menu
 
-As in other places, the context menu changes dynamically depending on what you right click on. For example, if you right click on a hive’s full path, you will see the option to remove the hive from Registry Explorer. Right clicking anywhere else but the hive’s path will hide this option from view. Similarly, if a key is hidden, an option to unhide the key will be shown, else it will be hidden, and so on.
+As in other places, the context menu changes dynamically depending on what you right click on. For example, if you right click on a hive's full path, you will see the option to remove the hive from Registry Explorer. Right clicking anywhere else but the hive's path will hide this option from view. Similarly, if a key is hidden, an option to unhide the key will be shown, else it will be hidden, and so on.
 
 The key context menu looks like this:
 
@@ -359,16 +359,16 @@ The name of the currently selected key is shown at the top. Most options also ha
 * Remove hive: Removes the loaded hive from Registry Explorer.  This option is only shown when a hive is selected (denoted by the full path to the hive name, shown in bold, and with a different icon).
 * Add bookmark: Creates a new user bookmark. Full details will be discussed below.
 * Hide key
-  * For this session only: Hides keys matching the selected key’s path from all loaded hives until Registry Explorer is restarted
-  * Hide and add to auto hide: Same as the above option, except the key’s path is remembered between restarts of Registry Explorer. This option is useful to hide non-useful keys in the Registry that get in your way.
+  * For this session only: Hides keys matching the selected key's path from all loaded hives until Registry Explorer is restarted
+  * Hide and add to auto hide: Same as the above option, except the key's path is remembered between restarts of Registry Explorer. This option is useful to hide non-useful keys in the Registry that get in your way.
 * Unhide key: Unhide previously hidden keys with the same path as the selected key. If a key has been auto hidden, this option will remove it from the auto hide list.
 * Export
   * To .reg format: Exports the selected key and its values to plaintext format. This file can then be imported into the active Registry by double clicking on the generated file.
   * To .reg format recursively: The same as above, except all keys and values for the selected key and all subkeys are exported.
 * Copy
-oKey name: Copies the selected key’s key name to the clipboard. Double clicking the key path in the status bar while holding Shift also copies the key name to the clipboard.
-  * Key path: Copies the selected key’s key path to the clipboard. Double clicking the key path in the status bar also copies the key path to the clipboard.
-  * Last write time: Copies the selected key’s last write timestamp to the clipboard. Double clicking the last write timestamp in the status bar also copies the last write timestamp to the clipboard. Double clicking the status bar while holding Shift will copy the key name and last write timestamp to the clipboard.
+oKey name: Copies the selected key's key name to the clipboard. Double clicking the key path in the status bar while holding Shift also copies the key name to the clipboard.
+  * Key path: Copies the selected key's key path to the clipboard. Double clicking the key path in the status bar also copies the key path to the clipboard.
+  * Last write time: Copies the selected key's last write timestamp to the clipboard. Double clicking the last write timestamp in the status bar also copies the last write timestamp to the clipboard. Double clicking the status bar while holding Shift will copy the key name and last write timestamp to the clipboard.
 * Expand subkeys: Recursively expands the selected key and all subkeys. You can also hold the CTRL key while right clicking a node to expand each key.
 * Collapse subkeys: Collapse all subkeys below the selected key
 * Technical details: Displays full technical details about the selected key, its subkeys, values, security records, and hive header. This option will be fully explored below.
@@ -382,18 +382,18 @@ A typical value context menu may look like this:
 The name of the currently selected value is shown at the top.
 
 * Export
-  * Value data: Exports selected value’s data in binary form to a file
-  * Value slack: Exports selected value’s slack data in binary form to a file. If a value has no slack, this option is disabled
+  * Value data: Exports selected value's data in binary form to a file
+  * Value slack: Exports selected value's slack data in binary form to a file. If a value has no slack, this option is disabled
 * Copy
   * Value summary: Copies a summary of the selected value to the clipboard. An example is shown below.
 
 ![image39](registryexplorer\image39.png)
 
-  * Value name: Copies the selected value’s name to the clipboard
-  * Value type: Copies the selected value’s type to the clipboard (RegBinary or RegSz for example)
-  * Value data: Copies the selected value’s value data to the clipboard. For RegBinary values, the hex values, separated by a hyphen, are copied to the clipboard as a string
-  * Value slack: Copies the selected value’s value slack to the clipboard. This option formats the data the same as the Value data option. If a value has no slack, this option is disabled.
-* Data interpreter: Brings up the Data interpreter window for the currently selected value and converts the value’s raw data to a variety of formats. The image below is shows how binary data for a 128-bit timestamp gets converted to different formats.
+  * Value name: Copies the selected value's name to the clipboard
+  * Value type: Copies the selected value's type to the clipboard (RegBinary or RegSz for example)
+  * Value data: Copies the selected value's value data to the clipboard. For RegBinary values, the hex values, separated by a hyphen, are copied to the clipboard as a string
+  * Value slack: Copies the selected value's value slack to the clipboard. This option formats the data the same as the Value data option. If a value has no slack, this option is disabled.
+* Data interpreter: Brings up the Data interpreter window for the currently selected value and converts the value's raw data to a variety of formats. The image below is shows how binary data for a 128-bit timestamp gets converted to different formats.
 
 ![image40](registryexplorer\image40.png)
 
@@ -409,7 +409,7 @@ For all values except RegBinary values, a simple string representation of the va
 
 The other thing to notice here is the raw value is also shown (highlighted in yellow above). This allows you to export out raw data into other tools, etc.
 
-For RegBinary keys, a hex viewer will be shown to display the value’s binary data.
+For RegBinary keys, a hex viewer will be shown to display the value's binary data.
 
 ![image42](registryexplorer\image42.png)
 
@@ -435,15 +435,15 @@ When viewing binary data, you can copy the selected bytes to the clipboard as ei
 
 In the lower right corner of the hex viewer is a Data interpreter button. Clicking this button will bring up the Data interpreter that converts the raw hexadecimal data into a variety of formats including dates and times, GUIDs, IP addresses, and more. The Data interpreter window is shown below.
 
-In the example above, a RegBinary value is selected and the 14th byte has been selected (click on a byte to select it). To the right of the hex display is an ASCII interpretation of the binary data. In this case, 70 corresponds to the ‘p’ character.
+In the example above, a RegBinary value is selected and the 14th byte has been selected (click on a byte to select it). To the right of the hex display is an ASCII interpretation of the binary data. In this case, 70 corresponds to the ‘p' character.
 
-The Data interpreter also shows the same offset, 14, but it goes a step further and decodes the ASCII string ‘please’ from bytes 70 6C 65 61 73 65. Registry Explorer will look for a single Null terminator for ASCII strings (00) and double Null terminators (00 00) for Unicode strings. If no Null terminators are found, the bytes will be interpreted from the current offset to the end of the data.
+The Data interpreter also shows the same offset, 14, but it goes a step further and decodes the ASCII string ‘please' from bytes 70 6C 65 61 73 65. Registry Explorer will look for a single Null terminator for ASCII strings (00) and double Null terminators (00 00) for Unicode strings. If no Null terminators are found, the bytes will be interpreted from the current offset to the end of the data.
 
 The Data interpreter can also convert GUIDs to known folder/location names as seen below.
 
 ![image47](registryexplorer\image47.png)
 
-In this case, a GUID was found at offset 0x04, 26ee0668-a00a-44d7-9371-beb064c98683, that maps to ‘Control panel.’
+In this case, a GUID was found at offset 0x04, 26ee0668-a00a-44d7-9371-beb064c98683, that maps to ‘Control panel.'
 
 To copy values from the Data interpreter to the clipboard, press Ctrl+C.
 
@@ -451,9 +451,9 @@ To copy values from the Data interpreter to the clipboard, press Ctrl+C.
 
 Registry Explorer can recover both deleted Registry keys and values. It also reassociates deleted values with their parent keys and subkeys to their parent keys.
 
-In some cases, it is not possible to reassociate recovered keys to an active Registry key because the deleted key’s parent cell index does not correspond to a key’s offset in the active Registry.
+In some cases, it is not possible to reassociate recovered keys to an active Registry key because the deleted key's parent cell index does not correspond to a key's offset in the active Registry.
 
-Registry Explorer shows recovered deleted keys in up to three ways: “Inlined’ with existing keys (that is, deleted keys are shown where they used to exist), Associated deleted records (the same info as inlined keys, but the parent keys are placeholders), and Unassociated deleted records (no parent key could be found in the active Registry).
+Registry Explorer shows recovered deleted keys in up to three ways: “Inlined' with existing keys (that is, deleted keys are shown where they used to exist), Associated deleted records (the same info as inlined keys, but the parent keys are placeholders), and Unassociated deleted records (no parent key could be found in the active Registry).
 
 ##### Inlined with existing keys
 
@@ -463,13 +463,13 @@ When Registry Explorer can reassociate a key with an active parent key, it is sh
 
 ##### Associated deleted records
 
-All associated deleted records are also shown under a virtual key called ‘Associated deleted’ records. Under this key, placeholder keys (keys with a link icon in the lower right) are created that denote active keys, down to the point where the deleted key can be found. In the example below, the same path as seen above is reflected down to the ‘BagMRU’ key. At this point, the icon and font color changes to indicate the key is in fact deleted and has been reassociated.
+All associated deleted records are also shown under a virtual key called ‘Associated deleted' records. Under this key, placeholder keys (keys with a link icon in the lower right) are created that denote active keys, down to the point where the deleted key can be found. In the example below, the same path as seen above is reflected down to the ‘BagMRU' key. At this point, the icon and font color changes to indicate the key is in fact deleted and has been reassociated.
 
 ![image49](registryexplorer\image49.png)
 
 ##### Unassociated deleted records
 
-In the cases where an active parent key could not be found, the recovered deleted key will be placed under another virtual key called ‘Unassociated deleted records’ that functions in a similar way to the Associated deleted records. The primary difference between the two is that there will not be any active parent keys shown for unassociated records. Unassociated records can be explored like any other records (looking at values, viewing Technical details, etc.).
+In the cases where an active parent key could not be found, the recovered deleted key will be placed under another virtual key called ‘Unassociated deleted records' that functions in a similar way to the Associated deleted records. The primary difference between the two is that there will not be any active parent keys shown for unassociated records. Unassociated records can be explored like any other records (looking at values, viewing Technical details, etc.).
 
 ![image50](registryexplorer\image50.png)
 
@@ -501,9 +501,9 @@ The Bookmarks menu will look like this once the Save button is clicked:
 
 ![image55](registryexplorer\image55.png)
 
-A ‘User created’ menu is now visible as is our VirtualStore bookmark (with the short description shown in parenthesis after the key name).
+A ‘User created' menu is now visible as is our VirtualStore bookmark (with the short description shown in parenthesis after the key name).
 
-Selecting the ‘VirtualStore’ bookmark expands all child keys to the bookmarked key in the selected Registry hive.
+Selecting the ‘VirtualStore' bookmark expands all child keys to the bookmarked key in the selected Registry hive.
 
 ##### Managing bookmarks
 
@@ -511,7 +511,7 @@ Recall bookmarks are kept in two folders, one for included bookmarks and one for
 
 ![image56](registryexplorer\image56.png)
 
-The column headers in bold (Type, Hive Type and Key Path) are read only. To edit any of the other columns, click on that column’s value and adjust. The bookmark is saved automatically, and the Bookmarks menu will be updated accordingly.
+The column headers in bold (Type, Hive Type and Key Path) are read only. To edit any of the other columns, click on that column's value and adjust. The bookmark is saved automatically, and the Bookmarks menu will be updated accordingly.
 
 ##### Available bookmarks
 
@@ -525,7 +525,7 @@ When the root folder for a bookmark is selected (BagMRU in the example above), i
 
 The numbers at the end of the Available bookmarks tab indicate the total number of common bookmarks (20 in this case) and the total number of user created bookmarks (5 in this case). Available bookmarks dynamically updates as hives are loaded/unloaded, bookmarks are created/removed, etc.
 
-Right clicking on a key brings up a context menu. The options work the same way as on the Registry hives tab. The ‘Jump to key’ option will change the active tab to the ‘Registry hives’ tab and select the bookmarked key. This is useful to see the bookmarked key in context with other keys.
+Right clicking on a key brings up a context menu. The options work the same way as on the Registry hives tab. The ‘Jump to key' option will change the active tab to the ‘Registry hives' tab and select the bookmarked key. This is useful to see the bookmarked key in context with other keys.
 
 ![image58](registryexplorer\image58.png)
 
@@ -547,13 +547,13 @@ Registry Explorer allows you to search all hives at once across key names, value
 
 Clear recent
 
-When conducting a standard search, search terms in the ‘Search for’ box are remembered between program executions. Use this option to clear these recent searches.
+When conducting a standard search, search terms in the ‘Search for' box are remembered between program executions. Use this option to clear these recent searches.
 
 Convert
 
-The convert menu contains options to convert the selected search string in the ‘Search for’ box to its ASCII or Unicode hexadecimal value. This is useful when searching for patterns in Value data.
+The convert menu contains options to convert the selected search string in the ‘Search for' box to its ASCII or Unicode hexadecimal value. This is useful when searching for patterns in Value data.
 
-For example, selecting ‘Eric’ (without the quotes) and using the conversion options results in the following being shown in the ‘Search for’ box:
+For example, selecting ‘Eric' (without the quotes) and using the conversion options results in the following being shown in the ‘Search for' box:
 
 * ASCII: 45-72-69-63
 * Unicode: 45-00-72-00-69-00-63-00
@@ -572,13 +572,13 @@ Launches a web page with information about creating .net regular expressions
 
 ##### Standard search
 
-To conduct a standard search, simply enter one or more values in the ‘Search for’ box and click ‘Search.’ You can also press the Enter key twice on an empty line after entering a search term to perform the search.
+To conduct a standard search, simply enter one or more values in the ‘Search for' box and click ‘Search.' You can also press the Enter key twice on an empty line after entering a search term to perform the search.
 
 ![image61](registryexplorer\image61.png)
 
 The Literal checkbox controls whether the term searched for is looked for in binary data when searching in value data and/or slack. This is explained in more detail below.
 
-If you entered a regular expression, change the radio button to ‘Regular expression’ so Registry Explorer knows to use RegEx when searching. The Help menu can be used to get additional help on building .net regular expressions. For additional resources on regular expressions, click here to view the regular expression searching section for RECmd.
+If you entered a regular expression, change the radio button to ‘Regular expression' so Registry Explorer knows to use RegEx when searching. The Help menu can be used to get additional help on building .net regular expressions. For additional resources on regular expressions, click here to view the regular expression searching section for RECmd.
 
 The History drop down will contain a list of your recent searches
 
@@ -592,13 +592,13 @@ Note: Depending on the Date/Time format under Preferences you may see extra char
 
 ##### Minimum value size search
 
-When searching for values above a minimum size, the size of the value data’s length is shown in the Value Data column as seen below.
+When searching for values above a minimum size, the size of the value data's length is shown in the Value Data column as seen below.
 
 ![image63](registryexplorer\image63.png)
 
 ##### Base64 in values search
 
-This works the same as a minimum value size but validates the value’s data contains a valid base64 encoded string.
+This works the same as a minimum value size but validates the value's data contains a valid base64 encoded string.
 
 ##### Interacting with search results
 
@@ -606,7 +606,7 @@ Once a search is underway, results will show up in the Results grid at the botto
 
 ![image64](registryexplorer\image64.png)
 
-In the above example, a simple search was done for the string ‘mui’ and ‘cache’ which resulted in 334 hits. The search results contains the hive the hit was found in, what type of hit it was (key name, value name, etc.), the hit text, and other relevant information.
+In the above example, a simple search was done for the string ‘mui' and ‘cache' which resulted in 334 hits. The search results contains the hive the hit was found in, what type of hit it was (key name, value name, etc.), the hit text, and other relevant information.
 
 The columns shown in the Results grid will change depending on what kind of search was done. When searching in value name and/or value data, two additional columns will be shown as seen below.
 
@@ -616,12 +616,12 @@ When searching in value data and/or value slack, the Search for term will be fou
 
 The way this works is to take the raw bytes that make up the value data and/or value slack and convert it to a string (again, in Western 1252 and Unicode), which is then searched using a regular expression. The regex will find the hit with exact capitalization, and the exact hit is then converted back to a byte string. This hit can then be reported back to the application and the data highlighted in context with the rest of the data, regardless of encoding or capitalization.
 
-Here is an example of some search hits for ‘cache’ that were found in binary data:
+Here is an example of some search hits for ‘cache' that were found in binary data:
 
 ![image66](registryexplorer\image66.png)
 
 If the Literal checkbox is checked, the additional search against the converted data is not done behind the scenes. This allows you to look for specific byte patterns without Registry Explorer converting binary data to strings.
-Here is an example where the string ‘las’ was found in value slack:
+Here is an example where the string ‘las' was found in value slack:
 
 ![image67](registryexplorer\image67.png)
 
@@ -659,16 +659,16 @@ You can export the search results to Excel via the button in the lower right.
 
 One unique feature of Registry Explorer is the ability to view the technical details of any key, its values, security information, etc. This feature bridges the gap between a hex editor and other viewers in that Registry Explorer can be used to validate itself as to its interpretation of Registry data.
 
-To view the technical details of a key, select the key you are interested in, then right click and select ‘Technical details’ from the context menu. F5 can also be used as a shortcut.
+To view the technical details of a key, select the key you are interested in, then right click and select ‘Technical details' from the context menu. F5 can also be used as a shortcut.
 
 ![image72](registryexplorer\image72.png)
 
-In the example above, the Technical details for the ‘Local Settings\Software\Microsoft\Windows\Shell\BagMRU’ key are shown. The bytes at the bottom of the details form are the bytes for the NK record as they are found in the Registry hive as viewed in a hex editor.
+In the example above, the Technical details for the ‘Local Settings\Software\Microsoft\Windows\Shell\BagMRU' key are shown. The bytes at the bottom of the details form are the bytes for the NK record as they are found in the Registry hive as viewed in a hex editor.
 
 As different properties are selected, the highlighted bytes change to reflect the location in the raw data where that property lives. The Last write timestamp property is selected, as are the bytes that this property is derived from.
 
 The selected bytes can be copied via Ctrl+C. Hold Ctrl+Alt+C to copy both the property name and the value to the clipboard.
-If a key contains one or more values, the Values tab is visible and contains a list of all the key’s values. Selecting a value will display the VK record’s properties and raw data as we saw with the NK record above.
+If a key contains one or more values, the Values tab is visible and contains a list of all the key's values. Selecting a value will display the VK record's properties and raw data as we saw with the NK record above.
 
 ![image73](registryexplorer\image73.png)
 
@@ -676,7 +676,7 @@ At the bottom of the Values tab, the raw VK record is shown. A hex viewer for th
 
 ![image74](registryexplorer\image74.png)
 
-If a key contains subkeys, the Subkeys tab is visible and contains a list of the current key’s subkeys. Double clicking on a subkey will open the Technical details report for that key in its own window.
+If a key contains subkeys, the Subkeys tab is visible and contains a list of the current key's subkeys. Double clicking on a subkey will open the Technical details report for that key in its own window.
 
 ![image75](registryexplorer\image75.png)
 
@@ -684,7 +684,7 @@ Keys found in the active Registry (in other words, not deleted) will have an SK 
 
 ![image76](registryexplorer\image76.png)
 
-The ‘Full details as text’ tab contains a textual representation of the selected key including the NK record, all VK records, and the SK record. This can be copied and pasted into reports as needed.
+The ‘Full details as text' tab contains a textual representation of the selected key including the NK record, all VK records, and the SK record. This can be copied and pasted into reports as needed.
 
 Finally, the Hive details tab contains information about the hive where the key was found. This includes the sequence numbers, timestamp, length, root key name, checksum, and so on.
 
@@ -696,7 +696,7 @@ Plugins provide a means to process a key and/or value in the Registry. They are 
 
 Each release of Registry Explorer will contain all available plugins, but the hope is that others will also contribute to the Registry Explorer project, located at https://github.com/EricZimmerman/RegistryPlugins.
 
-Plugins live under the main Registry Explorer directory in a subdirectory called ‘Plugins’ which can also contain other directories as needed. Plugins are named according to the format:
+Plugins live under the main Registry Explorer directory in a subdirectory called ‘Plugins' which can also contain other directories as needed. Plugins are named according to the format:
 
 RegistryPlugin.*.dll
 
@@ -713,8 +713,8 @@ Plugins can be tied to a key name or a key name and a value name. When a plugin 
 The Internal GUID is an identifier Registry Explorer uses to make sure each plugin is unique. In this way you can have multiple plugins for a given key and things would still work properly (vs. basing uniqueness off of a name or similar).
 The short and long descriptions are used to explain in more detail what a plugin is doing, why it is relevant, etc. The long description can also include even more details including links to blogs, etc.
 Using plugins
-There is no requirement on a user’s part other than clicking on a given key and/or value. As Registry Explorer is used to navigate around a hive, Registry Explorer checks if any plugins have registered an interest in the selected key/value. If any plugins are found, the key is passed to the plugin for processing and the plugin then returns results to Registry Explorer which it then displays.
-For example, say a user clicks on the SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\CIDSizeMRU key. This key’s values look like this:
+There is no requirement on a user's part other than clicking on a given key and/or value. As Registry Explorer is used to navigate around a hive, Registry Explorer checks if any plugins have registered an interest in the selected key/value. If any plugins are found, the key is passed to the plugin for processing and the plugin then returns results to Registry Explorer which it then displays.
+For example, say a user clicks on the SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\CIDSizeMRU key. This key's values look like this:
 
 ![image79](registryexplorer\image79.png)
 
@@ -737,7 +737,7 @@ When this value is selected, the 7-Zip plugin processes the value and returns a 
 ![image83](registryexplorer\image83.png)
 
 The data returned can now be filtered, sorted, and exported as we saw earlier.
-Some plugins can return a vast amount of information which can make displaying it all in a grid overwhelming. In these cases, Registry Explorer will, by default, hide the details from the plugin view (but this column can easily be unhidden if you like). As an example, let’s look at the LastVisitedPidlMRULegacy plugin. When this key is selected, all values are processed, and the results are displayed as we saw before. This plugin has a property named ‘Details’ which contains just that, a very detailed listing of information extracted from a value. When a value is selected a new tab is shown next to the Type viewer tab that contains the details of the selected value, like this:
+Some plugins can return a vast amount of information which can make displaying it all in a grid overwhelming. In these cases, Registry Explorer will, by default, hide the details from the plugin view (but this column can easily be unhidden if you like). As an example, let's look at the LastVisitedPidlMRULegacy plugin. When this key is selected, all values are processed, and the results are displayed as we saw before. This plugin has a property named ‘Details' which contains just that, a very detailed listing of information extracted from a value. When a value is selected a new tab is shown next to the Type viewer tab that contains the details of the selected value, like this:
 
 ![image84](registryexplorer\image84.png)
 
@@ -762,7 +762,7 @@ With the ValuesOut class done, we can code the primary class. Using the 7-Zip pr
 
 ![image87](registryexplorer\image87.png)
 
-After the class name we can see a reference to an Interface, IRegistryPluginGrid. This interface contains the ‘rules’ the class must follow as it relates to properties. The interface definition looks like this:
+After the class name we can see a reference to an Interface, IRegistryPluginGrid. This interface contains the ‘rules' the class must follow as it relates to properties. The interface definition looks like this:
 
 ![image88](registryexplorer\image88.png)
 
@@ -823,8 +823,8 @@ Searching is broken down into four types, by last write timestamp, value data mi
 * Base64: Find Base64 encoded values greater than or equal to the specified size (in bytes).
 * sk: Search for <string> in key names
 * sv: Search for <string> in value names
-* sd: Search for <string> in value record’s value data. The value data will be converted to its equivalent in ASCII and Unicode and searched/compared to <string> unless the --Literal switch is used
-* ss: Search for <string> in value record’s value slack. The value slack will be converted to its equivalent in ASCII and Unicode and searched/compared to <string> unless the --Literal switch is used
+* sd: Search for <string> in value record's value data. The value data will be converted to its equivalent in ASCII and Unicode and searched/compared to <string> unless the --Literal switch is used
+* ss: Search for <string> in value record's value slack. The value slack will be converted to its equivalent in ASCII and Unicode and searched/compared to <string> unless the --Literal switch is used
 * RegEx: If present, treat <string> in --sk, --sv, --sd, and –ss as a regular expression
 * literal: If present, the --sd and --ss search value is not interpreted as ASCII and Unicode strings
 * nd: When true, suppress showing data when --sd or --ss is used. Default is FALSE.
@@ -837,7 +837,7 @@ Other
 
 
 Simple searches
-The two letter search options starting with ‘s’ are string search options. These options look for matches via ‘contains’ logic rather than ‘begins with’ or similar. For example, if you search for ‘cache’, the following keys would match if they existed in the Registry hive:
+The two letter search options starting with ‘s' are string search options. These options look for matches via ‘contains' logic rather than ‘begins with' or similar. For example, if you search for ‘cache', the following keys would match if they existed in the Registry hive:
 * Muicache
 * Cache items
 * UnCAcHeD
@@ -859,13 +859,13 @@ Enclose the RegEx in quotes to make sure the shell does not try to interpret any
 As with simple searches, regular expression-based searches are case insensitive.
 Regular Expression examples
 Finding keys
-To find all keys that contain ‘Microsoft.Bing’ followed by an F, H, or a W, then an o, use the following search:
+To find all keys that contain ‘Microsoft.Bing' followed by an F, H, or a W, then an o, use the following search:
 RECmd.exe -f "D:\temp\re\UsrClass 1.dat" --RegEx --sk "Microsoft.Bing[FHW]o”
 
 ![image93](registryexplorer\image93.png)
 
 Finding values
-To find all values with names that contain either ‘AppName’ or ‘DisplayName’, use the following search:
+To find all values with names that contain either ‘AppName' or ‘DisplayName', use the following search:
 RECmd.exe -f "D:\temp\re\UsrClass 1.dat" --RegEx --sv "(App|Display)Name"
 326 results were found, but due to the length of the output, only a few are shown below.
 
@@ -873,7 +873,7 @@ RECmd.exe -f "D:\temp\re\UsrClass 1.dat" --RegEx --sv "(App|Display)Name"
 
 Notice that some of the hits are in red. This means they were recovered keys/values.
 Finding data
-To find all values whose data contains ‘URL:bing’ followed by either an m, h, or s, use the following search:
+To find all values whose data contains ‘URL:bing' followed by either an m, h, or s, use the following search:
 RECmd.exe -f "D:\temp\re\UsrClass 1.dat" --RegEx --sd "URL:bing[mhs]"
 
 ![image95](registryexplorer\image95.png)
@@ -948,7 +948,7 @@ NEW: Updated controls, move to Fody vs LibZ for single exe
 CHANGE: Show slack tab when a plugin is used
 
 FIX: Fixes for handle leaks
-FIX: Handle NK record  referencing deleted value per @errnofail’s research
+FIX: Handle NK record  referencing deleted value per @errnofail's research
 FIX: Various tweaks and fixes
 Version 1.0.0.0
 NEW: Display warning when Header sequence 1 != sequence 2. this means the hive is dirty and there are transactions in the log file(s) which has not been committed to the hive.
@@ -1013,7 +1013,7 @@ CHANGE: Sort bookmarks by name
 CHANGE: Load hives when they do not have an nk record with a HiveRootEntry flag set. When this happens, an alternate method is used to find the root key
 CHANGE: Put the newest search history items at the top of the list
 CHANGE: Don't trust Header length when looking for hbins as sometimes Header length is wrong
-CHANGE: Values grid filters use ‘contains’ vs ‘starts with’ as default
+CHANGE: Values grid filters use ‘contains' vs ‘starts with' as default
 
 FIX: Add missing tooltip to Literal checkbox on Find form
 FIX: Update hex position in hex type viewer when moving up and down rows vs only left and right

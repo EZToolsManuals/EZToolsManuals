@@ -2,7 +2,7 @@
 
 ## RLA Introduction
 
-RLA is a tool that can be used to repair dirty Windows Registry hives. This is particularly useful when using tools that don’t handle dirty Registry hives themselves.
+RLA is a tool that can be used to repair dirty Windows Registry hives. This is particularly useful when using tools that don't handle dirty Registry hives themselves.
 
 <!-- TODO: need to expand this -->
 <!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->

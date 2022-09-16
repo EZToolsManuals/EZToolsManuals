@@ -239,7 +239,7 @@ Prefetch files can store multiple run times for a single executable. This can he
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2016/01/windows-prefetch-parser-in-c.html>
 * <https://binaryforay.blogspot.com/2016/01/introducing-pecmd.html>

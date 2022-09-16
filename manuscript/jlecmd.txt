@@ -88,7 +88,7 @@ Options:
 Either -f or -d is required. Exiting
 ```
 
-While there are explanations for each switch, let’s walk through each one of the switches unique to JLECmd in further detail.
+While there are explanations for each switch, let's walk through each one of the switches unique to JLECmd in further detail.
 
 ### Switch Descriptions
 
@@ -699,7 +699,7 @@ Entry #: 11
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, [Binary Foray](https://binaryforay.blogspot.com/):
+Blog posts from Eric Zimmerman's blog, [Binary Foray](https://binaryforay.blogspot.com/):
 
 * <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
 * <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>

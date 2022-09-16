@@ -18,7 +18,7 @@ If you are looking for guidance on how to create SQLECmd Maps, look no further t
 * [SQLECmd Maps Guide](https://github.com/EricZimmerman/SQLECmd/blob/master/SQLMap/Maps/!OS_Application_OptionalDescription.guide)
 * [SQLECmd Maps Template](https://github.com/EricZimmerman/SQLECmd/blob/master/SQLMap/Maps/!OS_Application_OptionalDescription.template)
 
-Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=682) for a timestamped link to the section of the presentation that relates to SQLECmd Maps.
+Additionally, please check out Andrew Rathbun's 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=682) for a timestamped link to the section of the presentation that relates to SQLECmd Maps.
 
 {pagebreak}
 
@@ -141,7 +141,7 @@ The `--hunt` command will inform you as to which files are SQLite databases! Thi
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
 * <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>

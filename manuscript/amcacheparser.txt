@@ -166,7 +166,7 @@ If you want to analyze the Amcache.hve artifact in a GUI tool, you can simply in
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
 * <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>

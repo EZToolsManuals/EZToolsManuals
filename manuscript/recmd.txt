@@ -17,7 +17,7 @@ If you are looking for guidance on how to create RECmd Batch Files, look no furt
 * [RECmd Batch Files Guide](https://github.com/EricZimmerman/RECmd/blob/master/BatchExamples/!RECmdBatch.guide)
 * [RECmd Batch Files Template](https://github.com/EricZimmerman/RECmd/blob/master/BatchExamples/!RECmdBatch.template)
 
-Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=318) for a timestamped link to the section of the presentation that relates to RECmd Batch Files.
+Additionally, please check out Andrew Rathbun's 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=318) for a timestamped link to the section of the presentation that relates to RECmd Batch Files.
 
 {pagebreak}
 
@@ -319,7 +319,7 @@ The above command will dump from the ROOT (aka topmost) key in the hive, regardl
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2015/05/introducing-recmd.html>
 * <https://binaryforay.blogspot.com/2015/05/recmd-0600-released.html>

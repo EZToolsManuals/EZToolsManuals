@@ -24,7 +24,7 @@ If you are looking for guidance on how to create EvtxECmd Maps, look no further 
 * [EvtxECmd Maps Guide](https://github.com/EricZimmerman/evtx/blob/master/evtx/Maps/!Channel-Name_Provider-Name_EventID.guide)
 * [EvtxECmd Maps Template](https://github.com/EricZimmerman/evtx/blob/master/evtx/Maps/!Channel-Name_Provider-Name_EventID.template)
 
-Additionally, please check out Andrew Rathbun’s 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=860) for a timestamped link to the section of the presentation that relates to EvtxECmd Maps.
+Additionally, please check out Andrew Rathbun's 2021 SANS DFIR Summit presentation on EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions. Click [here](https://youtu.be/mIb1GQP3ciE?t=860) for a timestamped link to the section of the presentation that relates to EvtxECmd Maps.
 
 ## EvtxECmd Switches
 
@@ -275,7 +275,7 @@ The Payload column will always have all the of XML data stored within a given ev
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2019/04/introducing-evtxecmd.html>
 

@@ -409,7 +409,7 @@ $I30 files can provide insight into deleted and overwritten files. Learn more ab
 
 #### Official Blog Posts
 
-Blog posts from Eric Zimmerman’s blog, Binary Foray:
+Blog posts from Eric Zimmerman's blog, Binary Foray:
 
 * <https://binaryforay.blogspot.com/2018/06/introducing-mftecmd.html>
 * <https://binaryforay.blogspot.com/2018/06/mftecmd-v0260-released.html>
