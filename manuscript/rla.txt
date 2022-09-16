@@ -4,6 +4,9 @@
 
 RLA is a tool that can be used to repair dirty Windows Registry hives. This is particularly useful when using tools that don’t handle dirty Registry hives themselves.
 
+<!-- TODO: need to expand this -->
+<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
+
 {pagebreak}
 
 ## RLA Switches
@@ -70,6 +73,8 @@ Example: `.\rla.exe -d "D:\Hives" --out "D:\Hives\clean" --ca`
 This switch will compress the names for profile-based hives.
 
 Example: `.\rla.exe -d "D:\Hives\NTUser" --out "D:\Hives\clean" --cn`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 
