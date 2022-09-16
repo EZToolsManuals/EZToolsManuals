@@ -4,7 +4,7 @@
 
 ### Description
 
-LECmd is a tool created by Eric Zimmerman used to parse .LNK files. .LNK files are native to the Windows operating system and are common indicators of file access. 
+LECmd is a tool created by Eric Zimmerman used to parse .LNK files. .LNK files are native to the Windows operating system and are common indicators of file access.
 
 TODO flesh this out more
 
@@ -229,7 +229,7 @@ Icon Location: %systemroot%\system32\XpsRchVw.exe
 
 ### Analyzing LECmd Output - Console
 
-When parsing .LNK files with LECmd without the `-q` switch, LECmd will display in the console window parsed data from each .LNK filed processed. 
+When parsing .LNK files with LECmd without the `-q` switch, LECmd will display in the console window parsed data from each .LNK filed processed.
 
 ![](lecmd\ConsoleExample1.jpg)
 ![](lecmd\ConsoleExample2.jpg)
@@ -247,7 +247,7 @@ When parsing .LNK files with LECmd with the `--csv` switch, LECmd will output th
 
 ### Analyzing LECmd Output - JSON
 
-When parsing .LNK files with LECmd with the `--json` switch, LECmd will output the parsed data into a JSON file. 
+When parsing .LNK files with LECmd with the `--json` switch, LECmd will output the parsed data into a JSON file.
 
 ![](lecmd\JSONPrettyReportExample.jpg)
 
@@ -316,15 +316,15 @@ VolumeSerialNumber will provide the Volume Serial Number of the drive the target
 
 ##### LocalPath
 
-LocalPath will provide the full path to the target file that was accessed by the user. 
+LocalPath will provide the full path to the target file that was accessed by the user.
 
 ##### TargetMFTEntryNumber
 
-TargetMFTEntryNumber will provide the MFT Entry number for the Target File in hexadecimal and decimal. 
+TargetMFTEntryNumber will provide the MFT Entry number for the Target File in hexadecimal and decimal.
 
 ##### TargetMFTSequenceNumber
 
-TargetMFTSequenceNumber will provide the MFT Sequence number for the Target File in hexadecimal and decimal. 
+TargetMFTSequenceNumber will provide the MFT Sequence number for the Target File in hexadecimal and decimal.
 
 ##### MachineID
 
@@ -354,7 +354,7 @@ TrackerCreatedOn
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/Lnk> is the C# library for parsing .LNK files 
+* <https://github.com/EricZimmerman/Lnk> is the C# library for parsing .LNK files
 * <https://github.com/EricZimmerman/LECmd> is the Command Line wrapper for the .LNK library
 
 ### Blog Posts

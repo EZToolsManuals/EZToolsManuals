@@ -4,7 +4,7 @@
 
 ### Description
 
-JLECmd is a tool created by Eric Zimmerman used to parse JumpList files. JumpList files are native to the Windows operating system and are common indicators of file access. 
+JLECmd is a tool created by Eric Zimmerman used to parse JumpList files. JumpList files are native to the Windows operating system and are common indicators of file access.
 
 {pagebreak}
 
@@ -241,9 +241,9 @@ Entry #: 4
 
 #### `--withDir`
 
-This switch will instruct JLECmd to list directories not account for in the DestList entries. 
+This switch will instruct JLECmd to list directories not account for in the DestList entries.
 
-For example, running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --withDir` resulted in the following extra data: 
+For example, running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b4d95cf55d32a.automaticDestinations-ms" --withDir` resulted in the following extra data:
 
 {line-numbers:false}
 ```powershell
@@ -312,7 +312,7 @@ JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\f01b
 
 ### Analyzing JLECmd Output - Console
 
-When parsing JumpList files with JLECmd without the `-q` switch, JLECmd will display in the console window parsed data from each .LNK filed processed. 
+When parsing JumpList files with JLECmd without the `-q` switch, JLECmd will display in the console window parsed data from each .LNK filed processed.
 
 ![](jlecmd\ConsoleExample1.jpg)
 
@@ -328,7 +328,7 @@ When parsing JumpLists with JLECmd with the `--csv` switch, JLECmd will output t
 
 ### Analyzing JLECmd Output - JSON
 
-When parsing JumpLists with JLECmd with the `--json` switch, JLECmd will output the parsed data into a JSON file. 
+When parsing JumpLists with JLECmd with the `--json` switch, JLECmd will output the parsed data into a JSON file.
 
 `![](jlecmd\JSONPrettyReportExample.jpg)`
 
@@ -652,7 +652,7 @@ Entry #: 2
 
 ## JLECmd Key Takeaways
 
-JLECmd parses JumpLists, which are a collection of LNK files organized by AppID. JumpLists provide indicators of file access. 
+JLECmd parses JumpLists, which are a collection of LNK files organized by AppID. JumpLists provide indicators of file access.
 
 JLECmd output, regardless of file format, will provide potentially useful information about user activity on a given Windows system.
 
@@ -691,7 +691,7 @@ Entry #: 11
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
+* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
 * <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
 * <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
 

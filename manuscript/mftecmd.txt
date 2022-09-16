@@ -158,7 +158,7 @@ Removing the `--fls` switch would display the timestamps and other NTFS metadata
 
 #### `--ds`
 
-This switch informs the tool to provide information about the specified security descriptor. 
+This switch informs the tool to provide information about the specified security descriptor.
 
 Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\Secure_$SDS\Win10\APTSimulatorVM\$Secure_$SDS' --ds 256`
 
@@ -293,7 +293,7 @@ MFTECmd.exe -f "C:\Temp\SomeMFT" --de 5-5
 
 ### Analyzing MFTECmd Output - CSV
 
-MFTECmd output provides a few important data points that are not native to NTFS metadata files but are still very helpful to examiners. 
+MFTECmd output provides a few important data points that are not native to NTFS metadata files but are still very helpful to examiners.
 
 When parsing the $MFT, output provided will contain three data points unique to MFTECmd:
 
@@ -305,11 +305,11 @@ When parsing the $MFT, output provided will contain three data points unique to 
 
 #### u Sec Zeros
 
-`u Sec Zeros` indicates that the subseconds of a timestamp has been zeroed out. An example of a zeroed out subsecond value would be 2022-12-34 12:34:56.0000000. Prior to being timestomped, that timestamp likely looked similar to this: 2022-12-34 12:34:56.1234567 where the subsecond values were not zeroed out. 
+`u Sec Zeros` indicates that the subseconds of a timestamp has been zeroed out. An example of a zeroed out subsecond value would be 2022-12-34 12:34:56.0000000. Prior to being timestomped, that timestamp likely looked similar to this: 2022-12-34 12:34:56.1234567 where the subsecond values were not zeroed out.
 
 #### Copied
 
-`Copied` indicates that the Last Modified timestamp value occurs before the Creation timestamp of a given file or folder. How can this be? During a file copy operation, the file being copied's Creation timestamp is untouched but the Last Modified timestamp will reflect the time of file copy. This can often result in a file showing as being modified before it existed, which is impossible. MFTECmd recognizes this and will provide an indicator in this `Copied` column as to whether or not the timestamps indicate such a file copy operation may have occurred. 
+`Copied` indicates that the Last Modified timestamp value occurs before the Creation timestamp of a given file or folder. How can this be? During a file copy operation, the file being copied's Creation timestamp is untouched but the Last Modified timestamp will reflect the time of file copy. This can often result in a file showing as being modified before it existed, which is impossible. MFTECmd recognizes this and will provide an indicator in this `Copied` column as to whether or not the timestamps indicate such a file copy operation may have occurred.
 
 {pagebreak}
 

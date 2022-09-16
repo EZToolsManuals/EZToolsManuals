@@ -2,7 +2,7 @@
 
 ## VSCMount Introduction
 
-VSCMount is a tool created by Eric Zimmerman used to mount Volume Shadow Copies (VSCs). Volume Shadow Copies can be used to uncover artifacts that no longer reside on the computer. 
+VSCMount is a tool created by Eric Zimmerman used to mount Volume Shadow Copies (VSCs). Volume Shadow Copies can be used to uncover artifacts that no longer reside on the computer.
 
 {pagebreak}
 

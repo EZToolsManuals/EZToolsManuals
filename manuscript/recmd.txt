@@ -289,19 +289,19 @@ RECmd.exe --f "D:\temp\UsrClass 1.dat" --regex --sv "(App|Display)Name"
 
 ### Analyzing RECmd Output - CSV
 
-Using RECmd in batch mode is the ideal way to parse the Registry when CSV output is desired. 99% of the Windows Registry is not forensically interesting to examiners, so Batch files serve as a filter that tells RECmd to only parse what is specified within the Batch file, and ignore the rest. This allows for all the quick win artifacts in the Registry to be output to a single CSV output. Generally speaking, the Description and Category columns are going to be very important when trying to make sense of the CSV output. 
+Using RECmd in batch mode is the ideal way to parse the Registry when CSV output is desired. 99% of the Windows Registry is not forensically interesting to examiners, so Batch files serve as a filter that tells RECmd to only parse what is specified within the Batch file, and ignore the rest. This allows for all the quick win artifacts in the Registry to be output to a single CSV output. Generally speaking, the Description and Category columns are going to be very important when trying to make sense of the CSV output.
 
-An artifact will be given an accurate Description, which can be similar to UserAssist or TypedURLs, for example. Next, an artifact will be given a Category, so UserAssist's Category would be Program Execution and TypedURLs would be User Activity, as an example. This allows for examiners to filter on either the specific artifact by Description or filter by general category of artifact, such as Program Execution, Web Browsers, System Info, and many more. 
+An artifact will be given an accurate Description, which can be similar to UserAssist or TypedURLs, for example. Next, an artifact will be given a Category, so UserAssist's Category would be Program Execution and TypedURLs would be User Activity, as an example. This allows for examiners to filter on either the specific artifact by Description or filter by general category of artifact, such as Program Execution, Web Browsers, System Info, and many more.
 
-The Kroll Batch file has received the most care and curation from the DFIR community and should be considered the de facto option when choosing a batch file for RECmd. 
+The Kroll Batch file has received the most care and curation from the DFIR community and should be considered the de facto option when choosing a batch file for RECmd.
 
 ### Analyzing RECmd Output - JSON
 
-Dumping Registry hives to JSON can be helpful as a supplement to CSV output. Dumping from the ROOT key to JSON will allow for the entire contents of the Registry hives parsed to be grepped through with a program like PowerGREP. 
+Dumping Registry hives to JSON can be helpful as a supplement to CSV output. Dumping from the ROOT key to JSON will allow for the entire contents of the Registry hives parsed to be grepped through with a program like PowerGREP.
 
 Example: `.\RECmd.exe -f C:\temp\NTUSER.dat --kn ROOT --nl false --json C:\temp\output --jsonf NTUSER_ROOT.json`
 
-The above command will dump from the ROOT (aka topmost) key in the hive, regardless of what it's called, to JSON. 
+The above command will dump from the ROOT (aka topmost) key in the hive, regardless of what it's called, to JSON.
 
 {pagebreak}
 
