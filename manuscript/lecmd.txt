@@ -94,10 +94,6 @@ This switch will instruct LECmd to suppress the Target ID list details. This wil
 
 This switch will instruct LECmd to suppress the Extra blocks details. This will provide a message similar to this in place of the Target ID list details: `(Extra blocks information suppressed. Lnk Extra block count: 2)`
 
-#### `--dt`
-
-This switch will instruct LECmd to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
-
 #### `--mp`
 
 This switch will instruct LECmd to provide more verbose timestamps. For instance, running `.\LECmd.exe -f "D:\DFIRArtifactMuseum\Windows\LNK\Win10\XWFIM.lnk.test` resulted in the following:

@@ -198,10 +198,6 @@ This switch will instruct JLECmd to dump the .LNK files associated with the Jump
 
 Example: .\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms" --dumpTo "D:\DFIRArtifactMuseum\testJL"
 
-#### `--dt`
-
-This switch will instruct JLECmd to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
-
 #### `--mp`
 
 This switch will instruct JLECmd to provide more verbose timestamps. For instance, running `.\JLECmd.exe -f "D:\DFIRArtifactMuseum\Windows\JumpLists\Win7\1b4dd67f29cb1962.automaticDestinations-ms"` resulted in the following:

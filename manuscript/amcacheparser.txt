@@ -70,10 +70,6 @@ This switch will instruct AmcacheParser to read a specified file containing SHA-
 
 Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache -b D:\Amcache\Hashes.txt`
 
-#### `--dt`
-
-This switch will instruct AmcacheParser to display timestamps in a specified format. The options for timestamp format can be found here: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN>
-
 #### `--mp`
 
 This switch will instruct AmcacheParser to provide more verbose timestamps. For instance, running `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache` resulted in the following:
