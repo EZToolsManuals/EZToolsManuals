@@ -4,6 +4,9 @@
 
 SQLECmd is a tool created by Eric Zimmerman used to parse SQLite databases. SQLite databases will only be parsed if a Map exists for that specific SQLite database.
 
+<!-- TODO: need to expand this -->
+<!-- TODO: add a blurb about how output will differ based on the SQLite query -->
+
 ### SQLECmd Maps
 
 <https://github.com/EricZimmerman/SQLECmd/tree/master/SQLMap/Maps>
@@ -67,17 +70,19 @@ Options:
 
 ### Switch Descriptions
 
-#### `--dedupe`
-
-This switch will inform the tool to deduplicate across all parsed data. By default, SQLECmd will deduplicate results parsed from raw artifacts.
-
-Example: ``
-
 #### `--hunt‘
 
-This switch
+This switch informs the tool to hunt for SQLite databases. This is useful due to SQLite databases often having inconsistent file extensions (or sometimes none at all). This switch will search for the file header for SQLite databases and inform examiners which files are SQLite databases. Please note, only those databases that have Maps made for them will be parsed.
 
-Example: ``
+Example: `.\SQLECmd.exe -d "D:\DFIRArtifactMuseum\Windows" --csv C:\temp --hunt`
+
+SQLECmd will display the following message when a SQLite file is not found:
+
+` D:\DFIRArtifactMuseum\Windows\SRUM\Win10\RathbunVM\Clean\SRU00004.log is not a SQLite file! Skipping...`
+
+SQLECmd will display the following message when a SQLite file is found:
+
+`Processing D:\DFIRArtifactMuseum\Windows\WindowsTimeline\Win10\APTSimulatorVM\ActivitiesCache.db...`
 
 #### `--maps‘
 
@@ -90,6 +95,8 @@ Example: `.\SQLECmd.exe -d "D:\sql" --csv "D:\sql" --maps "D:\Maps"`
 This switch will inform the tool to download all SQLECmd Maps from [GitHub](https://github.com/EricZimmerman/SQLECmd/tree/master/SQLMap/Maps) and update the local Maps stored in `.\SQLECmd\Maps`.
 
 Example: `.\SQLECmd.exe --sync`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 
@@ -122,26 +129,6 @@ The `--hunt` command will inform you as to which files are SQLite databases! Thi
 
 {pagebreak}
 
-## SQLECmd Output
-
-### Analyzing SQLECmd Output - CSV
-
-{pagebreak}
-
-### Analyzing SQLECmd Output - JSON
-
-{pagebreak}
-
-## SQLECmd Sample Output
-
-{pagebreak}
-
-## SQLECmd Key Takeaways
-
-### Important Data Points
-
-{pagebreak}
-
 ## SQLECmd References
 
 ### Associated GitHub Repositories
@@ -169,4 +156,3 @@ SQLECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
 ### SQLite Sample Data
 
 Sample SQLite databases  can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum) in the Android and Windows directories.
-
