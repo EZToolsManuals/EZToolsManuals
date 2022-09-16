@@ -4,6 +4,8 @@
 
 SumECmd is a tool created by Eric Zimmerman used to parse the SUM database. The SUM database is located at `C:\Windows\System32\LogFiles\SUM` where multiple `*.mdb` files can be located.
 
+<!-- TODO: need to expand this -->
+
 {pagebreak}
 
 ## SumECmd Switches
@@ -46,11 +48,13 @@ Options:
 
 ### Switch Descriptions
 
-#### wd
+#### `--wd`
 
 This switch will generate CSVs with day level details. This means an extra CSV will be generated named `TIMESTAMP_SumECmd_DETAIL_ClientsDetailed_Output.csv`. When running SumECmd with `--wd false`, this CSV will not generate.
 
 Example: `.\SumECmd.exe -d "D:\Test\SUM" --csv "D:\temp" --wd`
+
+<!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
 {pagebreak}
 
@@ -71,15 +75,39 @@ SumECmd.exe -d "C:\Temp\sum" --csv "C:\Temp\"
 
 ### Analyzing SumECmd Output - CSV
 
-TODO
+SumECmd will output the following CSVs when ran against a Domain Controller's SUM database with the ADDS (Active Directory Domain Services) role assigned to it:
 
-{pagebreak}
+`%timestamp%_SumECmd_DETAIL_Clients_Output.csv`
+`%timestamp%_SumECmd_DETAIL_ClientsDetailed_Output.csv`
+`%timestamp%_SumECmd_DETAIL_DnsInfo_Output.csv`
+`%timestamp%_SumECmd_DETAIL_RoleAccesses_Output.csv`
+`%timestamp%_SumECmd_SUMMARY_ChainedDbInfo_Output.csv`
+`%timestamp%_SumECmd_SUMMARY_RoleInfos_Output.csv`
+`%timestamp%_SumECmd_SUMMARY_SystemIdentInfo_Output.csv`
 
-## SumECmd Key Takeaways
+If a Domain Controller does NOT have the ADDS role assigned to it, you will still see the above output, but you likely will not see the DnsInfo output.
 
-### Important Data Points
+#### `%timestamp%_SumECmd_DETAIL_Clients_Output.csv`
 
+This output is useful for helping examiners observe which accounts authenticated where within a given domain. Insert Date and Last Access can be interpreted as the first and last time an account authenticated to the IP Address listed in the column of the same name.
 
+#### `%timestamp%_SumECmd_DETAIL_ClientsDetailed_Output.csv`
+
+This output will provide a different look at the most of the same info from the output mentioned above. Between this output and the above output, examiners can glean good insight as to which accounts authenticated where, when, and how many times along with an idea of when the first and last authentication occurred.
+
+#### `%timestamp%_SumECmd_DETAIL_DnsInfo_Output.csv`
+
+This output is incredibly useful for providing the examiner with historical DNS information within the domain. If an examiner needs to know which host a certain IP address resolves to within a domain, first locate a Domain Controller that has the ADDS role assigned (often trial and error) and locate this table's output!
+
+As a protip, in Timeline Explorer, sort ascending on the hostname and then secondary sort (hold down shift while clicking on the next column you want to sort on) on Last Seen. This will give you a great overview of which hosts had which IP addresses when.
+
+#### `%timestamp%_SumECmd_DETAIL_RoleAccesses_Output.csv`
+
+This output will provide examiners with an idea of which roles were assigned to the Windows Server endpoints within a given domain along with their Role GUIDs.
+
+#### `%timestamp%_SumECmd_SUMMARY_ChainedDbInfo_Output.csv`
+
+This output will provide examiners with an idea of which calendar years are covered within the SUM database for a Domain Controller within a given domain. Please note, that the second a Domain Controller connects to a domain for the first time, it will only have information from that point forward. It will not inherit historical information within the domain prior to the time of host coming online within the domain.
 
 {pagebreak}
 
