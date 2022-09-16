@@ -10,11 +10,11 @@ EZViewer is a standalone, zero dependency viewer for .doc, .docx, .xls, .xlsx, .
 
 ## Key Takeaways
 
-EZViewer is a great tool to have on your flash drive when you’re on site at a search warrant or at a client’s site. There is no need to deal with Microsoft Office. Just use EZViewer in all of its fully portable glory so you can view those files without any of the first-party dependencies! 
+EZViewer is a great tool to have on your flash drive when you're on site at a search warrant or at a client's site. There is no need to deal with Microsoft Office. Just use EZViewer in all of its fully portable glory so you can view those files without any of the first-party dependencies!
 
 Pro-tip: hold down control and scroll with your mouse wheel to zoom in and out.
 
-As stated above, you can open any file in EZViewer! If it’s not supported, it’ll open in hex view, as seen below:
+As stated above, you can open any file in EZViewer! If it's not supported, it'll open in hex view, as seen below:
 
 ![](ezviewer_PrefetchFileHexExample.jpg)
 
