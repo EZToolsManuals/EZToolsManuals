@@ -92,7 +92,7 @@ We know we are at the "bottom" because there are no more child keys and the MRUL
 
 ### LastWrite times and their value in ShellBags analysis
 
-Whenever a value is changed in a registry key, the key's LastWrite timestamp is updated. Regedit does not display these timestamps, but other forensic programs such as X-Ways Forensics or TZWorks yaru can. When using yaru to look at the same key as shown above, we can see the key was last written on 11/17/2014 at 18:14:40.553 UTC.
+Whenever a value is changed in a registry key, the key's LastWrite timestamp is updated. Regedit does not display these timestamps, but other forensic programs such as X-Ways Forensics or TZWorks yaru can. When using yaru to look at the same key as shown above, we can see the key was last written on 11/17/2014 at 18:14:40 UTC.
 
 ![image9](shellbagsexplorer\image9.png)
 
