@@ -2,15 +2,19 @@
 
 ## WxTCmd Introduction
 
-WxTCmd is a tool created by Eric Zimmerman used to parse the [Windows Timeline](https://support.microsoft.com/en-us/windows/get-help-with-timeline-febc28db-034c-d2b0-3bbe-79aa0c501039). Windows Timeline was added to Windows 10 with the 1804 (April 2018) feature update.
+WxTCmd is a tool created by Eric Zimmerman used to parse the [Windows Timeline](https://support.microsoft.com/en-us/windows/get-help-with-timeline-febc28db-034c-d2b0-3bbe-79aa0c501039). The Windows Timeline feature was added to Windows 10 with the 1804 (April 2018) feature update. The Windows Timeline can be found at the following location: `C:\Users\%User%\AppData\Local\ConnectedDevicesPlatform\L.CFUser\ActivitiesCache.db`.
 
-The Windows Timeline can be found at the following location: `C:\Users\%User%\AppData\Local\ConnectedDevicesPlatform\L.CFUser\ActivitiesCache.db`.
+### WxTCmd Use Cases
 
-<!-- TODO: need to expand this -->
+#### Law Enforcement
 
-### Understanding the Artifact: Windows Timeline
+For those in Law Enforcement, this tool is useful for parsing Windows Timeline artifacts which can provide program execution activity that can be attributed to a specific user account. This can be useful for providing attribution of activity for various crimes involving media players, photo viewers, etc. Establish which Windows account the suspect was using during the time of interest and see what this artifact can provide to you.
 
-The Windows Timeline is an SQLite database that records artifacts relating to program execution and file access for up to 30 days prior to the time of parsing the artifact.
+#### Private Sector
+
+For those in the Private Sector working ransomware cases, this tool is useful for parsing Windows Timeline artifacts which can provide program execution activity that can be attributed to a specific user account. For instance, an account compromised by a threat actor may have useful artifacts within the user of interest’s Windows Timeline.
+
+For insider threat cases, this artifact can provide useful program execution artifacts that can be attributed to a specific user of interest. Any applications used by the user during the timeframe of interest may be recorded here so long as the events occurred within 30 days of acquiring the Windows Timeline artifact.
 
 {pagebreak}
 
