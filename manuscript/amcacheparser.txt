@@ -15,7 +15,6 @@ For those in Law Enforcement, this tool is useful for parsing the Amcache.hve ar
 For those in the Private Sector, this tool is useful for parsing the Amcache.hve artifact which can help provide evidence of program execution. Unassociated entries will often be where malicious applications can be found along with the associated SHA1 hash value which can then be leveraged into a resource like VirusTotal to learn more about the application.
 
 <!-- TODO: need to expand this -->
-<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
 {pagebreak}
 
@@ -66,19 +65,19 @@ Options:
 
 This switch will instruct AmcacheParser to include output for ProgramEntries.
 
-Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache -i`
+Example: `.\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\APTSimulatorVM\Amcache.hve" --csv D:\Amcache -i`
 
 #### `-w`
 
 This switch will instruct AmcacheParser to read a specified file containing SHA-1 hashes to exclude from the results. This means that hashes specified in this file will NOT be included in the CSV output.
 
-Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache -w D:\Amcache\Hashes.txt`
+Example: `.\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\APTSimulatorVM\Amcache.hve" --csv D:\Amcache -w D:\Amcache\Hashes.txt`
 
 #### `-b`
 
 This switch will instruct AmcacheParser to read a specified file containing SHA-1 hashes to include from the results. This means that hashes specified in this file will be the ONLY results included in the CSV output.
 
-Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache -b D:\Amcache\Hashes.txt`
+Example: `.\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\APTSimulatorVM\Amcache.hve" --csv D:\Amcache -b D:\Amcache\Hashes.txt`
 
 #### `--mp`
 
@@ -90,7 +89,7 @@ File Key Last Write Timestamp
 2022-03-20 21:24:56.000000
 ```
 
-Running `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache --mp` resulted in the following:
+Running `.\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\APTSimulatorVM\Amcache.hve" --csv D:\Amcache --mp` resulted in the following:
 
 {line-numbers:false}
 ```powershell
@@ -102,7 +101,7 @@ File Key Last Write Timestamp
 
 This switch will instruct AmcacheParser to ignore transaction logs (*.LOG files)
 
-Example: `.\AmcacheParser.exe -f "D:\Amcache\Amcache.hve" --csv D:\Amcache --nl`
+Example: `.\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\APTSimulatorVM\Amcache.hve" --csv D:\Amcache --nl`
 
 <!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 

@@ -80,7 +80,7 @@ While there are explanations for each switch, let's walk through each one of the
 
 This switch will instruct LECmd to parse .LNK files that point to a file being opened from a removable drive ONLY.
 
-Example: `.\LECmd.exe -d C:\temp -r`
+Example: `.\LECmd.exe -d D:\DFIRArtifactMuseum\Windows\LNK\Win10 -r`
 
 #### `-q`
 
@@ -94,15 +94,19 @@ Running `.\LECmd.exe -d "D:\DFIRArtifactMuseum" --csv "D:\DFIRArtifactMuseum\" -
 
 This switch will instruct LECmd to attempt to parse every file in the directory specified, regardless of file extension. Output will be generated only for those files identified to be .LNK files.
 
-Example: `.\LECmd.exe -d C:\temp --all`
+Example: `.\LECmd.exe -d D:\DFIRArtifactMuseum\Windows --all`
 
 #### `--nid`
 
 This switch will instruct LECmd to suppress the Target ID list details. This will provide a message similar to this in place of the Target ID list details: `(Target ID information suppressed. Lnk TargetID count: 6)`
 
+Example: `.\LECmd.exe -d D:\DFIRArtifactMuseum\Windows\LNK\Win10 --nid`
+
 #### `--neb`
 
 This switch will instruct LECmd to suppress the Extra blocks details. This will provide a message similar to this in place of the Target ID list details: `(Extra blocks information suppressed. Lnk Extra block count: 2)`
+
+Example: `.\LECmd.exe -d D:\DFIRArtifactMuseum\Windows\LNK\Win10 --neb`
 
 #### `--mp`
 
@@ -351,11 +355,7 @@ MACVendor will resolve the MAC address to provide the associated vendor, if know
 
 ExtraBlocksPresent will provide insight as to whether or not extra data blcoks are present within the LNK file. The other blocks that are possible to be present within a LNK file are: TrackerDataBaseBlock and PropertyStoreDataBlock.
 
-##### TODO
-FileAttributes
-HeaderFlags
-TargetIDAbsolutePath
-TrackerCreatedOn
+<!-- TODO: FileAttributes, HeaderFlags, TargetIDAbsolutePath, TrackerCreatedOn -->
 
 {pagebreak}
 
@@ -389,4 +389,3 @@ LECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
 
 Sample LNK files can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/LNK).
 
-{pagebreak}

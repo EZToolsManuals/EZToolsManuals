@@ -15,7 +15,6 @@ For those in Law Enforcement, this tool may not prove to be immediately useful, 
 For those in the Private Sector, this tool is useful for parsing IIS logs and helping to identify unique IPs that can be geolocated and ran through useful resources like VirusTotal for IOC development. Additionally, this tool can convert the IIS logs from flat text to CSV format for better ingestion into Timeline Explorer.
 
 <!-- TODO: need to expand this -->
-<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
 {pagebreak}
 

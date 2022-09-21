@@ -15,7 +15,6 @@ For those in Law Enforcement, this tool is useful for parsing Prefetch files whi
 For those in the Private Sector, this tool is useful for parsing Prefetch files which can help provide evidence of execution of suspicious applications used by a threat actor during a period of unauthorized access.
 
 <!-- TODO: need to expand this -->
-<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
 {pagebreak}
 

@@ -15,7 +15,6 @@ For those in Law Enforcement, this tool is useful for parsing event logs which c
 For those in the Private Sector, this tool is useful for parsing event logs which can provide useful artifacts relating to RDP sessions, account lockouts, failed logons, and much more.
 
 <!-- TODO: need to expand this -->
-<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
 {pagebreak}
 

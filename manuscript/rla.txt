@@ -9,7 +9,6 @@ RLA is a tool that can be used to repair dirty Windows Registry hives. This is p
 This tool is useful for replaying Registry transaction logs which will ensure you’re parsing all possible data within a given Registry hive.
 
 <!-- TODO: need to expand this -->
-<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
 {pagebreak}
 

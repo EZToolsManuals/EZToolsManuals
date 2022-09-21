@@ -14,8 +14,6 @@ For those in Law Enforcement, this tool is useful for parsing the NTUser.dat and
 
 For those in the Private Sector, this tool is useful for enumerating what a user of interest did during unauthorized access to a given host. Often, artifacuts during periods of unauthorized access will show the threat actor accessing and viewing files and folders that are highly sensitive to the client's business.
 
-<!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
-
 {pagebreak}
 
 ## SBECmd Switches
