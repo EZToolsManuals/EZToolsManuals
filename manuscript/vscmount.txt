@@ -4,6 +4,16 @@
 
 VSCMount is a tool created by Eric Zimmerman used to mount Volume Shadow Copies (VSCs). Volume Shadow Copies can be used to uncover artifacts that no longer reside on the computer.
 
+### VSCMount Use Cases
+
+#### Law Enforcement
+
+For those in Law Enforcement, VSCs may provide access to files that no longer currently exist on the forensic image being analyzed. Taking advantage of VSCs may provide more evidence for an investigation.
+
+#### Private Sector
+
+For those in the Private Sector, VSCs may provide more visibility into historical artifacts within event logs, Registry hives, and NTFS metadata files. These are common sources for quick wins that are often subject to data rolling over, si the more visibility, the better.
+
 {pagebreak}
 
 ## VSCMount Switches
