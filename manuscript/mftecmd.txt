@@ -4,6 +4,16 @@
 
 MFTECmd is a tool created by Eric Zimmerman used to parse various NTFS metadata artifacts, including but not limited to the $MFT, $J, $Boot, $SDS, and $I30 files.
 
+### MFTECmd Use Cases
+
+#### Law Enforcement
+
+For those in Law Enforcement, this tool is useful for parsing NTFS metadata files that can provide invaluable information relating to the files that currently exist, previously existed, and what changes have occurred to those files and at what time. The $MFT should be examined in nearly every instance as that will provide insight as to which files and folders exist on a system currently. The $J should be examined in nearly every instance as it will provide insight as to which files changed in which ways, including but not limited to file creations, file deletions, file renames, etc. The $I30 can provide insight into folders that no longer exist on a system.
+
+#### Private Sector
+
+For those in the Private Sector, this tool is useful for parsing NTFS metadata files that can provide invaluable information relating to the files that currently exist, previously existed, and what changes have occurred to those files and at what time. The $MFT can be useful in locating suspicious files and folders that were created by a threat actor during a period of unauthorized access. The $J can provide insight into files that no longer exist on disk and no longer have references within the $MFT, including but not limited to threat actor tool output or evidence of malicious executables that were deleted after being executed.
+
 <!-- TODO: need to expand this -->
 
 {pagebreak}

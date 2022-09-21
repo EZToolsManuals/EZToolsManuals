@@ -4,6 +4,16 @@
 
 AmcacheParser is a tool created by Eric Zimmerman used to parse Amcache.hve files, commonly found at `C:\Windows\appcompat\Programs\Amcache.hve`.
 
+### AmcacheParser Use Cases
+
+#### Law Enforcement
+
+For those in Law Enforcement, this tool is useful for parsing the Amcache.hve artifact which can help provide insight as to which programs were installed on a computer. Additionally, the artifact can provide hardware information which may be useful context to have for the purpose of evidence identifcation.
+
+#### Private Sector
+
+For those in the Private Sector, this tool is useful for parsing the Amcache.hve artifact which can help provide evidence of program execution. Unassociated entries will often be where malicious applications can be found along with the associated SHA1 hash value which can then be leveraged into a resource like VirusTotal to learn more about the application.
+
 <!-- TODO: need to expand this -->
 <!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 

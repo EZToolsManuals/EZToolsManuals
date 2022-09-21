@@ -4,6 +4,16 @@
 
 AppCompatCacheParser is a tool created by Eric Zimmerman used to parse the AppCompatCache, commonly referred to as the ShimCache, which can be found in the SYSTEM hive.
 
+### AppCompatCacheParser Use Cases
+
+#### Law Enforcement
+
+For those in Law Enforcement, this tool is useful for providing evidence of file knowledge. Artifacts seen in the AppCompatCache, depending on the version of Windows, may provide indicators of an executable existing on the file system at a given point in time.
+
+#### Private Sector
+
+For those in the Private Sector, this tool is useful for providing evidence of file knowledge. Artifacts seen in the AppCompatCache, depending on the version of Windows, may provide indicators of an executable existing on the file system at a given point in time. Additionally, previous versions of Windows had indicators of program execution but more reliably that same information can be found in Prefetch, UserAssist, etc.
+
 <!-- TODO: need to expand this -->
 <!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 

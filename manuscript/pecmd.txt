@@ -4,6 +4,16 @@
 
 PECmd is a tool created by Eric Zimmerman used to parse Windows Prefetch files (.pf), which can be located at `C:\Windows\Prefetch`.
 
+### PECmd Use Cases
+
+#### Law Enforcement
+
+For those in Law Enforcement, this tool is useful for parsing Prefetch files which can help provide evidence of program execution. This may be useful in situations where crimes are being investigated that involve media players and photo viewers. Historical run times of the program can be useful in establishing a pattern of activity relating to application use.
+
+#### Private Sector
+
+For those in the Private Sector, this tool is useful for parsing Prefetch files which can help provide evidence of execution of suspicious applications used by a threat actor during a period of unauthorized access.
+
 <!-- TODO: need to expand this -->
 <!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 

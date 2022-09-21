@@ -4,6 +4,16 @@
 
 bstrings is a tool created by Eric Zimmerman used to search files for strings. This can be accomplished by using user-specified search strings or regular expressions or built-in regular expressions.
 
+### bstrings Use Cases
+
+#### Law Enforcement
+
+For those in Law Enforcement, this tool is useful for searching through files for keywords or regular expressions of interest, including but not limited to: credit cards, Social Security numbers, phone numbers, email addresses, cryptocurrency wallets, and many more.
+
+#### Private Sector
+
+For those in the Private Sector, this tool is useful for searching through files for keywords or regular expressions of interest, including but not limited to: IPv4 addresses, IPv6 addresses, SID numbers, cryptocurrency wallets, and many more.
+
 <!-- TODO: need to expand this -->
 
 {pagebreak}

@@ -6,6 +6,16 @@
 
 LECmd is a tool created by Eric Zimmerman used to parse .LNK files. .LNK files are native to the Windows operating system and are common indicators of file access.
 
+### LECmd Use Cases
+
+#### Law Enforcement
+
+For those in Law Enforcement, this tool is useful for parsing LNK files which can provide useful evidence of file access that can be attributed to a specific user account. LNK files can provide insight as to when a file was first opened and last opened.
+
+#### Private Sector
+
+For those in the Private Sector, this tool is useful for parsing LNK files which can provide useful evidence of file access that can be attributed to a specific user account. Often, these can be used along with Shellbags and JumpLists to determine which files and folders were accessed by a threat actor during a period of unauthorized access
+
 <!-- TODO: need to expand this -->
 <!-- TODO: need to use DFIRArtifactMuseum paths in commands used in Switch Descriptions section -->
 
