@@ -12,7 +12,7 @@ EZ Tools are free and open-source digital forensics tools written by [Eric Zimme
 
 This book serves as the official manuals for EZ Tools. This manual does not cover KAPE as KAPE has its own manual which can be found [here](https://ericzimmerman.github.io/KapeDocs/#!index.md).
 
-This book was made on GitHub and published through Leanpub. The GitHub repository for this book is [here](https://github.com/EZToolsManuals/EZToolsManuals). This book is open-source and can be improved by anyone! Please suggest improvements by submitting an [Issue](https://github.com/EZToolsManuals/EZToolsManuals/issues) or propose changes by submitting a [Pull Request](https://github.com/EZToolsManuals/EZToolsManuals/pulls).
+This book was made on GitHub and published through Leanpub. The GitHub repository for this book's manuscripts is [here](https://github.com/EZToolsManuals/EZToolsManuals). This book is open-source and can be improved by anyone! Please suggest improvements by submitting an [Issue](https://github.com/EZToolsManuals/EZToolsManuals/issues) or propose changes by submitting a [Pull Request](https://github.com/EZToolsManuals/EZToolsManuals/pulls).
 
 <!-- talk about the GitHub repo for the book -->
 <!-- DFIRArtifactMuseum - sample data -->
