@@ -4,11 +4,17 @@
 
 EZ Tools are free and open-source digital forensics tools written by [Eric Zimmerman](https://www.sans.org/profiles/eric-zimmerman/).
 
+TODO: DFIRArtifactMuseum - sample data
+
 <!-- TODO: need to expand this -->
 
 ## Download EZ Tools
 
 [EZ Tools](https://ericzimmerman.github.io/#!index.md)
+
+## What is this book?
+
+TODO: talk about the GitHub repo for the book
 
 ## Content by Eric Zimmerman
 
@@ -28,3 +34,7 @@ EZ Tools are free and open-source digital forensics tools written by [Eric Zimme
 * [Enabling KAPE at Scale](https://youtu.be/YF-jDoh8BFM)
 * [Fast, Scalable Results with EZ Tools and the New Command line poster](https://youtu.be/yEmLuj3oDzs)
 * [Triage Collection and Timeline Analysis with KAPE](https://www.youtube.com/watch?v=iYyWZSNBNcw)
+
+
+
+https://www.sans.org/posters/eric-zimmerman-tools-cheat-sheet/
