@@ -2,11 +2,7 @@
 
 ## What are EZ Tools?
 
-EZ Tools are free and open-source digital forensics tools written by [Eric Zimmerman](https://www.sans.org/profiles/eric-zimmerman/).
-
-TODO: DFIRArtifactMuseum - sample data
-
-<!-- TODO: need to expand this -->
+EZ Tools are free and open-source digital forensics tools written by [Eric Zimmerman](https://www.sans.org/profiles/eric-zimmerman/). Please note, this covers EZ Tools, not KAPE. The KAPE manual can be found .
 
 ## Download EZ Tools
 
@@ -14,7 +10,12 @@ TODO: DFIRArtifactMuseum - sample data
 
 ## What is this book?
 
-TODO: talk about the GitHub repo for the book
+This book serves as the official manuals for EZ Tools. This manual does not cover KAPE as KAPE has its own manual which can be found [here](https://ericzimmerman.github.io/KapeDocs/#!index.md).
+
+This book was made on GitHub and published through Leanpub. The GitHub repository for this book is [here](https://github.com/EZToolsManuals/EZToolsManuals). This book is open-source and can be improved by anyone! Please suggest improvements by submitting an [Issue](https://github.com/EZToolsManuals/EZToolsManuals/issues) or propose changes by submitting a [Pull Request](https://github.com/EZToolsManuals/EZToolsManuals/pulls).
+
+<!-- talk about the GitHub repo for the book -->
+<!-- DFIRArtifactMuseum - sample data -->
 
 ## Content by Eric Zimmerman
 
@@ -34,7 +35,7 @@ TODO: talk about the GitHub repo for the book
 * [Enabling KAPE at Scale](https://youtu.be/YF-jDoh8BFM)
 * [Fast, Scalable Results with EZ Tools and the New Command line poster](https://youtu.be/yEmLuj3oDzs)
 * [Triage Collection and Timeline Analysis with KAPE](https://www.youtube.com/watch?v=iYyWZSNBNcw)
-
-
-
-https://www.sans.org/posters/eric-zimmerman-tools-cheat-sheet/
+* [Eric Zimmerman's Results in Seconds at the Command-Line Poster](https://www.sans.org/posters/eric-zimmermans-results-in-seconds-at-the-command-line-poster/)
+* [EZ Tools/KAPE: How to Contribute to and Benefit from Open Source Contributions](https://www.youtube.com/watch?v=mIb1GQP3ciE)
+* [Enhancing Event Log Analysis with EvtxEcmd using KAPE](https://www.youtube.com/watch?v=BIkyWexMF0I)
+* [How to Use KAPE and SQLECmd with EventTranscript.db](https://www.youtube.com/watch?v=DoVStoCJrog)
