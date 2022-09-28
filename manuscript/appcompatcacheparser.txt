@@ -148,6 +148,7 @@ AppCompatCacheParser will output a filename similar to these:
 
 According to [AppCompatCacheParser's code](https://github.com/EricZimmerman/AppCompatCacheParser/blob/95d4e1e084fdf8289175fdb47a15747753ec8e77/AppCompatCache/AppCompatCache.cs#L56), the following versions can replace the XXXXXX:
 
+{line-numbers:false}
 ```
 WindowsXP,
 WindowsVistaWin2k3Win2k8,
