@@ -26,11 +26,11 @@ Pro-tip: hold down control and scroll with your mouse wheel to zoom in and out.
 
 As stated above, you can open any file in EZViewer! If it's not supported, it'll open in hex view, as seen below:
 
-![](ezviewer_PrefetchFileHexExample.jpg)
+![](ezviewer\ezviewerPrefetchFileHexExample.jpg)
 
 Supported file formats like Word (.docx) will appear as such:
 
-![](ezviewer_WordDocExample.jpg)
+![](ezviewer\ezviewerWordDocExample.jpg)
 
 ## References
 
