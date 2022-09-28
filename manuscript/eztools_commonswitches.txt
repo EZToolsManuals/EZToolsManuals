@@ -12,7 +12,7 @@ Use `-f` to point the tool to a single file to be parsed.
 
 `.\JLECmd.exe -f D:\DFIRArtifactMuseum\Windows\JumpLists\Win10\APTSimulatorVM\573770283dc3d854.automaticDestinations-ms`
 `.\LECmd.exe -f C:\temp\test.lnk`
-`.\MFTECmd.exe -f C:\temp\webinar6152022\tout\C\$MFT`
+`.\MFTECmd.exe -f 'C:\temp\webinar6152022\tout\C\$MFT'`
 
 ### `-d`
 
@@ -30,7 +30,7 @@ This switch will instruct LECmd to output parsed data into a CSV at the specifie
 
 `.\LECmd.exe -d C:\temp\LNKFiles --csv C:\temp\LNKFiles\output`
 `.\JLECmd.exe -d C:\temp\JumpLists --csv C:\temp\JumpLists\output`
-`.\MFTECmd.exe -f C:\some\random\$MFT --csv C:\temp\output`
+`.\MFTECmd.exe -f 'C:\some\random\$MFT' --csv C:\temp\output`
 
 ### `--csvf`
 
