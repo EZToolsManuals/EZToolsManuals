@@ -313,7 +313,7 @@ MFTECmd output provides a few important data points that are not native to NTFS 
 
 When parsing the $MFT, output provided will contain three data points unique to MFTECmd:
 
-![mftecmd3columns](mftecmd\mftecmd3columns.jpg.png)
+![mftecmd3columns](mftecmd\mftecmd3columns.jpg)
 
 #### SI < FN
 
