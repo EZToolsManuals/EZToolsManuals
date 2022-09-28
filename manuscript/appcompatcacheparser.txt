@@ -136,8 +136,6 @@ AppCompatCacheParser.exe --csv c:\temp --csvf results.csv
 
 <!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
-{pagebreak}
-
 ## AppCompatCacheParser Output
 
 ### Analyzing AppCompatCacheParser Output - CSV

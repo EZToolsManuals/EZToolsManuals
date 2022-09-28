@@ -132,8 +132,6 @@ AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -i on --csv C:\temp --cs
 AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.txt" --csv C:\temp
 ```
 
-{pagebreak}
-
 ## AmcacheParser Output
 
 ### Analyzing AmcacheParser Output - CSV
