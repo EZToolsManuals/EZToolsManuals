@@ -64,8 +64,6 @@ Example: `.\SumECmd.exe -d "D:\Test\SUM" --csv "D:\temp" --wd`
 
 <!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
-{pagebreak}
-
 ## SumECmd Command Examples
 
 ### Example SumECmd Commands
@@ -116,8 +114,6 @@ This output will provide examiners with an idea of which roles were assigned to 
 #### `%timestamp%_SumECmd_SUMMARY_ChainedDbInfo_Output.csv`
 
 This output will provide examiners with an idea of which calendar years are covered within the SUM database for a Domain Controller within a given domain. Please note, that the second a Domain Controller connects to a domain for the first time, it will only have information from that point forward. It will not inherit historical information within the domain prior to the time of host coming online within the domain.
-
-{pagebreak}
 
 ## SumECmd References
 
