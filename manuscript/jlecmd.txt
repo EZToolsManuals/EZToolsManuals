@@ -673,6 +673,7 @@ JLECmd output, regardless of file format, will provide potentially useful inform
 
 This timestamp will provide you with the a reliable indication of when a file was opened with a specific application.
 
+```
 --- AppId information ---
   AppID: f01b4d95cf55d32a
   Description: Windows Explorer Windows 8.1
@@ -695,6 +696,7 @@ Entry #: 11
 
 --- Lnk information ---
   Absolute path: My Computer\C:\Users\TestUser\Desktop\Targets
+```
 
 {pagebreak}
 
