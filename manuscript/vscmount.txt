@@ -50,6 +50,8 @@ Options:
 --dl is required. Exiting
 ```
 
+{pagebreak}
+
 ### Switch Descriptions
 
 #### `--dl`
@@ -110,8 +112,6 @@ Example: `.\VSCMount.exe --dl C --mp C:\vssroot --ud false`
 ```powershell
 .\VSCMount.exe --dl C --mp C:\VssRoot --ud --debug
 ```
-
-{pagebreak}
 
 ## VSCMount References
 
