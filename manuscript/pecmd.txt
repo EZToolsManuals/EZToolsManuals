@@ -76,6 +76,8 @@ Options:
 Either -f or -d is required. Exiting
 ```
 
+{pagebreak}
+
 ### Switch Descriptions
 
 #### `-k`
@@ -176,10 +178,6 @@ PECmd.exe -d "C:\Windows\Prefetch"
 
 ## PECmd Output
 
-### Analyzing PECmd Output - Console
-
-{pagebreak}
-
 ### Analyzing PECmd Output - CSV
 
 PECmd will output multiple CSVs with the following filenames:
@@ -225,8 +223,6 @@ Here's an example of PECmd's JSON output:
 ### Analyzing PECmd Output - HTML
 
 PECmd's JSON output will be very similar to the JSON output, except in an HTML file.
-
-{pagebreak}
 
 ## PECmd Key Takeaways
 
