@@ -18,10 +18,6 @@ For those in the Private Sector, this tool is useful for parsing event logs whic
 
 {pagebreak}
 
-## EvtxECmd Switches
-
-In a PowerShell window, running `.\EvtxECmd.exe` will provide the following options when running EvtxECmd:
-
 ### EvtxECmd Maps
 
 <https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps>
