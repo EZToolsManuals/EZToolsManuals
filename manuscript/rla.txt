@@ -79,8 +79,6 @@ Example: `.\rla.exe -d "D:\Hives\NTUser" --out "D:\Hives\clean" --cn`
 
 <!-- All other switches are covered by eztools_commonswitches.txt - 2022-09-15 -->
 
-{pagebreak}
-
 ## RLA Command Examples
 
 ### Example RLA Commands
@@ -99,8 +97,6 @@ rla.exe -f "C:\Temp\UsrClass 1.dat" --out C:\temp
 ```powershell
 rla.exe -d "D:\temp\" --out c:\temp
 ```
-
-{pagebreak}
 
 ## RLA References
 
