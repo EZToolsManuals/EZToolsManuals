@@ -786,7 +786,8 @@ The AlertMessage can be anything a plugin author wishes and will be displayed in
 The Values property at the bottom is the property Registry Explorer will use to display the data returned by the plugin.
 Creating plugins is very simple in that it is some basic plumbing code (name, email, key path, etc.) and a single function to process things. While this example showed a simple plugin, there are other, more complicated examples in the Github project you can use as templates for new plugins.
 
-# RECmd
+## RECmd
+
 RECmd is a command line tool used to access offline Registry hives. It includes many of the same features as Registry Explorer including searching, looking at keys and values, and exporting data. Version 1.2 added batch mode and plugin support for automated searching and extracting of data to CSV.
 RECmd uses the same back end as Registry Explorer to process Registry hives. RECmd is open source and the source code is available here.
 Getting started
