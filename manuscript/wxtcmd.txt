@@ -62,8 +62,6 @@ Options:
 
 Thankfully, WxTCmd doesn't have any unique switches that aren't already covered in the common switches chapter.
 
-{pagebreak}
-
 ## WxTCmd Command Examples
 
 ### Example WxTCmd Commands
@@ -74,8 +72,6 @@ Thankfully, WxTCmd doesn't have any unique switches that aren't already covered 
 ```powershell
 WxTCmd.exe -f "C:\Users\eric\AppData\Local\ConnectedDevicesPlatform\L.eric\ActivitiesCache.db" --csv c:\temp
 ```
-
-{pagebreak}
 
 ## WxTCmd Output
 
@@ -88,10 +84,6 @@ This CSV will contain GUIDs of applications that were executed on disk. Generall
 #### ‘%timestamp%__Activity.csv
 
 This CSV will contain the Start Time and End Time of an application's execution by a given user. This database is user specific, so this activity can be associated with a specific user account. Additionally, there is a JSON payload for each entry within the Windows Timeline SQLite database that may provide further context for an entry within the database.
-
-{pagebreak}
-
-## WxTCmd Sample Output
 
 {pagebreak}
 
