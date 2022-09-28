@@ -14,7 +14,7 @@ Here's an example of this:
 
 We are assigning that very long file path to the $filePath variable. Therefore, in a script, we could simple use `$filePath` every time we want to inject that file path into our script. Additionally, it allows for us to declare the file path once in the script and the corrected file path is reflected wherever that variable is used.
 
-How this relates to MFTECmd's usage is when pointing to a $MFT file, if you use quotation marks, PowerShell will be expecting a value to have been assigned to $MFT or $J. When running a one-liner command with MFTECmd, we are not declaring variables called $MFT or $J, rather, we're pointing to files that have those specific names.
+How this relates to MFTECmd's usage is when pointing to a `$MFT` file, if you use quotation marks, PowerShell will be expecting a value to have been assigned to `$MFT` or `$J`. When running a one-liner command with MFTECmd, we are not declaring variables called `$MFT` or `$J`, rather, we're pointing to files that have those specific names.
 
 Here is an example of a bad command using PowerShell:
 
