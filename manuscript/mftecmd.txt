@@ -92,6 +92,8 @@ Options:
 -f is required. Exiting
 ```
 
+{pagebreak}
+
 ### Switch Descriptions
 
 #### `-m`
@@ -218,7 +220,7 @@ Example: `.\MFTECmd.exe -f 'D:\DFIRArtifactMuseum\Windows\NTFSArtifacts\MFT\Win1
 
 The above command output a 191MB CSV compared to 122MB without the `--sn` switch. Also, the above command adds the following columns within Timeline Explorer that are available in the Column Chooser (right-click on a column header and double click on them to add them in).
 
-![mftecmdSNswitchcolumnsTLE](mftecmd\mftecmdSNswitchcolumnsTLE.png)
+![mftecmdSNswitchcolumnsTLE](mftecmd\mftecmdSNswitchcolumnsTLE.jpg)
 
 #### `--fl`
 
