@@ -2,6 +2,14 @@
 
 ![image1](registryexplorer\image1.png)
 
+Revision history
+2015-07-01 Rev. 1 – Initial release
+2016-06-08 Rev. 2 – Updated for v0.8.1.0
+2017-05-19 Rev. 3 – Updated for v0.9.0.0
+2017-03-02 Rev. 4 – Updated for v1.0.0.0
+2019-01-15 Rev. 5 – Updated for v1.2.0.0
+2022-07-14 Rev. 6 - Leanpub release
+
 ## Registry Explorer Introduction
 
 Registry Explorer is a GUI based tool used to view the contents of offline Registry Hives. It can load multiple hives at once, search across all loaded hives using strings or regular expressions, exporting of data, and much more.
