@@ -1,3 +1,3 @@
-# EZ Tools - CLI (Command Line Interface)
+# EZ Tools - CLI
 
-add graphic here 
+![](EZToolsDownloaded.jpg)
