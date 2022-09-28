@@ -80,6 +80,7 @@ Example: `.\SBECmd.exe -d "D:\temp\hives" --nl false --csv "D:\temp"`
 
 When processing transaction logs, you will see a message similar to this:
 
+{line-numbers:false}
 ```
 Two transaction logs found. Determining primary log...
 Primary log: D:\temp\hives\SYSTEM.LOG2, secondary log: D:\temp\hives\SYSTEM.LOG1
@@ -95,6 +96,7 @@ Example: `.\SBECmd.exe -d "D:\temp\hives" --nl true --csv "D:\temp"`
 
 When ignoring transaction logs, you will see a message similar to this:
 
+{line-numbers:false}
 ```
 Registry hive is dirty and transaction logs were found in the same directory, but --nl was provided. Data may be missing! Continuing anyways...
 Sequence numbers do not match! Hive is dirty and the transaction logs should be reviewed for relevant data!
@@ -137,14 +139,13 @@ SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout --dedupe
 
 When executing SBECmd with CSV output enabled, it will output filenames similar to the examples below:
 
+{line-numbers:false}
 ```
 Username_NTUSER.csv
 Username_usrClass.csv
 ```
 
 If the system you're analzying has had 100 users who have traversed directories at some point in time, you should see 200 CSVs for your output!
-
-{pagebreak}
 
 ## SBECmd Key Takeaways
 
