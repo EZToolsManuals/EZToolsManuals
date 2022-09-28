@@ -2,11 +2,17 @@
 
 ## What are EZ Tools?
 
-EZ Tools are free and open-source digital forensics tools written by [Eric Zimmerman](https://www.sans.org/profiles/eric-zimmerman/). Please note, this covers EZ Tools, not KAPE. The KAPE manual can be found .
+EZ Tools are free and open-source digital forensics tools written by [Eric Zimmerman](https://www.sans.org/profiles/eric-zimmerman/).
 
 ## Download EZ Tools
 
-[EZ Tools](https://ericzimmerman.github.io/#!index.md)
+Eric Zimmerman's Tools can be downloaded [here](https://ericzimmerman.github.io/#!index.md).
+
+## .NET 4 vs .NET 6 EZ Tools
+
+The main difference between the .NET 4 version and .NET 6 version of EZ Tools is the speed and cross-platform compatability. To compare the speed between .NET 4 and .NET 6 versions of EZ Tools, check out the [Benchmarks](https://ericzimmerman.github.io/#!benchmarks.md) on the EZ Tools site.
+
+.NET 6 allows for EZ Tools (and any other application) to run on Linux and macOS in addition to Windows. In order to run both the CLI and GUI tools, download the latest version of the  `.NET Desktop Runtime` [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
 ## What is this book?
 
@@ -14,8 +20,9 @@ This book serves as the official manuals for EZ Tools. This manual does not cove
 
 This book was made on GitHub and published through Leanpub. The GitHub repository for this book's manuscripts is [here](https://github.com/EZToolsManuals/EZToolsManuals). This book is open-source and can be improved by anyone! Please suggest improvements by submitting an [Issue](https://github.com/EZToolsManuals/EZToolsManuals/issues) or propose changes by submitting a [Pull Request](https://github.com/EZToolsManuals/EZToolsManuals/pulls).
 
-<!-- talk about the GitHub repo for the book -->
-<!-- DFIRArtifactMuseum - sample data -->
+## Mastering EZ Tools
+
+The best way to master EZ Tools, or any tools for that matter, is to use them. Use tools against sample images found on [CFReDS](https://cfreds.nist.gov/), [Digital Corpora](https://digitalcorpora.org/), or [AboutDFIR](https://aboutdfir.com/resources/tool-testing/). Additionally, the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum) will be referenced often throughout this manual as there are multiple samples of the raw artifacts that each EZ Tool is designed to parse.
 
 ## Content by Eric Zimmerman
 
