@@ -65,8 +65,6 @@ Either -f or -d is required. Exiting
 
 Thankfully, RBCmd doesn't have any unique switches that aren't already covered in the common switches chapter.
 
-{pagebreak}
-
 ## RBCmd Command Examples
 
 ### Example RBCmd Commands
@@ -112,8 +110,6 @@ Deleted on: 2022-05-13 16:29:11
 ### Analyzing RBCmd Output - CSV
 
 When running RBCmd with CSV output, a CSV will be output with similar data that's output to the console.
-
-{pagebreak}
 
 ## RBCmd Key Takeaways
 
