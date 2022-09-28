@@ -70,8 +70,6 @@ This switch will instruct IISGeoLocate to not update the CSV file at the locatio
 
 IISGeoLocate will convert IIS logs into CSV format for ingestion into Timeline Explorer as well as adding IP geolocation data to each log entry.
 
-{pagebreak}
-
 ## IISGeoLocate References
 
 ### Associated GitHub Repositories
