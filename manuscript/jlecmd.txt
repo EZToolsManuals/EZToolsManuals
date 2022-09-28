@@ -99,6 +99,8 @@ Either -f or -d is required. Exiting
 
 While there are explanations for each switch, let's walk through each one of the switches unique to JLECmd in further detail.
 
+{pagebreak}
+
 ### Switch Descriptions
 
 #### `--all`
@@ -448,7 +450,7 @@ When parsing JumpLists with JLECmd with the `--json` switch, JLECmd will output 
 					}
 				],
 				"SourceFile": "D:\\DFIRArtifactMuseum\\Windows\\JumpLists\\Win10\\APTSimulatorVM\\573770283dc3d854.automaticDestinations-ms_Directory name_1",
-				"RawBytes": "TAAAAAEUAgAAAAAAwAAAAAAAAEaBAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAKoAFAAfaIBTHIegQmkQouoIACswMJ2UAGGAAAAAAHcAaQBuAGQAbwB3AHMAZABlAGYAZQBuAGQAZQByADoALwAvAHQAaAByAGUAYQB0AC8AAAAAAFYAAAAaAO++AgBBAHAAcABYAHIAcgBlAGIAbQBuAGcAZQBiADAAYQA3AGcAZwBkAGQANgBzAGUAYwAxAGMAcQA0ADkANAA2ADgAdgA4AHEAcgAAAD4AAAA5AAAACQAAoC0AAAAxU1BTVShMn3mfOUuo0OHULeHV8xEAAAAHAAAAAAsAAAD//wAAAAAAAAAAAAAAAAAA",
+				"RawBytes": "TAAAAAEUAgAAAAAAwAAAAAAAAEaBAKAA<SNIP>",
 				"Header": {
 					"Signature": "0002140100000000c000000000000046",
 					"DataFlags": 10485889,
