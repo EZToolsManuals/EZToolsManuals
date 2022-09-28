@@ -6,7 +6,13 @@ EZ Tools are free and open-source digital forensics tools written by [Eric Zimme
 
 ## Download EZ Tools
 
-Eric Zimmerman's Tools can be downloaded [here](https://ericzimmerman.github.io/#!index.md).
+Eric Zimmerman's Tools can be downloaded [here](https://ericzimmerman.github.io/#!index.md). Run the `Get-ZimmermanTools.ps1` PowerShell script to download EZ Tools.
+
+![](DownloadingEZTools.jpg)
+
+## CLI vs GUI
+
+EZ Tools comprise of CLI (Command Line Interface) and GUI (Graphical User Interface) tools. The CLI tools will be covered first followed by the GUI tools. Generally speaking, the CLI tools are updated more often and are the preferable method of parsing the respective artifact the tool is designed to parse.
 
 ## .NET 4 vs .NET 6 EZ Tools
 
