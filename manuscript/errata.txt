@@ -1,0 +1,5 @@
+# Errata
+
+## Reporting Errata
+
+If you think you've found an error relating to spelling, grammar, or anything else that's currently holding this book back from being the best it can be, please visit the book's [GitHub repository](https://github.com/EZToolsManuals/EZToolsManuals/issues) and create an Issue detailing the error you've found. Anyone is also welcome to submit a Pull Request with new content, fixes, changes, etc. 
