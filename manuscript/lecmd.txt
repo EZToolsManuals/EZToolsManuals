@@ -294,12 +294,12 @@ LECmd output, regardless of file format, will provide potentially useful informa
 
 LECmd output will provide the following timestamps:
 
- * SourceCreated - The creation timestamp associated with the .LNK file itself
- * SourceModified - The modified timestamp associated with the .LNK file itself
- * SourceAccessed - The accessed timestamp associated with the .LNK file itself
- * TargetCreated - The creation timestamp associated with the file the .LNK file points to
- * TargetModified - The modified timestamp associated with the file the .LNK file points to
- * TargetAccessed - The accessed timestamp associated with the file the .LNK file points to
+ * `SourceCreated` - The creation timestamp associated with the .LNK file itself
+ * `SourceModified` - The modified timestamp associated with the .LNK file itself
+ * `SourceAccessed` - The accessed timestamp associated with the .LNK file itself
+ * `TargetCreated` - The creation timestamp associated with the file the .LNK file points to
+ * `TargetModified` - The modified timestamp associated with the file the .LNK file points to
+ * `TargetAccessed` - The accessed timestamp associated with the file the .LNK file points to
 
 SourceCreated will be the most useful indicator of when a file was first opened by a user. SourceModified will be the most useful indicator of when the file was last opened by a user.
 
