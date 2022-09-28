@@ -51,8 +51,6 @@ Options:
 
 Thankfully, RecentFileCacheParser doesn't have any unique switches that aren't already covered in the common switches chapter.
 
-{pagebreak}
-
 ## RecentFileCacheParser Command Examples
 
 ### Example RecentFileCacheParser Commands
@@ -92,8 +90,6 @@ c:\windows\system32\icacls.exe
 c:\windows\system32\systempropertiesprotection.exe
 c:\windows\bcuninstall.exe
 ```
-
-{pagebreak}
 
 ### Analyzing RecentFileCacheParser Output - CSV
 
