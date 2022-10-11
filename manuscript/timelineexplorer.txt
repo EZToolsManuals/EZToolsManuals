@@ -75,15 +75,16 @@ In a PowerShell window, running `.\Timeline Explorer.exe` will provide the follo
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* <https://binaryforay.blogspot.com/2017/04/introducing-timeline-explorer-v0400.html>
+* <https://binaryforay.blogspot.com/2017/05/timeline-explorer-0500-released.html>
+* <https://binaryforay.blogspot.com/2017/10/timeline-explorer-060-released.html>
+* <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
+* <https://binaryforay.blogspot.com/2018/05/a-fluery-of-updates.html>
+* <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
 
 #### Community Resources
 
-* Links to blog posts go here
+* <https://aboutdfir.com/toolsandartifacts/windows/timeline-explorer>
 
 ### Download Timeline Explorer
 
