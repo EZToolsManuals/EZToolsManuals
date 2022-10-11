@@ -25,4 +25,5 @@ sectionGUI.txt
 ezviewer.txt
 registryexplorer.txt
 shellbagsexplorer.txt
+timelineexplorer.txt
 errata.txt
