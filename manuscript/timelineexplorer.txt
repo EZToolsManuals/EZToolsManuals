@@ -2,72 +2,13 @@
 
 ## Timeline Explorer Introduction
 
+Timeline Explorer 
+
 
 {pagebreak}
 
-## Timeline Explorer Switches
-
-In a PowerShell window, running `.\Timeline Explorer.exe` will provide the following options when running JLECmd:
-
-{line-numbers:false}
-```powershell
-
-```
-
-### Switch Descriptions
-
-#### SWITCH
-
-{pagebreak}
-
-## Timeline Explorer Command Examples
-
-### Example Timeline Explorer Commands
-
-#### Example description here
-
-{line-numbers:false}
-```powershell
-
-```
-
-{pagebreak}
-
-## Timeline Explorer Output
-
-### Analyzing Timeline Explorer Output - Console
-
-{pagebreak}
-
-### Analyzing Timeline Explorer Output - CSV
-
-{pagebreak}
-
-### Analyzing Timeline Explorer Output - JSON
-
-{pagebreak}
-
-### Analyzing Timeline Explorer Output - HTML
-
-{pagebreak}
-
-## Timeline Explorer Sample Output
-
-{pagebreak}
-
-## Timeline Explorer Key Takeaways
-
-### Important Data Points
-
-{pagebreak}
 
 ## Timeline Explorer References
-
-### Associated GitHub Repositories
-
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
 
 ### Blog Posts
 
