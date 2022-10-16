@@ -2,7 +2,52 @@
 
 ## Timeline Explorer Introduction
 
-Timeline Explorer 
+Timeline Explorer is an application that can be used by forensic examiners (or anyone) to ingest CSV files (and a few other filetypes). 
+
+Timeline Explorer uses [Plugins](https://github.com/EricZimmerman/TLEFilePlugins) that will allow Timeline Explorer to ingest multiple filetypes. The benefit of these Plugins allows for the `Line` and `Tag` columns to be populated for the various supported file types.
+
+### Supported File Types
+
+Timeline Explorer supports the following filetypes:
+
+* .csv
+* .tsv
+* .xlsx
+* .txt
+
+### Ingesting Excel Spreadsheets (.xlsx)
+
+Please note, when you ingest an Excel spreadsheet with multiple sheets, only the first sheet will load within Timeline Explorer. All other sheets will be ignored. 
+
+## Layout Files
+
+### What Are Layout Files?
+
+Layout files are located at `.\ZimmermanTools\net6\TimelineExplorer\Layouts\Default` which provide the default layouts for output that's supported with a Plugin. If you move columns around, hide columns, or anything else, those preferences will be stored in layout files with the `.layout.local` file extension. If you ever want to revert to the default, delete your `.layout.local` files and Timeline Explorer will revert to the `.layout` files within the `.\ZimmermanTools\net6\TimelineExplorer\Layouts\Default` directory.
+
+## Plugins
+
+Plugins are written in C# (as are all of Eric's tools) which aim to provide better support for ingested CSV output. 
+
+## 
+
+
+### Expected Headers
+
+Each Plugin looks for 
+
+
+All of the output from Eric Zimmerman's Tools have a Plugin 
+
+https://github.com/EricZimmerman/TLEFilePlugins/blob/master/TLEFileEZTools/EZTools.cs
+
+### Ingesting CSVs That Don't Have Plugin Support
+
+
+
+
+If you have your own PowerShell script that merges the multiple CSV outputs from a tool like LECmd, for example, and the script adds an extra column for the path of the source file so within the merged output you know which original CSV each row can be attributed to, that output will no longer be able to leverage the LECmd Plugin. 
+
 
 
 {pagebreak}
