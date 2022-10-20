@@ -21,7 +21,7 @@ Please note, when you ingest an Excel spreadsheet with multiple sheets, only the
 
 {pagebreak}
 
-## Settings
+## Timeline Explorer Settings
 
 A `TLE_settings.xml` file is located within `.\TimelineExplorer\Settings` which stores user preferences in XML format. These are effectively storing the preferences for the options that can be modified by the user within the Tools menu. An example can be seen below:
 
@@ -62,7 +62,7 @@ A public copy of this exact `TLE_settings.xml` file is hosted on Andrew Rathbun'
 
 It is very important that the `.fffffff` values are added to this whether in the Timeline Explorer GUI or directly into the XML file itself. Without these subseconds enabled, it will be impossible to detect [timestomping](https://www.kroll.com/en/insights/publications/cyber/anti-forensic-tactics/anti-forensics-tactics-timestomping) within MFTECmd output or leverage more precise timestamps that other EZ Tools provide.
 
-## Layout Files
+## Timeline Explorer Layout Files
 
 ### What Are Layout Files?
 
@@ -70,7 +70,7 @@ Layout files are located at `.\ZimmermanTools\net6\TimelineExplorer\Layouts\Defa
 
 {pagebreak}
 
-## Plugins
+## Timeline Explorer Plugins
 
 Plugins are written in C# (as are all of Eric's tools) which aim to provide better support for ingested CSV output.
 
@@ -82,14 +82,17 @@ Each Plugin looks for headers within CSV output so it can know that a plugin mat
 
 It doesn't NEED plugins but plugins will allow for a better experience when dealing with supported tool output.
 
-For instance, [here's](https://github.com/EricZimmerman/TLEFilePlugins/blob/13055b37b5880c131e1cf6ae4d5ff1a57a537467/TLEFileEZTools/EZTools.cs#L368) an excerpt from the EZ Tools plugin where the plugin is looking for certain headers within the CSV in order to ingest the output properly:
+For instance, [here](https://github.com/EricZimmerman/TLEFilePlugins/blob/13055b37b5880c131e1cf6ae4d5ff1a57a537467/TLEFileEZTools/EZTools.cs#L368) is an excerpt from the EZ Tools plugin where the plugin is looking for certain headers within the CSV in order to ingest the output properly:
 
+{line-numbers:false}
 ```csharp
             ExpectedHeaders = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
             {
                 "entrynumber,sequencenumber,inuse,parententrynumber,parentsequencenumber,parentpath,filename,extension,filesize,referencecount,reparsetarget,isdirectory,hasads,isads,si<fn,useczeros,copied,siflags,nametype,created0x10,created0x30,lastmodified0x10,lastmodified0x30,lastrecordchange0x10,lastrecordchange0x30,lastaccess0x10,lastaccess0x30,updatesequencenumber,logfilesequencenumber,securityid,objectidfiledroid,loggedutilstream,zoneidcontents"
             };
 ```
+
+{pagebreak}
 
 ### Ingesting CSVs That Don't Have Plugin Support
 
@@ -103,21 +106,21 @@ Here we will cover a few key examples of what value plugins provide to Timeline 
 
 Excel is unable render checkboxes for True/False values when dealing with MFTECmd output.
 
-![ExcelCheckboxExample](ExcelCheckboxExample.jpg)
+![ExcelCheckboxExample](timelineexplorer\ExcelCheckboxExample.jpg)
 
 Timeline Explorer will render the True/False values as a checkbox.
 
-![TLECheckboxExample](TLECheckboxExample.jpg)
+![TLECheckboxExample](timelineexplorer\TLECheckboxExample.jpg)
 
 #### Timestamp Column Filters, Part 1
 
 Excel is unable to handle the values within MFTECmd output (and other EZ Tools' output) without input from the user.
 
-![ExcelMFTECmdTimestampsExample](ExcelMFTECmdTimestampsExample.jpg)
+![ExcelMFTECmdTimestampsExample](timelineexplorer\ExcelMFTECmdTimestampsExample.jpg)
 
 When converting the timestamp manually in Excel to the specified format, it works, but why do all of that work? Timeline Explorer displays each timestamp as a DateTime object and allow the examiner to digest the data quicker.
 
-![TLEMFTECmdTimestampsExample](TLEMFTECmdTimestampsExample.jpg)
+![TLEMFTECmdTimestampsExample](timelineexplorer\TLEMFTECmdTimestampsExample.jpg)
 
 #### Timestamp Column Filters, Part 2
 
@@ -125,13 +128,13 @@ Now that we've established the power of plugins for timestamp values, let's furt
 
 By removing the `TLEFileEZTools.dll` prior to ingesting MFTECmd output, we can see that Timeline Explorer won't know to convert the values within the timestamp-specific columns to DateTime objects.
 
-![TLEGenericCSVTimestampsExample.jpg](TLEGenericCSVTimestampsExample.jpg)
+![TLEGenericCSVTimestampsExample.jpg](timelineexplorer\TLEGenericCSVTimestampsExample.jpg)
 
 To reproduce the above example, remove the `.\TimelineExplorer\Plugins\TLEFileEZTools.dll` file prior to opening Timeline Explorer and ingest output from the most current version of MFTECmd.
 
 When we leverage the plugin built for EZ Tools output, we can see what value Timeline Explorer provides.
 
-![TLEEzToolsPluginTimestampsExample](TLEEzToolsPluginTimestampsExample.jpg)
+![TLEEzToolsPluginTimestampsExample](timelineexplorer\TLEEzToolsPluginTimestampsExample.jpg)
 
 The above provides a much more user friendly method of filtering on years, months, and days when conducting analysis.
 
