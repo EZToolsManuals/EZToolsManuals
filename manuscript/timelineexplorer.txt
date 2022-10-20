@@ -106,21 +106,21 @@ Here we will cover a few key examples of what value plugins provide to Timeline 
 
 Excel is unable render checkboxes for True/False values when dealing with MFTECmd output.
 
-![MFTECmd's InUse column in Excel](timelineexplorer\ExcelCheckboxExample.jpg)
+![MFTECmd's InUse column in Excel](timelineexplorer\ExcelCheckboxExample.png)
 
 Timeline Explorer will render the True/False values as a checkbox.
 
-![MFTECmd's InUse column in Timeline Explorer](timelineexplorer\TLECheckboxExample.jpg)
+![MFTECmd's InUse column in Timeline Explorer](timelineexplorer\TLECheckboxExample.png)
 
 #### Timestamp Column Filters, Part 1
 
 Excel is unable to handle the values within MFTECmd output (and other EZ Tools' output) without input from the user.
 
-![MFTECmd's timestamp columns in Excel](timelineexplorer\ExcelMFTECmdTimestampsExample.jpg)
+![MFTECmd's timestamp columns in Excel](timelineexplorer\ExcelMFTECmdTimestampsExample.png)
 
 When converting the timestamp manually in Excel to the specified format, it works, but why do all of that work? Timeline Explorer displays each timestamp as a DateTime object and allow the examiner to digest the data quicker.
 
-![MFTECmd's timestamp columns in Timeline Explorer](timelineexplorer\TLEMFTECmdTimestampsExample.jpg)
+![MFTECmd's timestamp columns in Timeline Explorer](timelineexplorer\TLEMFTECmdTimestampsExample.png)
 
 {pagebreak}
 
@@ -130,7 +130,7 @@ Now that we've established the power of plugins for timestamp values, let's furt
 
 By removing the `TLEFileEZTools.dll` prior to ingesting MFTECmd output, we can see that Timeline Explorer won't know to convert the values within the timestamp-specific columns to DateTime objects.
 
-![MFTECmd's timestamps displayed as strings](timelineexplorer\TLEGenericCSVTimestampsExample.jpg)
+![MFTECmd's timestamps displayed as strings](timelineexplorer\TLEGenericCSVTimestampsExample.png)
 
 To reproduce the above example, remove the `.\TimelineExplorer\Plugins\TLEFileEZTools.dll` file prior to opening Timeline Explorer and ingest output from the most current version of MFTECmd.
 
@@ -138,7 +138,7 @@ To reproduce the above example, remove the `.\TimelineExplorer\Plugins\TLEFileEZ
 
 When we leverage the plugin built for EZ Tools output, we can see what value Timeline Explorer provides.
 
-![MFTECmd's timestamps displayed as DateTime objects](timelineexplorer\TLEEzToolsPluginTimestampsExample.jpg)
+![MFTECmd's timestamps displayed as DateTime objects](timelineexplorer\TLEEzToolsPluginTimestampsExample.png)
 
 The above provides a much more user friendly method of filtering on years, months, and days when conducting analysis.
 
