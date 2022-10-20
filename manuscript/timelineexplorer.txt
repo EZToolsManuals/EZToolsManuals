@@ -2,9 +2,9 @@
 
 ## Timeline Explorer Introduction
 
-Timeline Explorer is an application that can be used by forensic examiners (or anyone) to ingest CSV files (and a few other filetypes). 
+Timeline Explorer is an application that can be used by forensic examiners (or anyone) to ingest CSV files (and a few other filetypes). Timeline Explorer can handle large files (over 14GB) and provides a user friendly experience for dealing with data contained within CSV files. Timeline Explorer can have multiple files open at a time (over 300) and contains many familiar keyboard shortcuts to move through analysis more efficiently.
 
-Timeline Explorer uses [Plugins](https://github.com/EricZimmerman/TLEFilePlugins) that will allow Timeline Explorer to ingest multiple filetypes. The benefit of these Plugins allows for the `Line` and `Tag` columns to be populated for the various supported file types.
+Timeline Explorer uses [Plugins](https://github.com/EricZimmerman/TLEFilePlugins) that will allow Timeline Explorer to ingest multiple filetypes. The benefit of these Plugins allows for the `Line` and `Tag` columns to be populated for the various supported file types as well as other enhancements to boolean (True/False) and timestamp values.
 
 ### Supported File Types
 
@@ -17,7 +17,50 @@ Timeline Explorer supports the following filetypes:
 
 ### Ingesting Excel Spreadsheets (.xlsx)
 
-Please note, when you ingest an Excel spreadsheet with multiple sheets, only the first sheet will load within Timeline Explorer. All other sheets will be ignored. 
+Please note, when you ingest an Excel spreadsheet with multiple sheets, only the first sheet will load within Timeline Explorer. All other sheets will be ignored.
+
+{pagebreak}
+
+## Settings
+
+A `TLE_settings.xml` file is located within `.\TimelineExplorer\Settings` which stores user preferences in XML format. These are effectively storing the preferences for the options that can be modified by the user within the Tools menu. An example can be seen below:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/TimelineExplorer.Classes">
+    <CopyColumnHeaders>
+        false
+    </CopyColumnHeaders>
+    <CopyRightClick>
+        true
+    </CopyRightClick>
+    <DateTimeFormat>
+        yyyy-MM-dd HH:mm:ss.fffffff
+    </DateTimeFormat>
+    <DetailsOnTop>
+        false
+    </DetailsOnTop>
+    <FirstPinnedColumns xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    <FontName>
+        Consolas
+    </FontName>
+    <FontSize>
+        12
+    </FontSize>
+    <MultilineTabs>
+        true
+    </MultilineTabs>
+    <Theme>
+        Office 2019 Black
+    </Theme>
+</Settings>
+```
+
+A public copy of this exact `TLE_settings.xml` file is hosted on Andrew Rathbun's GitHub [here](https://github.com/AndrewRathbun/TimelineExplorerSettings).
+
+### DateTimeFormat
+
+It is very important that the `.fffffff` values are added to this whether in the Timeline Explorer GUI or directly into the XML file itself. Without these subseconds enabled, it will be impossible to detect [timestomping](https://www.kroll.com/en/insights/publications/cyber/anti-forensic-tactics/anti-forensics-tactics-timestomping) within MFTECmd output or leverage more precise timestamps that other EZ Tools provide.
 
 ## Layout Files
 
@@ -25,33 +68,74 @@ Please note, when you ingest an Excel spreadsheet with multiple sheets, only the
 
 Layout files are located at `.\ZimmermanTools\net6\TimelineExplorer\Layouts\Default` which provide the default layouts for output that's supported with a Plugin. If you move columns around, hide columns, or anything else, those preferences will be stored in layout files with the `.layout.local` file extension. If you ever want to revert to the default, delete your `.layout.local` files and Timeline Explorer will revert to the `.layout` files within the `.\ZimmermanTools\net6\TimelineExplorer\Layouts\Default` directory.
 
+{pagebreak}
+
 ## Plugins
 
-Plugins are written in C# (as are all of Eric's tools) which aim to provide better support for ingested CSV output. 
-
-## 
-
+Plugins are written in C# (as are all of Eric's tools) which aim to provide better support for ingested CSV output.
 
 ### Expected Headers
 
-Each Plugin looks for 
+Each Plugin looks for headers within CSV output so it can know that a plugin matches with the tool output being ingested.
 
+#### Why does Timeline Explorer need plugins?
 
-All of the output from Eric Zimmerman's Tools have a Plugin 
+It doesn't NEED plugins but plugins will allow for a better experience when dealing with supported tool output.
 
-https://github.com/EricZimmerman/TLEFilePlugins/blob/master/TLEFileEZTools/EZTools.cs
+For instance, [here's](https://github.com/EricZimmerman/TLEFilePlugins/blob/13055b37b5880c131e1cf6ae4d5ff1a57a537467/TLEFileEZTools/EZTools.cs#L368) an excerpt from the EZ Tools plugin where the plugin is looking for certain headers within the CSV in order to ingest the output properly:
+
+```csharp
+            ExpectedHeaders = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            {
+                "entrynumber,sequencenumber,inuse,parententrynumber,parentsequencenumber,parentpath,filename,extension,filesize,referencecount,reparsetarget,isdirectory,hasads,isads,si<fn,useczeros,copied,siflags,nametype,created0x10,created0x30,lastmodified0x10,lastmodified0x30,lastrecordchange0x10,lastrecordchange0x30,lastaccess0x10,lastaccess0x30,updatesequencenumber,logfilesequencenumber,securityid,objectidfiledroid,loggedutilstream,zoneidcontents"
+            };
+```
 
 ### Ingesting CSVs That Don't Have Plugin Support
 
+If there are no headers that match, then Timeline Explorer will default to the `GenericCSV` plugin, which can be found [here](https://github.com/EricZimmerman/TLEFilePlugins/tree/master/TLEFileGenericCsv). Effectively, this plugin will treat every value as a string, regardless of whether it's a True/False value, a timestamp, etc.
 
+### Examples of Benefits of Timeline Explorer Plugins
 
+Here we will cover a few key examples of what value plugins provide to Timeline Explorer and supported output.
 
-If you have your own PowerShell script that merges the multiple CSV outputs from a tool like LECmd, for example, and the script adds an extra column for the path of the source file so within the merged output you know which original CSV each row can be attributed to, that output will no longer be able to leverage the LECmd Plugin. 
+#### Checkboxes
 
+Excel is unable render checkboxes for True/False values when dealing with MFTECmd output.
 
+![ExcelCheckboxExample](ExcelCheckboxExample.jpg)
+
+Timeline Explorer will render the True/False values as a checkbox.
+
+![TLECheckboxExample](TLECheckboxExample.jpg)
+
+#### Timestamp Column Filters, Part 1
+
+Excel is unable to handle the values within MFTECmd output (and other EZ Tools' output) without input from the user.
+
+![ExcelMFTECmdTimestampsExample](ExcelMFTECmdTimestampsExample.jpg)
+
+When converting the timestamp manually in Excel to the specified format, it works, but why do all of that work? Timeline Explorer displays each timestamp as a DateTime object and allow the examiner to digest the data quicker.
+
+![TLEMFTECmdTimestampsExample](TLEMFTECmdTimestampsExample.jpg)
+
+#### Timestamp Column Filters, Part 2
+
+Now that we've established the power of plugins for timestamp values, let's further demonstrate the power of a plugin that's catered towards a specific tool's output compared to the GenericCsv plugin.
+
+By removing the `TLEFileEZTools.dll` prior to ingesting MFTECmd output, we can see that Timeline Explorer won't know to convert the values within the timestamp-specific columns to DateTime objects.
+
+![TLEGenericCSVTimestampsExample.jpg](TLEGenericCSVTimestampsExample.jpg)
+
+To reproduce the above example, remove the `.\TimelineExplorer\Plugins\TLEFileEZTools.dll` file prior to opening Timeline Explorer and ingest output from the most current version of MFTECmd.
+
+When we leverage the plugin built for EZ Tools output, we can see what value Timeline Explorer provides.
+
+![TLEEzToolsPluginTimestampsExample](TLEEzToolsPluginTimestampsExample.jpg)
+
+The above provides a much more user friendly method of filtering on years, months, and days when conducting analysis.
 
 {pagebreak}
-
 
 ## Timeline Explorer References
 
@@ -71,6 +155,7 @@ Blog posts from Eric Zimmerman's blog, Binary Foray:
 #### Community Resources
 
 * <https://aboutdfir.com/toolsandartifacts/windows/timeline-explorer>
+* <https://www.youtube.com/watch?v=Hy8ZIc86tCo>
 
 ### Download Timeline Explorer
 
