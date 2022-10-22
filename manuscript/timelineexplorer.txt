@@ -15,6 +15,8 @@ Timeline Explorer supports the following filetypes:
 * .xlsx
 * .txt
 
+Timeline Explorer only runs on Windows due to the [.NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) currently only being available for Windows and not macOS or Linux.
+
 ### Ingesting Excel Spreadsheets (.xlsx)
 
 Please note, when you ingest an Excel spreadsheet with multiple sheets, only the first sheet will load within Timeline Explorer. All other sheets will be ignored.
