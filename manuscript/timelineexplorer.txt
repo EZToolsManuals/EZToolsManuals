@@ -2,7 +2,7 @@
 
 ## Timeline Explorer Introduction
 
-Timeline Explorer is an application that can be used by forensic examiners (or anyone) to ingest CSV files (and a few other filetypes). Timeline Explorer can handle large files (over 14GB) and provides a user friendly experience for dealing with data contained within CSV files. Timeline Explorer can have multiple files open at a time (over 300) and contains many familiar keyboard shortcuts to move through analysis more efficiently.
+Timeline Explorer is a tool created by Eric Zimmerman that can be used by forensic examiners (or anyone) to ingest CSV files (and a few other filetypes). Timeline Explorer can handle large files (over 14GB) and provides a user friendly experience for dealing with data contained within CSV files. Timeline Explorer can have multiple files open at a time (over 300) and contains many familiar keyboard shortcuts to move through analysis more efficiently.
 
 Timeline Explorer uses [Plugins](https://github.com/EricZimmerman/TLEFilePlugins) that will allow Timeline Explorer to ingest multiple filetypes. The benefit of these Plugins allows for the `Line` and `Tag` columns to be populated for the various supported file types as well as other enhancements to boolean (True/False) and timestamp values.
 
