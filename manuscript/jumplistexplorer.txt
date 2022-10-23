@@ -2,62 +2,35 @@
 
 ## JumpList Explorer Introduction
 
+JumpList Explorer is a tool created by Eric Zimmerman that can be used to visually parse JumpList files. JumpList files are [OLE containers](https://learn.microsoft.com/en-us/cpp/mfc/ole-background?view=msvc-170) like many other filetypes within the Windows operating system. 
 
-{pagebreak}
+Below is a screenshot of JumpList Explorer without any artifacts loaded.
 
-## JumpList Explorer Switches
+![](jumplistexplorer\JumpListExplorerClean.jpg)
 
-In a PowerShell window, running `.\JumpList Explorer.exe` will provide the following options when running JLECmd:
+Below is a screenshot of JumpList Explorer with all JumpLists ingested from `.\DFIRArtifactMuseum\Windows\JumpLists\Win10\RathbunVM artifacts`
 
-{line-numbers:false}
-```powershell
+![](jumplistexplorer\JumpListExplorerArtifactsLoaded.jpg)
 
-```
+## JumpList Explorer Functionality
 
-### Switch Descriptions
+### Exporting LNK Files
 
-#### SWITCH
+JumpList files are simply a collection of LNK files associated with a given application. JumpList Explorer provides functionality for exporting out the LNK files associated with a given application via `File -> Export -> Lnk Files`, as seen below.
 
-{pagebreak}
+![](jumplistexplorer\JumpListExplorerExportLnkFiles.jpg)
 
-## JumpList Explorer Command Examples
+### Exploring Automatic Destinations
 
-### Example JumpList Explorer Commands
+JumpList Explorer can parse AutomaticDestinations files, as seen below.
 
-#### Example description here
+![](jumplistexplorer\JumpListExplorerAutomatic.jpg)
 
-{line-numbers:false}
-```powershell
+### Exploring Custom Destinations
 
-```
+JumpList Explorer can parse CustomDestinations files, as seen below.
 
-{pagebreak}
-
-## JumpList Explorer Output
-
-### Analyzing JumpList Explorer Output - Console
-
-{pagebreak}
-
-### Analyzing JumpList Explorer Output - CSV
-
-{pagebreak}
-
-### Analyzing JumpList Explorer Output - JSON
-
-{pagebreak}
-
-### Analyzing JumpList Explorer Output - HTML
-
-{pagebreak}
-
-## JumpList Explorer Sample Output
-
-{pagebreak}
-
-## JumpList Explorer Key Takeaways
-
-### Important Data Points
+![](jumplistexplorer\JumpListExplorerCustom.jpg)
 
 {pagebreak}
 
@@ -67,24 +40,13 @@ In a PowerShell window, running `.\JumpList Explorer.exe` will provide the follo
 
 * <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
 * <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
 
-### Blog Posts
-
-#### Official Blog Posts
-
-Blog posts from Eric Zimmerman's blog, Binary Foray:
-
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
-
-#### Community Resources
-
-* Links to blog posts go here
+Please note, JumpList Explorer is not an open source tool. 
 
 ### Download JumpList Explorer
 
 JumpList Explorer can be downloaded from <https://ericzimmerman.github.io/#!index.md>
+
+### JumpList Sample Data
+
+Sample JumpList files can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/JumpLists).
