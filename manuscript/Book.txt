@@ -23,6 +23,7 @@ vscmount.txt
 wxtcmd.txt
 sectionGUI.txt
 ezviewer.txt
+jumplistexplorer.txt
 registryexplorer.txt
 shellbagsexplorer.txt
 timelineexplorer.txt
