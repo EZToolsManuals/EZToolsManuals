@@ -40,6 +40,8 @@ JumpList Explorer can parse CustomDestinations files, as seen below.
 
 ![](jumplistexplorer\JumpListExplorerCustom.jpg)
 
+{pagebreak}
+
 ### Search
 
 The search bar can be enabled by clicking on the magnifying glass in the top right corner, as seen below.
