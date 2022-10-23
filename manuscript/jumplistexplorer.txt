@@ -8,9 +8,13 @@ Below is a screenshot of JumpList Explorer without any artifacts loaded.
 
 ![](jumplistexplorer\JumpListExplorerClean.jpg)
 
+{pagebreak}
+
 Below is a screenshot of JumpList Explorer with all JumpLists ingested from `.\DFIRArtifactMuseum\Windows\JumpLists\Win10\RathbunVM artifacts`
 
 ![](jumplistexplorer\JumpListExplorerArtifactsLoaded.jpg)
+
+{pagebreak}
 
 ## JumpList Explorer Functionality
 
@@ -20,11 +24,15 @@ JumpList files are simply a collection of LNK files associated with a given appl
 
 ![](jumplistexplorer\JumpListExplorerExportLnkFiles.jpg)
 
+{pagebreak}
+
 ### Exploring Automatic Destinations
 
 JumpList Explorer can parse AutomaticDestinations files, as seen below.
 
 ![](jumplistexplorer\JumpListExplorerAutomatic.jpg)
+
+{pagebreak}
 
 ### Exploring Custom Destinations
 
