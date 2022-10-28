@@ -167,7 +167,7 @@ Below is the information located in `Help -> Quick help`.
 
 #### Legend
 
-When ingesting Super Timelines, the following Legend can provde to be helpful.
+When ingesting Super Timelines, the following Legend can prove to be helpful.
 
 ![Timeline Explorer's Legend for SuperTimelines](timelineexplorer\TLELegend.jpg)
 
