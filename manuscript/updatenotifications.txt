@@ -1,0 +1,5 @@
+# Enabling Update Notifications on Leanpub
+
+Please, before you go any further in reading this book, enable update notifications for this book (and any others) so you're notified when this book is updated! This can be done in [your Leanpub library](https://leanpub.com/user_dashboard/library). This book is a live document and will constantly be updated as time goes on. You don't want to miss out!
+
+![Update Notifications](LeanpubLibraryEZTools.jpg)
