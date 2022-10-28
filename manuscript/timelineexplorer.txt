@@ -35,6 +35,7 @@ The File menu has a couple of noteworthy features that we'll cover in this secti
 
 When you have multiple CSVs ingested into Timeline Explorer, you can save a session which will open all the same files that are opened at the time of session save. Timeline Explorer will create a `.tle_sess` file which is simply a JSON file that will look similar to the example below:
 
+{line-numbers:false}
 ```json
 {
 	"SessionFiles": {
@@ -72,6 +73,8 @@ One of the most convenient features Timeline Explorer offers is the ability to c
 
 This can be useful for when headers need to be copied out of a file that's open within Timeline Explorer.
 
+{pagebreak}
+
 #### Groups
 
 Below is an example of grouping RECmd output by the `Hive Type` column.
@@ -84,11 +87,15 @@ When pushing `CTRL+K`, the Hive Type groups will collapse which can then be expa
 
 As long as there are Line and Tag columns visibile for a file ingested into Timeline Explorer, examiners can take advantage of the Tag feature. Rows that contain data of interest can be tagged by checking the box in the Tag column. This can be useful for when analysis is complete on a given file to where an examiner is ready to filter on only the rows of interest. This can be done by filtering on the Tag column for checked boxes only. This will allow for all untagged rows to disappear and only rows that were tagged by the examiner will appear.
 
+{pagebreak}
+
 #### Multiline Open Tabs
 
 Below is an example of Timeline Explorer with Multiline Tabs enabled.
 
 ![Timeline Explorer with Multiline Tabs Enabled](timelineexplorer\TLEMultilineTabsOn.jpg)
+
+{pagebreak}
 
 Below is an example of Timeline Explorer with Multiline Tabs disabled.
 
@@ -106,6 +113,8 @@ Below is an example of Timeline Explorer with Multiline Tabs disabled.
 
 As examinations progress, columns get resized and it can be a pain to manually resize the columns back to a reasonable size. `CTRL+R` provides the quickest method to reset all columns to their default width.
 
+{pagebreak}
+
 ### Tabs Menu
 
 The Tabs menu provides examiners with an overview of all files opened within a Timeline Explorer instance.
@@ -116,11 +125,15 @@ In addition to providing an easy way to see a massive amount of tabs open within
 
 ![Searching within Timeline Explorer's Tabs Menu](timelineexplorer\TLETabsMenuSearchBoxExample.jpg)
 
+{pagebreak}
+
 ### View Menu
 
 The View menu provides helpful information when trying to troubleshoot issues with Timeline Explorer.
 
 ![Timeline Explorer's View Menu](timelineexplorer\TLEViewMenu.jpg)
+
+{pagebreak}
 
 #### Messages
 
@@ -128,14 +141,13 @@ Timeline Explorer offers a Messages window that can provide insight as to how lo
 
 ![Timeline Explorer's Messages Window](timelineexplorer\TLEMessagesWindow.jpg)
 
-
-
-
 ### Help Menu
 
 Timeline Explorer provides helpful resources within the Help menu.
 
 ![Timeline Explorer's Help Menu](timelineexplorer\TLEHelpMenu.jpg)
+
+{pagebreak}
 
 ### Quick Help
 
@@ -143,11 +155,15 @@ Below is the information located in `Help -> Quick help`.
 
 ![Timeline Explorer's Quick Help](timelineexplorer\TLEQuickHelp.jpg)
 
+{pagebreak}
+
 #### Legend
 
 When ingesting Super Timelines, the following Legend can provde to be helpful.
 
 ![Timeline Explorer's Legend for SuperTimelines](timelineexplorer\TLELegend.jpg)
+
+{pagebreak}
 
 ## Timeline Explorer Settings
 
