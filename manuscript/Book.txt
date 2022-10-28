@@ -1,3 +1,4 @@
+updatenotifications.txt
 eztools_introduction.txt
 eztools_commonswitches.txt
 eztools_powershellCMD.txt
