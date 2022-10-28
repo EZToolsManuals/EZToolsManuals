@@ -23,6 +23,132 @@ Please note, when you ingest an Excel spreadsheet with multiple sheets, only the
 
 {pagebreak}
 
+## Timeline Explorer Features
+
+### File Menu
+
+The File menu has a couple of noteworthy features that we'll cover in this section
+
+![Timeline Explorer's File Menu](timelineexplorer\TLEFileMenu.jpg)
+
+#### Sessions
+
+When you have multiple CSVs ingested into Timeline Explorer, you can save a session which will open all the same files that are opened at the time of session save. Timeline Explorer will create a `.tle_sess` file which is simply a JSON file that will look similar to the example below:
+
+```json
+{
+	"SessionFiles": {
+		"C:\\temp\\20220913030423_RECmd_Batch_Kroll_Batch_Output.csv": [
+		],
+		"C:\\temp\\20220913030450_RECmd_Batch_Kroll_Batch_Output.csv": [
+		]
+	}
+}
+```
+
+Opening this particular session file will instruct Timeline Explorer to open the files specified.
+
+#### Export
+
+Timeline Explorer can export an opened file as CSV or XLSX. This may be helpful where if you have a CSV file ingested but want to export it as XLSX, or vice-versa.
+
+### Tools Menu
+
+Timeline Explorer offers multiple useful features within the Tools menu.
+
+![Timeline Explorer's Tools Menu](timelineexplorer\TLEToolsMenu.jpg)
+
+#### Find
+
+Timeline Explorer provides an incredibly useful Find window where examiners can search for terms amongst all open files. The below example shows the term `microsoft` and the amount of hits within each open file. Double-clicking on a search result will warp to the file in question and automatically filter on the search term.
+
+![Timeline Explorer's Find Window](timelineexplorer\TLEFindExample.jpg)
+
+#### Right-Click to Copy
+
+One of the most convenient features Timeline Explorer offers is the ability to carry out copy functions with a simple right-click of the mouse. This allow for minimal, if any, interaction with a keyboard when copying data from a file opened in Timeline Explorer. Every click saved matters!
+
+#### Copy Column Headers When Copying
+
+This can be useful for when headers need to be copied out of a file that's open within Timeline Explorer.
+
+#### Groups
+
+Below is an example of grouping RECmd output by the `Hive Type` column.
+
+![Grouping Columns in Timeline Explorer](timelineexplorer\TLEGroupExample.jpg)
+
+When pushing `CTRL+K`, the Hive Type groups will collapse which can then be expanded with `CTRL+M`.
+
+#### Tagging
+
+As long as there are Line and Tag columns visibile for a file ingested into Timeline Explorer, examiners can take advantage of the Tag feature. Rows that contain data of interest can be tagged by checking the box in the Tag column. This can be useful for when analysis is complete on a given file to where an examiner is ready to filter on only the rows of interest. This can be done by filtering on the Tag column for checked boxes only. This will allow for all untagged rows to disappear and only rows that were tagged by the examiner will appear.
+
+#### Multiline Open Tabs
+
+Below is an example of Timeline Explorer with Multiline Tabs enabled.
+
+![Timeline Explorer with Multiline Tabs Enabled](timelineexplorer\TLEMultilineTabsOn.jpg)
+
+Below is an example of Timeline Explorer with Multiline Tabs disabled.
+
+![Timeline Explorer with Multiline Tabs Disabled](timelineexplorer\TLEMultilineTabsOff.jpg)
+
+#### Clear Filters
+
+`CTRL+E` is one of the most useful keyboard shortcuts in Timeline Explorer. Regardless of how many filters are applied by an examiner, this shortcut will clear them all.
+
+#### Applying Value as a Filter
+
+`CTRL+SHIFT+F` is another useful keyboard shortcut available in Timeline Explorer. When a given cell is highlighted in Timeline Explorer, this keyboard shortcut will allow for the value within that cell to be applied as a filter in the column it resides in. The filter type can be changed once the value is populated in the column header filter box.
+
+#### Reset Column Widths
+
+As examinations progress, columns get resized and it can be a pain to manually resize the columns back to a reasonable size. `CTRL+R` provides the quickest method to reset all columns to their default width.
+
+### Tabs Menu
+
+The Tabs menu provides examiners with an overview of all files opened within a Timeline Explorer instance.
+
+![Timeline Explorer's Tabs Menu](timelineexplorer\TLETabsMenu.jpg)
+
+In addition to providing an easy way to see a massive amount of tabs open within Timeline Explorer, this box also serves as a search box so you can filter on a specific open file that you want to analyze.
+
+![Searching within Timeline Explorer's Tabs Menu](timelineexplorer\TLETabsMenuSearchBoxExample.jpg)
+
+### View Menu
+
+The View menu provides helpful information when trying to troubleshoot issues with Timeline Explorer.
+
+![Timeline Explorer's View Menu](timelineexplorer\TLEViewMenu.jpg)
+
+#### Messages
+
+Timeline Explorer offers a Messages window that can provide insight as to how long a file takes to ingest into Timeline Explorer, which plugin was used to process a file during ingestion, and error messages that may come up while ingesting unsupported output. As always, toggling Debug Messages will provide much more verbose messaging in this window but it will also likely drastically slow the ingestion of a file.
+
+![Timeline Explorer's Messages Window](timelineexplorer\TLEMessagesWindow.jpg)
+
+
+
+
+### Help Menu
+
+Timeline Explorer provides helpful resources within the Help menu.
+
+![Timeline Explorer's Help Menu](timelineexplorer\TLEHelpMenu.jpg)
+
+### Quick Help
+
+Below is the information located in `Help -> Quick help`.
+
+![Timeline Explorer's Quick Help](timelineexplorer\TLEQuickHelp.jpg)
+
+#### Legend
+
+When ingesting Super Timelines, the following Legend can provde to be helpful.
+
+![Timeline Explorer's Legend for SuperTimelines](timelineexplorer\TLELegend.jpg)
+
 ## Timeline Explorer Settings
 
 A `TLE_settings.xml` file is located within `.\TimelineExplorer\Settings` which stores user preferences in XML format. These are effectively storing the preferences for the options that can be modified by the user within the Tools menu. An example can be seen below:
