@@ -95,11 +95,15 @@ Below is an example of Timeline Explorer with Multiline Tabs enabled.
 
 ![Timeline Explorer with Multiline Tabs Enabled](timelineexplorer\TLEMultilineTabsOn.jpg)
 
+<!-- Lots of whitespace here. Room for more content here, within reason -->
+
 {pagebreak}
 
 Below is an example of Timeline Explorer with Multiline Tabs disabled.
 
 ![Timeline Explorer with Multiline Tabs Disabled](timelineexplorer\TLEMultilineTabsOff.jpg)
+
+<!-- Lots of whitespace here. Room for more content here, within reason -->
 
 #### Clear Filters
 
@@ -133,6 +137,8 @@ The View menu provides helpful information when trying to troubleshoot issues wi
 
 ![Timeline Explorer's View Menu](timelineexplorer\TLEViewMenu.jpg)
 
+<!-- Lots of whitespace here. Room for more content here, within reason -->
+
 {pagebreak}
 
 #### Messages
@@ -140,6 +146,8 @@ The View menu provides helpful information when trying to troubleshoot issues wi
 Timeline Explorer offers a Messages window that can provide insight as to how long a file takes to ingest into Timeline Explorer, which plugin was used to process a file during ingestion, and error messages that may come up while ingesting unsupported output. As always, toggling Debug Messages will provide much more verbose messaging in this window but it will also likely drastically slow the ingestion of a file.
 
 ![Timeline Explorer's Messages Window](timelineexplorer\TLEMessagesWindow.jpg)
+
+{pagebreak}
 
 ### Help Menu
 
@@ -162,6 +170,8 @@ Below is the information located in `Help -> Quick help`.
 When ingesting Super Timelines, the following Legend can provde to be helpful.
 
 ![Timeline Explorer's Legend for SuperTimelines](timelineexplorer\TLELegend.jpg)
+
+<!-- Lots of whitespace here. Room for more content here, within reason -->
 
 {pagebreak}
 
@@ -211,6 +221,8 @@ It is very important that the `.fffffff` values are added to this whether in the
 ### What Are Layout Files?
 
 Layout files are located at `.\ZimmermanTools\net6\TimelineExplorer\Layouts\Default` which provide the default layouts for output that's supported with a Plugin. If you move columns around, hide columns, or anything else, those preferences will be stored in layout files with the `.layout.local` file extension. If you ever want to revert to the default, delete your `.layout.local` files and Timeline Explorer will revert to the `.layout` files within the `.\ZimmermanTools\net6\TimelineExplorer\Layouts\Default` directory.
+
+<!-- Lots of whitespace here. Room for more content here, within reason -->
 
 {pagebreak}
 
@@ -286,6 +298,8 @@ When we leverage the plugin built for EZ Tools output, we can see what value Tim
 
 The above provides a much more user friendly method of filtering on years, months, and days when conducting analysis.
 
+<!-- Lots of whitespace here. Room for more content here, within reason -->
+
 {pagebreak}
 
 ## Timeline Explorer References
@@ -303,10 +317,14 @@ Blog posts from Eric Zimmerman's blog, Binary Foray:
 * <https://binaryforay.blogspot.com/2018/05/a-fluery-of-updates.html>
 * <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
 
+<!-- TODO: need to resolve these URLs -->
+
 #### Community Resources
 
 * <https://aboutdfir.com/toolsandartifacts/windows/timeline-explorer>
 * <https://www.youtube.com/watch?v=Hy8ZIc86tCo>
+
+<!-- TODO: need to resolve these URLs -->
 
 ### Download Timeline Explorer
 
