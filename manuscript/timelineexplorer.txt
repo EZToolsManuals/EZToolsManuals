@@ -47,11 +47,11 @@ When you have multiple CSVs ingested into Timeline Explorer, you can save a sess
 }
 ```
 
-Opening this particular session file will instruct Timeline Explorer to open the files specified.
+Opening this particular session file will instruct Timeline Explorer to open the files specified. Additionally, any tagged rows will persist when saving and reloading sessions.
 
 #### Export
 
-Timeline Explorer can export an opened file as CSV or XLSX. This may be helpful where if you have a CSV file ingested but want to export it as XLSX, or vice-versa.
+Timeline Explorer can export an opened file as CSV or XLSX. This may be helpful where if you have a CSV file ingested but want to export it as XLSX, or vice-versa. Please note, the Export function is WYSIWYG, so whatever data is visible due to active layouts, filters, sorting, etc will be what is exported. 
 
 ### Tools Menu
 
