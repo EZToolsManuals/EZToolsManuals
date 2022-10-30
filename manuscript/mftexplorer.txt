@@ -2,88 +2,29 @@
 
 ## MFT Explorer Introduction
 
+MFT Explorer is a tool created by Eric Zimmerman that can be used by forensic examiners to ingest $MFT files and visually explore the contents. 
+
+![MFT Explorer with the tdungan $MFT ingested](mftexplorer\mftexplorertdunganMFTloaded.jpg)
 
 {pagebreak}
 
-## MFT Explorer Switches
+## MFT Explorer Features
 
-In a PowerShell window, running `.\MFT Explorer.exe` will provide the following options when running JLECmd:
+### Find Panel
 
-{line-numbers:false}
-```powershell
+Enabling the Find panel is done by simply right-clicking on a column header and clicking `Show Find Panel`, as seen below.
 
-```
-
-### Switch Descriptions
-
-#### SWITCH
+![Enabling the Find panel in MFT Explorer](mftexplorer\mftexplorershowfindpanelbefore.jpg)
 
 {pagebreak}
 
-## MFT Explorer Command Examples
+Once enabled, the Find panel will be visible in the top right corner, as seen below.
 
-### Example MFT Explorer Commands
-
-#### Example description here
-
-{line-numbers:false}
-```powershell
-
-```
-
-{pagebreak}
-
-## MFT Explorer Output
-
-### Analyzing MFT Explorer Output - Console
-
-{pagebreak}
-
-### Analyzing MFT Explorer Output - CSV
-
-{pagebreak}
-
-### Analyzing MFT Explorer Output - JSON
-
-{pagebreak}
-
-### Analyzing MFT Explorer Output - HTML
-
-{pagebreak}
-
-## MFT Explorer Sample Output
-
-{pagebreak}
-
-## MFT Explorer Key Takeaways
-
-### Important Data Points
+![Find panel enabled in MFT Explorer](mftexplorer\mftexplorershowfindpanelafter.jpg)
 
 {pagebreak}
 
 ## MFT Explorer References
-
-### Associated GitHub Repositories
-
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files 
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
-
-### Blog Posts
-
-#### Official Blog Posts
-
-Blog posts from Eric Zimmerman's blog, Binary Foray:
-
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
-
-#### Community Resources
-
-* Links to blog posts go here
 
 ### Download MFT Explorer
 
