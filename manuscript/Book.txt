@@ -25,7 +25,9 @@ wxtcmd.txt
 sectionGUI.txt
 ezviewer.txt
 jumplistexplorer.txt
+mftexplorer.txt
 registryexplorer.txt
+sdbexplorer.txt
 shellbagsexplorer.txt
 timelineexplorer.txt
 errata.txt
