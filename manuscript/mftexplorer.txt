@@ -22,8 +22,6 @@ Once enabled, the Find panel will be visible in the top right corner, as seen be
 
 ![Find panel enabled in MFT Explorer](mftexplorer\mftexplorershowfindpanelafter.jpg)
 
-{pagebreak}
-
 ## MFT Explorer References
 
 ### Download MFT Explorer
