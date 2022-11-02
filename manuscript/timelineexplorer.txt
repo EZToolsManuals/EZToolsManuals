@@ -77,11 +77,33 @@ This can be useful for when headers need to be copied out of a file that's open 
 
 #### Groups
 
+Timeline Explorer allows examiners to grab a column header and drag above to the box which contains the text `Drag a column header here to group by that column`, as seen below.
+
+![An Example of the Grouping by Column Header Workflow in Timeline Explorer](timelineexplorer\TLEColumnHeaderGroupingExample.jpg)
+
+Grabbing the `Time Created` column header and dragging it into the blank area above the column headers will create a grouping that can be very helpful during everyday analysis.
+
+##### RECmd
+
 Below is an example of grouping RECmd output by the `Hive Type` column.
 
-![Grouping Columns in Timeline Explorer](timelineexplorer\TLEGroupExample.jpg)
+![Grouping Columns in Timeline Explorer](timelineexplorer\TLEGroupingRECmdExample.jpg)
 
 When pushing `CTRL+K`, the Hive Type groups will collapse which can then be expanded with `CTRL+M`.
+
+{pagebreak}
+
+##### EvtxECmd
+
+Below is an example of grouping EvtxECmd output by the `Map Description` column.
+
+![Timeline Explorer with Multiline Tabs Enabled](timelineexplorer\TLEGroupingEvtxECmdExample.jpg)
+
+Below is an example of stacking column headers to form a complex grouping.
+
+![Timeline Explorer with Multiline Tabs Enabled](timelineexplorer\TLEGroupingEvtxECmdExample2.jpg)
+
+With this particular grouping, examiners can see how many overall events resides in the Security.evtx file as well as how many events exist within each Provider that logs to that particular .evtx file.
 
 #### Tagging
 
@@ -175,6 +197,35 @@ When ingesting Super Timelines, the following Legend can prove to be helpful.
 
 {pagebreak}
 
+### Conditional Formatting
+
+#### Custom Conditions
+
+![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingHighlightCellRulesCustomConditionBlank.jpg)
+
+
+
+#### Other TODO
+
+Need to figure out a better title for this subheader
+
+Timeline Explorer allows for examiners to set conditional formatting for certain criteria within rows, columns, and/or cells.
+
+![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRules.jpg)
+
+
+
+
+![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRulesBlank.jpg)
+
+
+
+![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRulesNewFormattingRule.jpg)
+
+
+
+
+
 ## Timeline Explorer Settings
 
 A `TLE_settings.xml` file is located within `.\TimelineExplorer\Settings` which stores user preferences in XML format. These are effectively storing the preferences for the options that can be modified by the user within the Tools menu. An example can be seen below:
@@ -182,31 +233,31 @@ A `TLE_settings.xml` file is located within `.\TimelineExplorer\Settings` which 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Settings xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/TimelineExplorer.Classes">
-    <CopyColumnHeaders>
-        false
-    </CopyColumnHeaders>
-    <CopyRightClick>
-        true
-    </CopyRightClick>
-    <DateTimeFormat>
-        yyyy-MM-dd HH:mm:ss.fffffff
-    </DateTimeFormat>
-    <DetailsOnTop>
-        false
-    </DetailsOnTop>
-    <FirstPinnedColumns xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-    <FontName>
-        Consolas
-    </FontName>
-    <FontSize>
-        12
-    </FontSize>
-    <MultilineTabs>
-        true
-    </MultilineTabs>
-    <Theme>
-        Office 2019 Black
-    </Theme>
+	<CopyColumnHeaders>
+		false
+	</CopyColumnHeaders>
+	<CopyRightClick>
+		true
+	</CopyRightClick>
+	<DateTimeFormat>
+		yyyy-MM-dd HH:mm:ss.fffffff
+	</DateTimeFormat>
+	<DetailsOnTop>
+		false
+	</DetailsOnTop>
+	<FirstPinnedColumns xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	<FontName>
+		Consolas
+	</FontName>
+	<FontSize>
+		12
+	</FontSize>
+	<MultilineTabs>
+		true
+	</MultilineTabs>
+	<Theme>
+		Office 2019 Black
+	</Theme>
 </Settings>
 ```
 
@@ -242,10 +293,10 @@ For instance, [here](https://github.com/EricZimmerman/TLEFilePlugins/blob/13055b
 
 {line-numbers:false}
 ```csharp
-            ExpectedHeaders = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-            {
-                "entrynumber,sequencenumber,inuse,parententrynumber,parentsequencenumber,parentpath,filename,extension,filesize,referencecount,reparsetarget,isdirectory,hasads,isads,si<fn,useczeros,copied,siflags,nametype,created0x10,created0x30,lastmodified0x10,lastmodified0x30,lastrecordchange0x10,lastrecordchange0x30,lastaccess0x10,lastaccess0x30,updatesequencenumber,logfilesequencenumber,securityid,objectidfiledroid,loggedutilstream,zoneidcontents"
-            };
+		ExpectedHeaders = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+		{
+			"entrynumber,sequencenumber,inuse,parententrynumber,parentsequencenumber,parentpath,filename,extension,filesize,referencecount,reparsetarget,isdirectory,hasads,isads,si<fn,useczeros,copied,siflags,nametype,created0x10,created0x30,lastmodified0x10,lastmodified0x30,lastrecordchange0x10,lastrecordchange0x30,lastaccess0x10,lastaccess0x30,updatesequencenumber,logfilesequencenumber,securityid,objectidfiledroid,loggedutilstream,zoneidcontents"
+		};
 ```
 
 {pagebreak}
