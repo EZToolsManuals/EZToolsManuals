@@ -2,10 +2,31 @@
 
 ## SDB Explorer Introduction
 
-SDB Explorer is a tool created by Eric Zimmerman that can be used by forensic examiners to examine shim database files (.sdb). 
+SDB Explorer is a tool created by Eric Zimmerman that can be used by forensic examiners to examine shim database files (.sdb). Please check out Microsoft's official documentation on Application Compatability Databases [here](https://learn.microsoft.com/en-us/windows/win32/devnotes/application-compatibility-database?redirectedfrom=MSDN).
 
+![SDB Explorer](sdbexplorer\sdbexplorer.jpg)
+
+{pagebreak}
+
+Below is a screenshot of SDB Explorer with a shim database file loaded.
+
+![SDB Explorer with a loaded Shim Database](sdbexplorer\sdbexplorerdatabaseexample.jpg)
+
+{pagebreak}
+
+Using the Info -> Metrics menu, examiners can look at a visual representation of the data present within a loaded shim datbase.
+
+![SDB Explorer's Metrics Feature](sdbexplorer\sdbexplorermetrics.jpg)
 
 ## SDB Explorer References
+
+### Blog Posts
+
+#### Official Blog Posts
+
+Blog posts from Eric Zimmerman's blog, Binary Foray:
+
+* <https://binaryforay.blogspot.com/2018/02/introducing-sdb-explorer.html>
 
 ### Download SDB Explorer
 
