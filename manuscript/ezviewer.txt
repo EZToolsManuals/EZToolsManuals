@@ -14,11 +14,11 @@ For those in Law Enforcement, this tool is useful for bringing on site to a sear
 
 For those in the Private Sector, this tool is useful for bringing on site to a client engagement and not having to worry about having a certain application to open a certain file type.
 
-## Screenshot
+## EZViewer Screenshot
 
 ![](ezviewer\ezviewer.jpg)
 
-## Key Takeaways
+## EZViewer Key Takeaways
 
 EZViewer is a great tool to have on your flash drive when you're on site at a search warrant or at a client's site. There is no need to deal with Microsoft Office. Just use EZViewer in all of its fully portable glory so you can view those files without any of the first-party dependencies!
 
@@ -32,7 +32,7 @@ Supported file formats like Word (.docx) will appear as such:
 
 ![](ezviewer\ezviewerWordDocExample.jpg)
 
-## References
+## EZViewer References
 
 ### Download EZViewer
 
