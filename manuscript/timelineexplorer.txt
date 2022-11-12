@@ -83,6 +83,8 @@ Timeline Explorer allows examiners to grab a column header and drag above to the
 
 Grabbing the `Time Created` column header and dragging it into the blank area above the column headers will create a grouping that can be very helpful during everyday analysis.
 
+{pagebreak}
+
 ##### RECmd
 
 Below is an example of grouping RECmd output by the `Hive Type` column.
@@ -98,6 +100,8 @@ When pushing `CTRL+K`, the Hive Type groups will collapse which can then be expa
 Below is an example of grouping EvtxECmd output by the `Map Description` column.
 
 ![Timeline Explorer with Multiline Tabs Enabled](timelineexplorer\TLEGroupingEvtxECmdExample.jpg)
+
+{pagebreak}
 
 Below is an example of stacking column headers to form a complex grouping.
 
@@ -203,21 +207,29 @@ When ingesting Super Timelines, the following Legend can prove to be helpful.
 
 ![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingHighlightCellRulesCustomConditionBlank.jpg)
 
+{pagebreak}
+
 #### Manage Rules
 
 Timeline Explorer allows for examiners to set conditional formatting for certain criteria within rows, columns, and/or cells. This can be done using the Manage Rules menu.
 
 ![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRules.jpg)
 
+{pagebreak}
+
 Clicking on Manage Rules will bring up this Rules Manager window.
 
 ![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRulesBlank.jpg)
+
+{pagebreak}
 
 ##### Example Rule
 
 Clicking New Rule in the top left will bring up the following window.
 
 ![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRulesNewFormattingRule.jpg)
+
+{pagebreak}
 
 Below is an example of what highlighting every row containing the string `successful` in the Map Description column looks like.
 
@@ -226,6 +238,8 @@ Below is an example of what highlighting every row containing the string `succes
 Diving deeper into the Rules Manager will show the settings for applying this conditional formatting to every row containing the desired string.
 
 ![Example Rule Part 1](timelineexplorer\TLEConditionalFormattingExampleSuccessfulRed2.jpg)
+
+{pagebreak}
 
 Using the bottom formula option allows the examiner to craft a filter similar to the filter editor used in the main Timeline Explorer window.
 
