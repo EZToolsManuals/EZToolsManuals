@@ -1,6 +1,6 @@
 # Shellbags Explorer
 
-![image1](shellbagsexplorer\image1.png)
+![](shellbagsexplorer\image1.png)
 
 Revision history
 2014-11-21 Rev. 1 – Initial release
@@ -37,7 +37,7 @@ SBE currently looks at the bold keys. The "Bags" keys are not looked at as they 
 
 The regedit utility included with Windows can be used to view ShellBag data. After starting regedit, navigate to the HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU key (shown below).
 
-![image2](shellbagsexplorer\image2.png)
+![](shellbagsexplorer\image2.png)
 
 On the left, registry keys are displayed. After selecting a key, the values for that key are displayed in the right pane.
 
@@ -47,13 +47,13 @@ The values on the right correspond to ShellBags that are children of the selecte
 
 Each ShellBag contains binary data that defines what the ShellBag represents. Double clicking on a value will bring up an editor showing the binary data as seen below.
 
-![image3](shellbagsexplorer\image3.png)
+![](shellbagsexplorer\image3.png)
 
 In the example above, the "0" value has been opened. The contents of the ShellBag are shown in hexadecimal. The example above contains a GUID which corresponds to the "My Computer" folder. There are hundreds of GUIDs that map to directories, control panel items and categories, etc. SBE contains hundreds of GUID mappings to human readable formats.
 
 Some ShellBags will contain strings (both ANSI and Unicode) representing things such as directory names or UNC paths. In the image below, a directory named "Timelord" was accessed. The ‘short name' is highlighted in green and the ‘long name' is highlighted in blue.
 
-![image4](shellbagsexplorer\image4.png)
+![](shellbagsexplorer\image4.png)
 
 While not obvious, there are also several dates and times embedded in the binary data as well as MFT entry and sequence numbers.  It is also possible to determine the file system this directory existed on based on the contents of the ShellBag. In the example above, the directory existed on an NTFS file system with MFT Entry Number 332634 and MFT Sequence Number 20 and was last accessed on 11/19/2014 at 8:47:52 PM +00:00!
 
@@ -63,7 +63,7 @@ The MRUListEx value is the Most Recently Used list and reflects the order the Sh
 
 Double clicking the MRUListEx value brings up an editor showing the binary data contained in the value.
 
-![image5](shellbagsexplorer\image5.png)
+![](shellbagsexplorer\image5.png)
 
 Each entry in the MRU list is 4 bytes long (little endian). In the image above, the first 4 MRU positions have been highlighted with different colors.
 
@@ -79,15 +79,15 @@ In the screen shot on page 6, the BagMRU key has been expanded and circled in re
 
 Subkeys with the same name as the value will contain child objects for that value. Recall each value represents a ShellBag. A ShellBag can be the Desktop item, a Control Panel Category, a Control Panel item, a drive letter, or a directory (there are other possibilities as well).
 
-![image6](shellbagsexplorer\image6.png)
+![](shellbagsexplorer\image6.png)
 
 In the image above, the ShellBag with a value of 4 is the "parent" ShellBag for any ShellBags found in the key with the same name. Selecting the key with name 4 results in the following.
 
-![image7](shellbagsexplorer\image7.png)
+![](shellbagsexplorer\image7.png)
 
 As you can see, the pattern continues as we drill down into child keys. If we continue to drill down we will eventually run out of child keys as seen in the next screen shot.
 
-![image8](shellbagsexplorer\image8.png)
+![](shellbagsexplorer\image8.png)
 
 We know we are at the "bottom" because there are no more child keys and the MRUListEx value is FF FF FF FF.
 
@@ -95,7 +95,7 @@ We know we are at the "bottom" because there are no more child keys and the MRUL
 
 Whenever a value is changed in a registry key, the key's LastWrite timestamp is updated. Regedit does not display these timestamps, but other forensic programs such as X-Ways Forensics or TZWorks yaru can. When using yaru to look at the same key as shown above, we can see the key was last written on 11/17/2014 at 18:14:40 UTC.
 
-![image9](shellbagsexplorer\image9.png)
+![](shellbagsexplorer\image9.png)
 
 #### Using LastWrite values to determine First Explored and Last Explored dates and times
 
@@ -103,13 +103,13 @@ Keeping in mind how LastWrite timestamps work, we can now determine when a given
 
 To determine the first time a ShellBag was explored, we can look for the "bottom" most keys and use their LastWrite timestamps for the ShellBag in the parent key. Recall in the example above, the key is "0" and the last write value is 11/17/2014 at 18:14:40.553 UTC. If we go "up" a level and select the parent key of the bottommost key, we see a ShellBag value named "0."
 
-![image10](shellbagsexplorer\image10.png)
+![](shellbagsexplorer\image10.png)
 
 Note: This only works for the bottommost key and its corresponding value in the key's parent. If a child directory is browsed underneath the highlighted key above, it is not possible to determine the first explored date for the intermediate folder anymore (but we would now know when the newly browsed folder was viewed, assuming it was the bottommost directory navigated to).
 
 To determine the last time a ShellBag was explored, we use the LastWrite timestamp in conjunction with the MRUListEx value. Recall the first entry in MRUListEx is the most recently viewed ShellBag in a given key. By looking at the LastWrite timestamp for a key, we know when the first entry in the MRUListEx was last explored.
 
-![image11](shellbagsexplorer\image11.png)
+![](shellbagsexplorer\image11.png)
 
 Since MRUListEx has its first entry set to a value of "4", the ShellBag with the same value was last explored when the "0" key was last written to. Since the MRUListEx value is updated as ShellBags are accessed, the LastWrite timestamp is also updated.
 
@@ -158,7 +158,7 @@ This is the GUI version of SBE. It provides deep insight into shellbag data in a
 
 To start SBE, open the SBE folder and double click on ShellBagsExplorer.exe.
 
-![image12](shellbagsexplorer\image12.png)
+![](shellbagsexplorer\image12.png)
 
 Each of the sections above will be explored further in subsequent sections below.
 
@@ -202,7 +202,7 @@ The status bar on the bottom contains various details about the loaded hive, whe
 
 ### File
 
-![image13](shellbagsexplorer\image13.png)
+![](shellbagsexplorer\image13.png)
 
 The File menu allows for loading either the live registry information or an offline hive. When loading an offline hive, the user will be prompted for the location of the hive file to load.
 
@@ -220,17 +220,17 @@ NOTE: You can customize the columns shown in the grid view by clicking the field
 
 ### Tools
 
-![image14](shellbagsexplorer\image14.png)
+![](shellbagsexplorer\image14.png)
 
 The tools menu contains options to expand and contract tree nodes, show the messages window, or set the time zone to be used when displaying dates and times. The messages window is displayed automatically as messages are generated.
 
-![image15](shellbagsexplorer\image15.png)
+![](shellbagsexplorer\image15.png)
 
 A time zone must be selected before selecting a source for ShellBags (the live registry or an offline hive). By default, UTC is used for all dates and times.
 
 ### Help
 
-![image16](shellbagsexplorer\image16.png)
+![](shellbagsexplorer\image16.png)
 
 Quick help provides basic information on how to use SBE. About contains version information and contact information for the developer.
 
@@ -238,17 +238,17 @@ Quick help provides basic information on how to use SBE. About contains version 
 
 After selecting either the live registry or an offline hive, SBE will display a summary of the types of ShellBags that were found as seen below.
 
-![image17](shellbagsexplorer\image17.png)
+![](shellbagsexplorer\image17.png)
 
 In the image above, notice 331 ShellBags were found in the registry and 331 ShellBags were processed. Should there be a situation where the number of ShellBags found is not equal to the number of ShellBags displayed by SBE, the summary screen will be different to reflect this fact.
 
-![image18](shellbagsexplorer\image18.png)
+![](shellbagsexplorer\image18.png)
 
 ### Messages window
 
 If there are any errors when processing ShellBags, the Messages window will be displayed.
 
-![image19](shellbagsexplorer\image19.png)
+![](shellbagsexplorer\image19.png)
 
 Selecting a message will show the details for that message in the lower pane. All messages can be exported or cleared using the buttons in the lower right corner.
 
@@ -256,23 +256,23 @@ The Messages window can contain both errors and informational messages. Informat
 
 NOTE: You can quickly jump to the ShellBag related to the message by double clicking anywhere on a row. This will select the ShellBag in the tree so it can be reviewed as needed.
 
-![image20](shellbagsexplorer\image20.png)
+![](shellbagsexplorer\image20.png)
 
 ### Tree view
 
 The tree view will also be updated. As seen earlier, the starting point for ShellBags is the Desktop folder.
 
-![image21](shellbagsexplorer\image21.png)
+![](shellbagsexplorer\image21.png)
 
 Expanding a node displays its children. In the image below, several child objects have been expanded.
 
-![image22](shellbagsexplorer\image22.png)
+![](shellbagsexplorer\image22.png)
 
 Each different kind of ShellBag is represented by a different icon. In the example above we see icons for directories, GUIDs, control panel categories, drive letters, and user application data. This helps you quickly visualize what kind of ShellBags are available.
 
 As mentioned above, left clicking selects a given node in the tree and displays child bags in the grid view. Right clicking a node will select that node and expand all child nodes and display all bags under the selected node in the grid view.
 
-![image23](shellbagsexplorer\image23.png)
+![](shellbagsexplorer\image23.png)
 
 In the example above, D: has been recursively explored. Notice the icon now shows a blue down arrow indicating the node is being explored recursively. Exploring recursively lets you drill down into specific areas of interest and, as we will soon see, easily search for things across a given set of ShellBags.
 
@@ -282,7 +282,7 @@ Should any errors occur when parsing ShellBags, a placeholder for the ShellBag w
 
 By adding a placeholder for ShellBags with parse errors, any child ShellBags of the unparsed ShellBag will be still be visible in the proper context.
 
-![image24](shellbagsexplorer\image24.png)
+![](shellbagsexplorer\image24.png)
 
 ### Grid view
 
@@ -294,7 +294,7 @@ The grid view serves as a way to view Shellbags in a consistent manner. Not all 
 
 Clicking in the upper left corner of the grid view allows for customizing the fields displayed in the grid.
 
-![image25](shellbagsexplorer\image25.png)
+![](shellbagsexplorer\image25.png)
 
 #### Column definitions
 
@@ -345,27 +345,27 @@ To sort, simply click a column header. Click it again to sort in reverse order. 
 
 At the top of each column is a filter cell. In the image below it is highlighted in yellow.
 
-![image26](shellbagsexplorer\image26.png)
+![](shellbagsexplorer\image26.png)
 
 Clicking on this cell and typing will immediately filter that column to only items containing the entered. To the left of the cell is a button with options on how the filter should work. The default is "contains."
 
-![image27](shellbagsexplorer\image27.png)
+![](shellbagsexplorer\image27.png)
 
 There are also dropdowns which contain all unique entries in the column plus options to add custom filters to the list. To the right of each cell is a button that can be used to clear that column's filter.
 
 To the far right of the filter row is a button that can be used to clear all filters.
 
-![image28](shellbagsexplorer\image28.png)
+![](shellbagsexplorer\image28.png)
 
 #### Grouping
 
 At the top of the grid is an area where one or more column headers can be dragged. As columns are dragged and dropped, each unique value in the selected column will be used to create a group.
 
-![image29](shellbagsexplorer\image29.png)
+![](shellbagsexplorer\image29.png)
 
 In the example above, the "Type" column was grouped. Clicking on a plus sign expands that group.
 
-![image30](shellbagsexplorer\image30.png)
+![](shellbagsexplorer\image30.png)
 
 Clicking the minus sign collapses it.
 
@@ -373,7 +373,7 @@ After grouping, columns can be sorted as we saw earlier, by clicking on the colu
 
 To group more than one column, drag them to the group area.
 
-![image31](shellbagsexplorer\image31.png)
+![](shellbagsexplorer\image31.png)
 
 In the example above, we first grouped by type, then by MRU. This can be useful to see a list of all the most recently accessed directories (i.e. all the ShellBags of type directory where MRU == 0) .
 
@@ -385,15 +385,15 @@ Left clicking a bag will select that bag and display that bag's details in the d
 
 In the image below, we are recursively viewing the bags at and below D:.
 
-![image32](shellbagsexplorer\image32.png)
+![](shellbagsexplorer\image32.png)
 
 Notice the D: drive is highlighted in the tree view and the details view reflects this. If the bag with value "GOON2" is left clicked, then right clicked, notice the tree view is updated and the "GOON2" bag is highlighted and the grid view is updated to show the child bags of the GOON2 bag.
 
-![image33](shellbagsexplorer\image33.png)
+![](shellbagsexplorer\image33.png)
 
 The details pane is also updated with the newly selected bag in the tree view. Clicking the "Queue" bag in grid view will update the details view to the "Queue" bag.
 
-![image34](shellbagsexplorer\image34.png)
+![](shellbagsexplorer\image34.png)
 
 ### Details view
 
@@ -408,7 +408,7 @@ The type specific data contains things as timestamps, file attributes, strings, 
 
 Extension blocks can be identified by a unique signature, BE EF 00 XX, where XX varies on the type of extension block. In the image below, the beginning of a BEEF0004 block is highlighted. Since the data is stored in little endian format it has to be read "backwards."
 
-![image35](shellbagsexplorer\image35.png)
+![](shellbagsexplorer\image35.png)
 
 Extension blocks in general have the following format:
 
@@ -430,7 +430,7 @@ All available information about a bag is visible in details view, even when a ba
 
 An example of the full details of a ShellBag representing a directory is shown below.
 
-![image36](shellbagsexplorer\image36.png)
+![](shellbagsexplorer\image36.png)
 
 Here we can see the short name, MAC dates and times, full bag path, the absolute path, and the first explored date.
 
@@ -440,11 +440,11 @@ Additionally we can see that the file system is NTFS. This can be determined sin
 
 Some ShellBags contain embedded property sheets. These are another data structure commonly seen in various Windows artifacts and essentially are key/value pairs. In the example below, the bags related to the Control Panel have been expanded.
 
-![image37](shellbagsexplorer\image37.png)
+![](shellbagsexplorer\image37.png)
 
 After selecting the "Set Program Associations" bag, its details view contains:
 
-![image38](shellbagsexplorer\image38.png)
+![](shellbagsexplorer\image38.png)
 
 Here we can see the various property sheets and the data contained therein. Notice that now it is possible to tell not only WHEN program associations were changed, but WHAT program was used to take over those associations.
 
@@ -454,7 +454,7 @@ Finally, the bottom of the details view contains the raw hexadecimal data.
 
 The hex view contains the raw hexadecimal data of the selected Shellbag. It is displayed in traditional hex editor style in read-only mode.
 
-![image39](shellbagsexplorer\image39.png)
+![](shellbagsexplorer\image39.png)
 
 To the right of the hex data is a rough interpretation of the data. A few strings can be seen in both ASCII and Unicode format. As the position of the cursor is changed by clicking on hex values, the data interpreter updates in real time.
 
@@ -462,13 +462,13 @@ To the right of the hex data is a rough interpretation of the data. A few string
 
 The data interpreter assists in decoding the contents of ShellBags when manual verification is desired. As the cursor is moved to different offsets, the interpreter updates in real time and shows different interpretations of the data FROM THE POSITION OF THE CURSOR IRRESPECTIVE OF ANY SELECTED BYTES.
 
-![image40](shellbagsexplorer\image40.png)
+![](shellbagsexplorer\image40.png)
 
 In this example the cursor is at offset 0x8 and we see the DOS date is showing 4/24/2014 1:09:08 PM +00:00 which corresponds to the Modified timestamp.
 
 In the next example we can see the data interpreter has found a GUID for the Control Panel at offset 0x4.
 
-![image41](shellbagsexplorer\image41.png)
+![](shellbagsexplorer\image41.png)
 
 By using the data interpreter to explore ShellBags you can begin to see common patterns including timestamps, extension blocks, property sheets, and so on.
 
@@ -482,13 +482,13 @@ These provide visual cues that a valid timestamp or GUID may have been found.
 
 Finally, the data from the data interpreter and its corresponding ShellBag details can be copied to the clipboard by double clicking the designated area at the bottom of the data interpreter. An example is shown below of what this data may look like once copied into a text editor.
 
-![image42](shellbagsexplorer\image42.png)
+![](shellbagsexplorer\image42.png)
 
 ## SBECmd.exe
 
 SBECmd.exe is a command line version of ShellBags Explorer that will automatically process hive files and export the results to TSV. The command line options are shown below.
 
-![image37](shellbagsexplorer\image43.png)
+![](shellbagsexplorer\image43.png)
 
 ### Processing multiple, unrelated hives
 
@@ -498,7 +498,7 @@ SBECmd.exe -d <directory>
 
 A new directory underneath <directory> will be created called ‘Out' which will contain the TSV reports generated by SBECmd.exe. An example run is shown below.
 
-![image44](shellbagsexplorer\image44.png)
+![](shellbagsexplorer\image44.png)
 
 If SBECmd.exe encounters any errors processing hives, they will be reported to the console and to ‘!SBECmd_Messages.txt' in <directory>\Out
 
@@ -514,17 +514,17 @@ SBECmd.exe -d <directory> --dedupe
 
 A new directory underneath <directory> will be created called ‘Out' which will contain the TSV report named 'Deduplicated.tsv'. An example run is shown below.
 
-![image45](shellbagsexplorer\image45.png)
+![](shellbagsexplorer\image45.png)
 
 ### Time zone support
 
 Like its GUI counterpart, SBECmd can adjust all dates and times to a user selected time zone. The default time zone is UTC, but a different time zone can be selected via the –timezone switch. Enclose the timezone in quotes. An example is shown below.
 
-![image46](shellbagsexplorer\image46.png)
+![](shellbagsexplorer\image46.png)
 
 The TSV file(s) will now reflect the selected time zone, including any adjustments for daylight savings time.
 
-![image47](shellbagsexplorer\image47.png)
+![](shellbagsexplorer\image47.png)
 
 ## General usage tips and tricks
 
@@ -540,6 +540,7 @@ CHANGE: Updated registry parser code (~150% faster and significant memory reduct
 
 FIX: Correct FAT vs exFAT file system hint in BEEF0004 blocks
 FIX: Correctly detect end of ShellBag in C3 bags
+
 Version 0.5.0.4
 NEW: Build for AnyCPU vs forcing x86.
 NEW: Add icon for "History folder" ShellBag type
@@ -562,8 +563,10 @@ CHANGE: Look for common signatures in several bags and act accordingly
 
 FIX: Detect several fringe cases and set value to "!!! Unable to determine value !!!". These need more research for full support
 FIX: Remove early return in 0x4d bag which resulted in the ShellBag not displaying properly
+
 Version 0.5.0.3
 NEW: Add new ShellBag type, ShellBagParseError, that is used as a placeholder when ShellBag contents aren't parsed properly.
+
 Version 0.5.0.2
 NEW: Added support for 0x61 bags (FTP). Connection date and username (when saved) are reported
 NEW: Added support for Variable: FTP URI ShellBags. These show directories browsed on an FTP server and in many cases contains the timestamp on the FTP folder
@@ -574,9 +577,11 @@ CHANGE: Updated drive letter icon to a hard drive vs green folder
 CHANGE: Expand and collapse nodes now affects the selected node vs all nodes.
 
 FIX: Some GUI fixes (when using expand/collapse nodes remove recursive icon)
+
 Version 0.5.0.1
 FIX: Remove recursive icon when right clicking an entry in the grid
 FIX: Minor manual updates
+
 Version 0.5.0.0
 NEW: Completely rewritten manual
 NEW: Added Time zone setting to Tools menu. Change the time zone BEFORE processing a hive to have all dates automatically adjusted for the selected timezone
@@ -584,12 +589,15 @@ NEW: Added --timezone command line argument to SBECmd.exe. Use --timezone="" for
 NEW: Added --dedupe option to SBECmd. This will process all hives in a directory and remove any duplicate bags. See --help for details
 
 FIX: Adjust Beef0025 version offset to always pull the right offset.
+
 Version 0.4.3.0
 CHANGE: Switch from CSV extension to TSV for easier processing in Excel without having to import manually
 
 FIX: Minor fixes to command line version if source directory is missing
+
 Version 0.4.2.0
 FIX: Correct file system hint in details pane misreporting file system. The value in Misc column was correct but in some cases the details pane misreported the file system type
+
 Version 0.4.1.0
 NEW: A shiny manual is now included
 NEW: CSV output has been added. You can optionally include the raw hex from bags as well
@@ -600,6 +608,7 @@ NEW: More GUIDs (Windows 10, RealPlayer Cloud, etc)
 NEW: Added support for ShellBags with TypeID 0x01 special case
 NEW: You can now drag and drop an offline hive on the grid, tree, or details pane to load
 NEW: Added note to Miscellaneous column denoting what file system a bag came from based on MFT information (Thanks to David Cowen for idea and testing)
+
 Version 0.3.9.0
 NEW: Added icon for CDBurn bags
 NEW: Added CTRL-A and CTRL-C functionality to main grid. This lets you quickly select all rows and copy selected rows to clipboard
@@ -607,6 +616,7 @@ NEW: SBE now remembers its size and will restore the last size on startup
 
 CHANGE: Add detection of certain special signatures earlier in the process as these types of bags can occur in different places (CDBurn, etc)
 CHANGE: Rename "Variable: CDBurn" to "CDBurn" since they can be seen in different places
+
 Version 0.3.8.0
 NEW: Added operating system information for beef0004 blocks based on Identifier property. 0x14 => Windows XP, 2003 | 0x26 => Windows Vista | 0x2a => Windows 2008, 7, 8.0 | 0x2e => Windows 8.1
 NEW: Report unmapped GUIDs to messages window
@@ -620,6 +630,7 @@ CHANGE: Hide InternalID and HexView from grid field chooser
 FIX: Deal with improperly terminated Unicode strings so a ? isn't displayed as the last character
 FIX: Handle embedded property stores in 0x71 (Control panel bags) vs reporting unknown GUID
 FIX: Lots of fringe case cleanup
+
 Version 0.3.7.0
 NEW: Report unknown type IDs to Messages window so they can be reported
 NEW: Added support for Beef0010 extension block. This block contains property store data. Vector data in one of the sheets looks to contain additional property stores with additional data. More work to be done here
@@ -630,10 +641,12 @@ CHANGE: Do not force 'Last write time' column visible when loading an offline hi
 CHANGE: Added more GUIDs
 
 FIX: Don't crash when grouping and a group is selected
+
 Version 0.3.6.0
 NEW: Pull extension blocks out of property sheets in 0x00 and 0x1F ShellBag types. These appear to be the results of searches. More research is needed to confirm
 
 CHANGE: Clean up some messages
+
 Version 0.3.5.0
 NEW: Added 'Absolute path' to grid which contains the full path from the Desktop to the bag item
 NEW: Added a few dozen more GUIDs
