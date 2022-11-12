@@ -203,28 +203,33 @@ When ingesting Super Timelines, the following Legend can prove to be helpful.
 
 ![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingHighlightCellRulesCustomConditionBlank.jpg)
 
+#### Manage Rules
 
-
-#### Other TODO
-
-Need to figure out a better title for this subheader
-
-Timeline Explorer allows for examiners to set conditional formatting for certain criteria within rows, columns, and/or cells.
+Timeline Explorer allows for examiners to set conditional formatting for certain criteria within rows, columns, and/or cells. This can be done using the Manage Rules menu.
 
 ![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRules.jpg)
 
-
-
+Clicking on Manage Rules will bring up this Rules Manager window.
 
 ![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRulesBlank.jpg)
 
+##### Example Rule
 
+Clicking New Rule in the top left will bring up the following window.
 
 ![Timeline Explorer's Conditional Formatting -> Manage Rules Location](timelineexplorer\TLEConditionalFormattingManageRulesNewFormattingRule.jpg)
 
+Below is an example of what highlighting every row containing the string `successful` in the Map Description column looks like.
 
+![Highlighting Every Row That Contains "Successful"](timelineexplorer\TLEConditionalFormattingExampleSuccessfulRed.jpg)
 
+Diving deeper into the Rules Manager will show the settings for applying this conditional formatting to every row containing the desired string.
 
+![Example Rule Part 1](timelineexplorer\TLEConditionalFormattingExampleSuccessfulRed2.jpg)
+
+Using the bottom formula option allows the examiner to craft a filter similar to the filter editor used in the main Timeline Explorer window.
+
+![Example Rule Part 2](timelineexplorer\TLEConditionalFormattingExampleSuccessfulRed3.jpg)
 
 ## Timeline Explorer Settings
 
