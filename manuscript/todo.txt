@@ -9,7 +9,7 @@ add sample output for every single type of output to GitHub repo and link to it 
 
 TODO
 
-Add DFIRArtifactrMuseum links to all community resources sections of each tool
+Add DFIRArtifactMuseum links to all community resources sections of each tool
 
 
 change commands to point to DFIRArtifactMuseum artifacts so the reader can follow along
