@@ -183,19 +183,19 @@ The Last Modified timestamp will not be the last time of execution, rather, it'l
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2015/05/introducing-appcompatcacheparser.html>
-* <https://binaryforay.blogspot.com/2015/05/appcompatcacheparser-v0051-released.html>
-* <https://binaryforay.blogspot.com/2015/05/appcompatcacheparser-v0052-released.html>
-* <https://binaryforay.blogspot.com/2016/05/appcompatcacheparser-v0900-released-and.html>
-* <https://binaryforay.blogspot.com/2017/03/windows-10-creators-update-vs-shimcache.html>
-* <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
-* <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
-* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
+* [Introducing AppCompatCacheParser](https://binaryforay.blogspot.com/2015/05/introducing-appcompatcacheparser.html)
+* [AppCompatCacheParser v0.0.5.1 released](https://binaryforay.blogspot.com/2015/05/appcompatcacheparser-v0051-released.html)
+* [AppCompatCacheParser v0.0.5.2 released](https://binaryforay.blogspot.com/2015/05/appcompatcacheparser-v0052-released.html)
+* [AppCompatCacheParser v0.9.0.0 released and some AppCompatCache/shimcache parser testing](https://binaryforay.blogspot.com/2016/05/appcompatcacheparser-v0900-released-and.html)
+* [Windows 10 Creators update vs shimcache parsers: Fight!!](https://binaryforay.blogspot.com/2017/03/windows-10-creators-update-vs-shimcache.html)
+* [Updates to the left of me, updates to the right of me, version 1 releases are here (for the most part)](https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html)
+* [Everything gets an update, Sept 2018 edition](https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html)
+* [Locked file support added to AmcacheParser, AppCompatCacheParser, MFTECmd, ShellBags Explorer (and SBECmd), and Registry Explorer (and RECmd)](https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html)
 
 #### Community Resources
 
-* <https://youtu.be/ZKlyu-HOvxY>
-* <https://youtu.be/7byz1dR_CLg>
+* [13Cubed - Windows Application Compatibility Forensics](https://youtu.be/ZKlyu-HOvxY)
+* [13Cubed - Let's Talk About Shimcache - The Most Misunderstood Artifact](https://youtu.be/7byz1dR_CLg)
 
 ### Download AppCompatCacheParser
 
