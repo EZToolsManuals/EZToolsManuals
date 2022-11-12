@@ -123,7 +123,7 @@ Using this option will be explained in full detail below in the Using Registry E
 
 This menu contains several options that control such things as recovering deleted records, viewing hidden keys, etc.
 
-![image10](registryexplorer\image10.png)
+![](registryexplorer\image10.png)
 
 * Recover deleted keys/values: When enabled (the selector is to the right), Registry Explorer will recover any deleted records available during hive loading
 * Show associated deleted records: When enabled, all associated deleted records will be shown in a special group under the main Registry hive data. Any recovered keys that could be associated with an active (that is, not deleted) key will also be shown in relation to the active key. This will be explained more in a subsequent section.
@@ -396,7 +396,7 @@ The name of the currently selected value is shown at the top.
 * Copy
   * Value summary: Copies a summary of the selected value to the clipboard. An example is shown below.
 
-![image39](registryexplorer\image39.png)
+![](registryexplorer\image39.png)
 
   * Value name: Copies the selected value's name to the clipboard
   * Value type: Copies the selected value's type to the clipboard (RegBinary or RegSz for example)
