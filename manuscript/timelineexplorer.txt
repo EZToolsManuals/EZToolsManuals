@@ -366,21 +366,17 @@ The above provides a much more user friendly method of filtering on years, month
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2017/04/introducing-timeline-explorer-v0400.html>
-* <https://binaryforay.blogspot.com/2017/05/timeline-explorer-0500-released.html>
-* <https://binaryforay.blogspot.com/2017/10/timeline-explorer-060-released.html>
-* <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
-* <https://binaryforay.blogspot.com/2018/05/a-fluery-of-updates.html>
-* <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
-
-<!-- TODO: need to resolve these URLs -->
+* [Introducing Timeline Explorer v0.4.0.0](https://binaryforay.blogspot.com/2017/04/introducing-timeline-explorer-v0400.html)
+* [Timeline Explorer 0.5.0.0 released](https://binaryforay.blogspot.com/2017/05/timeline-explorer-0500-released.html)
+* [Timeline Explorer 0.6.0 released!](https://binaryforay.blogspot.com/2017/10/timeline-explorer-060-released.html>)
+* [Updates to the left of me, updates to the right of me, version 1 releases are here (for the most part)](https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html)
+* [A fluery of updates!](https://binaryforay.blogspot.com/2018/05/a-fluery-of-updates.html)
+* [Everything gets an update, Sept 2018 edition](https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html)
 
 #### Community Resources
 
-* <https://aboutdfir.com/toolsandartifacts/windows/timeline-explorer>
-* <https://www.youtube.com/watch?v=Hy8ZIc86tCo>
-
-<!-- TODO: need to resolve these URLs -->
+* [AboutDFIR - Timeline Explorer](https://aboutdfir.com/toolsandartifacts/windows/timeline-explorer)
+* [Episode 87: Introducing and Using Timeline Explorer](https://www.youtube.com/watch?v=Hy8ZIc86tCo)
 
 ### Download Timeline Explorer
 
