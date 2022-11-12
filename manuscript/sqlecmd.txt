@@ -142,21 +142,7 @@ The `--hunt` command will inform you as to which files are SQLite databases! Thi
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
-
-### Blog Posts
-
-#### Official Blog Posts
-
-Blog posts from Eric Zimmerman's blog, Binary Foray:
-
-* <https://binaryforay.blogspot.com/2016/02/jump-lists-in-depth-understand-format.html>
-* <https://binaryforay.blogspot.com/2016/03/introducing-jlecmd.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/04/lecmd-and-jlecmd-updated.html>
-* <https://binaryforay.blogspot.com/2016/09/jlecmd-v0960-released.html>
+* <https://github.com/EricZimmerman/SQLECmd> is the GitHub repository for SQLECmd
 
 ### Download SQLECmd
 
@@ -164,4 +150,4 @@ SQLECmd can be downloaded from <https://ericzimmerman.github.io/#!index.md>
 
 ### SQLite Sample Data
 
-Sample SQLite databases  can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum) in the Android and Windows directories.
+Sample SQLite databases can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum) in the Android and Windows directories.
