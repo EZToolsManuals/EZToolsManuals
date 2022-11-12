@@ -243,6 +243,7 @@ Diving deeper into the Rules Manager will show the settings for applying this co
 
 Using the bottom formula option allows the examiner to craft a filter similar to the filter editor used in the main Timeline Explorer window.
 
+{width: 75%}
 ![Example Rule Part 2](timelineexplorer\TLEConditionalFormattingExampleSuccessfulRed3.jpg)
 
 ## Timeline Explorer Settings
