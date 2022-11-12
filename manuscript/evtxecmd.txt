@@ -284,11 +284,11 @@ The Payload column will always have all the of XML data stored within a given ev
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2019/04/introducing-evtxecmd.html>
+* [Introducing EvtxECmd!!](https://binaryforay.blogspot.com/2019/04/introducing-evtxecmd.html)
 
 #### Community Resources
 
-* <https://www.youtube.com/watch?v=BIkyWexMF0I>
+* [Enhancing Event Log Analysis with EvtxEcmd using KAPE](https://www.youtube.com/watch?v=BIkyWexMF0I)
 
 ### Download EvtxECmd
 

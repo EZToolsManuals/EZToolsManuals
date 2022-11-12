@@ -26,7 +26,7 @@ Using the Info -> Metrics menu, examiners can look at a visual representation of
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2018/02/introducing-sdb-explorer.html>
+* [Introducing SDB Explorer](https://binaryforay.blogspot.com/2018/02/introducing-sdb-explorer.html)
 
 ### Download SDB Explorer
 

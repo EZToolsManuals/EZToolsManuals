@@ -165,13 +165,13 @@ THe FirstInteracted timestamp for a shell item will provide you with the timesta
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2015/02/shellbags-explorer-v0520-released.html>
-* <https://binaryforay.blogspot.com/2015/02/shellbags-explorer-0540-released.html>
-* <https://binaryforay.blogspot.com/2015/08/a-few-updates.html>
-* <https://binaryforay.blogspot.com/2017/01/shellbags-explorer-v0800-released.html>
-* <https://binaryforay.blogspot.com/2017/09/shellbags-explorer-0950-released.html>
-* <https://binaryforay.blogspot.com/2018/05/a-fluery-of-updates.html>
-* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
+* [ShellBags Explorer v0.5.2.0 released!](https://binaryforay.blogspot.com/2015/02/shellbags-explorer-v0520-released.html)
+* [ShellBags Explorer 0.5.4.0 released!](https://binaryforay.blogspot.com/2015/02/shellbags-explorer-0540-released.html)
+* [A few updates](https://binaryforay.blogspot.com/2015/08/a-few-updates.html)
+* [ShellBags Explorer v0.8.0.0 released!](https://binaryforay.blogspot.com/2017/01/shellbags-explorer-v0800-released.html)
+* [ShellBags Explorer 0.9.5.0 released!](https://binaryforay.blogspot.com/2017/09/shellbags-explorer-0950-released.html)
+* [A fluery of updates!](https://binaryforay.blogspot.com/2018/05/a-fluery-of-updates.html)
+* [Locked file support added to AmcacheParser, AppCompatCacheParser, MFTECmd, ShellBags Explorer (and SBECmd), and Registry Explorer (and RECmd)](https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html)
 
 ### Download SBECmd
 

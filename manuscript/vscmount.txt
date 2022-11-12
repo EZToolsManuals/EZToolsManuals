@@ -125,7 +125,7 @@ Example: `.\VSCMount.exe --dl C --mp C:\vssroot --ud false`
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2018/09/introducing-vscmount.html>
+* [Introducing VSCMount](https://binaryforay.blogspot.com/2018/09/introducing-vscmount.html)
 
 ### Download VSCMount
 

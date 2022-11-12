@@ -142,7 +142,7 @@ Sample SRUM database artifacts can be found at the [DFIRArtifactMuseum](https://
 
 #### Community Resources
 
-* <https://aboutdfir.com/app-timeline-provider-srum-database/>
+* [AboutDFIR - App Timeline Provider – SRUM Database](https://aboutdfir.com/app-timeline-provider-srum-database/)
 
 ### Download SrumECmd
 

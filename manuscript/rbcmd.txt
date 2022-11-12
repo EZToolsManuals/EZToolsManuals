@@ -131,7 +131,7 @@ The `Deleted On` timestamp will be useful in determining when a file was deleted
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://thinkdfir.com/2018/11/23/quick-post-notes-on-the-win10-recycle-bin/>
+* [Quick Post: Notes on the Win10 Recycle Bin](https://thinkdfir.com/2018/11/23/quick-post-notes-on-the-win10-recycle-bin/)
 
 ### Download RBCmd
 

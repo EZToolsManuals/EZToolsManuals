@@ -112,15 +112,14 @@ WxTCmd will output the following timestamps of interest:
 
 Blog posts from Eric Zimmerman's blog, [Binary Foray](https://binaryforay.blogspot.com/):
 
-* <https://binaryforay.blogspot.com/2018/05/introducing-wxtcmd.html>
+* [Introducing WxTCmd!](https://binaryforay.blogspot.com/2018/05/introducing-wxtcmd.html)
 
 #### Community Resources
 
-* <https://niiconsulting.com/checkmate/2021/10/windows-timeline-putting-the-what-when-together/>
-* <https://www.datadigitally.com/2019/04/windows-10-timeline-feature.html>
-* <https://blog.group-ib.com/windows10_timeline_for_forensics>
-* <https://andreafortuna.org/2019/10/03/some-forensic-thoughts-about-windows-10-timeline/>
-* <https://tajdini.net/blog/forensics-and-security/windows-artifacts-for-forensics-investigation/>
+* [Windows Timeline: Putting the what & when together](https://niiconsulting.com/checkmate/2021/10/windows-timeline-putting-the-what-when-together/)
+* [Windows 10 Timeline Feature](https://www.datadigitally.com/2019/04/windows-10-timeline-feature.html)
+* [Some thoughts about Windows 10 "Timeline" forensics artifacts](https://andreafortuna.org/2019/10/03/some-forensic-thoughts-about-windows-10-timeline/)
+* [Windows Artifacts for Forensics Investigation](https://tajdini.net/blog/forensics-and-security/windows-artifacts-for-forensics-investigation/)
 
 ### Download WxTCmd
 

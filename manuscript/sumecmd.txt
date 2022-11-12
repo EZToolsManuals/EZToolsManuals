@@ -125,8 +125,8 @@ This output will provide examiners with an idea of which calendar years are cove
 
 #### Community Resources
 
-* <https://advisory.kpmg.us/blog/2021/digital-forensics-incident-response.html>
-* <https://svch0st.medium.com/windows-user-access-logs-ual-9580f1100635>
+* [A new type of User access log](https://advisory.kpmg.us/blog/2021/digital-forensics-incident-response.html)
+* [Windows User Access Logs (UAL)](https://svch0st.medium.com/windows-user-access-logs-ual-9580f1100635)
 
 ### Download SumECmd
 

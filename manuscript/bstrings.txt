@@ -403,20 +403,19 @@ bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls mui --sl
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2015/07/introducing-bstrings-better-strings.html>
-* <https://binaryforay.blogspot.com/2015/07/bstrings-0900-released.html>
-* <https://binaryforay.blogspot.com/2015/07/bstrings-0950-released.html>
-* <https://binaryforay.blogspot.com/2015/08/a-few-updates.html>
-* <https://binaryforay.blogspot.com/2015/11/bstrings-0970-released.html>
-* <https://binaryforay.blogspot.com/2015/12/bstrings-0980-released.html>
-* <https://binaryforay.blogspot.com/2016/02/bstrings-0990-released.html>
-* <https://binaryforay.blogspot.com/2016/02/bstrings-10-released.html>
-* <https://binaryforay.blogspot.com/2016/04/bstrings-v11-released.html>
-* <https://binaryforay.blogspot.com/2016/04/bstrings-v11-released.html>
+* [Introducing bstrings, a Better Strings utility!](https://binaryforay.blogspot.com/2015/07/introducing-bstrings-better-strings.html)
+* [bstrings 0.9.0.0 released](https://binaryforay.blogspot.com/2015/07/bstrings-0900-released.html)
+* [bstrings 0.9.5.0 released](https://binaryforay.blogspot.com/2015/07/bstrings-0950-released.html)
+* [A few updates](https://binaryforay.blogspot.com/2015/08/a-few-updates.html)
+* [bstrings 0.9.7.0 released](https://binaryforay.blogspot.com/2015/11/bstrings-0970-released.html)
+* [bstrings 0.9.8.0 released](https://binaryforay.blogspot.com/2015/12/bstrings-0980-released.html)
+* [bstrings 0.9.9.0 released!](https://binaryforay.blogspot.com/2016/02/bstrings-0990-released.html)
+* [bstrings 1.0 released!](https://binaryforay.blogspot.com/2016/02/bstrings-10-released.html)
+* [bstrings v1.1 released!](https://binaryforay.blogspot.com/2016/04/bstrings-v11-released.html)
 
 #### Community Resources
 
-* <https://forensicblogs.com/tag/data-recovery/>
+* [Data Recovery Blog 2](https://leahycenterblog.champlain.edu/2020/05/01/data-recovery-blog-2-2/)
 
 ### Download bstrings
 

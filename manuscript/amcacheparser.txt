@@ -175,10 +175,10 @@ If you want to analyze the Amcache.hve artifact in a GUI tool, you can simply in
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
-* <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
-* <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
-* <https://binaryforay.blogspot.com/2017/10/amcache-still-rules-everything-around.html>
+* [Locked file support added to AmcacheParser, AppCompatCacheParser, MFTECmd, ShellBags Explorer (and SBECmd), and Registry Explorer (and RECmd)](https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html)
+* [Everything gets an update, Sept 2018 edition](https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html)
+* [Updates to the left of me, updates to the right of me, version 1 releases are here (for the most part)](https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html)
+* [(Am)cache still rules everything around me (part 2 of 1)](https://binaryforay.blogspot.com/2017/10/amcache-still-rules-everything-around.html)
 
 ### Download AmcacheParser
 

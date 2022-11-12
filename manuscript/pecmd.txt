@@ -246,17 +246,16 @@ Prefetch files can store multiple run times for a single executable. This can he
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2016/01/windows-prefetch-parser-in-c.html>
-* <https://binaryforay.blogspot.com/2016/01/introducing-pecmd.html>
-* <https://binaryforay.blogspot.com/2016/01/pecmd-v0600-released.html>
-* <https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html>
+* [Windows Prefetch parser in C#](https://binaryforay.blogspot.com/2016/01/windows-prefetch-parser-in-c.html)
+* [Introducing PECmd!](https://binaryforay.blogspot.com/2016/01/introducing-pecmd.html)
+* [PECmd v0.6.0.0 released](https://binaryforay.blogspot.com/2016/01/pecmd-v0600-released.html)
+* [PECmd, LECmd, and JLECmd updated!](https://binaryforay.blogspot.com/2016/03/pecmd-lecmd-and-jlecmd-updated.html)
 
 #### Community Resources
 
-* <https://or10nlabs.tech/prefetch-forensics/>
-* <https://www.security-hive.com/post/execution-evidence-prefetch-files>
-* <https://www.hackingarticles.in/forensic-investigation-prefetch-file/>
-* <https://angry-bender.github.io/blog/WIP_Windows_Artefacts/>
+* [Prefetch Forensics](https://or10nlabs.tech/prefetch-forensics/)
+* [Forensic Investigation : Prefetch File](https://www.hackingarticles.in/forensic-investigation-prefetch-file/)
+* [DFIR Playbook - Windows Forensics(WIP APR21)](https://angry-bender.github.io/blog/WIP_Windows_Artefacts/#prefetch-files)
 
 ### Download PECmd
 

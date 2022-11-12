@@ -331,20 +331,20 @@ The above command will dump from the ROOT (aka topmost) key in the hive, regardl
 
 Blog posts from Eric Zimmerman's blog, Binary Foray:
 
-* <https://binaryforay.blogspot.com/2015/05/introducing-recmd.html>
-* <https://binaryforay.blogspot.com/2015/05/recmd-0600-released.html>
-* <https://binaryforay.blogspot.com/2015/06/recmd-0610-released.html>
-* <https://binaryforay.blogspot.com/2015/07/reintroducing-registry-explorer-and.html>
-* <https://binaryforay.blogspot.com/2015/07/registry-explorerrecmd-0710-released.html>
-* <https://binaryforay.blogspot.com/2016/01/registry-values-starting-with-null.html>
-* <https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html>
-* <https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html>
-* <https://binaryforay.blogspot.com/2019/01/registry-explorer-and-recmd-1200.html>
-* <https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html>
+* [Introducing RECmd!](https://binaryforay.blogspot.com/2015/05/introducing-recmd.html)
+* [RECmd 0.6.0.0 released!](https://binaryforay.blogspot.com/2015/05/recmd-0600-released.html)
+* [RECmd 0.6.1.0 released!](https://binaryforay.blogspot.com/2015/06/recmd-0610-released.html)
+* [Reintroducing Registry Explorer and RECmd!](https://binaryforay.blogspot.com/2015/07/reintroducing-registry-explorer-and.html)
+* [Registry Explorer/RECmd 0.7.1.0 released!](https://binaryforay.blogspot.com/2015/07/registry-explorerrecmd-0710-released.html)
+* [Registry values starting with a NULL character](https://binaryforay.blogspot.com/2016/01/registry-values-starting-with-null.html)
+* [Updates to the left of me, updates to the right of me, version 1 releases are here (for the most part)](https://binaryforay.blogspot.com/2018/03/updates-to-left-of-me-updates-to-right.html)
+* [Everything gets an update, Sept 2018 edition](https://binaryforay.blogspot.com/2018/09/everything-gets-update-sept-2018-edition.html)
+* [Registry Explorer and RECmd 1.2.0.0 released!](https://binaryforay.blogspot.com/2019/01/registry-explorer-and-recmd-1200.html)
+* [Locked file support added to AmcacheParser, AppCompatCacheParser, MFTECmd, ShellBags Explorer (and SBECmd), and Registry Explorer (and RECmd)](https://binaryforay.blogspot.com/2019/01/locked-file-support-added-to.html)
 
 #### Community Resources
 
-* <https://aboutdfir.com/toolsandartifacts/windows/registry-explorer-recmd/>
+* [AboutDFIR - Registry Explorer/RECmd](https://aboutdfir.com/toolsandartifacts/windows/registry-explorer-recmd/)
 
 ### Download RECmd
 
