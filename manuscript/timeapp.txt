@@ -1,3 +1,27 @@
-# Placeholder
+# TimeApp
 
-content goes here
+## TimeApp Introduction
+
+TimeApp is a tool created by Eric Zimmerman that provides multiple functions: current time, stopwatch, countdown timer, and current IP address.
+
+## TimeApp Screenshots
+
+![](timeapp\TimeApp1.jpg)
+
+![](timeapp\TimeApp2.jpg)
+
+![](timeapp\TimeApp3.jpg)
+
+![](timeapp\TimeApp4.jpg)
+
+![](timeapp\TimeApp5.jpg)
+
+## TimeApp References
+
+### Associated GitHub Repositories
+
+* <https://github.com/EricZimmerman/timeapp> is the GitHub repository for TimeApp
+
+### Download TimeApp
+
+TimeApp can be downloaded from <https://ericzimmerman.github.io/#!index.md>
