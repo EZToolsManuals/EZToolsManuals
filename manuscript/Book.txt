@@ -24,6 +24,7 @@ vscmount.txt
 wxtcmd.txt
 sectionGUI.txt
 ezviewer.txt
+hasher.txt
 jumplistexplorer.txt
 mftexplorer.txt
 registryexplorer.txt
