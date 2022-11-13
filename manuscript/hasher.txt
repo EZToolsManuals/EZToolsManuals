@@ -1,3 +1,93 @@
-# Placeholder
+# Hasher
 
-content goes here
+## Hasher Introduction
+
+Hasher is a tool created by Eric Zimmerman used to generate hash values for files and/or folders.
+
+## Hasher Screenshot
+
+![](hasher\Hasher.jpg)
+
+{pagebreak}
+
+## Hasher Features
+
+Hasher can generate hash values for a single file or a folder of files, as seen below.
+
+![](hasher\HasherFileMenu.jpg)
+
+### Hasher Options
+
+Hasher provides examiners with multiple options in the Tools -> Options menu.
+
+![](hasher\HasherOptions.jpg)
+
+Within these options, examiners can choose which hash algorithms Hasher should calculate, how many worker threads, the default save path, default file delimiter, and other settings.
+
+These settings will be saved within a `Hasher.ini` settings file.
+
+### Hasher Settings
+
+Below is an example of `Hasher.ini`.
+
+```
+[General]
+DefaultSavePath = 
+AutoSaveResults = False
+FileDelimiter = Tab
+ClearResultsBetweenRuns = False
+MAXThreads = 10
+[Algorithms]
+MD5 = True
+SHA1b32 = True
+SHA1b16 = False
+MD4 = False
+Tiger = False
+Whirlpool = False
+SHA-256 = False
+SHA-512 = False
+RipeMD-256 = False
+eMule = False
+CRC32 = False
+[Theme]
+Theme = Visual Studio 2013 Blue
+```
+
+![](hasher\HasherEZToolsFolderHashed.jpg)
+
+### Exporting Hasher Results
+
+Once files/folders have been hashed in Hasher, examiners can export the results to multiple formats. 
+
+![](hasher\HasherEZToolsFolderHashedExport.jpg)
+
+Exporting to `.txt` will provide an output file named similarly to `2022-11-12-222212-HasherResults.txt`.
+
+Below is an example of Hasher output.
+
+```
+File name	SHA1 base32	MD5
+D:\ZimmermanTools\PECmd.exe	Z5AODWE3HRXUWLJMJBEMFVXGK7APOAQU	1AFED4AFCB86C8AC6BA2AA3C6160072A
+```
+
+## Hasher References
+
+### Quick Help
+
+Below is the information located in Help -> Quick Help.
+
+```
+To use, select some files and/or folders and drag/drop them onto the main program window. Alternatively, use the File menu options to select files or a folder.
+
+As files are hashed, you can sort, filter, search, etc. by interacting with the column headers: Left click to sort and right click for a context menu with many more options.
+
+CTRL-C will copy the highlighted row to the clipboard. ALT-C will copy only the selected cell to the clipboard.
+
+You can export the search via the File menu once hashing is complete.
+
+You can set various options via the Options menu.
+```
+
+### Download Hasher
+
+Hasher can be downloaded from <https://ericzimmerman.github.io/#!index.md>
