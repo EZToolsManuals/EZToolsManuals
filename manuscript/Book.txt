@@ -29,5 +29,6 @@ mftexplorer.txt
 registryexplorer.txt
 sdbexplorer.txt
 shellbagsexplorer.txt
+timeapp.txt
 timelineexplorer.txt
 errata.txt
