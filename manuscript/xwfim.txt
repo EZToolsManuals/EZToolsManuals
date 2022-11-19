@@ -1,3 +1,104 @@
-# Placeholder
+# XWFIM
 
-content goes here
+XWFIM is a tool created by Eric Zimmerman that assists with installing and managing a local instance of [X-Ways](https://www.x-ways.net/). XWFIM allows examiners to download everything necessary to begin using X-Ways Forensics (including BYOD) or X-Ways Investigator in a few clicks. XWFIM also provides tooltips for X-Ways to leverage. These can be found by hovering the cursor over each option within X-Ways.
+
+![](XWFIMToolTipsExample.jpg)
+
+{pagebreak}
+
+## Using XWFIM
+
+XWFIM provides many features to assist with installing, managing, and verifying a local installation of X-Ways.
+
+![](xwfim\XWFIMMainWindow.jpg)
+
+{pagebreak}
+
+### X-Ways Credentials
+
+Prior to using XWFIM, one must have valid credentials to download X-Ways using XWFIM.
+
+![](xwfim\XWFIMCredentialsWindow.jpg)
+
+Once valid credentials are entered, XWFIM will provide a prompt similar to below.
+
+![](xwfim\XWFIMCredentialsValidated.jpg)
+
+### Typical Installation
+
+Installing X-Ways Forensics can be done following the steps below.
+
+First, select the desired version using the dropdown, as seen below.
+
+![](xwfim\XWFIMVersionSelect.jpg)
+
+Once a version is selected, ensure the install directory and X-Ways folder name are populated and hit `Install`.
+
+![](xwfim\XWFIMInstalling.jpg)
+
+Once the installation is complete, XWFIM will display a prompt similar to below.
+
+![](xwfim\XWFIMInstallComplete.jpg)
+
+### Portable Installation
+
+To create a portable installation of X-Ways using XWFIM, select the Tools -> Create portable installation feature. Please note, if you try to do this without having executed X-Ways successfully on the host system, a similar error message will likely display: `WinHex.cfg is missing from 'C:\xwf'. Open X-Ways at least once to create it and try again. Aborting...`
+
+With a USB flash drive plugged in, one will see all attached USB flash drives available to create the portable installation on.
+
+![](xwfim\XWFIMPortableInstallation.jpg)
+
+Selecting the `E:\` as the destination, a progress window will emerge once the `Create` button is pushed.
+
+![](xwfim\XWFIMPortableInstallationInProgress.jpg)
+
+When complete, a similar window will display.
+
+![](xwfim\XWFIMPortableInstallationComplete.jpg)
+
+On the destination USB flash drive, one can see similar files to what can be found in `C:\xwf` from the previous example.
+
+![](xwfim\XWFIMPortableInstallationFiles.jpg)
+
+### Verifying Installation
+
+XWFIM can verify a local installation of X-Ways using the Tools -> Verify installation feature. First, specify which directory for XWFIM to verify the installation of. In this example, we'll use the `C:\xwf` directory as shown in previous screenshots.
+
+![](xwfim\XWFIMVerifyInstallationPre.jpg)
+
+Once a directory is specified, choose whether or not a log file should be generated and hit Verify.
+
+![](xwfim\XWFIMVerifyInstallationPost.jpg)
+
+Generating a log file will output the same data in the above screenshot to an .XLSX file.
+
+### XWFIM Status Messages
+
+Below is an example of status messages that XWFIM displays during the installation process.
+
+{line-numbers:false}
+```
+Message Date	Message
+11/18/2022 20:14:44	Installation complete. Be sure to configure/verify the appropriate settings in Options | General and Options | Viewer Programs
+11/18/2022 20:14:42	Generating validation data...
+11/18/2022 20:14:42	Copying manual to 'C:\xwf'
+11/18/2022 20:14:39	Unzipping Tesseract to 'C:\xwf'
+11/18/2022 20:14:38	Unzipping MPlayer to 'C:\xwf'
+11/18/2022 20:14:36	Unzipping viewer to 'C:\xwf'
+11/18/2022 20:14:35	Unzipping X-Ways Forensics to 'C:\xwf'
+11/18/2022 20:14:35	'WinHex.cfg' not found in 'C:\xwf'. Skipping
+11/18/2022 20:14:34	Downloading manual
+11/18/2022 20:14:23	Downloading Tesseract
+11/18/2022 20:14:20	Downloading MPlayer
+11/18/2022 20:14:14	Downloading viewer
+11/18/2022 20:14:10	Downloading X-Ways Forensics version 20.7
+11/18/2022 20:13:23	Local install version missing. Selecting current release version
+11/18/2022 20:13:23	Current release version is 20.7 which was last modified on 11/15/2022 17:41:34 +00:00
+11/18/2022 20:13:23	Found 18 versions of X-Ways Forensics
+11/18/2022 20:11:12	XWFIM - X-Ways Forensics Installation Manager v2.1.0.0 initializing
+```
+## XWFIM References
+
+### Download XWFIM
+
+XWFIM can be downloaded from <https://ericzimmerman.github.io/#!index.md>
