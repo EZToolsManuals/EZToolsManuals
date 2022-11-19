@@ -1,8 +1,10 @@
 # XWFIM
 
-XWFIM is a tool created by Eric Zimmerman that assists with installing and managing a local instance of [X-Ways](https://www.x-ways.net/). XWFIM allows examiners to download everything necessary to begin using X-Ways Forensics (including BYOD) or X-Ways Investigator in a few clicks. XWFIM also provides tooltips for X-Ways to leverage. These can be found by hovering the cursor over each option within X-Ways.
+XWFIM is a tool created by Eric Zimmerman that assists with installing and managing a local instance of [X-Ways](https://www.x-ways.net/). XWFIM allows examiners to download everything necessary to begin using X-Ways Forensics (including BYOD) or X-Ways Investigator in a few clicks. 
 
-![](XWFIMToolTipsExample.jpg)
+XWFIM also provides tooltips for X-Ways to leverage. These can be found by hovering the cursor over each option within X-Ways.
+
+![](xwfim\XWFIMToolTipsExample.jpg)
 
 {pagebreak}
 
@@ -20,6 +22,8 @@ Prior to using XWFIM, one must have valid credentials to download X-Ways using X
 
 ![](xwfim\XWFIMCredentialsWindow.jpg)
 
+{pagebreak}
+
 Once valid credentials are entered, XWFIM will provide a prompt similar to below.
 
 ![](xwfim\XWFIMCredentialsValidated.jpg)
@@ -32,6 +36,8 @@ First, select the desired version using the dropdown, as seen below.
 
 ![](xwfim\XWFIMVersionSelect.jpg)
 
+{pagebreak}
+
 Once a version is selected, ensure the install directory and X-Ways folder name are populated and hit `Install`.
 
 ![](xwfim\XWFIMInstalling.jpg)
@@ -39,6 +45,8 @@ Once a version is selected, ensure the install directory and X-Ways folder name 
 Once the installation is complete, XWFIM will display a prompt similar to below.
 
 ![](xwfim\XWFIMInstallComplete.jpg)
+
+{pagebreak}
 
 ### Portable Installation
 
@@ -48,17 +56,25 @@ With a USB flash drive plugged in, one will see all attached USB flash drives av
 
 ![](xwfim\XWFIMPortableInstallation.jpg)
 
+{pagebreak}
+
 Selecting the `E:\` as the destination, a progress window will emerge once the `Create` button is pushed.
 
 ![](xwfim\XWFIMPortableInstallationInProgress.jpg)
+
+{pagebreak}
 
 When complete, a similar window will display.
 
 ![](xwfim\XWFIMPortableInstallationComplete.jpg)
 
+{pagebreak}
+
 On the destination USB flash drive, one can see similar files to what can be found in `C:\xwf` from the previous example.
 
 ![](xwfim\XWFIMPortableInstallationFiles.jpg)
+
+{pagebreak}
 
 ### Verifying Installation
 
@@ -66,11 +82,15 @@ XWFIM can verify a local installation of X-Ways using the Tools -> Verify instal
 
 ![](xwfim\XWFIMVerifyInstallationPre.jpg)
 
+{pagebreak}
+
 Once a directory is specified, choose whether or not a log file should be generated and hit Verify.
 
 ![](xwfim\XWFIMVerifyInstallationPost.jpg)
 
 Generating a log file will output the same data in the above screenshot to an .XLSX file.
+
+{pagebreak}
 
 ### XWFIM Status Messages
 
@@ -97,6 +117,7 @@ Message Date	Message
 11/18/2022 20:13:23	Found 18 versions of X-Ways Forensics
 11/18/2022 20:11:12	XWFIM - X-Ways Forensics Installation Manager v2.1.0.0 initializing
 ```
+
 ## XWFIM References
 
 ### Download XWFIM
