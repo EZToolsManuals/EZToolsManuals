@@ -32,4 +32,5 @@ sdbexplorer.txt
 shellbagsexplorer.txt
 timeapp.txt
 timelineexplorer.txt
+xwfim.txt
 errata.txt
