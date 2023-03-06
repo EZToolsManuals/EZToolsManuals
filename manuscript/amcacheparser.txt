@@ -53,7 +53,7 @@ Example: `.\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\AP
 
 Example: 
 
-‘“powershelll
+```powershelll
 .\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\APTSimulatorVM\Amcache.hve" --csv D:\Amcache -i
 ```
 
