@@ -1,3 +1,4 @@
 # EZ Tools - CLI
 
+{height: "80%"}
 ![](EZToolsDownloaded.jpg)
