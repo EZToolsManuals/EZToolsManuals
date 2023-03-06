@@ -124,8 +124,6 @@ This output can be useful for seeing which applications were running at a given 
 
 This output can be useful for seeing which applications were sending and receiving data. This is helpful in Incident Response engagements where data exfiltration is an important part of the mission for examiners.
 
-{pagebreak}
-
 ## SrumECmd Sample Data
 
 Sample SRUM database artifacts can be found at the [DFIRArtifactMuseum](https://github.com/AndrewRathbun/DFIRArtifactMuseum/tree/main/Windows/SRUM).
