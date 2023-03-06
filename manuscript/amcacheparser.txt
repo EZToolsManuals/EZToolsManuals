@@ -57,6 +57,10 @@ Example:
 .\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\APTSimulatorVM\Amcache.hve" --csv D:\Amcache -i
 ```
 
+```
+.\AmcacheParser.exe -f "D:\DFIRArtifactMuseum\Windows\Amcache\Win10\APTSimulatorVM\Amcache.hve" --csv D:\Amcache -i
+```
+
 #### `-w`
 
 This switch will instruct AmcacheParser to read a specified file containing SHA-1 hashes to exclude from the results. This means that hashes specified in this file will NOT be included in the CSV output.
