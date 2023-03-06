@@ -18,7 +18,7 @@ For those in the Private Sector, VSCs may provide more visibility into historica
 
 ## VSCMount Switches
 
-In a PowerShell window, running `.\VSCMount.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\VSCMount.exe` will provide the following options when running VSCMount:
 
 {line-numbers:false}
 ```powershell

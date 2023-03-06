@@ -20,7 +20,7 @@ For insider threat cases, this artifact can provide useful program execution art
 
 ## WxTCmd Switches
 
-In a PowerShell window, running `.\WxTCmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\WxTCmd.exe` will provide the following options when running WxTCmd:
 
 {line-numbers:false}
 ```powershell

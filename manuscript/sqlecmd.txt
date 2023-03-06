@@ -33,7 +33,7 @@ Additionally, please check out Andrew Rathbun's 2021 SANS DFIR Summit presentati
 
 ## SQLECmd Switches
 
-In a PowerShell window, running `.\SQLECmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\SQLECmd.exe` will provide the following options when running SQLECmd:
 
 {line-numbers:false}
 ```powershell

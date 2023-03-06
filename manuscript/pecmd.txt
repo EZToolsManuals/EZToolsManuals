@@ -236,9 +236,8 @@ Prefetch files can store multiple run times for a single executable. This can he
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/Prefetch> is the C# library for parsing Prefetch files
+* <https://github.com/EricZimmerman/PECmd> is the Command Line wrapper for the Prefetch library
 
 ### Blog Posts
 

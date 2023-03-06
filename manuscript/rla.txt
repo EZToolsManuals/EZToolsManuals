@@ -14,7 +14,7 @@ This tool is useful for replaying Registry transaction logs which will ensure yo
 
 ## RLA Switches
 
-In a PowerShell window, running `.\RLA.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\RLA.exe` will provide the following options when running RLA:
 
 {line-numbers:false}
 ```powershell

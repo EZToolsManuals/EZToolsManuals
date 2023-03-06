@@ -18,7 +18,7 @@ For those in the Private Sector, this tool is useful for parsing the SRUM databa
 
 ## SrumECmd Switches
 
-In a PowerShell window, running `.\SrumECmd.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\SrumECmd.exe` will provide the following options when running SrumECmd:
 
 {line-numbers:false}
 ```powershell

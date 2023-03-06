@@ -173,9 +173,7 @@ The Last Modified timestamp will not be the last time of execution, rather, it'l
 
 ### Associated GitHub Repositories
 
-* <https://github.com/EricZimmerman/JumpList> is the C# library for parsing JumpList files
-* <https://github.com/EricZimmerman/OleCf> is the C# library for parsing OLE compound files, which Jump Lists are
-* <https://github.com/EricZimmerman/JLECmd> is the Command Line wrapper for the JumpList library
+* <https://github.com/EricZimmerman/AppCompatCacheParser> is the GitHub repository for AppCompatCacheParser
 
 ### Blog Posts
 

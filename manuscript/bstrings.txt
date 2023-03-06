@@ -20,7 +20,7 @@ For those in the Private Sector, this tool is useful for searching through files
 
 ## bstrings Switches
 
-In a PowerShell window, running `.\bstrings.exe` will provide the following options when running JLECmd:
+In a PowerShell window, running `.\bstrings.exe` will provide the following options when running bstrings:
 
 {line-numbers:false}
 ```powershell
