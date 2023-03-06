@@ -24,28 +24,6 @@ In a PowerShell window, running `.\bstrings.exe` will provide the following opti
 
 {line-numbers:false}
 ```powershell
-Description:
-  bstrings version 1.5.2.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/bstrings
-
-  Examples: bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls URL
-            bstrings.exe -f "C:\Temp\someFile.txt" --lr guid
-            bstrings.exe -f "C:\Temp\aBigFile.bin" --fs c:\temp\searchStrings.txt --fr
-  c:\temp\searchRegex.txt -s
-            bstrings.exe -d "C:\Temp" --mask "*.dll"
-            bstrings.exe -d "C:\Temp" --ar "[\x20-\x37]"
-            bstrings.exe -d "C:\Temp" --cp 10007
-            bstrings.exe -d "C:\Temp" --ls test
-            bstrings.exe -f "C:\Temp\someOtherFile.txt" --lr cc --sa
-            bstrings.exe -f "C:\Temp\someOtherFile.txt" --lr cc --sa -m 15 -x 22
-            bstrings.exe -f "C:\Temp\UsrClass 1.dat" --ls mui --sl
-
-Usage:
-  bstrings [options]
-
-Options:
   -f <f>          File to search. Either this or -d is required
   -d <d>          Directory to recursively process. Either this or -f is required
  -o <o>          File to save results to
@@ -86,9 +64,6 @@ Options:
   --trace         Show trace information during processing [default: False]
   --version       Show version information
   -?, -h, --help  Show help and usage information
-
-
-Either -f or -d is required. Exiting
 ```
 
 {pagebreak}

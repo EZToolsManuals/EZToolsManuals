@@ -18,31 +18,6 @@ In a PowerShell window, running `.\RLA.exe` will provide the following options w
 
 {line-numbers:false}
 ```powershell
-rla version 2.0.0.0
-
-Author: Eric Zimmerman (saericzimmerman@gmail.com)
-https://github.com/EricZimmerman/RECmd
-
-Note: Enclose all strings containing spaces with double quotes
-
-Command line:
-
-Description:
-  rla version 2.0.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/RECmd
-
-  Note: Enclose all strings containing spaces with double quotes
-
-  Example: rla.exe -f "C:\Temp\UsrClass 1.dat" --out C:\temp
-           rla.exe -d "D:\temp\" --out c:\temp
-
-
-Usage:
-  rla [options]
-
-Options:
   -f <f>          Hive to process. -f or -d is required
   -d <d>          Directory to look for hives (recursively). -f or -d is required
   --out <out>     Directory to save updated hives to. Only dirty hives with logs applied will end
@@ -54,7 +29,6 @@ Options:
   --trace         Show trace information during processing [default: False]
   --version       Show version information
   -?, -h, --help  Show help and usage information
-
 ```
 
 ### Switch Descriptions

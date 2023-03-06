@@ -26,29 +26,6 @@ In a PowerShell window, running `.\JLECmd.exe` will provide the following option
 
 {line-numbers:false}
 ```powershell
-Description:
-  JLECmd version 1.5.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/JLECmd
-
-  Examples: JLECmd.exe -f "C:\Temp\f01b4d95cf55d32a.customDestinations-ms"
-  --mp
-          JLECmd.exe -f "C:\Temp\f01b4d95cf55d32a.automaticDestinations-ms"
-  --json "D:\jsonOutput" --jsonpretty
-          JLECmd.exe -d "C:\CustomDestinations" --csv "c:\temp" --html "c:\temp"
-  -q
-          JLECmd.exe -d "C:\Users\e\AppData\Roaming\Microsoft\Windows\Recent"
-  --dt "ddd yyyy MM dd HH:mm:ss.fff"
-
-          Short options (single letter) are prefixed with a single dash. Long
-  commands are prefixed with two dashes
-
-
-Usage:
-  JLECmd [options]
-
-Options:
   -f <f>             File to process. Either this or -d is required
   -d <d>             Directory to recursively process. Either this or -f is
                      required
@@ -92,9 +69,6 @@ Options:
                      False]
   --version          Show version information
   -?, -h, --help     Show help and usage information
-
-
-Either -f or -d is required. Exiting
 ```
 
 While there are explanations for each switch, let's walk through each one of the switches unique to JLECmd in further detail.

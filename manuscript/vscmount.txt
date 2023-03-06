@@ -22,21 +22,6 @@ In a PowerShell window, running `.\VSCMount.exe` will provide the following opti
 
 {line-numbers:false}
 ```powershell
-Description:
-  VSCMount version 1.5.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/VSCMount
-
-  Examples: VSCMount.exe --dl C --mp C:\VssRoot --ud --debug
-
-            Short options (single letter) are prefixed with a single dash. Long commands are
-  prefixed with two dashes
-
-Usage:
-  VSCMount [options]
-
-Options:
   --dl <dl>       Source drive to look for Volume Shadow Copies (C, D:, or F:\ for example)
   --mp <mp>       The base directory where you want VSCs mapped to
   --ud            Use VSC creation timestamps (yyyyMMddTHHmmss.fffffff) in symbolic link
@@ -44,10 +29,6 @@ Options:
   --debug         Show debug information during processing [default: False]
   --version       Show version information
   -?, -h, --help  Show help and usage information
-
-
-
---dl is required. Exiting
 ```
 
 {pagebreak}
@@ -56,7 +37,7 @@ Options:
 
 #### `--dl`
 
-This switch will allow for the examiner to specify which drive letter to search for Volume Shadow Copies to be mounted. In the below example, a folder will be created at the root of the C:\ drive labeled `vssroot_C` and the following folders will be created, as an example:
+This required switch will allow for the examiner to specify which drive letter to search for Volume Shadow Copies to be mounted. In the below example, a folder will be created at the root of the C:\ drive labeled `vssroot_C` and the following folders will be created, as an example:
 
 * vss067-20220802T071544.8950680
 * vss069-20220802T111643.1360760

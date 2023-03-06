@@ -37,23 +37,6 @@ In a PowerShell window, running `.\SQLECmd.exe` will provide the following optio
 
 {line-numbers:false}
 ```powershell
-Description:
-  SQLECmd version 1.0.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/SQLECmd
-
-  Examples: SQLECmd.exe -f "C:\Temp\someFile.db" --csv "c:\temp\out"
-            SQLECmd.exe -d "C:\Temp\" --csv "c:\temp\out"
-            SQLECmd.exe -d "C:\Temp\" --hunt --csv "c:\temp\out"
-
-            Short options (single letter) are prefixed with a single dash. Long commands are prefixed
-  with two dashes
-
-Usage:
-  SQLECmd [options]
-
-Options:
   -f <f>          File to process. This or -d is required
   -d <d>          Directory to process that contains SQLite files. This or -f is required
   --csv <csv>     Directory to save CSV formatted results to
@@ -72,9 +55,6 @@ Options:
   --trace         Show trace information during processing [default: False]
   --version       Show version information
   -?, -h, --help  Show help and usage information
-
-
--f or -d is required. Exiting
 ```
 
 ### Switch Descriptions

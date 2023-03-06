@@ -37,22 +37,6 @@ In a PowerShell window, running `.\EvtxECmd.exe` will provide the following opti
 
 {line-numbers:false}
 ```powershell
-Description:
-  EvtxECmd version 1.0.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/evtx
-
-  Examples: EvtxECmd.exe -f "C:\Temp\Application.evtx" --csv "c:\temp\out" --csvf MyOutputFile.csv
-            EvtxECmd.exe -f "C:\Temp\Application.evtx" --csv "c:\temp\out"
-            EvtxECmd.exe -f "C:\Temp\Application.evtx" --json "c:\temp\jsonout"
-
-            Short options (single letter) are prefixed with a single dash. Long commands are prefixed with two dashes
-
-Usage:
-  EvtxECmd [options]
-
-Options:
   -f <f>           File to process. This or -d is required
   -d <d>           Directory to process that contains evtx files. This or -f is required
   --csv <csv>      Directory to save CSV formatted results to
@@ -79,9 +63,6 @@ Options:
   --trace          Show trace information during processing [default: False]
   --version        Show version information
   -?, -h, --help   Show help and usage information
-
-
--f or -d is required. Exiting
 ```
 
 {pagebreak}

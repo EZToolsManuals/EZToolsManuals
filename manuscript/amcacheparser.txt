@@ -24,22 +24,6 @@ In a PowerShell window, running `.\AmcacheParser.exe` will provide the following
 
 {line-numbers:false}
 ```powershell
-Description:
-  AmcacheParser version 1.5.1.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/AmcacheParser
-
-  Examples: AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" --csv C:\temp
-            AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -i on --csv C:\temp --csvf foo.csv
-            AmcacheParser.exe -f "C:\Temp\amcache\AmcacheWin10.hve" -w "c:\temp\whitelist.txt" --csv C:\temp
-
-            Short options (single letter) are prefixed with a single dash. Long commands are prefixed with two dashes
-
-Usage:
-  AmcacheParser [options]
-
-Options:
   -f <f> (REQUIRED)       Amcache.hve file to parse
   -i                      Include file entries for Programs entries [default: False]
   -w <w>                  Path to file containing SHA-1 hashes to *exclude* from the results. Blacklisting overrides

@@ -24,23 +24,6 @@ In a PowerShell window, running `.\AppCompatCacheParser.exe` will provide the fo
 
 {line-numbers:false}
 ```powershell
-Description:
-  AppCompatCache Parser version 1.5.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/AppCompatCacheParser
-
-  Examples: AppCompatCacheParser.exe --csv c:\temp -t -c 2
-            AppCompatCacheParser.exe --csv c:\temp --csvf results.csv
-
-            Short options (single letter) are prefixed with a single dash. Long commands are
-  prefixed with two dashes
-
-
-Usage:
-  AppCompatCacheParser [options]
-
-Options:
   -f <f>                  Full path to SYSTEM hive to process. If this option is not
                           specified, the live Registry will be used
   --csv <csv> (REQUIRED)  Directory to save CSV formatted results to. Be sure to include the

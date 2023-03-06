@@ -37,31 +37,6 @@ In a PowerShell window, running `.\RECmd.exe` will provide the following options
 
 {line-numbers:false}
 ```powershell
-RECmd version 2.0.0.0
-
-Author: Eric Zimmerman (saericzimmerman@gmail.com)
-https://github.com/EricZimmerman/RECmd
-
-Note: Enclose all strings containing spaces (and all RegEx) with double quotes
-
-Command line:
-
-Description:
-  RECmd version 2.0.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/RECmd
-
-  Note: Enclose all strings containing spaces (and all RegEx) with double quotes
-
-  Example: ``RECmd.exe --f "C:\Temp\UsrClass 1.dat" --sk URL --recover false --nl
-             RECmd.exe --f "D:\temp\UsrClass 1.dat" --StartDate "11/13/2014 15:35:01"
-             RECmd.exe --f "D:\temp\UsrClass 1.dat" --RegEx --sv "(App|Display)Name"
-
-Usage:
-  RECmd [options]
-
-Options:
   -d <d>               Directory to look for hives (recursively). -f or -d is required
   -f <f>               Hive to search. -f or -d is required
   --kn <kn>            Display details for key name. Includes subkeys and values

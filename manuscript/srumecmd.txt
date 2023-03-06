@@ -22,24 +22,6 @@ In a PowerShell window, running `.\SrumECmd.exe` will provide the following opti
 
 {line-numbers:false}
 ```powershell
-Description:
-  SrumECmd version 0.5.1.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/Srum
-
-  Examples: SrumECmd.exe -f "C:\Temp\SRUDB.dat" -r "C:\Temp\SOFTWARE" --csv "C:\Temp\"
-            SrumECmd.exe -f "C:\Temp\SRUDB.dat" --csv "c:\temp"
-            SrumECmd.exe -d "C:\Temp" --csv "c:\temp"
-
-            Short options (single letter) are prefixed with a single dash. Long commands are prefixed
-  with two dashes
-
-
-Usage:
-  SrumECmd [options]
-
-Options:
   -f <f>                  SRUDB.dat file to parse
   -r <r>                  SOFTWARE hive to process. This is optional, but recommended
   -d <d>                  Directory to recursively process, looking for SRUDB.dat and SOFTWARE
@@ -54,7 +36,6 @@ Options:
   --trace                 Show trace information during processing [default: False]
   --version               Show version information
   -?, -h, --help          Show help and usage information
-
 ```
 
 ### Switch Descriptions

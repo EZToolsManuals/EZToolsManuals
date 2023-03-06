@@ -48,25 +48,6 @@ In a PowerShell window, running `.\MFTECmd.exe` will provide the following optio
 
 {line-numbers:false}
 ```powershell
-Description:
-  MFTECmd version 1.2.1.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/MFTECmd
-
-  Examples: MFTECmd.exe -f "C:\Temp\SomeMFT" --csv "c:\temp\out" --csvf MyOutputFile.csv
-            MFTECmd.exe -f "C:\Temp\SomeMFT" --csv "c:\temp\out"
-            MFTECmd.exe -f "C:\Temp\SomeMFT" --json "c:\temp\jsonout"
-            MFTECmd.exe -f "C:\Temp\SomeMFT" --body "c:\temp\bout" --bdl c
-            MFTECmd.exe -f "C:\Temp\SomeMFT" --de 5-5
-
-            Short options (single letter) are prefixed with a single dash. Long commands are prefixed
-  with two dashes
-
-Usage:
-  MFTECmd [options]
-
-Options:
   -f <f>           File to process ($MFT | $J | $Boot | $SDS | $I30). Required
   -m <m>           $MFT file to use when -f points to a $J file (Use this to resolve parent path
                    in $J CSV output).
@@ -111,9 +92,6 @@ Options:
   --trace          Show trace information during processing [default: False]
   --version        Show version information
   -?, -h, --help   Show help and usage information
-
-
--f is required. Exiting
 ```
 
 {pagebreak}

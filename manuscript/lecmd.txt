@@ -27,25 +27,6 @@ In a PowerShell window, running `.\LECmd.exe` will provide the following options
 
 {line-numbers:false}
 ```powershell
-Description:
-  LECmd version 1.5.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman/LECmd
-
-  Examples: LECmd.exe -f "C:\Temp\foobar.lnk"
-            LECmd.exe -f "C:\Temp\somelink.lnk" --json "D:\jsonOutput" --jsonpretty
-            LECmd.exe -d "C:\Temp" --csv "c:\temp" --html c:\temp --xml c:\temp\xml -q
-            LECmd.exe -f "C:\Temp\some other link.lnk" --nid --neb
-            LECmd.exe -d "C:\Temp" --all
-
-            Short options (single letter) are prefixed with a single dash. Long commands are prefixed with two dashes
-
-
-Usage:
-  LECmd [options]
-
-Options:
   -f <f>          File to process. Either this or -d is required
   -d <d>          Directory to recursively process. Either this or -f is required
   -r              Only process lnk files pointing to removable drives [default: False]
@@ -67,9 +48,6 @@ Options:
   --trace         Show trace information during processing [default: False]
   --version       Show version information
   -?, -h, --help  Show help and usage information
-
-
-Either -f or -d is required. Exiting
 ```
 
 While there are explanations for each switch, let's walk through each one of the switches unique to LECmd in further detail.

@@ -22,24 +22,6 @@ In a PowerShell window, running `.\SBECmd.exe` will provide the following option
 
 {line-numbers:false}
 ```powershell
-Description:
-  SBECmd version 2.0.0.0
-
-  Author: Eric Zimmerman (saericzimmerman@gmail.com)
-  https://github.com/EricZimmerman
-
-  Examples: SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout
-            SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout --tz "US Eastern Standard Time"
-            SBECmd.exe -d c:\temp\hives --csv c:\temp\sbeout --dedupe
-
-            Short options (single letter) are prefixed with a single dash. Long commands are prefixed
-  with two dashes
-
-
-Usage:
-  SBECmd [options]
-
-Options:
   -d <d>          Directory to look for registry hives. This or -l is required
   -l              Process live registry (Requires Administrator rights). This or -d is required
                   [default: False]
@@ -55,9 +37,6 @@ Options:
   --trace         Show trace information during processing [default: False]
   --version       Show version information
   -?, -h, --help  Show help and usage information
-
-
--d or -l required. Exiting
 ```
 
 ### Switch Descriptions
