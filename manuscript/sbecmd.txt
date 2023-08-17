@@ -53,7 +53,7 @@ The above command will output a filename similar to this: `YYYYMMDD_HHMMSS_hostn
 
 This switch will inform the tool whether to replay transaction logs or not.
 
-Below is an exmaple of replaying transaction logs:
+Below is an example of replaying transaction logs:
 
 Example: `.\SBECmd.exe -d "D:\temp\hives" --nl false --csv "D:\temp"`
 
