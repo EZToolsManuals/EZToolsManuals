@@ -1,3 +1,4 @@
+
 $Boot
 $J
 $MFT
@@ -27,6 +28,7 @@ NTLM
 ntuser
 PCAP
 prefetch
+sequencenumber
 shellbag
 shellbags
 shimcache
@@ -35,6 +37,7 @@ sru
 SRUDB
 Srum
 SRUM
+subkeys
 SUM
 SYSCACHE
 timestamped
@@ -44,4 +47,5 @@ usrclass
 VHDX
 vmdk
 vsc
+VSCs
 werfault

@@ -1,4 +1,5 @@
 Amcache Parser
+amcacheparser
 AppCompatCacheParser
 bitcoin
 bodyf
@@ -8,6 +9,7 @@ bytecoin
 csvf
 dashcoin
 entrynumber
+evtxecmd
 EvtxECmd
 eztools
 ezviewer
@@ -21,6 +23,9 @@ isads
 isdirectory
 jlecmd
 JLECmd
+jsonf
+jsonout
+jsonpretty
 JumpList Explorer
 jumplistexplorer
 lastaccess
@@ -28,11 +33,15 @@ lastmodified
 lastrecordchange
 lecmd
 LECmd
+logfilesequencenumber
 mftecmd
 MFTECmd
 mftexplorer
 MFTExplorer
 monero
+parententrynumber
+parentpath
+parentsequencenumber
 pecmd
 PECmd
 RBCmd
@@ -48,16 +57,22 @@ SDB Explorer SBECmd
 sdbexplorer
 ShellBags Explorer
 shellbagsexplorer
+sqlecmd
 SQLECmd
+srumecmd
 SrumECmd
+ssn
+sumecmd
 SumECmd
 sumokoin
 timeapp
 Timeline Explorer
 timelineexplorer
 tle
+updatesequencenumber
 useczeros
+vscmount
 VSCMount
-vupdatesequencenumber
+wxtcmd
 WxTCmd
 xwfim

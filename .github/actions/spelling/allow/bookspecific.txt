@@ -1,7 +1,5 @@
-mftexplorershowfindpanelafter
-mftexplorershowfindpanelbefore
-mftexplorertdungan
-objectidfiledroid
+CFUSER
+commonswitches
 ConsoleExample1
 ConsoleExample2
 ConsoleExample3
@@ -35,8 +33,12 @@ MFTECmdExampleQuotationMarks
 MFTECmdExampleSingleBackticks
 mftecmdSNswitchcolumnsTLE
 mftexplorershowfindpanelafter
+mftexplorershowfindpanelafter
 mftexplorershowfindpanelbefore
+mftexplorershowfindpanelbefore
+mftexplorertdungan
 mftexplorertdunganMFTloaded
+objectidfiledroid
 palm-trees
 RegistryExplorerGUI
 sdbexplorer
