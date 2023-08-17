@@ -87,8 +87,11 @@ pwned
 ransomware
 remoting
 rockyou
+tdungan
 timelining
 timestomping
 triaging
 UAC
 usb
+winevt
+zoneidcontents

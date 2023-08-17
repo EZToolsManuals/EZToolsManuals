@@ -1,4 +1,6 @@
 abrignoni
+ackerman
+Ballenthin
 Banaanhangwagen
 Beckers
 Boettcher
@@ -11,6 +13,7 @@ Guus
 Hamdard
 hickman
 kevinpagano
+keydet
 khatri
 Koishigawa
 Lahr
@@ -28,6 +31,7 @@ rathbun
 Schweihofer
 Seyer
 Sofer
+Suhanov
 suthar
 sutharnisarg
 torvalds

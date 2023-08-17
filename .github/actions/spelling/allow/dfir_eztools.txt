@@ -1,24 +1,50 @@
 Amcache Parser
 AppCompatCacheParser
+bodyf
+bodyfile
 bstrings
+bytecoin
+dashcoin
 EvtxECmd
+eztools
+ezviewer
 EZViewer
+hasads
 Hasher
+iisgeolocate
+inuse
+isads
+isdirectory
+jlecmd
 JLECmd
 JumpList Explorer
+lecmd
 LECmd
+mftecmd
 MFTECmd
+mftexplorer
 MFTExplorer
+pecmd
 PECmd
 RBCmd
 RecentFileCacheParser
+recmd
 RECmd
 Registry Explorer RLA
+registryexplorer
+saericzimmerman
+sbecmd
 SDB Explorer SBECmd
+sdbexplorer
 ShellBags Explorer
 SQLECmd
 SrumECmd
 SumECmd
+timeapp
 Timeline Explorer
+timelineexplorer
+tle
+useczeros
 VSCMount
 WxTCmd
+xwfim

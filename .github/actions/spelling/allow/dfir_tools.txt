@@ -37,6 +37,7 @@ Onlinehashcrack
 procexp
 Procmon
 rapidspar
+regedit
 Regedit
 regfinfo
 regfmnt
@@ -47,10 +48,13 @@ samdump
 sigma
 Sleuthkit
 sqlitebrowser
+Sysmon
 taskinfo
 tkape
 Velociraptor
 virtualbox
 wireshark
+woanware
 xmount
+xwf
 yara
