@@ -12,7 +12,7 @@ For those in Law Enforcement, this tool is useful for parsing the NTUser.dat and
 
 #### Private Sector
 
-For those in the Private Sector, this tool is useful for enumerating what a user of interest did during unauthorized access to a given host. Often, artifacuts during periods of unauthorized access will show the threat actor accessing and viewing files and folders that are highly sensitive to the client's business.
+For those in the Private Sector, this tool is useful for enumerating what a user of interest did during unauthorized access to a given host. Often, artifacts during periods of unauthorized access will show the threat actor accessing and viewing files and folders that are highly sensitive to the client's business.
 
 {pagebreak}
 
