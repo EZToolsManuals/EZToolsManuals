@@ -111,7 +111,7 @@ With this particular grouping, examiners can see how many overall events resides
 
 #### Tagging
 
-As long as there are Line and Tag columns visibile for a file ingested into Timeline Explorer, examiners can take advantage of the Tag feature. Rows that contain data of interest can be tagged by checking the box in the Tag column. This can be useful for when analysis is complete on a given file to where an examiner is ready to filter on only the rows of interest. This can be done by filtering on the Tag column for checked boxes only. This will allow for all untagged rows to disappear and only rows that were tagged by the examiner will appear.
+As long as there are Line and Tag columns visible for a file ingested into Timeline Explorer, examiners can take advantage of the Tag feature. Rows that contain data of interest can be tagged by checking the box in the Tag column. This can be useful for when analysis is complete on a given file to where an examiner is ready to filter on only the rows of interest. This can be done by filtering on the Tag column for checked boxes only. This will allow for all untagged rows to disappear and only rows that were tagged by the examiner will appear.
 
 {pagebreak}
 
