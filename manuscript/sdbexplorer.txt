@@ -14,7 +14,7 @@ Below is a screenshot of SDB Explorer with a shim database file loaded.
 
 {pagebreak}
 
-Using the Info -> Metrics menu, examiners can look at a visual representation of the data present within a loaded shim datbase.
+Using the Info -> Metrics menu, examiners can look at a visual representation of the data present within a loaded shim database.
 
 ![SDB Explorer's Metrics Feature](sdbexplorer\sdbexplorermetrics.jpg)
 
