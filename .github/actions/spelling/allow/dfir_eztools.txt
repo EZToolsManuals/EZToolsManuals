@@ -1,14 +1,18 @@
 Amcache Parser
 AppCompatCacheParser
+bitcoin
 bodyf
 bodyfile
 bstrings
 bytecoin
+csvf
 dashcoin
+entrynumber
 EvtxECmd
 eztools
 ezviewer
 EZViewer
+fantomcoin
 hasads
 Hasher
 iisgeolocate
@@ -18,12 +22,17 @@ isdirectory
 jlecmd
 JLECmd
 JumpList Explorer
+jumplistexplorer
+lastaccess
+lastmodified
+lastrecordchange
 lecmd
 LECmd
 mftecmd
 MFTECmd
 mftexplorer
 MFTExplorer
+monero
 pecmd
 PECmd
 RBCmd
@@ -32,19 +41,23 @@ recmd
 RECmd
 Registry Explorer RLA
 registryexplorer
+rla
 saericzimmerman
 sbecmd
 SDB Explorer SBECmd
 sdbexplorer
 ShellBags Explorer
+shellbagsexplorer
 SQLECmd
 SrumECmd
 SumECmd
+sumokoin
 timeapp
 Timeline Explorer
 timelineexplorer
 tle
 useczeros
 VSCMount
+vupdatesequencenumber
 WxTCmd
 xwfim

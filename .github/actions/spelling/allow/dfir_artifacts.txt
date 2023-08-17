@@ -36,6 +36,7 @@ SRUDB
 Srum
 SRUM
 SUM
+SYSCACHE
 timestamped
 timestomped
 USN
