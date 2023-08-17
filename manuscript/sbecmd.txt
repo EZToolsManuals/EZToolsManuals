@@ -124,7 +124,7 @@ Username_NTUSER.csv
 Username_usrClass.csv
 ```
 
-If the system you're analzying has had 100 users who have traversed directories at some point in time, you should see 200 CSVs for your output!
+If the system you're analyzing has had 100 users who have traversed directories at some point in time, you should see 200 CSVs for your output!
 
 ## SBECmd Key Takeaways
 
