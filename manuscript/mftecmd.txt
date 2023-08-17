@@ -319,7 +319,7 @@ When parsing the $MFT, output provided will contain three data points unique to 
 
 #### SI < FN
 
-`SI < FN` can be translated to Standard Information (0x10) Attribute timestamp is less than (aka earlier than) the File Name (0x30) Attribute timestamp. This is meant to point out a potential indicator of timestomping occuring on the volume being analyzed. Learn more about timestomping [here](https://www.kroll.com/en/insights/publications/cyber/anti-forensic-tactics/anti-forensics-tactics-timestomping) and [here](https://www.inversecos.com/2022/04/defence-evasion-technique-timestomping.html).
+`SI < FN` can be translated to Standard Information (0x10) Attribute timestamp is less than (aka earlier than) the File Name (0x30) Attribute timestamp. This is meant to point out a potential indicator of timestomping occurring on the volume being analyzed. Learn more about timestomping [here](https://www.kroll.com/en/insights/publications/cyber/anti-forensic-tactics/anti-forensics-tactics-timestomping) and [here](https://www.inversecos.com/2022/04/defence-evasion-technique-timestomping.html).
 
 #### u Sec Zeros
 

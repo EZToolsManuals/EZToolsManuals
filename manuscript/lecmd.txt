@@ -281,7 +281,7 @@ LECmd output will provide the following timestamps:
 
 SourceCreated will be the most useful indicator of when a file was first opened by a user. SourceModified will be the most useful indicator of when the file was last opened by a user.
 
-The Target timestamps can be useful to cross reference with the timestamps in the MFT. Usually, these timestamps are the 0x10 ($Standard_Information) timestamps from the $MFT. In testing, it appears the timestamps stored within the .LNK file are “refreshed” when a file is opened again. The timestamps stored within a .LNK file are therefore a snapshop in time of when the .LNK file was last modified via opening a file. This can be useful in that if a file was timestomped (aka timestamps altered), those altered timestamps won't reflect in the .LNK file until the timestomped file has been opened AFTER being timestomped.
+The Target timestamps can be useful to cross reference with the timestamps in the MFT. Usually, these timestamps are the 0x10 ($Standard_Information) timestamps from the $MFT. In testing, it appears the timestamps stored within the .LNK file are “refreshed” when a file is opened again. The timestamps stored within a .LNK file are therefore a snapshot in time of when the .LNK file was last modified via opening a file. This can be useful in that if a file was timestomped (aka timestamps altered), those altered timestamps won't reflect in the .LNK file until the timestomped file has been opened AFTER being timestomped.
 
 #### Other Attributes
 

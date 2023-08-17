@@ -82,7 +82,7 @@ This switch will instruct AmcacheParser to display timestamps in a specified for
 
 ### `--dedupe`
 
-This switch informs the tool to deduplicate results parsed from by the tool. That way, your output won't include multipe identical rows for the leanest output possible.
+This switch informs the tool to deduplicate results parsed from by the tool. That way, your output won't include multiple identical rows for the leanest output possible.
 
 ### `--vss`
 

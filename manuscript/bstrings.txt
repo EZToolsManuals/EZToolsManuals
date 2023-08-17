@@ -105,7 +105,7 @@ Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows\Pagefile\" --ls power
 Running the above command will result in console messages similar to the below:
 
 ```
-Searching 3 chunks (10 MB each) across 22.034 MB in 'D:\DFIRArtifactMuseum\Windows\Pagefile\Win10\APTSiimulatorVM\pagefile.7z'
+Searching 3 chunks (10 MB each) across 22.034 MB in 'D:\DFIRArtifactMuseum\Windows\Pagefile\Win10\APTSimulatorVM\pagefile.7z'
 
 Chunk 1 of 3 finished. Total strings so far: 311,770 Elapsed time: 0.252 seconds. Average strings/sec: 1,239,057
 Chunk 2 of 3 finished. Total strings so far: 580,462 Elapsed time: 0.649 seconds. Average strings/sec: 894,890
@@ -117,7 +117,7 @@ Search complete.
 Change the value to 1 would result in the following messages:
 
 ```
-Searching 23 chunks (1 MB each) across 22.034 MB in 'D:\DFIRArtifactMuseum\Windows\Pagefile\Win10\APTSiimulatorVM\pagefile.7z'
+Searching 23 chunks (1 MB each) across 22.034 MB in 'D:\DFIRArtifactMuseum\Windows\Pagefile\Win10\APTSimulatorVM\pagefile.7z'
 
 Chunk 1 of 23 finished. Total strings so far: 33,330 Elapsed time: 0.029 seconds. Average strings/sec: 1,153,463
 Chunk 2 of 23 finished. Total strings so far: 66,074 Elapsed time: 0.052 seconds. Average strings/sec: 1,266,474

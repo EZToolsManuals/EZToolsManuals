@@ -8,7 +8,7 @@ RECmd is a tool created by Eric Zimmerman used to parse Registry hives. Registry
 
 #### Law Enforcement
 
-For those in Law Enforcement, this tool is useful for parsing Registry hives which can contain a wealth of artifacts that can be attributed to a specific user of interest. There are artifacts within the Windows Registry that can help prove evidence of program execution, evidence of file opening, evidence of user logon, and many more. The Registry is simply too valuable to ignore on almost any possible criminal invesitgation.
+For those in Law Enforcement, this tool is useful for parsing Registry hives which can contain a wealth of artifacts that can be attributed to a specific user of interest. There are artifacts within the Windows Registry that can help prove evidence of program execution, evidence of file opening, evidence of user logon, and many more. The Registry is simply too valuable to ignore on almost any possible criminal investigation.
 
 #### Private Sector
 
