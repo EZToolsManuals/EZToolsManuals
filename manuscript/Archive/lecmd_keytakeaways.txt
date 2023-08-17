@@ -69,7 +69,7 @@ MACVendor will resolve the MAC address to provide the associated vendor, if know
 
 #### ExtraBlocksPresent
 
-ExtraBlocksPresent will provide insight as to whether or not extra data blcoks are present within the LNK file. The other blocks that are possible to be present within a LNK file are: TrackerDataBaseBlock and PropertyStoreDataBlock.
+ExtraBlocksPresent will provide insight as to whether or not extra data blocks are present within the LNK file. The other blocks that are possible to be present within a LNK file are: TrackerDataBaseBlock and PropertyStoreDataBlock.
 
 #### TODO
 FileAttributes
