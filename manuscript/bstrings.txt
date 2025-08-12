@@ -84,7 +84,7 @@ This switch informs the tool to look for [ASCII](https://en.wikipedia.org/wiki/A
 
 Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --ls powershell -o "D:\DFIRArtifactMuseum\Windows\results.txt" -a false`
 
-#### ``-u
+#### `-u`
 
 This switch informs the tool to look for [Unicode](https://en.wikipedia.org/wiki/Unicode) strings. Default is true, so if you want to disable it, use `-u false`.
 
