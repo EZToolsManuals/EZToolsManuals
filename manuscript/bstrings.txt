@@ -280,7 +280,7 @@ This switch informs the tool to sort the results alphabetically.
 
 Example: `.\bstrings.exe -d "D:\DFIRArtifactMuseum\Windows" --lr ipv4 -o C:\temp\results.txt --sa -q`
 
-#### ``--sl
+#### `--sl`
 
 This switch informs the tool to sort the results by length.
 
